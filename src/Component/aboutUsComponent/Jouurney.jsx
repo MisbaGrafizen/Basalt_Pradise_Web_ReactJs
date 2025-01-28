@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import imag1 from "../../../public/Basalt Final/B1.jpg";
 import imag2 from "../../../public/Basalt Final/B6.jpg";
 import imag3 from "../../../public/Basalt Final/B3.jpg";
 import imag4 from "../../../public/Basalt Final/B9.jpg";
 
 export default function Jouurney() {
+  const [scrollYProgress, setScrollYProgress] = useState(0);
+
+ 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const documentHeight = document.body.scrollHeight - window.innerHeight;
+
+      // Multiplier to control speed
+      const multiplier = 1.5; // Increase to make the line grow/shrink faster
+      const progress = Math.min((scrollTop / documentHeight) * multiplier, 1); // Ensures it stays between 0 and 1
+      setScrollYProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <div className="w-[100%] bg-[#f4f6f9] mt-[40px]   px-[10px] font-Poppins flex mx-auto">
+      <div className="w-[100%] bg-[#f4f6f9] mt-[40px]   relative overflow-hidden px-[10px] font-Poppins flex mx-auto">
         <div className="flex  flex-col justify-between py-[50px] gap-[50px] relative w-[80%] mx-auto">
           <div className=" flex  flex-col gap-[1px]">
             <h1 className=" flex font-[600] text-[38px] ">
@@ -19,7 +39,14 @@ export default function Jouurney() {
             </p>
           </div>
           <div className=" flex w-[100%] flex-col relative gap-[80px]">
-            <span className=" flex w-[2.8px] absolute   items-center justify-center  left-0 right-0 mx-auto top-[150px]  h-[80%] bg-[#ff8000]"></span>
+            {/* <span className=" flex w-[2.8px] absolute   items-center justify-center  left-0 right-0 mx-auto top-[150px]  h-[80%] bg-[#ff8000]"></span> */}
+            <motion.div
+              className="absolute top-[190px] left-[50%] w-[4px] bg-[#ff8000] "
+              style={{
+                height: `${scrollYProgress * 78}%`, // Adjusted height with controlled speed
+                transform: "translateX(-50%)",
+              }}
+            />
             <div className=" flex w-[100%] relative  items-center   justify-between">
               <div className=" flex w-[43%]  ">
                 <img
@@ -27,12 +54,12 @@ export default function Jouurney() {
                   src={imag1}
                 />
               </div>
-  
-              <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
-                <h1 className=" text-center text-[40px] text-[#ff8000]">2011</h1>
-                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button">
 
-                </div>
+              <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
+                <h1 className=" text-center text-[40px] text-[#ff8000]">
+                  2011
+                </h1>
+                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
               <div className=" flex  flex-col  gap-[20px] w-[43%]  ">
                 <div>
@@ -51,7 +78,7 @@ export default function Jouurney() {
                     </span>
                   </h1>
                 </div>
-                
+
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
                   A shared dream of Chitra Gurnani Daga and Abhishek Daga,
                   Thrillophilia was launched in 2011. Within just a year, what
@@ -86,10 +113,10 @@ export default function Jouurney() {
                 </p>
               </div>
               <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
-                <h1 className=" text-center text-[40px] text-[#ff8000]">2014</h1>
-                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button">
-
-                </div>
+                <h1 className=" text-center text-[40px] text-[#ff8000]">
+                  2014
+                </h1>
+                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
               <div className=" flex w-[43%]  ">
                 <img
@@ -106,10 +133,10 @@ export default function Jouurney() {
                 />
               </div>
               <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
-                <h1 className=" text-center text-[40px] text-[#ff8000]">2019</h1>
-                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button">
-
-                </div>
+                <h1 className=" text-center text-[40px] text-[#ff8000]">
+                  2019
+                </h1>
+                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
               <div className=" flex  flex-col  gap-[20px] w-[43%]  ">
                 <div>
@@ -154,10 +181,10 @@ export default function Jouurney() {
                 </p>
               </div>
               <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
-                <h1 className=" text-center text-[40px] text-[#ff8000]">2023</h1>
-                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button">
-
-                </div>
+                <h1 className=" text-center text-[40px] text-[#ff8000]">
+                  2023
+                </h1>
+                <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
               <div className=" flex w-[43%]  ">
                 <img

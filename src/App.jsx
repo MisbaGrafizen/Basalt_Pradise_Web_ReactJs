@@ -15,6 +15,9 @@ import ScrollToTop from "./Component/Scrooltop";
 import AboutUs from "./pages/aboutUs/AboutUs";
 import AmentiesPage from "./pages/amenities/AmentiesPage";
 import Accomodation from "./pages/accomoPage/Accomodation";
+import { Root } from "postcss";
+import RoomListing from "./pages/roomListingpage/RoomListing";
+import RoomDetails from "./pages/roomDetails/RoomDetails";
 // import Cookies from 'js-cookie';
 // import PageNotFound from "./pages/DamjiPage/PageNotFound";
 // import CheackOut from "./pages/DamjiPage/CheackOut";
@@ -47,6 +50,8 @@ function App() {
           <Route path="/about" element={loading ? <Loader /> : <AboutUs />} />
           <Route path="/amenities" element={loading ? <Loader /> : <AmentiesPage />} />
           <Route path="/accomdation" element={loading ? <Loader /> : <Accomodation />} />
+          <Route path="/all-rooms" element={loading ? <Loader /> : <RoomListing />} />
+          <Route path="/room-details" element={loading ? <Loader /> : <RoomDetails />} />
           {/* <Route
             path="/about-us"
             element={loading ? <Loader /> : <AboutUs />}
