@@ -1,5 +1,6 @@
 import React from "react";
 import Mainvideo from "../../../public/heroVideo/Alphabet_For_Web.mp4";
+import mainbg from "../../../public/Basalt Final/B2.jpg";
 
 export default function HeroSection() {
   return (

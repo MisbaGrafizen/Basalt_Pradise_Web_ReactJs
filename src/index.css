@@ -405,10 +405,15 @@ body {
 
 
 
+.bgblur{
+background: rgba(255, 255, 255, 0.25);
+box-shadow: 0 2px 22px 0 rgba(177, 179, 202, 0.37),inset 0 -2px 10px 0 rgba(177, 179, 202, 0.37);
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+border-radius: 20px 10 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-
-
-
+}
 
 
 
@@ -1691,7 +1696,7 @@ tr> :where(.css-dev-only-do-not-override-1qhpsh8).ant-picker-dropdown .ant-picke
 :where(.css-dev-only-do-not-override-49qm).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled) .ant-picker-cell-inner,
 :where(.css-dev-only-do-not-override-49qm).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
   color: #fff;
-  background-color: #175a2d;
+  background-color: #0236c7;
 
 
 }
@@ -1787,7 +1792,7 @@ tr> :where(.css-dev-only-do-not-override-1qhpsh8).ant-picker-dropdown .ant-picke
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-outlined:focus,
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-outlined:focus-within {
 
-  border-color: #248d27;
+  border-color: #0556d1;
   box-shadow: none;
   outline: 0;
   background-color: #ffffff;
@@ -1796,13 +1801,13 @@ tr> :where(.css-dev-only-do-not-override-1qhpsh8).ant-picker-dropdown .ant-picke
 
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-range .ant-picker-active-bar {
 
-  background-color: #248d27;
+  background-color: #0556d1;
 }
 
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-outlined:hover {
 
 
-  border-color: #248d27;
+  border-color: #0556d1;
 }
 
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker {
@@ -1824,20 +1829,20 @@ tr> :where(.css-dev-only-do-not-override-1qhpsh8).ant-picker-dropdown .ant-picke
 :where(.css-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled) .ant-picker-cell-inner,
 :where(.css-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
 
-  background-color: #248d27 !important;
+  background-color: #0556d1 !important;
 }
 
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected:not(.ant-picker-cell-disabled) .ant-picker-cell-inner,
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled) .ant-picker-cell-inner,
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
-  background-color: #107914 !important;
+  background-color: #0556d1 !important;
 }
 
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-in-range:not(.ant-picker-cell-disabled):before,
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-disabled):before,
 :where(.css-dev-only-do-not-override-1x0dypw).ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled):before {
-  background-color: #12c31847 !important;
-  border-top: 1.5px dashed #11bd17 !important;
-  border-bottom: 1.5px dashed #14ba1a !important;
+  background-color: #02bcff47 !important;
+  border-top: 1px dashed #0556d1 !important;
+  border-bottom: 1px dashed #0556d1 !important;
 
 }

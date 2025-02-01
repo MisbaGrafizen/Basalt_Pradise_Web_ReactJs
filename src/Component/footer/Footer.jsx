@@ -222,12 +222,12 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a
+                  {/* <a
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Travel Deals
-                  </a>
+                  </a> */}
                 </li>
                 {/* <li>
                   <a
@@ -297,7 +297,7 @@ export default function Footer() {
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Articles By Veena Patil
+                    Articles By Hardik Bhai Patel
                   </a>
                 </li>
                 <li>
@@ -305,7 +305,7 @@ export default function Footer() {
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Articles By Sunila Patil
+                    Articles By Darshit Adesara
                   </a>
                 </li>
                 {/* <li>

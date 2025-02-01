@@ -47,7 +47,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={loading ? <Loader /> : <Home />} />
-          <Route path="/about" element={loading ? <Loader /> : <AboutUs />} />
+          <Route path="/about-us" element={loading ? <Loader /> : <AboutUs />} />
           <Route path="/amenities" element={loading ? <Loader /> : <AmentiesPage />} />
           <Route path="/accomdation" element={loading ? <Loader /> : <Accomodation />} />
           <Route path="/all-rooms" element={loading ? <Loader /> : <RoomListing />} />

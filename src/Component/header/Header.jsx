@@ -36,10 +36,10 @@ export default function Header() {
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link
-                        to="/about"
-                        onClick={() => handleLinkClick("/about")}
+                        to="/about-us"
+                        onClick={() => handleLinkClick("/about-us")}
                         className={`cursor-pointer font-[400] font-Poppins ${
-                          selected === "/about"
+                          selected === "/about-us"
                             ? "text-yellow-500 hover:text-yellow-500"
                             : " text-[#515151]"
                         }`}
@@ -50,10 +50,10 @@ export default function Header() {
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link
-                        to="/accommodation"
-                        onClick={() => handleLinkClick("/accommodation")}
+                        to="/all-rooms"
+                        onClick={() => handleLinkClick("/all-rooms")}
                         className={`cursor-pointer font-[400] font-Poppins ${
-                          selected === "/accommodation"
+                          selected === "/all-rooms"
                             ? "text-yellow-500 hover:text-yellow-500"
                             : " text-[#515151]"
                         }`}

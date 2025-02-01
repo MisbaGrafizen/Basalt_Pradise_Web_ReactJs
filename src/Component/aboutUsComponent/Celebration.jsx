@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import image1 from "../../../public/Basalt Final/B4.jpg";
 
 export default function Celebration() {
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -250, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 250, behavior: "smooth" });
+    }
+  };
   return (
     <>
       <div className=" w-[100%] mx-auto  pb-[50px]  pt-[20px] ">
@@ -12,10 +25,10 @@ export default function Celebration() {
               Thrilling Celebrations at <span className=" flex font-[400] pl-[10px]">Basalt Pradise{" "}</span>
             </h1>
             <div className=" flex gap-[30px]">
-            <div className="  text-[#ff8000] cursor-pointer justify-center items-center   shadow-md flex w-[60px] rounded-[100%] bg-[#fff] h-[60px] ">
+            <div className="  text-[#ff8000] cursor-pointer justify-center items-center   shadow-md flex w-[60px] rounded-[100%] bg-[#fff] h-[60px] " onClick={scrollLeft}>
                 <i class="fa-solid fa-chevron-left text-[14px]"></i>
               </div>
-              <div className="  text-[#ff8000]  justify-center items-center  shadow-md flex w-[60px] rounded-[100%] bg-[#fff] h-[60px] ">
+              <div className="  text-[#ff8000]  justify-center items-center  shadow-md flex w-[60px] rounded-[100%] bg-[#fff] h-[60px] " onClick={scrollRight}>
                 <i class="fa-solid fa-chevron-right text-[14px]"></i>
               </div>
             </div>
@@ -23,38 +36,28 @@ export default function Celebration() {
           <div className="   flex w-[100%] justify-between ">
             <div className=" pt-[30px] w-[50%]  gap-[20px] flex flex-col  ">
               <div className="  leading-4flex flex-col  text-[23px]  font-[600] gap-[5px]   ">
-                <h1>Celebrating Abhishek Puri’s</h1>
+                <h1>Celebrating hardik bhai Patel’s</h1>
                 <div className=" w-fit">
                   <h2 className=" flex text-[#fcaf17] ">
                     {" "}
-                    7 Impactful Years at Thrillophilia
+                    3 Impactful Years at Basalt Pradise
                   </h2>
                   <div className=" flex w-[100%] bg-[#fcaf17] h-[2px]"></div>
                 </div>
               </div>
               <p className=" flex  font-[400] text-justify  w-[95%] text-[16px] text-[#515151] ">
-                “It’s been a joyride for Abhishek Puri as the VP-Growth at
-                Thrillophilia! He has emerged as a resilient leader, facing
-                challenges head-on. With innovative business strategies and
-                meaningful partnerships, Abhishek over the years has taken
-                Thrillophilia to global recognition. Whether in the boardroom or
-                on the football field, he reflects a winning spirit, making him
-                stand out in all his endeavors."
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,  .
               </p>
             </div>
-            <div className=" flex  gap-[20px] overflow-y-auto w-[42%]">
+            <div ref={scrollContainerRef} className=" flex  gap-[20px] overflow-y-auto w-[42%]">
+            {[image1, image1, image1].map((img, index) => (
               <img
-                className=" flex rounded-[10px] w-[230px] h-[320px] object-cover"
-                src={image1}
+                key={index}
+                className="rounded-[10px] w-[230px] h-[320px] object-cover"
+                src={img}
+                alt={`Celebration ${index}`}
               />
-              <img
-                className=" flex rounded-[10px] w-[230px] h-[320px] object-cover"
-                src={image1}
-              />
-              <img
-                className=" flex rounded-[10px] w-[230px] h-[320px] object-cover"
-                src={image1}
-              />
+            ))}
             </div>
           </div>
         </div>

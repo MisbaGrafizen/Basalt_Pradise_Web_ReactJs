@@ -74,22 +74,13 @@ export default function Jouurney() {
                     Infusing
                     <span className=" pl-[10px] font-[600] flex text-[#fcaf17]">
                       {" "}
-                      Thrill.
+                      Basalt.
                     </span>
                   </h1>
                 </div>
 
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                  A shared dream of Chitra Gurnani Daga and Abhishek Daga,
-                  Thrillophilia was launched in 2011. Within just a year, what
-                  began as an online platform went on to become one of India’s
-                  most-loved adventure travel service providers. From 2011-13,
-                  Thrillophilia continued to expand its horizons and even
-                  ventured into the B2B space. The company served 1000+
-                  corporate clients like Google, Cisco, SAP, Microsoft,
-                  Mercedes, and many prominent brands. We also catered to 300K+
-                  travellers and positioned ourselves as a leader in corporate
-                  travel experiences.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
                 </p>
               </div>
             </div>
@@ -101,15 +92,7 @@ export default function Jouurney() {
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                  This pivotal year witnessed strategic expansions as well as
-                  significant investments that provided Thrillophilia the boost
-                  it needed to become the market leader. In the next two years,
-                  we ventured into scaling activities and experiences, invested
-                  in technology, and launched a B2C app for bookings activities
-                  on the go. Over the next three years (2014-17) the growth rate
-                  spiked to 200% Year-on-Year. By late 2016, we shifted our base
-                  of operations from Bengaluru to Jaipur and expanded the team
-                  size to fulfil our growth objectives.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
                 </p>
               </div>
               <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
@@ -145,15 +128,7 @@ export default function Jouurney() {
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                  With a user base exceeding 3 million, Thrillophilia curated
-                  12,500+ activities across 125+ destinations and emerged as a
-                  leader in India's activities & experiences travel market. We
-                  received widespread recognition and admiration within the
-                  travel industry. Responding to the growing demand for
-                  experiential travel, we selected a few Indian destinations to
-                  venture into the multi-day tour segment in next two years. The
-                  pilot tests fuelled our confidence for this promising
-                  category.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
                 </p>
               </div>
             </div>
@@ -162,22 +137,11 @@ export default function Jouurney() {
               <div className=" flex  flex-col  gap-[20px] w-[43%]  ">
                 <div>
                   <h1 className=" flex font-[700] text-[28px] ">
-                    Thriving Together through an Apocalypse Called COVID
+                  Sed ut perspiciatis unde omnis iste natus 
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                  During the Covid-19 outbreak, while the world stood still, we,
-                  at Thrillophilia, embarked on a journey of transformation
-                  overhauling our content and technology infrastructure. Our
-                  sustained efforts and never-say-die attitude eventually
-                  resulted in a 10x increase in the company’s revenue as
-                  compared to the pre-Covid years. Recognizing the evolving
-                  travel landscape post-pandemic, our team pioneered innovative
-                  concepts, leading to the creation of 53 TakeOffs—a house of
-                  digital-first travel brands and the current parent company of
-                  Thrillophilia. In FY 2022-23, Thrillophilia bought back its
-                  30% stakes from the investors, which gave us complete autonomy
-                  and set the stage for a new chapter of innovation and growth.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
                 </p>
               </div>
               <div className=" flex  bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
