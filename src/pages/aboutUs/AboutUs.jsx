@@ -14,7 +14,7 @@ const AboutUs = () => {
     <>
       <Header />
   
-      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[100px]   w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
+      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[180px]   w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
         <AboutComponenet />
         <MasterIdea />
       </div>
