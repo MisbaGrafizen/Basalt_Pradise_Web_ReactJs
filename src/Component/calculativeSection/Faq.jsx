@@ -36,14 +36,14 @@ export default function Faq() {
   };
 
   return (
-    <div className="w-[80%]  px-[10px] flex flex-col gap-[30px]  mx-auto">
+    <div className="md:w-[80%] w-[95%]  px-[10px] flex flex-col gap-[30px]  mx-auto">
       <div className="w-[100%] flex flex-col md:gap-[20px]">
 
         <div className="flex w-[100%] gap-[30px] mt-[20px] flex-col justify-between">
           <div className="w-[100%] flex md:flex-row flex-col justify-between">
             <div className="md:w-[30%]  ">
               <img
-                className=" w-[100%] md:h-[300px] rounded-[10px]  shadow-md"
+                className=" w-[100%] md:h-[300px]  rounded-[10px]  shadow-md"
                 src={faq}
                 alt="FAQ"
               />

@@ -5,10 +5,10 @@ export default function MasterIdea() {
     <>
       <div className="w-[100%] px-[15px] pb-[30px] font-Poppins flex mx-auto">
         <div className="flex justify-between relative gap-[19px] flex-col w-[100%]">
-          <h1 className=" fledx text-[40px] font- font-[700]  text-center">
+          <h1 className=" fledx text-[25px] md:text-[40px] font- font-[700]  text-center">
             Masters of Hospitality, Vision & Growth
           </h1>
-          <p className="  flex  text-center justify-center w-[95%] text-[#515151] mx-auto text-[17px]  ">
+          <p className="  flex  text-center justify-center w-[95%] text-[#515151] mx-auto md:text-[17px]  ">
             Meet the passionate leaders of Basalt Paradise Resort who set the
             stage for unforgettable experiences. With a blend of expertise,
             creativity, and a love for exceptional service, they ensure every

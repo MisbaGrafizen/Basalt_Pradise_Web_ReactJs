@@ -45,7 +45,7 @@ export default function StaffHand() {
 
   return (
     <>
-      <div className=" px-[10px] 2xl:w-[1400px] items-center  gap-[30px] flex !bg-[#] w-[80%] mt-[0px]   h-[90%] mx-auto">
+      <div className=" px-[10px] 2xl:w-[1400px] items-center  gap-[30px] flex !bg-[#] w-[95%] md:w-[80%] mt-[0px]   h-[90%] mx-auto">
         <div className=" flex  flex-col  gap-[30px] w-[100%] ">
           <div>
             <h1 className=" flex text-[23px] font-Poppins ">
@@ -66,15 +66,14 @@ export default function StaffHand() {
               Waiting with ❤️ for you!
             </p>
           </div>
-          <div className=" flex  justify-between gap-[10px]">
-            <div className=" w-[335px] relative h-[490px] overflow-hidden rounded-[12px]">
+          <div className=" flex  w-[100%]  overflow-x-auto justify-between gap-[20px]">
+            <div className=" w-[310px] md:w-[335px] relative h-[490px] overflow-hidden rounded-[12px] flex-shrink-0">
               {images1.map((image, index) => (
                 <>
                   <img
                     key={index}
-                    className={`absolute top-0 left-0 w-[100%] h-[100%] rounded-b-lg object-cover rounded-[10px] transition-opacity duration-1000 ${
-                      currentImage1 === index ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute top-0 left-0 w-[100%] h-[100%] rounded-b-lg object-cover rounded-[10px] transition-opacity duration-1000 ${currentImage1 === index ? "opacity-100" : "opacity-0"
+                      }`}
                     src={image}
                     alt={`Image ${index + 1}`}
                   />
@@ -115,13 +114,12 @@ export default function StaffHand() {
                 </div>
               </div>
             </div>
-            <div className=" w-[335px] h-[490px]  relative rounded-[12px]">
+            <div className="  flex-shrink-0 w-[310px] md:w-[335px] h-[490px]  relative rounded-[12px]">
               {images2.map((image, index) => (
                 <img
                   key={index}
-                  className={`absolute top-0 left-0 w-[100%] h-[100%] object-cover rounded-[10px] transition-opacity duration-1000 ${
-                    currentImage2 === index ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute top-0 left-0 w-[100%] h-[100%] object-cover rounded-[10px] transition-opacity duration-1000 ${currentImage2 === index ? "opacity-100" : "opacity-0"
+                    }`}
                   src={image}
                   alt={`Image ${index + 1}`}
                 />
@@ -162,7 +160,7 @@ export default function StaffHand() {
                 </div>
               </div>
             </div>
-            <div className=" w-[335px] relative h-[490px] rounded-[12px]">
+            <div className=" flex-shrink-0 w-[310px] md:w-[335px] relative h-[490px] rounded-[12px]">
               {/* <img
                 className=" flex w-[100%] h-[100%] object-cover rounded-[10px]"
                 src={image33}
@@ -170,17 +168,16 @@ export default function StaffHand() {
               {images3.map((image, index) => (
                 <img
                   key={index}
-                  className={`absolute top-0 left-0 w-[100%] h-[100%] object-cover rounded-[10px] transition-opacity duration-1000 ${
-                    currentImage3 === index ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute top-0 left-0 w-[100%] h-[100%] object-cover rounded-[10px] transition-opacity duration-1000 ${currentImage3 === index ? "opacity-100" : "opacity-0"
+                    }`}
                   src={image}
                   alt={`Image ${index + 1}`}
                 />
               ))}
               <div className=" flex  absolute bottom-0  w-[95%]  mx-auto flex-col  left-[0px] right-0  gap-[px] ">
                 <div className=" flex items-center gap-[5px] px-[10px] font-Poppins text-[12px] text-white font-[400]">
-                <Coffee className="h-[20px] w-[20px] text-[#fff]" />
-                <Utensils className="h-[15px] w-[15px] text-[#fff]" />
+                  <Coffee className="h-[20px] w-[20px] text-[#fff]" />
+                  <Utensils className="h-[15px] w-[15px] text-[#fff]" />
                   <p>Lunch, Hi-Tea & Dinner included</p>
                 </div>
                 <div className=" flex py-[10px] bgStaff h-[150px] w-[95%] rounded-t-[10px] mx-auto  px-[15px]">

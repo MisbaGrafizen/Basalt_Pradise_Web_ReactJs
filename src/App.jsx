@@ -18,11 +18,8 @@ import Accomodation from "./pages/accomoPage/Accomodation";
 import { Root } from "postcss";
 import RoomListing from "./pages/roomListingpage/RoomListing";
 import RoomDetails from "./pages/roomDetails/RoomDetails";
-// import Cookies from 'js-cookie';
-// import PageNotFound from "./pages/DamjiPage/PageNotFound";
-// import CheackOut from "./pages/DamjiPage/CheackOut";
-// import MyBooking from "./pages/DamjiPage/mybookings/MyBooking";
-// import RoomDetails from "./pages/rooms/RoomDetails";
+import ConatctUs from "./pages/ConatctPage/ConatctUs";
+import Blogs from "../src/pages/blogs/Blogs"
 
 
 
@@ -52,47 +49,8 @@ function App() {
           <Route path="/accomdation" element={loading ? <Loader /> : <Accomodation />} />
           <Route path="/all-rooms" element={loading ? <Loader /> : <RoomListing />} />
           <Route path="/room-details" element={loading ? <Loader /> : <RoomDetails />} />
-          {/* <Route
-            path="/about-us"
-            element={loading ? <Loader /> : <AboutUs />}
-          />
-          <Route path="/all-rooms" element={loading ? <Loader /> : <Rooms />} />
-          <Route
-            path="/facilites"
-            element={loading ? <Loader /> : <Facilites />}
-          />  
-          <Route
-            path="/darshan-timing"
-            element={loading ? <Loader /> : <DarshanTiming />}
-          />
-          <Route
-            path="/gallery"
-            element={loading ? <Loader /> : <GalleryPage />}
-          />
-          <Route
-            path="/sight-seeing"
-            element={loading ? <Loader /> : <SightSeeing />}
-          />
-          <Route
-            path="/contct-us"
-            element={loading ? <Loader /> : <ContactUs />}
-          />
-          <Route
-            path="/pagenotfound"
-            element={loading ? <Loader /> : <PageNotFound />}
-          />
-          <Route
-            path="/cheackout"
-            element={loading ? <Loader /> : <CheackOut />}
-          />
-           <Route
-            path="/my-bookings"
-            element={loading ? <Loader /> : <MyBooking />}
-          />
-                     <Route
-            path="/room-details"
-            element={loading ? <Loader /> : <RoomDetails />}
-          /> */}
+          <Route path="/contact-us" element={loading ? <Loader /> : <ConatctUs />} />
+          <Route path="/blogs" element={loading ? <Loader /> : <Blogs />} />
         </Routes>
       </div>
     </>

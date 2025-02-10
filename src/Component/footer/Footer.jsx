@@ -50,8 +50,8 @@ export default function Footer() {
     // </>
 
     <footer className="bg-[#071a2d] font-Poppins text-white pt-[30px] pb-[20px]  px-6 md:px-12">
-      <div className="max-w-[92%] mx-auto flex flex-col">
-        <div className=" flex  gap-[20px] w-[100%] justify-between">
+      <div className="md:max-w-[92%] mx-auto flex flex-col">
+        <div className=" flex md:flex-row flex-col   gap-[20px] w-[100%] justify-between">
           <div className=" flex flex-col ">
             {/* Logo Section */}
             <div className="mb-">
@@ -104,7 +104,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Links Section */}
-          <div className="grid md:grid-cols-3 gap-[80px] mb-5">
+          <div className="md:grid  w-[100%]  md:w-fit flex md:grid-cols-3 mb-[40px] gap-[10px] md:gap-[80px] md:mb-5">
             {/* Discover us */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Discover us</h3>
@@ -355,11 +355,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6">
           <div className="flex flex-wrap justify-between w-[100%] gap-4 md:mb-0">
-            <span className="text-sm text-gray-400">
+            <span className="text-sm md:text-start text-center text-gray-400">
               © 2025 All Rights Reserved by Basalt Pradise || Designed and
               Developed with ❤️ by Grafizen International LLC
             </span>
-            <div className="  flex  gap-[20px]">
+            <div className="  md:flex hidden  gap-[20px]">
               <a href="#" className="text-sm text-gray-400 hover:text-white">
                 Privacy Policy
               </a>

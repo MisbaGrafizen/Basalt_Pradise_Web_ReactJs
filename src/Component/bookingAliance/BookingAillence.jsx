@@ -10,12 +10,12 @@ import logo6 from "../../../public/scrollImage/logoo.svg";
 export default function BookingAlliance() {
   return (
     <>
-      <div className="px-[10px] 2xl:w-[1400px] pb-[0px] my-[20px] items-center flex flex-col gap-[10px] w-[80%]  mx-auto">
-     
-        <h1 className="flex font-Poppins w-[100%]  items-center gap-[10px] pt-[10px] font-[500] text-[23px] mx-auto">
-        <div className="h-[2px] bg-gradient-to-r w-[310px] from-transparent to-[#ff8000] flex-grow" />
+      <div className="px-[10px] 2xl:w-[1400px] pb-[0px] my-[20px] items-center flex flex-col gap-[10px] md:w-[80%] w-[95%]  mx-auto">
+
+        <h1 className="flex font-Poppins w-[100%]  items-center gap-[10px] pt-[10px] font-[500] text-[18px] md:text-[23px] mx-auto">
+          <div className="h-[2px] bg-gradient-to-r md:w-[310px] from-transparent to-[#ff8000] flex-grow" />
           Booking Alliances
-          <div className="h-[2px] bg-gradient-to-r from-[#FF6B00] to-transparent flex-grow w-[300px]" />
+          <div className="h-[2px] bg-gradient-to-r from-[#FF6B00] to-transparent flex-grow md:w-[300px]" />
         </h1>
         <div className="relative mt-[40px]  w-full  overflow-hidden">
           {/* Sliding Container */}

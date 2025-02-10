@@ -26,7 +26,7 @@ const spotlightData = [
 
 export default function TheSpotLight() {
   return (
-    <div className="w-[80%] px-[15px] font-Poppins flex mx-auto">
+    <div className="md:w-[80%] w-[95%] px-[15px] font-Poppins flex mx-auto">
       <div className="flex flex-col gap-[30px] justify-between relative w-[100%]">
         <div className="flex flex-col">
           <h1 className="flex font-[700] text-[35px] font-Poppins">
@@ -36,11 +36,11 @@ export default function TheSpotLight() {
             Dive into a World of Ideas, Stories, News and Inspiration
           </p>
         </div>
-        <div className="flex w-[100%] justify-between gap-[20px]">
+        <div className="flex w-[100%] overflow-x-auto justify-between gap-[20px]">
           {spotlightData.map((item, index) => (
             <div
               key={index}
-              className="flex w-[330px] h-[340px] gap-[15px] flex-col rounded-[10px] p-[15px] shadow-md bg-[#f4f4f4]"
+              className="flex w-[330px] h-[340px] gap-[15px] flex-col rounded-[10px] p-[15px] flex-shrink-0  shadow-md bg-[#f4f4f4]"
             >
               <img className="w-[120px] h-[30px] rounded-[4px]" src={item.image} alt="logo" />
               <span className="flex bg-[#e0e0e0] w-[100%] h-[1px]"></span>

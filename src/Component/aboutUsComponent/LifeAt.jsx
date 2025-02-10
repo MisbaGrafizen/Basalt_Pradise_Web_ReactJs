@@ -93,25 +93,25 @@ export default function LifeAt() {
 
   return (
     <>
-      <div className="w-[100%] px-[10px] font-Poppins flex mx-auto">
+      <div className="w-[100%] md:px-[10px] font-Poppins flex mx-auto">
         <div className="flex  flex-col  gap-[30px] justify-between relative w-[100%]">
-          <div className=" flex  justify-between  items-center w-[100%]  ">
-            <div>
-              <h1 className=" text-[47px]  gap-[17px] flex  font-Poppins font-[700]">
+          <div className=" flex   flex-col md:flex-row justify-between  items-center w-[100%]  ">
+            <div className="  flex flex-col gap-[10px] w-[100%]">
+              <h1 className=" md:text-[47px] text-center   w-fit mx-auto md:mx-0 text-[26px] gap-[17px] flex  font-Poppins font-[700]">
                 Life At{" "}
                 <span className=" flex basalt-text1">Basalt Pradise</span>
               </h1>
-              <h2 className=" flex   text-[20px] text-[#515151] font-[500] ">
+              <h2 className=" flex  md:text-start text-center  md:text-[20px] text-[#515151] font-[500] ">
                 A Whirlwind of Excitement, Discovery, Innovation, & Limitless
                 Growth!
               </h2>
             </div>
-            <button className=" flex w-[160px] basalt-button h-[45px]  font-Poppins text-[14px]  text-[#fff] rounded-[6px] font-[500] justify-center items-center">
+            <button className=" flex w-[160px] basalt-button h-[45px] mt-[20px]  font-Poppins text-[13px]  text-[#fff] rounded-[6px] font-[500] justify-center items-center">
               Yes , We are Hiring!
             </button>
           </div>
           <Celebration />
-                <div className="w-[80%] mb-[25px]  mt-px] mx-auto h-[1px] bg-gradient-to-r from-transparent via-[#d8d8d8] to-transparent"></div>
+          <div className="w-[80%] mb-[25px]  mt-px] mx-auto h-[1px] bg-gradient-to-r from-transparent via-[#d8d8d8] to-transparent"></div>
           <div className="border border-gray-200 flex flex-col gap-[30px] rounded-lg overflow-hidden">
             {/* Orange top border */}
             <div className="h-[7px] bg-orange-500"></div>

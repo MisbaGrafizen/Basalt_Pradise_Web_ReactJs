@@ -102,7 +102,7 @@ export default function AboutComponent() {
     <>
       <div className="w-[100%] px-[10px] font-Poppins flex mx-auto">
         <div className="flex justify-between relative w-[100%]">
-          <div className="w-[67%] pl-[10px] h-[75%] mx-auto flex">
+          <div className="md:w-[67%] pl-[10px] h-[75%] mx-auto flex">
             <video
               className="w-full object-cover scale-[1.5] text rounded-[8px]"
               autoPlay
@@ -112,10 +112,10 @@ export default function AboutComponent() {
             >
               <source src={aboutvideo} type="video/mp4" />
             </video>
-            <div className="w-[51%] absolute text-[#fff] bottom-[15%] left-[6%] z-[10] items-start py-[10px] flex">
+            <div className="md:w-[51%] absolute md:text-[#fff] bottom-[15%] left-[6%] z-[10] items-start py-[10px] flex">
               <div className="flex flex-col">
                 <h1
-                  className="flex text-[45px] font-[600]  font-Poppins transition-all duration-500"
+                  className="flex md:text-[45px] font-[600]  font-Poppins transition-all duration-500"
                 >
                       {currentText}
                       <span className="blinking-cursor1">|</span>

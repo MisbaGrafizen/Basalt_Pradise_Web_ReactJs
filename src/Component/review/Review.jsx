@@ -142,7 +142,7 @@ export function Review({
             <div className="h-[2px] bg-gradient-to-r w-[310px] from-transparent to-[#ff8000] flex-grow" />
 
             {/* Heading text */}
-            <h1 className="text-2xl md:text-3xl lg:text-[29px] text-[#515151] font-Poppins font-[400] whitespace-nowrap">
+            <h1 className="text-[17px] md:text-3xl lg:text-[29px] text-[#515151] font-Poppins font-[400] whitespace-nowrap">
               People Love Our <span className="text-[#FF6B00]">Basalt</span>{" "}
               Paradise
             </h1>
@@ -153,8 +153,8 @@ export function Review({
         </div>
       </div>
 
-      <div className=" 2xl:w-[1400px] items-center   gap-[30px] flex !bg-[#] w-[80%] mt-[-30px]   h-[90%] mx-auto">
-        <div className="flex flex-col w-[250px] relative justify-center gap p-4">
+      <div className=" 2xl:w-[1400px] items-center   md:gap-[30px]  gap-[10px] flex md:flex-row flex-col !bg-[#] md:w-[80%] mt-[-30px] w-[95%]   h-[90%] mx-auto">
+        <div className="flex flex-col w-[250px] relative justify-center gap md:p-4">
           {/* Stars in curved arrangement */}
           <div className="relative h-16 w-full flex  items-center ">
             {stars.map((style, i) => (
@@ -213,17 +213,17 @@ export function Review({
             from over all the Globe
           </p>
         </div>
-        <div className=" w-[0.2px] h-[190px] bg-[#e3e2e2fc] o"></div>
+        <div className=" w-[0.2px] md:flex hidden  h-[190px] bg-[#e3e2e2fc] o"></div>
         {/* <Slider className="pt-2 flex" {...testimoniyalslider}> */}
-        <div className=" flex ml-[10px] gap-[20px] ">
-          <div className=" flex w-[355px] mr-[10px] h-[200px]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
+        <div className=" flex md:ml-[10px] justify-start md:w-fit  overflow-x-auto mx-auto md:mx-0 w-[90%] md:gap-[20px] ">
+          <div className=" flex w-[353px] md:w-[355px] mr-[10px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
             <div className=" flex flex-col gap-[10px]">
               <div className=" flex   gap-[15px]">
                 <div className=" flex w-[40px] h-[40px]  overflow-hidden rounded-[50%] ">
                   <img className=" flex w-[100%] h-[100%]" src={vector} />
                 </div>
                 <div className=" flex flex-col gap-[px]">
-                  <p className="   flex text-[#000] leading-5 font-[500] font-Poppins">
+                  <p className="   flex text-[#000] leading-5 font-[500] font-Poppins text-[13px] md:text-[16px]">
                     Darshit Mayurkumar Adesara
                   </p>
                   <div className=" flex font-Poppins gap-[5px] ">
@@ -237,25 +237,25 @@ export function Review({
                 provide during our stay in ...
               </div>
               <div className=" flex gap-[10px] justify-between mt-[5px]">
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
@@ -264,14 +264,14 @@ export function Review({
               </div>
             </div>
           </div>
-          <div className=" flex w-[355px] h-[200px]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
+          <div className=" flex w-[353px] md:w-[355px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
             <div className=" flex flex-col gap-[10px]">
               <div className=" flex   gap-[15px]">
                 <div className=" flex w-[40px] h-[40px]  overflow-hidden rounded-[50%] ">
                   <img className=" flex w-[100%] h-[100%]" src={vector} />
                 </div>
                 <div className=" flex flex-col gap-[px]">
-                  <p className="   flex text-[#000] leading-5 font-[500] font-Poppins">
+                  <p className="   flex text-[#000] leading-5 font-[500] font-Poppins text-[13px] md:text-[16px]">
                     Darshit Mayurkumar Adesara
                   </p>
                   <div className=" flex font-Poppins gap-[5px] ">
@@ -285,25 +285,25 @@ export function Review({
                 provide during our stay in ...
               </div>
               <div className=" flex gap-[10px] justify-between mt-[5px]">
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}
                   />
                 </div>
-                <div className=" flex w-[70px] h-[60px] rounded-[10px]">
+                <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
                     src={image1}

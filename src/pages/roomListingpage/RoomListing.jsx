@@ -73,7 +73,7 @@ const HotelCard = ({
 
   return (
     <div className="bg-white  border-[#e5eaff] w-[100%] rounded-lg border mb-[10px] relative flex flex-col   overflow-hidden">
-      <div className="flex relative  w-[100%]   md:flex-row">
+      <div className="flex  flex-col relative  w-[100%]   md:flex-row">
         {/* Left Section - Image Gal lery */}
         <div className="relative  h-[243px] md:w-[275px]">
           {/* Sponsored Badge */}
@@ -128,7 +128,7 @@ const HotelCard = ({
         </div>
 
         {/* Right Section - Details */}
-        <div className="flex-1 py-[8px] font-Poppins  w-[40%] pr-[30px] pl-[10px]">
+        <div className="flex-1 py-[8px] font-Poppins  md:w-[40%] pr-[30px] pl-[10px]">
           <div className="flex justify-between items-start gap-4">
             <div>
               <h2 className="text-[20px] font-[600] leading-7   text-gray-900">
@@ -195,8 +195,8 @@ const HotelCard = ({
             </div>
           </div>
         </div>
-        <div className="flex-1 py-[8px]   font-Poppins max-w-[220px] border-l pr-[20px]">
-          <div className="text-right flex flex-col  gap-[5px]">
+        <div className="flex-1 py-[8px]  px-[10px]  font-Poppins md:max-w-[220px] border-l md:pr-[20px]">
+          <div className="text-left flex flex-col  gap-[5px]">
             <div className="text-[#0066b2] text-[13px]  font-bold">
               {ratingText}
             </div>
@@ -208,14 +208,14 @@ const HotelCard = ({
             </div>
           </div>
 
-          <div className="flex   z-[12] mt-[20px] justify-end">
-            <div className="text-right w-[100%] ">
+          <div className="flex w-[100%] md:w-fit   z-[12]  relative  justify-start">
+            <div className="text-left w-[100%] ">
               {originalPrice && (
                 <div className="text-[#4a4a4a] text-[10px] line-through text-base">
                   ₹{originalPrice.toLocaleString()}
                 </div>
               )}
-              <div className="flex items-baseline gap-2 justify-end">
+              <div className="flex items-baseline gap-2 justify-start">
                 <span className="text-[22px] font-[600]  text-black">
                   ₹{discountedPrice.toLocaleString()}
                 </span>
@@ -223,9 +223,9 @@ const HotelCard = ({
               <div className="text-sm text-[400] text -[12] text-[#4a4a4a]  ">
                 + ₹{taxes.toLocaleString()} taxes & fees
               </div>
-              <div className=" flex justify-end mt-[5px]">
+              <div className=" flex justify-center mt-[5px]">
                 <div
-                  className=" flex w-[120px]  mt-[4px] cursor-pointer h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
+                  className=" flex md:w-[120px] w-[98%]   mt-[4px] cursor-pointer h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
                   onClick={handleDetails}
                 >
                   <p>View Details</p>
@@ -353,15 +353,15 @@ export default function RoomListing() {
       <div className="flex flex-col w-full font-Poppins pt-[110px] ">
         {/* <div className="hero-background"></div> */}
 
-        <div className="w-[80%]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
-          <div className="flex md:w-[300px] flex-col gap-[3px] h-[300px] mb-6">
+        <div className="md:w-[80%] w-[90%]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
+          <div className="md:flex  hidden md:w-[300px] flex-col gap-[3px] h-[300px] mb-6">
             <img className="rounded-[8px]  w-full" src={banner2} alt="Banner" />
             <img className="rounded-[8px]  w-full" src={banner1} alt="Banner" />
             <img className="rounded-[8px]  w-full" src={banner3} alt="Banner" />
           </div>
           <div className="w-[90%] mx-auto  md:h-[89vh] 2xl:h-[100%] gap-[10px] flex flex-col overflow-y-auto ">
-            <div className=" flex text-[30px] font-[600] ">
-              Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  w-[30px] h-[40px]" src={stars} />
+            <div className=" flex md:flex-row flex-col text-[30px] font-[600] ">
+              Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
             </div>
             {hotels.slice(0, 5).map((hotel, index) => (
               <HotelCard key={index} {...hotel} />

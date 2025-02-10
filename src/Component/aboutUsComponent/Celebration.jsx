@@ -18,13 +18,13 @@ export default function Celebration() {
   return (
     <>
       <div className=" w-[100%] mx-auto  pb-[50px]  pt-[20px] ">
-        <div className="bg-[#f4f6f9]  gap-[30px] shadow-md  font-Poppins flex flex-col rounded-[14px] py-[30px]  px-[30px] border border-gray-100  ">
-          <div className=" flex justify-between items-center w-[100%] ">
-            <h1 className=" flex text-[30px]  font-[600]">
+        <div className="bg-[#f4f6f9]  gap-[30px] shadow-md  font-Poppins flex flex-col rounded-[14px] py-[30px] px-[20px]  md:px-[30px] border border-gray-100  ">
+          <div className=" flex  justify-between items-center w-[100%] ">
+            <h1 className=" flex md:flex-row flex-col  md:text-[30px] text-[25px]  font-[600]">
               {" "}
-              Thrilling Celebrations at <span className=" flex font-[400] pl-[10px]">Basalt Pradise{" "}</span>
+              Thrilling Celebrations at <b className=" flex font-[400] md:pl-[10px]">Basalt Pradise{" "}</b>
             </h1>
-            <div className=" flex gap-[30px]">
+            <div className=" hidden md:flex gap-[30px]">
             <div className="  text-[#ff8000] cursor-pointer justify-center items-center   shadow-md flex w-[60px] rounded-[100%] bg-[#fff] h-[60px] " onClick={scrollLeft}>
                 <i class="fa-solid fa-chevron-left text-[14px]"></i>
               </div>
@@ -33,8 +33,8 @@ export default function Celebration() {
               </div>
             </div>
           </div>
-          <div className="   flex w-[100%] justify-between ">
-            <div className=" pt-[30px] w-[50%]  gap-[20px] flex flex-col  ">
+          <div className="  flex md:flex-row flex-col  w-[100%] justify-between ">
+            <div className=" pt-[30px] order-1 md:order-2    md:w-[50%]  gap-[20px] flex flex-col  ">
               <div className="  leading-4flex flex-col  text-[23px]  font-[600] gap-[5px]   ">
                 <h1>Celebrating hardik bhai Patel’s</h1>
                 <div className=" w-fit">
@@ -49,7 +49,7 @@ export default function Celebration() {
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,  .
               </p>
             </div>
-            <div ref={scrollContainerRef} className=" flex  gap-[20px] overflow-y-auto w-[42%]">
+            <div ref={scrollContainerRef} className=" flex  gap-[20px] overflow-y-auto md:w-[42%]">
             {[image1, image1, image1].map((img, index) => (
               <img
                 key={index}

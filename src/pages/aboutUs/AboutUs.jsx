@@ -14,13 +14,13 @@ const AboutUs = () => {
     <>
       <Header />
   
-      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[180px]   w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
+      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[180px]   w-[95%] md:w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
         <AboutComponenet />
         <MasterIdea />
       </div>
       <Jouurney />
 
-      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[80px]   w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
+      <div className=" flex  2xl:w-[1400px] !bg-[#] pt-[80px]  w-[95%]  md:w-[81%] flex-col gap-[34px] h-[100%] mx-auto">
         <LifeAt />
       
         <AlertBanner />
