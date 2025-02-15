@@ -20,6 +20,7 @@ import RoomListing from "./pages/roomListingpage/RoomListing";
 import RoomDetails from "./pages/roomDetails/RoomDetails";
 import ConatctUs from "./pages/ConatctPage/ConatctUs";
 import Blogs from "../src/pages/blogs/Blogs"
+import MyBookings from "./pages/myBookings/MyBookings";
 
 
 
@@ -51,7 +52,9 @@ function App() {
           <Route path="/room-details" element={loading ? <Loader /> : <RoomDetails />} />
           <Route path="/contact-us" element={loading ? <Loader /> : <ConatctUs />} />
           <Route path="/blogs" element={loading ? <Loader /> : <Blogs />} />
+          <Route path="/bookings" element={loading ? <Loader /> : <MyBookings />} />
         </Routes>
+
       </div>
     </>
   );

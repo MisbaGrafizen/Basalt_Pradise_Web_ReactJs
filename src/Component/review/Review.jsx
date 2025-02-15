@@ -76,7 +76,8 @@ const PrevArrow = ({ onClick }) => (
     <i className="fa-solid fa-arrow-left text-[24px] text-[#FF6B00]" />
   </div>
 );
-export function Review({
+export function 
+Review({
   rating = 4.8,
   totalReviews = 21656,
   location = "Dubai",
