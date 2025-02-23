@@ -154,7 +154,7 @@ Review({
         </div>
       </div>
 
-      <div className=" 2xl:w-[1400px] items-center   md:gap-[30px]  gap-[10px] flex md:flex-row flex-col !bg-[#] md:w-[80%] mt-[-30px] w-[95%]   h-[90%] mx-auto">
+      <div className=" 2xl:w-[1400px] items-center   md:gap-[30px]  gap-[10px] flex md:flex-row flex-col !bg-[#] md:w-[70%] mt-[-30px] w-[95%]   h-[90%] mx-auto">
         <div className="flex flex-col w-[250px] relative justify-center gap md:p-4">
           {/* Stars in curved arrangement */}
           <div className="relative h-16 w-full flex  items-center ">
@@ -216,8 +216,8 @@ Review({
         </div>
         <div className=" w-[0.2px] md:flex hidden  h-[190px] bg-[#e3e2e2fc] o"></div>
         {/* <Slider className="pt-2 flex" {...testimoniyalslider}> */}
-        <div className=" flex md:ml-[10px] justify-start md:w-fit  overflow-x-auto mx-auto md:mx-0 w-[90%] md:gap-[20px] ">
-          <div className=" flex w-[353px] md:w-[355px] mr-[10px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
+        <div className=" flex md:ml-[10px] justify-start  w-[90%]  overflow-x-auto mx-auto md:mx-0 md:w-[80%] md:gap-[20px] ">
+          <div className=" flex w-[357px] md:w-[355px] mr-[10px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] flex-shrink-0 ">
             <div className=" flex flex-col gap-[10px]">
               <div className=" flex   gap-[15px]">
                 <div className=" flex w-[40px] h-[40px]  overflow-hidden rounded-[50%] ">
@@ -265,7 +265,7 @@ Review({
               </div>
             </div>
           </div>
-          <div className=" flex w-[353px] md:w-[355px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px] ">
+          <div className=" flex w-[357px] md:w-[355px] h-[100%]  p-[15px] border-[1.5px] shadow-sm border-[#e3e2e2fc] rounded-[10px]  flex-shrink-0">
             <div className=" flex flex-col gap-[10px]">
               <div className=" flex   gap-[15px]">
                 <div className=" flex w-[40px] h-[40px]  overflow-hidden rounded-[50%] ">

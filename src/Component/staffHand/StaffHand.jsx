@@ -25,21 +25,21 @@ export default function StaffHand() {
   useEffect(() => {
     const interval1 = setInterval(() => {
       setCurrentImage1((prev) => (prev + 1) % images1.length);
-    }, 3200); // 3 seconds
+    }, 1200); // 3 seconds
     return () => clearInterval(interval1);
   }, [images1.length]);
 
   useEffect(() => {
     const interval2 = setInterval(() => {
       setCurrentImage2((prev) => (prev + 1) % images2.length);
-    }, 3600); // 5 seconds
+    }, 1200); // 5 seconds
     return () => clearInterval(interval2);
   }, [images2.length]);
 
   useEffect(() => {
     const interval3 = setInterval(() => {
       setCurrentImage3((prev) => (prev + 1) % images2.length);
-    }, 3700); // 5 seconds
+    }, 1200); // 5 seconds
     return () => clearInterval(interval3);
   }, [images3.length]);
 

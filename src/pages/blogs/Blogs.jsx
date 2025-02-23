@@ -82,7 +82,7 @@ export default function Blogs() {
                     ))}
                 </div>
 
-                <div className=" h-[550px] border-[1.5px]  md:flex hidden border-[#464646] bg-white shadow p-[17px] rounded-[10px]">
+                <div className=" h-[550px] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[17px] rounded-[10px]">
                     <div id="infoProduto">
                         <div className="blog-sidebar">
                             {/* Search Bar */}
@@ -145,7 +145,7 @@ export default function Blogs() {
                             <div className="ak-height-50 ak-height-lg-30"></div>
 
                             {/* Popular Tags */}
-                            <div className="sidebar-section  mt-[10px] px-[10px]">
+                            <div className="sidebar-section  mt-[20px] px-[10px]">
                                 <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
                                     Popular Tags
                                 </h5>

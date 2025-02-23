@@ -196,7 +196,7 @@ const HotelCard = ({
           </div>
         </div>
         <div className="flex-1 py-[8px]  px-[10px]  font-Poppins md:max-w-[220px] border-l md:pr-[20px]">
-          <div className="text-left flex flex-col  gap-[5px]">
+          <div className="text-left md:text-right flex flex-col  gap-[5px]">
             <div className="text-[#0066b2] text-[13px]  font-bold">
               {ratingText}
             </div>
@@ -208,14 +208,14 @@ const HotelCard = ({
             </div>
           </div>
 
-          <div className="flex w-[100%] md:w-fit   z-[12]  relative  justify-start">
-            <div className="text-left w-[100%] ">
+          <div className="flex w-[100%] md:w-[100%]   z-[12]  relative  md:justify-end justify-start">
+            <div className="text-left md:text-right w-[100%] ">
               {originalPrice && (
                 <div className="text-[#4a4a4a] text-[10px] line-through text-base">
                   ₹{originalPrice.toLocaleString()}
                 </div>
               )}
-              <div className="flex items-baseline gap-2 justify-start">
+              <div className="flex items-baseline gap-2 md:justify-end justify-start">
                 <span className="text-[22px] font-[600]  text-black">
                   ₹{discountedPrice.toLocaleString()}
                 </span>
@@ -225,7 +225,7 @@ const HotelCard = ({
               </div>
               <div className=" flex justify-center mt-[5px]">
                 <div
-                  className=" flex md:w-[120px] w-[98%]   mt-[4px] cursor-pointer h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
+                  className=" flex md:w-[120px] w-[98%]   md:absolute bottom-[-60px] right-[0px]  ab cursor-pointer h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
                   onClick={handleDetails}
                 >
                   <p>View Details</p>
@@ -281,7 +281,7 @@ export default function RoomListing() {
       ratingText: "Excellent",
       ratings: 29,
       sponsored: true,
-      originalPrice: null,
+      originalPrice: 6000,
       discountedPrice: 4000,
       taxes: 3560,
       amenities: ["Gym", "Restaurant", "24-hour Room Service"],

@@ -214,7 +214,7 @@ export default function Header() {
             <div className="flex w-full">
               <div className="flex w-full relative justify-between">
                 <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Logo" />
-                <div className="flex w-[76%]  mt-[5px] items-center md:items-start justify-between">
+                <div className="flex w-[68%]  mt-[5px] items-center md:items-start justify-between">
                   <div>
                     <div className="xl:text-[15px] gap-[15px] text-[#000] items-center pl-[20px] font-Montserrat mt-[-0.4%] flex font-[600] justify-end md36:hidden md:flex">
                       <Link
@@ -254,7 +254,7 @@ export default function Header() {
                         Accommodation
                       </Link>
 
-                      <span className="flex h-[24px] w-[1px] bg-black"></span>
+                  <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link
                         to="/amenities"
@@ -265,7 +265,7 @@ export default function Header() {
                           }`}
                       >
                         Amenities
-                      </Link>
+                      </Link> 
 
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
@@ -279,9 +279,9 @@ export default function Header() {
                       >
                         Blogs
                       </Link>
-                      <span className="flex h-[24px] w-[1px] bg-black"></span>
+                      {/* <span className="flex h-[24px] w-[1px] bg-black"></span> */}
 
-                      <Link
+                      {/* <Link
                         to="/memories"
                         onClick={() => handleLinkClick("/memories")}
                         className={`cursor-pointer font-[400] font-Poppins ${selected === "/memories"
@@ -290,7 +290,7 @@ export default function Header() {
                           }`}
                       >
                         Memories
-                      </Link>
+                      </Link> */}
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link

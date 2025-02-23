@@ -12,7 +12,7 @@ export default function BannerSection() {
         {/* Content container */}
         <div className="relative z-20  px-[20px] py-[18px] flex items-center">
           <div className="w-full max-w-xl  text-white">
-            <h2 className="text-[20px] w-[720px] leading-7 text-justify  font-[600] mb-[10px] font-Poppins ">
+            <h2 className="md:placeholder:text-[20px] w-[720px] leading-7 text-justify  font-[600] mb-[10px] font-Poppins ">
             Destination wedding ? 
             <br/> Plan a Luxurious Wedding with <br/>  complimentary  Honeymoon packages!
 
@@ -34,7 +34,7 @@ export default function BannerSection() {
             <img
               src={bgimage}
               alt="Group of friends enjoying sunset"
-              className="!w-[1700px] p h-full "
+              className="!md:w-[1800px] w-[100%] p object-cover h-[230px] md:h-full "
             />
           </div>  
           {/* Right image */}

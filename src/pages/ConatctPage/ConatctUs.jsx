@@ -213,7 +213,7 @@ export default function ContactUs() {
                 <div className="w-[100%] justify-between  flex flex-col gap-[20px] md:flex-row">
                   <div className="md:w-[45%] gap-[29px] flex flex-col">
                     <div className="w-[100%] flex justify-between flex-col ">
-                      <p className=" font-[600]     font-lucida-bright-regular text-[#ffa93a]  text-[30px]">
+                      <p className=" font-[600] basalt-text     font-lucida-bright-regular text-[#ffa93a]  text-[30px]">
                         We would love to hear from you.
                       </p>
                       <p className="w-[100%]  text-[15px] md:text-[16px] font-lucida-bright-regular text-[#273338]">
@@ -224,7 +224,7 @@ export default function ContactUs() {
                     </div>
                     <div className="border-[1px] bg-[#fff] shadow-lg py-[15px] px-[18px] rounded-[10px] mt-[13px] md:mt-[0px] gap-[7px] flex flex-col w-[100%]">
                       <div className="flex  gap-[20px] border-b-[1.5px] pb-[7px] justify-start">
-                        <i className=" text-[20px] mt-[5px] text-[#ffa93a] fa-solid fa-phone-volume"></i>
+                        <i className=" text-[20px] mt-[5px] basalt-text text-[#ffa93a] fa-solid fa-phone-volume"></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular  text-[17px]">
                             Customer Care Number
@@ -235,7 +235,7 @@ export default function ContactUs() {
                         </div>
                       </div>
                       <div className="flex  gap-[20px] border-b-[1.5px] pb-[7px] justify-start">
-                        <i className=" text-[20px] mt-[5px] text-[#ffa93a] fa-solid fa-envelope"></i>
+                        <i className=" text-[20px] mt-[5px] basalt-text text-[#ffa93a] fa-solid fa-envelope"></i>
                         <div>
                           <p className="font-[600]  font-lucida-bright-regular text-[17px]">
                             Business inquiry
@@ -246,7 +246,7 @@ export default function ContactUs() {
                         </div>
                       </div>
                       <div className="flex  gap-[20px] border-b-[1.5px] pb-[7px] justify-start">
-                        <i className=" text-[20px] mt-[5px] text-yellow-500 fa-solid fa-envelope"></i>
+                        <i className=" text-[20px] mt-[5px] basalt-text text-yellow-500 fa-solid fa-envelope"></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular text-[17px]">
                             Customer care
@@ -257,7 +257,7 @@ export default function ContactUs() {
                         </div>
                       </div>
                       <div className="flex  gap-[20px]  pt-[7px] justify-start">
-                        <i className=" text-[20px] mt-[5px] text-yellow-500 fa-solid fa-location-dot "></i>
+                        <i className=" text-[20px] mt-[5px] basalt-text text-yellow-500 fa-solid fa-location-dot "></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular  text-[17px]">
                             Company Info
