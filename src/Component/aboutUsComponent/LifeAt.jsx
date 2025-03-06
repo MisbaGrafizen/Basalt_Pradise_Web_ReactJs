@@ -69,7 +69,7 @@
 // }
 
 import React, { useEffect, useState } from "react";
-import image1 from "../../../public/Basalt Final/B5.jpg";
+import image1 from "../../../public/Basalt/B5.jpg";
 import logo from "../../../public/logo.png";
 import Celebration from "./Celebration";
 

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import image1 from "../../../public/Basalt Final/B4.jpg";
+import image1 from "../../../public/Basalt/B4.jpg";
 
 export default function Celebration() {
   const scrollContainerRef = useRef(null);

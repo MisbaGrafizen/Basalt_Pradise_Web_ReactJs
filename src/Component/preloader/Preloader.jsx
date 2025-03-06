@@ -10,13 +10,13 @@ export default function Preloader() {
     // Increment the percentage
     const interval = setInterval(() => {
       setPercent((prev) => {
-        if (prev >= 100) {
+        if (prev >= 170) {
           clearInterval(interval);
           setTimeout(() => {
             setHideAnimation(true); // Trigger hide animation
-            setTimeout(() => setShowLoader(false), 700); // Allow animation to complete
-          }, 1000); // Brief pause at 100%
-          return 100;
+            setTimeout(() => setShowLoader(false), 1000); // Allow animation to complete
+          }, 1100); // Brief pause at 100%
+          return 170;
         }
         return prev + 1;
       });

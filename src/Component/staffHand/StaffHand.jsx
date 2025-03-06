@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import stars from "../../../public/staffhand/stars1.png";
-import image1 from "../../../public/Basalt Final/B10.jpg";
-import image11 from "../../../public/Basalt Final/B15.jpg";
-import image2 from "../../../public/Basalt Final/B12.jpg";
-import image22 from "../../../public/Basalt Final/B14.jpg";
-import image222 from "../../../public/Basalt Final/B11.jpg";
-import image3 from "../../../public/Basalt Final/B5.jpg";
-import image33 from "../../../public/Basalt Final/B1.jpg";
-import image333 from "../../../public/Basalt Final/B3.jpg";
+import image1 from "../../../public/Basalt/B10.jpg";
+import image11 from "../../../public/Basalt/B15.jpg";
+import image2 from "../../../public/Basalt/B12.jpg";
+import image22 from "../../../public/Basalt/B14.jpg";
+import image222 from "../../../public/Basalt/B11.jpg";
+import image3 from "../../../public/Basalt/B5.jpg";
+import image33 from "../../../public/Basalt/B1.jpg";
+import image333 from "../../../public/Basalt/B3.jpg";
 import breakicon from "../../../public/staffhand/brekfast.jpeg";
 import { Utensils, Coffee } from "lucide-react";
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import blog1 from "../../../public/Basalt Final/B5.jpg"
-import blog2 from "../../../public/Basalt Final/B6.jpg"
-import blog3 from "../../../public/Basalt Final/B7.jpg"
+import blog1 from "../../../public/Basalt/B5.jpg"
+import blog2 from "../../../public/Basalt/B6.jpg"
+import blog3 from "../../../public/Basalt/B7.jpg"
 import Header from '../../Component/header/Header'
 
 

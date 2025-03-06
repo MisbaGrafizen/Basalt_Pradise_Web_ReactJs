@@ -27,11 +27,12 @@ export default function Home() {
   <Faq />
           <TheSpotLight />
           <div>
-          <Footer />
+        
 
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

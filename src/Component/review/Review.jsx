@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import vector from "../../../public/review/profile.jpeg";
-import image1 from "../../../public/Basalt Final/B2.jpg";
+import image1 from "../../../public/Basalt/B2.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

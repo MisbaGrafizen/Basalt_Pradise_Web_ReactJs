@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import banner1 from "../../../public/Basalt Final/B7.jpg";
-import banner2 from "../../../public/Basalt Final/B11.jpg";
-import banner3 from "../../../public/Basalt Final/B10.jpg";
+import banner1 from "../../../public/Basalt/B7.jpg";
+import banner2 from "../../../public/Basalt/B11.jpg";
+import banner3 from "../../../public/Basalt/B10.jpg";
 
 
 import { useNavigate } from "react-router-dom";

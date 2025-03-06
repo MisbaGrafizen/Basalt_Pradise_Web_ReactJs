@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import imag1 from "../../../public/Basalt Final/B1.jpg";
-import imag2 from "../../../public/Basalt Final/B6.jpg";
-import imag3 from "../../../public/Basalt Final/B3.jpg";
-import imag4 from "../../../public/Basalt Final/B9.jpg";
+import imag1 from "../../../public/Basalt/B1.jpg";
+import imag2 from "../../../public/Basalt/B6.jpg";
+import imag3 from "../../../public/Basalt/B3.jpg";
+import imag4 from "../../../public/Basalt/B9.jpg";
 
 export default function Jouurney() {
   const [scrollYProgress, setScrollYProgress] = useState(0);

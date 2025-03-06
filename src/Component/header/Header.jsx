@@ -305,7 +305,7 @@ export default function Header() {
                       </Link>
                     </div>
                   </div>
-                  <button className="md:mt-[-7px] flex w-[115px] gap-[10px] h-[33px] text-[14px] font-[500] rounded-[5px] basalt text-[#fff] text-center justify-center items-center" onClick={handleloginOpen}>
+                  <button className="md:mt-[-7px] flex w-[90px] gap-[10px] h-[33px] text-[14px] font-[500] rounded-[5px] basalt text-[#fff] text-center justify-center items-center" onClick={handleloginOpen}>
                     <i className="fa-solid fa-user"></i>
                     <span className="bg-white flex w-[2px] h-[20px]"></span>
                     Login
