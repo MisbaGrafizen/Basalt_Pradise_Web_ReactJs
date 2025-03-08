@@ -348,7 +348,7 @@ width: 10px !important;
   }
 
   to {
-    transform: translateY(-2%);
+    transform: translateY(1%);
   }
 }
 
@@ -357,7 +357,7 @@ width: 10px !important;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 9999;
   background: black;
   display: flex;

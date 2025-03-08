@@ -49,7 +49,7 @@ export default function Footer() {
     //   </div>
     // </>
 
-    <footer className="bg-[#071a2d] font-Poppins text-white pt-[30px] pb-[20px]  px-6 md:px-12">
+    <footer className="bg-[#071a2d] font-Poppins  text-white pt-[30px] md:pb-[20px]  pb-[110px] px-6 md:px-12">
       <div className="md:max-w-[92%] mx-auto flex flex-col">
         <div className=" flex md:flex-row flex-col   gap-[20px] w-[100%] justify-between">
           <div className=" flex flex-col ">

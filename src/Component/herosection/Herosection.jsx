@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className=" flex  w-[100%] md:pl-[10px] pt-[90px] h-[100%]">
         {/* <img className=' rounded-[6px] w-[80%] h-[87vh]  mx-auto' src={mainbg} /> */}
 
-        <div className="rounded-[10px] shadow-sm custom-sahdow  mx-auto md:w-[80%] 2xl:w-[100%] w-[90%]  md:h-[87vh]">
+        <div className="rounded-[10px] shadow-sm custom-sahdow  mx-auto md:w-[80%] 2xl:w-[100%] h-[30vh] w-[87%]  md:h-[87vh]">
           <video
             className=" w-[100%] h-[100%] scale-[0.1px]  rounded-[7px] object-cover  mx-auto"
             autoPlay

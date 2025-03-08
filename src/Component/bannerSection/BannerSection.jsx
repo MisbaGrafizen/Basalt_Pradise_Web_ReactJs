@@ -5,14 +5,14 @@ import bgimage from "../../../public/banner/bgimage-2.jpg"
 export default function BannerSection() {
   return (
     <>
-      <div className="relative  overflow-hidden rounded-xl  px-[10px] 2xl:w-[1400px] items-center   gap-[30px] flex !bg-[#] w-[79%]   h-[230px] mx-auto">
+      <div className="relative  overflow-hidden rounded-xl md:px-[10px] 2xl:w-[1400px] items-center   gap-[30px] flex !bg-[#] md:w-[79%]  w-[90%]  h-[230px] mx-auto">
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0000]/100 to-transparent z-10" />
 
         {/* Content container */}
         <div className="relative z-20  px-[20px] py-[18px] flex items-center">
           <div className="w-full max-w-xl  text-white">
-            <h2 className="md:placeholder:text-[20px] w-[720px] leading-7 text-justify  font-[600] mb-[10px] font-Poppins ">
+            <h2 className="md:placeholder:text-[20px] w-[720px] text-[16px] md:text-[20px] leading-7 text-justify  font-[600] mb-[10px] font-Poppins ">
             Destination wedding ? 
             <br/> Plan a Luxurious Wedding with <br/>  complimentary  Honeymoon packages!
 

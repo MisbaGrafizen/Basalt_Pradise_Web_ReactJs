@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { DatePicker } from "antd";
-import image1 from "../../../public/hero/1.jpg";
-import image2 from "../../../public/hero/2.jpg";
-import image3 from "../../../public/hero/3.jpg";
-import image4 from "../../../public/hero/4.jpg";
+import image1 from "../../../public/newRoom/image1.avif";
+import image2 from "../../../public/newRoom/image2.avif";
+import image3 from "../../../public/newRoom/image3.avif";
+import image4 from "../../../public/newRoom/image4.avif";
 import stars from "../../../public/staffhand/stars1.png";
 import image11 from "../../../public/Gallery/img1.jpg";
 import image22 from "../../../public/Gallery/img2.jpg";
@@ -274,35 +274,35 @@ export default function RoomListing() {
   // };
   const hotels = [
     {
-      name: "European Plan",
-      location: " Zen Room Only ",
+      name: "Zen Room",
+      location: " Fits 2 Adults ",
       distance: "Experience a serene stay in our Zen Room,",
       rating: 4.7,
       ratingText: "Excellent",
       ratings: 29,
       sponsored: true,
-      originalPrice: 6000,
-      discountedPrice: 4000,
-      taxes: 3560,
+      originalPrice: 5900,
+      discountedPrice: 5015 ,
+      taxes: 1239,
       amenities: ["Gym", "Restaurant", "24-hour Room Service"],
       images: [image1, image2, image3, image4],
-      features: ["Free Cancellation", "Breakfast Included"],
+      features: ["Wi-Fi", "Air Conditioning","Housekeeping"],
       description: null,
       noCostEmi: false,
     },
     {
-      name: "Modified American Plan",
-      location: "Villa with Private Pool",
-      distance: "similique sunt in culpa qui officia deserunt",
+      name: "Villa with Private Pool",
+      location: "Garden View | King Bed",
+      distance: "Halol, 15 minutes walk to Champaner-Pavagadh Archaeological Park",
       rating: 4.1,
       ratingText: "Very Good",
       ratings: 8074,
       sponsored: false,
-      originalPrice: 26018,
-      discountedPrice: 16000,
-      taxes: 5971,
-      amenities: ["Jacuzzi", "Spa"],
-      images: [image1, image2, image3, image4],
+      originalPrice: 18400,
+      discountedPrice: 15640,
+      taxes: 4968,
+      amenities: ["Gym", "Restaurant", "24-hour Room Service"],
+      images: [image4, image3, image2, image1],
       features: [ "Breakfast Included","Free Cancellation till 24 hrs before check in"],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",

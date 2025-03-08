@@ -21,6 +21,7 @@ import RoomDetails from "./pages/roomDetails/RoomDetails";
 import ConatctUs from "./pages/ConatctPage/ConatctUs";
 import Blogs from "../src/pages/blogs/Blogs"
 import MyBookings from "./pages/myBookings/MyBookings";
+import BottomBar from "./Component/bottomBar/BottomBar";
 
 
 
@@ -56,6 +57,8 @@ function App() {
         </Routes>
 
       </div>
+
+      <BottomBar />
     </>
   );
 }

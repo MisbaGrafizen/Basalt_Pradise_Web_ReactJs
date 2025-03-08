@@ -10,6 +10,7 @@ import NoticeCo from "../../Component/notice/NoticeCo";
 import TheSpotLight from "../../Component/spotlight/TheSpotLight";
 import Preloader from "../../Component/preloader/Preloader";
 import Faq from "../../Component/calculativeSection/Faq";
+import Gallery from "../../Component/gallery/Gallery";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <div className=" w-[100%]">
         <div className=" 2xl:w-[1400px] !bg-[#]    flex flex-col gap-[62px] h-[100%] mx-auto">
           <HeroSection />
+          <Gallery />
           <Review />
           <StaffHand />
           

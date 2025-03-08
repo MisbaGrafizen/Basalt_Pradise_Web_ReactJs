@@ -35,7 +35,7 @@ export default function Preloader() {
       >
         <div className="flex  justify-center items-center fixed top-0 left-0 w-full h-full z-50">
           <div className="flex flex-col items-center">
-            <video autoPlay muted className="w-[100%] h-auto">
+            <video autoPlay muted className="w-[100%] h-[100vh]">
               <source src={video} type="video/mp4" />
             </video>
       

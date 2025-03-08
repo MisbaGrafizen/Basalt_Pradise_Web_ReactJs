@@ -3,6 +3,7 @@ import blog1 from "../../../public/Basalt/B5.jpg"
 import blog2 from "../../../public/Basalt/B6.jpg"
 import blog3 from "../../../public/Basalt/B7.jpg"
 import Header from '../../Component/header/Header'
+import Footer from '../../Component/footer/Footer'
 
 
 const blogdata = [
@@ -38,18 +39,18 @@ export default function Blogs() {
 
 
             <Header />
-            <div className=' flex  font-Poppins justify-between w-[100%] mx-auto md:w-[78%] pt-[110px]  '>
+            <div className=' flex  mb-[40px]  font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
 
-                <div className=' flex-col gap-[20px] overflow-y-auto md:h-[86vh] flex w-[74%]'>
+                <div className=' flex-col gap-[20px] overflow-y-auto md:h-[86vh] flex md:w-[74%]'>
                     {blogdata.map((blog) => (
                         <div key={blog.id} className=' flex flex-col gap-[10px] '>
                             <img
-                                className='flex w-[100%] h-[400px] object-cover rounded-[8px] transition-transform duration-300 ease-in-out scale-[0.98] hover:scale-[1]'
+                                className='flex w-[100%] h-[240px] md:h-[400px] object-cover rounded-[8px] transition-transform duration-300 ease-in-out scale-[0.98] hover:scale-[1]'
                                 src={blog.image}
                                 alt="Blog"
                             />
 
-                            <div className=' flex w-[100%]  justify-between items-center  gap-[20px]'>
+                            <div className=' flex w-[100%] md:flex-row flex-col  justify-between md:items-center  gap-[20px]'>
 
 
                                 <div className=' flex w-[100%] gap-[10px] flex-col '>
@@ -61,14 +62,14 @@ export default function Blogs() {
                                             {blog.date}
                                         </p>
                                     </div>
-                                    <div className=' text-[17px] flex  px-[10px] w-[85%]'>
+                                    <div className=' text-[17px] flex text-justify  px-[10px] md:w-[85%]'>
                                         <p>
                                             {blog.description}
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className='flex gap-[10px] cursor-pointer  text-[#7442ff] w-[150px] items-center  '>
+                                <div className='flex gap-[10px] cursor-pointer pl-[10px]  text-[#7442ff] w-[150px] items-center  '>
                                     <p className='hover:underline'>
                                         Read More
                                     </p>
@@ -181,6 +182,7 @@ export default function Blogs() {
                 </div>
 
             </div>
+            <Footer />
         </>
     )
 }

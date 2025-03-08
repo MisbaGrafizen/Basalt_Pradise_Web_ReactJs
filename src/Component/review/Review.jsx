@@ -155,9 +155,9 @@ Review({
       </div>
 
       <div className=" 2xl:w-[1400px] items-center   md:gap-[30px]  gap-[10px] flex md:flex-row flex-col !bg-[#] md:w-[70%] mt-[-30px] w-[95%]   h-[90%] mx-auto">
-        <div className="flex flex-col w-[250px] relative justify-center gap md:p-4">
+        <div className=" hidden md:flex flex-col w-[250px] mx-auto md:mx-0 relative justify-center gap md:p-4">
           {/* Stars in curved arrangement */}
-          <div className="relative h-16 w-full flex  items-center ">
+          <div className="relative h-16 md:w-full  flex  items-center ">
             {stars.map((style, i) => (
               <div
                 key={i}
@@ -214,6 +214,75 @@ Review({
             from over all the Globe
           </p>
         </div>
+
+
+
+        <div className=" md:hidden flex flex-col w-[250px] mx-auto md:mx-0 relative justify-center gap md:p-4">
+          {/* Stars in curved arrangement */}
+          <div className="relative h-16 md:w-full justify-center mr-[37px]  flex  items-center ">
+            {stars.map((style, i) => (
+              <div
+                key={i}
+                className="absolute transition-all sha duration-500 ease-out"
+                style={{
+                 
+                  transform: mounted
+                    ? style.transform
+                    : "translate(0px, 0px) scale(0)",
+                  opacity: mounted ? style.opacity : 0,
+                  marginLeft: "10px",
+                }}
+              >
+                <RoundedStar />
+              </div>
+            ))}
+          </div>
+
+          {/* Rating number */}
+          <div
+            className="text-[55px]  font-[700] md:left-[17%] left-[30%] relative font-Poppins mt-[-20px] md:pl-[16px] basalt-text transition-all duration-500"
+            style={{
+              textShadow: "0px 2px 2px rgba(0, 0, 0, 0.1)",
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? "translateY(0)" : "translateY(20px)",
+            }}
+          >
+            {rating}
+          </div>
+
+          {/* Reviews text with link */}
+          <a
+            href="#"
+            className=" relative md:left-[30px] left-[22%] font-Poppins font-[600]  !text-[#000] underline underline-offset-2 decoration-[#000000] text-[20px] transition-all duration-500"
+
+            style={{
+          
+              transform: mounted ? "translateY(0)" : "translateY(20px)",
+            }}
+          >
+            25,627 Guests
+            {/*  */}
+          </a>
+
+
+          {/* Countries text */}
+          <p
+            className="text-gray-800 relative text-[16px] left-[15%]   font-Poppins transition-all duration-500"
+            style={{
+              opacity: mounted ? 1 : 0,
+              transform: mounted ? "translateY(0)" : "translateY(20px)",
+            }}
+          >
+            from over all the Globe
+          </p>
+        </div>
+
+
+
+
+
+
+
         <div className=" w-[0.2px] md:flex hidden  h-[190px] bg-[#e3e2e2fc] o"></div>
         {/* <Slider className="pt-2 flex" {...testimoniyalslider}> */}
         <div className=" flex md:ml-[10px] justify-start  w-[90%]  overflow-x-auto mx-auto md:mx-0 md:w-[80%] md:gap-[20px] ">

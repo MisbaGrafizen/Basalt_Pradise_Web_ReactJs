@@ -66,7 +66,7 @@ export default function StaffHand() {
               Waiting with ❤️ for you!
             </p>
           </div>
-          <div className=" flex  w-[100%]  overflow-x-auto justify-between gap-[20px]">
+          <div className=" flex  w-[100%]  overflow-x-auto h-fit  justify-between gap-[20px]">
             <div className=" w-[310px] md:w-[335px] relative h-[490px] overflow-hidden rounded-[12px] flex-shrink-0">
               {images1.map((image, index) => (
                 <>
@@ -182,7 +182,7 @@ export default function StaffHand() {
                 </div>
                 <div className=" flex py-[10px] bgStaff h-[150px] w-[95%] rounded-t-[10px] mx-auto  px-[15px]">
                   <div className=" flex  w-[100%] flex-col">
-                    <div className="  text-[#fff] font-Poppins flex ">
+                    <div className="  text-[#fff] text-[14px] font-Poppins flex ">
                       <p>One day escape Best picnic place</p>
                     </div>
                     <span className=" flex w-[100%] my-[5px] mx-auto h-[1px] bg-[#fff]"></span>
