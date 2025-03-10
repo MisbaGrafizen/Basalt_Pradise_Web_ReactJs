@@ -103,12 +103,12 @@ const HotelCard = ({
           </div>
 
           {/* Thumbnails */}
-          <div className="absolute bottom-3 left-[9px] flex gap-[5px]">
+          <div className="absolute bottom-3 left-[9px] w-[93%] flex gap-[5px]">
             {images.slice(0, 3).map((img, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-[60px] h-[55px] rounded overflow-hidden ${
+                className={`md:w-[60px] w-[50%] h-[55px] rounded overflow-hidden ${
                   currentImageIndex === index
                     ? "border-2 border-white"
                     : "border border-transparent"
@@ -121,7 +121,7 @@ const HotelCard = ({
                 />
               </button>
             ))}
-            <button className="w-[60px] h-[55px] bg-black/50 text-white rounded flex items-center justify-center text-xs">
+            <button className="md:w-[60px] w-[40%] h-[55px] bg-black/50 text-white rounded flex items-center justify-center text-xs">
               View All
             </button>
           </div>
@@ -353,7 +353,7 @@ export default function RoomListing() {
       <div className="flex flex-col w-full font-Poppins pt-[110px] ">
         {/* <div className="hero-background"></div> */}
 
-        <div className="md:w-[80%] w-[90%]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
+        <div className="md:w-[80%] w-[95%]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
           <div className="md:flex  hidden md:w-[300px] flex-col gap-[3px] h-[300px] mb-6">
             <img className="rounded-[8px]  w-full" src={banner2} alt="Banner" />
             <img className="rounded-[8px]  w-full" src={banner1} alt="Banner" />
