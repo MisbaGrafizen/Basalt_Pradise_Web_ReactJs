@@ -9,7 +9,7 @@ export default function HeroSection() {
         {/* <img className=' rounded-[6px] w-[80%] h-[87vh]  mx-auto' src={mainbg} /> */}
 
         <div className="rounded-[10px] shadow-sm custom-sahdow  mx-auto md:w-[80%] 2xl:w-[100%] h-[30vh] w-[87%]  md:h-[87vh]">
-          <video
+          {/* <video
             className=" w-[100%] h-[100%] scale-[0.1px]  rounded-[7px] object-cover  mx-auto"
             autoPlay
             loop
@@ -17,7 +17,11 @@ export default function HeroSection() {
             controls={false}
           >
             <source src={Mainvideo} type="video/mp4" />
-          </video>
+          </video> */}
+
+<img className="  w-[100%] h-[100%] scale-[0.1px]  rounded-[7px] object-cover  mx-auto" src={mainbg} />
+
+
         </div>
       </div>
     </>

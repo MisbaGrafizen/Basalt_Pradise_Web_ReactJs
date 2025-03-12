@@ -31,12 +31,12 @@
   box-shadow: 0px 1px 10px #7a6e6e, 0px 1px 10px #7a6e6e;
 }
 .custom-sahdowgreen {
-  box-shadow: 0px 1px 10px #d2dbd2, 0px 1px 10px #e5ebe5;
+  box-shadow: 0px 1px 10px #d2dbd2, 0px 1px 10px #f3f7f3;
 }
 
 
 .custom-sahdowgreenbu {
-  box-shadow: 0px 1px 10px #e9e3e3, 0px 1px 10px #e7e0e0;
+  box-shadow: 0px 1px 3px #f3f7f9, 0px 1px 3px #f3f7f9;
 }
 /* Custom modal backdrop */
 .nextui-modal-backdrop {

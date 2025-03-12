@@ -36,7 +36,7 @@ export default function TheSpotLight() {
             Dive into a World of Ideas, Stories, News and Inspiration
           </p>
         </div>
-        <div className="flex w-[100%] overflow-x-auto justify-between gap-[20px]">
+        <div className="flex w-[100%] overflow-x-auto py-[10px] justify-between gap-[20px]">
           {spotlightData.map((item, index) => (
             <div
               key={index}

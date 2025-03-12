@@ -1,5 +1,5 @@
 import { DatePicker } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import dayjs from "dayjs";
 import moment from "moment";
@@ -16,6 +16,7 @@ export default function DetailsAddBar() {
   const [numOfDays, setNumOfDays] = useState(null);
   const [endDate, setEndDate] = useState(dayjs());
   const [numOfNights, setNumOfNights] = useState(1);
+  const guestRef = useRef(null);
 
   const adulthandleChange = (e) => {
     setAdultNum(e.target.value);
@@ -101,6 +102,24 @@ export default function DetailsAddBar() {
     return current && current.isBefore(dayjs(), "day");
   };
 
+  const handleClickOutside = (event) => {
+    if (guestRef.current && !guestRef.current.contains(event.target)) {
+      setGuestDetails(false);
+    }
+  };
+
+  useEffect(() => {
+    if (guestDetails) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [guestDetails]);
+
   return (
     <>
       <div className=" flex  relative z-[10] shadow-md   pb-[10px] rounded-[10px] pt-[10px] items-center x` 2xl:w-[1400px]  mt-[20px] w-[79%]  mb-[10px] px-[30px] mx-auto  border justify-center  flex-col ">
@@ -156,7 +175,7 @@ export default function DetailsAddBar() {
               </p>
             </div>
             {guestDetails && (
-              <div className="w-100 absolute  top-[78px] start-0  flex flex-col bs-white p-3 rounded-xl shadow-3">
+              <div ref={guestRef} className="w-100 absolute  top-[78px] start-0  flex flex-col bs-white p-3 rounded-xl shadow-3">
                 <div
                   className=" top-0 start-0 z-10 "
                   onClick={() => setGuestDetails(false)}

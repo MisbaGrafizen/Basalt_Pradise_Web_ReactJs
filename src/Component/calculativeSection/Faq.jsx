@@ -58,7 +58,7 @@ export default function Faq() {
                   className="font-Redhat rounded-[10px] border-[1.5px] overflow-hidden "
                 >
                   <div
-                    className={`font-[600] flex justify-between  text-[#5a5555] md:items-center m px-[15px] md:py-[14px] py-[10px] text-[15] md:text-[18px] cursor-pointer ${activeIndex === index
+                    className={`font-[600] flex justify-between bg-white  text-[#5a5555] md:items-center m px-[15px] md:py-[14px] py-[10px] text-[15] md:text-[18px] cursor-pointer ${activeIndex === index
                         ? "border-b-[1.5px] rounded-b-[14px] "
                         : "  border-b-none"
                       }`}

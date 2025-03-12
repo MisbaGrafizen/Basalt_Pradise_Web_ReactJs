@@ -191,7 +191,8 @@
 // }
 import React, { useState } from "react";
 
-import Header  from "../../Component/header/Header";
+import Header from "../../Component/header/Header";
+import Footer from "../../Component/footer/Footer";
 
 
 export default function ContactUs() {
@@ -201,14 +202,14 @@ export default function ContactUs() {
 
   return (
     <>
-    
-    
+
+
       <section className=" w-[100%]  ">
-      <Header />
+        <Header />
         <div className=" 2xl:w-[1250px]   pt-[130px]  w-[100%] h-[100%] mx-auto">
           <div className=" md:w-[80%] relative mb-[30px] mx-auto bg-[] z-[1] flex flex-col  md150:w-[1200px]">
 
-            <form  className="w-[100%] ] px-[20px] h-[100%]">
+            <form className="w-[100%] ] px-[20px] h-[100%]">
               <div className="w-[100%] mx-auto flex flex-col gap-[20px] md:gap-[40px]">
                 <div className="w-[100%] justify-between  flex flex-col gap-[20px] md:flex-row">
                   <div className="md:w-[45%] gap-[29px] flex flex-col">
@@ -241,7 +242,7 @@ export default function ContactUs() {
                             Business inquiry
                           </p>
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular  text-[#646464]">
-                          mail@basaltparadise.com
+                            mail@basaltparadise.com
                           </p>
                         </div>
                       </div>
@@ -264,7 +265,7 @@ export default function ContactUs() {
                           </p>
 
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular text-[#646464]">
-                          813, B Wing, Om Decora 9 Square, Nana mauva road, St 9, beside Marwadi, Rajkot, Gujarat 360005
+                            813, B Wing, Om Decora 9 Square, Nana mauva road, St 9, beside Marwadi, Rajkot, Gujarat 360005
                           </p>
                         </div>
                       </div>
@@ -277,7 +278,7 @@ export default function ContactUs() {
                       <div className="w-[49%] h-[40px]  flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input
                           name="name"
-                          
+
                           placeholder="Name"
                           autoComplete="new-name"
                           className="w-[100%] font-lucida-bright-regular outline-none   px-[px] h-[100%] border-none bg-transparent"
@@ -292,7 +293,7 @@ export default function ContactUs() {
                       <div className="w-[49%] h-[40px]   flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input
                           name="email"
-                         autoComplete='Email'
+                          autoComplete='Email'
                           placeholder="Email"
                           className="w-[100%] outline-none font-lucida-bright-regular   h-[100%] border-none bg-transparent"
                           // value={formData.email}
@@ -316,7 +317,7 @@ export default function ContactUs() {
                           type="tel"
                           maxLength="10"
                         />
-          
+
                       </div>
                       <div className="w-[49%] h-[40px] font-lucida-bright-regular   flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input
@@ -342,14 +343,14 @@ export default function ContactUs() {
                         autoComplete="off"
                         placeholder="Message"
                         className="w-[100%] h-[100%] font-lucida-bright-regular border-none p-[10px] rounded-[10px] outline-none"
-                        // value={formData.message}
-                        // onChange={handleChange}
+                      // value={formData.message}
+                      // onChange={handleChange}
                       />
                     </div>
                     <button
                       type="submit"
                       className="flex justify-center basalt text-[#fff] mt-[10px] text-[#000] text-[18px] rounded-[6px] font-lucida-bright-regular  md:mx-0 py-[8px] w-[120px] font-[500] transition-transform duration-200 active:scale-95"
-             
+
                     >
                       Submit
                     </button>
@@ -358,14 +359,14 @@ export default function ContactUs() {
               </div>
             </form>
 
-            
+
 
           </div>
-          
+
         </div>
 
       </section>
-
+      <Footer />
     </>
   );
 }

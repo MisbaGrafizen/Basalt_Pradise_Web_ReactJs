@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import video from "../../../public/preloader.mp4";
+// import video from "../../../public/preloader.mp4";
+import video from "../../../public/preloaderNew.mp4";
+
 
 export default function Preloader() {
   const [percent, setPercent] = useState(0);
@@ -38,6 +40,8 @@ export default function Preloader() {
             <video autoPlay muted className="w-[100%] h-[100vh]">
               <source src={video} type="video/mp4" />
             </video>
+
+            {/* <img className="w-[100%] h-[100vh]" src={video} /> */}
       
           </div>
         </div>

@@ -456,7 +456,7 @@ export default function Gallery() {
 
     return (
         <section className='  md:w-[85%] md:px-[40px] px-[35px] relative  flex-col font-Poppins  md:overflow-visible overflow-x-hidden   gap-[30px] w-[100%] flex mx-auto   2xl:w-[1390px]'>
-            <h1 className="flex text-[23px] font-Poppins">
+            <h1 className="flex text-[30px] font-Poppins">
                 Actual
                 <span className="text-[#fcaf17] font-[600] px-[6px]">
                     Paradise

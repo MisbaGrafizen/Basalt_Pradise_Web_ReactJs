@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../public/Basalt_White_Logo.png";
 import india from "../../../public/footer/india.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
   const countries = [
@@ -9,6 +10,17 @@ export default function Footer() {
     { code: "UK", name: "United Kingdom", phone: "+44" },
     { code: "AE", name: "UAE", phone: "+971" },
   ];
+
+  const navigate = useNavigate()
+
+  const handlePrivacyPolicy =()=>{
+    navigate("/privacy-policy")
+  }
+
+
+  const handleTerms =()=>{
+    navigate("/terms")
+  }
 
   return (
     // <>
@@ -360,10 +372,10 @@ export default function Footer() {
               Developed with ❤️ by Grafizen International LLC
             </span>
             <div className="  md:flex hidden  gap-[20px]">
-              <a href="#" className="text-sm text-gray-400 hover:text-white">
+              <a href="#" className="text-sm text-gray-400 hover:text-white" onClick={handlePrivacyPolicy}>
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-gray-400 hover:text-white">
+              <a href="#" className="text-sm text-gray-400 hover:text-white" onClick={handleTerms}>
                 Terms & Conditions
               </a>
               <a href="#" className="text-sm text-gray-400 hover:text-white">

@@ -9,22 +9,47 @@ export default function Jouurney() {
   const [scrollYProgress, setScrollYProgress] = useState(0);
 
  
+  // useEffect(() => {
+
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const documentHeight = document.body.scrollHeight - window.innerHeight;
+
+  //     // Multiplier to control speed
+  //     const multiplier = 1.5; // Increase to make the line grow/shrink faster
+  //     const progress = Math.min((scrollTop / documentHeight) * multiplier, 1); // Ensures it stays between 0 and 1
+  //     setScrollYProgress(progress);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const documentHeight = document.body.scrollHeight - window.innerHeight;
-
+      const offsetThreshold = 606; // 1.5 cm in pixels
+  
+      // Ensure animation starts only after scrolling 56px
+      const adjustedScroll = Math.max(scrollTop - offsetThreshold, 0);
+  
       // Multiplier to control speed
-      const multiplier = 1.5; // Increase to make the line grow/shrink faster
-      const progress = Math.min((scrollTop / documentHeight) * multiplier, 1); // Ensures it stays between 0 and 1
+      const multiplier = 2; // Increase to make the line grow/shrink faster
+      const progress = Math.min((adjustedScroll / documentHeight) * multiplier, 1); // Ensures it stays between 0 and 1
       setScrollYProgress(progress);
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
   return (
     <>
       <div className="w-[100%] bg-[#f4f6f9] mt-[40px]   relative overflow-hidden px-[10px] font-Poppins flex mx-auto">

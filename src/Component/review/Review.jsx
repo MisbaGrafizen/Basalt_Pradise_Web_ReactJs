@@ -178,7 +178,7 @@ Review({
 
           {/* Rating number */}
           <div
-            className="text-[55px]  font-[700] left-[17%] relative font-Poppins mt-[-20px] pl-[16px] basalt-text transition-all duration-500"
+            className="text-[55px]  font-[700] left-[16%] relative font-Poppins mt-[-20px] pl-[16px] basalt-text transition-all duration-500"
             style={{
               textShadow: "0px 2px 2px rgba(0, 0, 0, 0.1)",
               opacity: mounted ? 1 : 0,
@@ -191,21 +191,21 @@ Review({
           {/* Reviews text with link */}
           <a
             href="#"
-            className=" relative left-[30px] font-Poppins font-[600]  !text-[#000] underline underline-offset-2 decoration-[#000000] text-[20px] transition-all duration-500"
+            className=" relative left-[11px] font-Poppins font-[600]  !text-[#000] underline underline-offset-2 decoration-[#000000] text-[20px] transition-all duration-500"
 
             style={{
           
               transform: mounted ? "translateY(0)" : "translateY(20px)",
             }}
           >
-            25,627 Guests
+            20,000+ Guests
             {/*  */}
           </a>
 
 
           {/* Countries text */}
           <p
-            className="text-gray-800 left-[6%] relative text-[16px]  font-Poppins transition-all duration-500"
+            className="text-gray-800 left-[-1px] relative text-[16px]  font-Poppins transition-all duration-500"
             style={{
               opacity: mounted ? 1 : 0,
               transform: mounted ? "translateY(0)" : "translateY(20px)",

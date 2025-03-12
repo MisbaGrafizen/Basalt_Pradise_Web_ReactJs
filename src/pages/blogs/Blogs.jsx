@@ -4,6 +4,7 @@ import blog2 from "../../../public/Basalt/B6.jpg"
 import blog3 from "../../../public/Basalt/B7.jpg"
 import Header from '../../Component/header/Header'
 import Footer from '../../Component/footer/Footer'
+import { useNavigate } from 'react-router-dom'
 
 
 const blogdata = [
@@ -34,14 +35,19 @@ const blogdata = [
 
 
 export default function Blogs() {
+    const navigate = useNavigate()
+
+const handleblogDetails =()=>{
+    navigate("/blog-details")
+}
     return (
         <>
 
 
             <Header />
-            <div className=' flex  mb-[40px]  font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
+            <div className=' flex  mb-[40px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
 
-                <div className=' flex-col gap-[20px] overflow-y-auto md:h-[86vh] flex md:w-[74%]'>
+                <div className=' flex-col gap-[20px]  flex md:w-[74%]'>
                     {blogdata.map((blog) => (
                         <div key={blog.id} className=' flex flex-col gap-[10px] '>
                             <img
@@ -69,11 +75,11 @@ export default function Blogs() {
                                     </div>
                                 </div>
 
-                                <div className='flex gap-[10px] cursor-pointer pl-[10px]  text-[#7442ff] w-[150px] items-center  '>
+                                <div className='flex gap-[10px] cursor-pointer pl-[10px]  text-[#7442ff] w-[150px] items-center  ' onClick={handleblogDetails}>
                                     <p className='hover:underline'>
                                         Read More
                                     </p>
-                                    <i class="fa-regular fa-arrow-right"></i>
+                                    <i className="fa-regular fa-arrow-right"></i>
                                 </div>
                             </div>
                             <span className=' flex w-[100%] border-t-[1.3px] border-[#7442ff] mt-[20px] border-dashed '>
@@ -83,8 +89,8 @@ export default function Blogs() {
                     ))}
                 </div>
 
-                <div className=" h-[550px] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[17px] rounded-[10px]">
-                    <div id="infoProduto">
+                <div className=" h-[550px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[17px] rounded-[10px]">
+                    <div id="infoProduto ">
                         <div className="blog-sidebar">
                             {/* Search Bar */}
                             <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
@@ -118,27 +124,27 @@ export default function Blogs() {
                                 </h5>
                                 <ul className="flex flex-col gap-[4px]">
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Energy-Efficient Fans</a>
                                     </li>
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Designe Ceiling Fans</a>
                                     </li>
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Smart Fans with IoT</a>
                                     </li>
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Industrial  Fans</a>
                                     </li>
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Outdoor Fans</a>
                                     </li>
                                     <li className=' items-center flex'>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">High-Speed Fans</a>
                                     </li>
                                 </ul>
@@ -152,27 +158,27 @@ export default function Blogs() {
                                 </h5>
                                 <ul className="flex  flex-col gap-[5px]">
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">EnergyEfficient</a>
                                     </li>
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">DesignerFans</a>
                                     </li>
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">SmartFans</a>
                                     </li>
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">IndustrialUse</a>
                                     </li>
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">OutdoorComfort</a>
                                     </li>
                                     <li>
-                                        <i class="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
+                                        <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
                                         <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">HighSpeed</a>
                                     </li>
                                 </ul>

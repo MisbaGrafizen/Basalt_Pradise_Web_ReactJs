@@ -22,6 +22,9 @@ import ConatctUs from "./pages/ConatctPage/ConatctUs";
 import Blogs from "../src/pages/blogs/Blogs"
 import MyBookings from "./pages/myBookings/MyBookings";
 import BottomBar from "./Component/bottomBar/BottomBar";
+import BlogDetails from "./pages/blogs/Blogdetails";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 
 
 
@@ -54,6 +57,11 @@ function App() {
           <Route path="/contact-us" element={loading ? <Loader /> : <ConatctUs />} />
           <Route path="/blogs" element={loading ? <Loader /> : <Blogs />} />
           <Route path="/bookings" element={loading ? <Loader /> : <MyBookings />} />
+          <Route path="/blog-details" element={loading ? <Loader /> : <BlogDetails />} />
+          <Route path="/privacy-policy" element={loading ? <Loader /> : <PrivacyPolicy />} />
+          <Route path="/terms" element={loading ? <Loader /> : <Terms />} />
+
+
         </Routes>
 
       </div>

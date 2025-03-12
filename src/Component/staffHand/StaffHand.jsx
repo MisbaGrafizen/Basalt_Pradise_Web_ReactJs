@@ -48,7 +48,7 @@ export default function StaffHand() {
       <div className=" px-[10px] 2xl:w-[1400px] items-center  gap-[30px] flex !bg-[#] w-[95%] md:w-[80%] mt-[0px]   h-[90%] mx-auto">
         <div className=" flex  flex-col  gap-[30px] w-[100%] ">
           <div>
-            <h1 className=" flex text-[23px] font-Poppins ">
+            <h1 className=" flex text-[30px] font-Poppins ">
               Holiday{" "}
               <span
                 style={{
