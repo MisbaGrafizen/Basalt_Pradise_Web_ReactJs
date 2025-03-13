@@ -64,7 +64,7 @@ export default function RoomDetails() {
         <div className=" flex  relative z-[10]  rounded-[10px] py-[20px] border bg-white 2xl:w-[1160px]  mt-[20px] w-[79%]  px-[30px] mx-auto  shadow-sm  justify-center  flex-col ">
 
           <h1 className="text-2xl  font-Poppins font-[600]  text-left flex  gap-2">
-            European Plan
+          Zen Room Only
           </h1>
         </div>
         <div className=" w-[84%] mx-auto shadow-custom font-Poppins   p-6 lg:p-10  relative mb-[30px]  bg-white rounded-lg">
@@ -77,26 +77,26 @@ export default function RoomDetails() {
                     alt="Hotel exterior"
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
-                  <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                  {/* <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                     +103 Property Photos
-                  </div>
+                  </div> */}
                 </div>
                 <div className="space-y-4">
                   {[1, 2].map((photo) => (
                     <div
                       key={photo}
-                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[196px]"
+                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
                     >
                       <img
                         src={mainimg2}
                         alt={`Hotel interior ${photo}`}
                         className="w-full h-full object-cover"
                       />
-                      {photo === 2 && (
+                      {/* {photo === 2 && (
                         <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                           +1222 Guest Photos
                         </div>
-                      )}
+                      )} */}
                     </div>
                   ))}
                 </div>
@@ -176,9 +176,9 @@ export default function RoomDetails() {
                   <button className=" basalt py-[10px] rounded-[7px]   w-[160px] font-[500] text-[13px] text-[#fff] px-[10px]">
                     BOOK THIS NOW
                   </button>
-                  <button className="text-[#4169E1]  text-[13px] font-[400] hover:underline">
+                  {/* <button className="text-[#4169E1]  text-[13px] font-[400] hover:underline">
                     11 More Options
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
@@ -313,9 +313,9 @@ export default function RoomDetails() {
                     <span>City View</span>
                   </div>
                 </div>
-                <button className="text-[#4169E1] text-sm mt-4">
+                {/* <button className="text-[#4169E1] text-sm mt-4">
                   View More Details
-                </button>
+                </button> */}
               </div>
               <div className=" flex w-[100%] flex-col gap-[20px]">
                 {/* Middle Column - Room Options */}
@@ -461,9 +461,9 @@ export default function RoomDetails() {
                     <span>City View</span>
                   </div>
                 </div>
-                <button className="text-[#4169E1] text-sm mt-4">
+                {/* <button className="text-[#4169E1] text-sm mt-4">
                   View More Details
-                </button>
+                </button> */}
               </div>
               <div className=" flex w-[100%] flex-col gap-[20px]">
                 {/* Middle Column - Room Options */}

@@ -213,7 +213,9 @@ export default function Header() {
           <div className="flex w-full">
             <div className="flex w-full">
               <div className="flex w-full relative justify-between">
+              <Link className="w-fit" to={"/"}>
                 <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Logo" />
+                </Link>
                 <div className="flex w-[68%]  mt-[5px] items-center md:items-start justify-between">
                   <div>
                     <div className="xl:text-[15px] gap-[15px] text-[#000] items-center pl-[20px] font-Montserrat mt-[-0.4%] flex font-[600] justify-end md36:hidden md:flex">

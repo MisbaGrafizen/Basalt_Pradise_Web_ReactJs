@@ -25,6 +25,9 @@ import BottomBar from "./Component/bottomBar/BottomBar";
 import BlogDetails from "./pages/blogs/Blogdetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import Faq from "./pages/faqs/Faq";
+import SpotLight from "./pages/spotlight/SpotLight";
+import Testimonials from "./pages/testimonials/Testimonials";
 
 
 
@@ -60,6 +63,11 @@ function App() {
           <Route path="/blog-details" element={loading ? <Loader /> : <BlogDetails />} />
           <Route path="/privacy-policy" element={loading ? <Loader /> : <PrivacyPolicy />} />
           <Route path="/terms" element={loading ? <Loader /> : <Terms />} />
+          <Route path="/faqs" element={loading ? <Loader /> : <Faq />} />
+          <Route path="/spotlight" element={loading ? <Loader /> : <SpotLight />} />
+          <Route path="/testimonials" element={loading ? <Loader /> : <Testimonials />} />
+
+
 
 
         </Routes>

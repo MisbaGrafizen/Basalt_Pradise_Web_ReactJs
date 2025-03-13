@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../Component/header/Header";
+import Footer from "../../Component/footer/Footer";
 
 export default function MyBookings() {
 const navigate = useNavigate();
@@ -109,6 +110,7 @@ const handleBack = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

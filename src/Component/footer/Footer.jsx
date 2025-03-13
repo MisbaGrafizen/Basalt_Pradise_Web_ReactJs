@@ -13,12 +13,12 @@ export default function Footer() {
 
   const navigate = useNavigate()
 
-  const handlePrivacyPolicy =()=>{
+  const handlePrivacyPolicy = () => {
     navigate("/privacy-policy")
   }
 
 
-  const handleTerms =()=>{
+  const handleTerms = () => {
     navigate("/terms")
   }
 
@@ -85,8 +85,8 @@ export default function Footer() {
               </p>
               <div className="space-y-2">
                 <div className="grid md:grid-cols-2 gap-">
-          
-            
+
+
                 </div>
                 <div className="flex gap-2 items-center">
                   {/* <select className="bg-transparent border border-gray-600 rounded px-3 py-2 w-36 appearance-none custom-select">
@@ -120,10 +120,10 @@ export default function Footer() {
             {/* Discover us */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Discover us</h3>
-              <ul className="  flex flex-col gap-[px]">
+              <ul className="  flex flex-col gap-[7px]">
                 <li>
                   <a
-                    href="#"
+                    href="/testimonials"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Guests Reviews
@@ -131,7 +131,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about-us"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     About Us
@@ -153,22 +153,7 @@ export default function Footer() {
                     Tour Managers
                   </a>
                 </li> */}
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
-                  >
-                    Sales Partners
-                  </a>
-                </li>
-                {/* <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
-                  >
-                    Become A Sales Partner
-                  </a>
-                </li> */}
+
                 <li>
                   <a
                     href="#"
@@ -186,24 +171,24 @@ export default function Footer() {
                     CSR Policy
                   </a>
                 </li> */}
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Create Your Travel Portfolio
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             {/* Support */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Support</h3>
-              <ul className=" flex flex-col gap-[px]">
+              <ul className=" flex flex-col gap-[7px]">
                 <li>
                   <a
-                    href="#"
+                    href="/contact-us"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Contact Us
@@ -211,15 +196,18 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.google.com/search?sca_esv=cc2a4126488dadb8&rlz=1C5CHFA_enIN1022IN1023&sxsrf=AHTn8zoOujCVN_EhRZWcpJNy4DF-jKMlyg:1741837797141&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzQVvI_O429WvNJ5H9m5FP3Dxi1hGTzbh3qS7J38kxnTWUC5yo4YiCROcQLWgINvB_Gbaz51qbrnWFVpdpHMktmEemRRe_6tHxyGieQ7cseWQuSAbFQ%3D%3D&q=Basalt+Paradise+Resort+%26+Spa+Reviews&sa=X&ved=2ahUKEwjMsp65k4aMAxVxTjABHUqALoEQ0bkNegQIHxAE&biw=1440&bih=711&dpr=2"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Leave Your Feedback
                   </a>
+
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/all-rooms"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     How To Book
@@ -227,7 +215,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/faqs"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     FAQ
@@ -271,18 +259,18 @@ export default function Footer() {
             {/* Resources */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
-              <ul className=" flex flex-col gap-[px]">
+              <ul className=" flex flex-col gap-[7px]">
                 <li>
                   <a
-                    href="#"
+                    href="/spotlight"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Tour Status
+                    Spotlight
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/blogs"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Blog
@@ -301,10 +289,10 @@ export default function Footer() {
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Video Blogs
+                    Video casts
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
@@ -319,7 +307,7 @@ export default function Footer() {
                   >
                     Articles By Darshit Adesara
                   </a>
-                </li>
+                </li> */}
                 {/* <li>
                   <a
                     href="#"
@@ -359,7 +347,7 @@ export default function Footer() {
             Web-link which ask you to click on a link and fill in your details.
             All Basalt Pradise authorized email communications are delivered from
             domain @basaltpradise.com  .
-           *Basalt Pradise bears no liability or responsibility whatsoever
+            *Basalt Pradise bears no liability or responsibility whatsoever
             for any communication which is fraudulent or misleading in nature
             and not received from registered domain.
           </p>

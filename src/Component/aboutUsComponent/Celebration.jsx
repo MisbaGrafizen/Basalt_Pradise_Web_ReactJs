@@ -35,7 +35,7 @@ export default function Celebration() {
           </div>
           <div className="  flex md:flex-row flex-col  w-[100%] justify-between ">
             <div className=" pt-[30px] md:order-1 order-2 md:w-[50%] flex flex-col gap-[20px]">
-              <div className="  leading-4 flex flex-col  text-[23px]  font-[600] gap-[5px]   ">
+              <div className="  md:leading-4 flex flex-col  text-[23px]  font-[600] gap-[5px]   ">
                 <h1>Celebrating hardik bhai Patel’s</h1>
                 <div className=" w-fit mt-[10px]">
                   <h2 className=" flex text-[#fcaf17] ">

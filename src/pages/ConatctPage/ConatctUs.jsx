@@ -193,6 +193,9 @@ import React, { useState } from "react";
 
 import Header from "../../Component/header/Header";
 import Footer from "../../Component/footer/Footer";
+import TheSpotLight from "../../Component/spotlight/TheSpotLight";
+import { Review } from "../../Component/review/Review";
+import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
 
 
 export default function ContactUs() {
@@ -212,9 +215,9 @@ export default function ContactUs() {
             <form className="w-[100%] ] px-[20px] h-[100%]">
               <div className="w-[100%] mx-auto flex flex-col gap-[20px] md:gap-[40px]">
                 <div className="w-[100%] justify-between  flex flex-col gap-[20px] md:flex-row">
-                  <div className="md:w-[45%] gap-[29px] flex flex-col">
+                  <div className="md:w-[45%] gap-[40px] flex flex-col">
                     <div className="w-[100%] flex justify-between flex-col ">
-                      <p className=" font-[600] basalt-text     font-lucida-bright-regular text-[#ffa93a]  text-[30px]">
+                      <p className=" font-[600] basalt-text  leading-[40px]   font-lucida-bright-regular text-[#ffa93a]  text-[30px]">
                         We would love to hear from you.
                       </p>
                       <p className="w-[100%]  text-[15px] md:text-[16px] font-lucida-bright-regular text-[#273338]">
@@ -273,7 +276,7 @@ export default function ContactUs() {
                   </div>
 
                   {/* Form Inputs */}
-                  <div autoComplete='off' className="md:w-[45%] gap-[20px] border-[#ffa93a] border  bg-[#ffffff] rounded-[10px] shadow-lg p-[20px] md:p-[30px] mt-[20px] md:mt-[0px] flex flex-col">
+                  <div autoComplete='off' className="md:w-[45%] gap-[20px] border-[#ffa93a] border  bg-[#ffffff] rounded-[10px] shadow-lg p-[20px] md:p-[30px] mt-[20px] md:mt-[10px] flex flex-col">
                     <div className="flex w-[100%] justify-between gap-[20px] font-Poppins">
                       <div className="w-[49%] h-[40px]  flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input
@@ -365,7 +368,19 @@ export default function ContactUs() {
 
         </div>
 
+
+
+
       </section>
+
+
+          <div className=" 2xl:w-[1400px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+              <Review />
+              <TheSpotLight />
+              <div className=" w-[90%] mx-auto">
+                <AlertBanner />
+              </div>
+              </div>
       <Footer />
     </>
   );

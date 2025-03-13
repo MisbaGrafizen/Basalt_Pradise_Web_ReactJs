@@ -31,6 +31,9 @@ import banner3 from "../../../public/Basalt/B10.jpg";
 import { useNavigate } from "react-router-dom";
 import Header from "../../Component/header/Header";
 import Footer from "../../Component/footer/Footer";
+import { Review } from "../../Component/review/Review";
+import BannerSection from "../../Component/bannerSection/BannerSection";
+import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
 
 // interface RoomProps {
 //   name: string;
@@ -108,11 +111,10 @@ const HotelCard = ({
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`md:w-[60px] w-[50%] h-[55px] rounded overflow-hidden ${
-                  currentImageIndex === index
-                    ? "border-2 border-white"
-                    : "border border-transparent"
-                }`}
+                className={`md:w-[60px] w-[50%] h-[55px] rounded overflow-hidden ${currentImageIndex === index
+                  ? "border-2 border-white"
+                  : "border border-transparent"
+                  }`}
               >
                 <img
                   src={img}
@@ -250,7 +252,7 @@ export default function RoomListing() {
   const [numOfDays, setNumOfDays] = useState(null);
   const [endDate, setEndDate] = useState(dayjs());
 
-  const formatPlaceholder = (dates) => {};
+  const formatPlaceholder = (dates) => { };
   const handleGuestDetails = () => {
     setGuestDetails((prevCheck) => !prevCheck);
   };
@@ -282,11 +284,11 @@ export default function RoomListing() {
       ratings: 29,
       sponsored: true,
       originalPrice: 5900,
-      discountedPrice: 5015 ,
+      discountedPrice: 5015,
       taxes: 1239,
       amenities: ["Gym", "Restaurant", "24-hour Room Service"],
       images: [image1, image2, image3, image4],
-      features: ["Wi-Fi", "Air Conditioning","Housekeeping"],
+      features: ["Wi-Fi", "Air Conditioning", "Housekeeping"],
       description: null,
       noCostEmi: false,
     },
@@ -303,7 +305,7 @@ export default function RoomListing() {
       taxes: 4968,
       amenities: ["Gym", "Restaurant", "24-hour Room Service"],
       images: [image4, image3, image2, image1],
-      features: [ "Breakfast Included","Free Cancellation till 24 hrs before check in"],
+      features: ["Breakfast Included", "Free Cancellation till 24 hrs before check in"],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
       noCostEmi: true,
@@ -353,13 +355,13 @@ export default function RoomListing() {
       <div className="flex flex-col w-full font-Poppins pt-[110px] ">
         {/* <div className="hero-background"></div> */}
 
-        <div className="md:w-[80%] w-[95%]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
+        <div className="md:w-[80%] w-[95%] pb-[30px]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
           <div className="md:flex  hidden md:w-[300px] flex-col gap-[3px] h-[300px] mb-6">
             <img className="rounded-[8px]  w-full" src={banner2} alt="Banner" />
             <img className="rounded-[8px]  w-full" src={banner1} alt="Banner" />
             <img className="rounded-[8px]  w-full" src={banner3} alt="Banner" />
           </div>
-          <div className="w-[90%] mx-auto  md:h-[89vh] 2xl:h-[100%] gap-[10px] flex flex-col overflow-y-auto ">
+          <div className="w-[90%] mx-auto   gap-[10px] flex flex-col  ">
             <div className=" flex md:flex-row flex-col text-[30px] font-[600] ">
               Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
             </div>
@@ -368,9 +370,20 @@ export default function RoomListing() {
             ))}
           </div>
         </div>
-        <Footer />
+
+      </div>
+      <div className=" 2xl:w-[1400px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+        <Review />
+        <BannerSection />
+        <div className=" w-[90%] mx-auto">
+          <AlertBanner />
+        </div>
+
       </div>
 
+
+
+      <Footer />
     </>
   );
 }
