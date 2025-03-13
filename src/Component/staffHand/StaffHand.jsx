@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import stars from "../../../public/staffhand/stars1.png";
-import image1 from "../../../public/Basalt/B10.jpg";
-import image11 from "../../../public/Basalt/B15.jpg";
-import image2 from "../../../public/Basalt/B12.jpg";
-import image22 from "../../../public/Basalt/B14.jpg";
-import image222 from "../../../public/Basalt/B11.jpg";
-import image3 from "../../../public/Basalt/B5.jpg";
-import image33 from "../../../public/Basalt/B1.jpg";
-import image333 from "../../../public/Basalt/B3.jpg";
-import breakicon from "../../../public/staffhand/brekfast.jpeg";
+// import image1 from "../../../public/Basalt/B10.jpg";
+// import image11 from "../../../public/Basalt/B15.jpg";
+// import image2 from "../../../public/Basalt/B12.jpg";
+// import image22 from "../../../public/Basalt/B14.jpg";
+// import image222 from "../../../public/Basalt/B11.jpg";
+// import image3 from "../../../public/Basalt/B5.jpg";
+// import image33 from "../../../public/Basalt/B1.jpg";
+// import image333 from "../../../public/Basalt/B3.jpg";
+// import breakicon from "../../../public/staffhand/brekfast.jpeg";
 import { Utensils, Coffee } from "lucide-react";
 
 export default function StaffHand() {
@@ -16,30 +16,29 @@ export default function StaffHand() {
   const [currentImage2, setCurrentImage2] = useState(0);
   const [currentImage3, setCurrentImage3] = useState(0);
 
-  const images1 = [image1, image11];
+  const images1 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg"];
 
-  const images2 = [image2, image22, image222];
-  const images3 = [image3, image33, image333];
+  const images2 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/cexy9hffqbeezzj1ekqn.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/b9zn3wzx5ekvwxi4u9o1.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg"];
+  const images3 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/yexlwgv1odu7gks0zut7.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/txggysorxbhfslfza7jd.jpg"];
 
-  // First carousel with 3-second interval
   useEffect(() => {
     const interval1 = setInterval(() => {
       setCurrentImage1((prev) => (prev + 1) % images1.length);
-    }, 1200); // 3 seconds
+    }, 1200); 
     return () => clearInterval(interval1);
   }, [images1.length]);
 
   useEffect(() => {
     const interval2 = setInterval(() => {
       setCurrentImage2((prev) => (prev + 1) % images2.length);
-    }, 1200); // 5 seconds
+    }, 1200); 
     return () => clearInterval(interval2);
   }, [images2.length]);
 
   useEffect(() => {
     const interval3 = setInterval(() => {
       setCurrentImage3((prev) => (prev + 1) % images2.length);
-    }, 1200); // 5 seconds
+    }, 1200); 
     return () => clearInterval(interval3);
   }, [images3.length]);
 
@@ -200,7 +199,7 @@ export default function StaffHand() {
                     </div>
                     <div className=" flex  gap-[10px] mt-[15px]">
                       <div className=" w-[50px]  border-[1.5px] border-[#ffff]   flex justify-center items-center h-[50px] rounded-[6px]">
-                        <i class=" text-[#fff] text-[21px]  fa-solid fa-phone"></i>
+                        <i className=" text-[#fff] text-[21px]  fa-solid fa-phone"></i>
                       </div>
                       <div className=" flex w-[80%]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff]">
                         <p>Reserve now</p>

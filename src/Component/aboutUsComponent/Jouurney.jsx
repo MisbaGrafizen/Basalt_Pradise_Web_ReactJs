@@ -76,7 +76,7 @@ export default function Jouurney() {
               <div className=" flex md:w-[43%]  ">
                 <img
                   className=" flex  rounded-[8px] object-cover"
-                  src={imag1}
+                  src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/yexlwgv1odu7gks0zut7.jpg"
                 />
               </div>
 
@@ -129,7 +129,7 @@ export default function Jouurney() {
               <div className=" flex order-1 md:order-2  md:w-[43%]  ">
                 <img
                   className=" flex  rounded-[8px] object-cover"
-                  src={imag2}
+                  src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pvzwlffwtndejk1oofkw.jpg"
                 />
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function Jouurney() {
               <div className=" flex ] md:w-[43%]  ">
                 <img
                   className=" flex  rounded-[8px] object-cover"
-                  src={imag3}
+                  src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/txggysorxbhfslfza7jd.jpg"
                 />
               </div>
               <div className=" md:flex  hidden bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
@@ -178,7 +178,7 @@ export default function Jouurney() {
               <div className=" flex md:w-[43%]  order-1 md:order-2  ">
                 <img
                   className=" flex  rounded-[8px] object-cover"
-                  src={imag4}
+                  src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg"
                 />
               </div>
             </div>

@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import banner1 from "../../../public/Basalt/B7.jpg";
+// import banner1 from "../../../public/Basalt/B7.jpg";
 import banner2 from "../../../public/Basalt/B11.jpg";
 import banner3 from "../../../public/Basalt/B10.jpg";
 
@@ -275,23 +275,7 @@ export default function RoomListing() {
   //   return current && current.isBefore(dayjs(), "day");
   // };
   const hotels = [
-    {
-      name: "Zen Room",
-      location: " Fits 2 Adults ",
-      distance: "Experience a serene stay in our Zen Room,",
-      rating: 4.7,
-      ratingText: "Excellent",
-      ratings: 29,
-      sponsored: true,
-      originalPrice: 5900,
-      discountedPrice: 5015,
-      taxes: 1239,
-      amenities: ["Gym", "Restaurant", "24-hour Room Service"],
-      images: [image1, image2, image3, image4],
-      features: ["Wi-Fi", "Air Conditioning", "Housekeeping"],
-      description: null,
-      noCostEmi: false,
-    },
+
     {
       name: "Villa with Private Pool",
       location: "Garden View | King Bed",
@@ -304,11 +288,29 @@ export default function RoomListing() {
       discountedPrice: 15640,
       taxes: 4968,
       amenities: ["Gym", "Restaurant", "24-hour Room Service"],
-      images: [image4, image3, image2, image1],
+      images: ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842102/axhoce3n8tmipx5fi5hm.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842060/uolxy7hbgtewokozst4b.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842061/lxbincg1s3j6bmwenbhl.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif"],
       features: ["Breakfast Included", "Free Cancellation till 24 hrs before check in"],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
       noCostEmi: true,
+    },
+
+    {
+      name: "Zen Room",
+      location: " Fits 2 Adults ",
+      distance: "Experience a serene stay in our Zen Room,",
+      rating: 4.7,
+      ratingText: "Excellent",
+      ratings: 29,
+      sponsored: true,
+      originalPrice: 5900,
+      discountedPrice: 5015,
+      taxes: 1239,
+      amenities: ["Gym", "Restaurant", "24-hour Room Service"],
+      images: ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/dek6p48b0ypsfe5rgt8t.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif"],
+      features: ["Wi-Fi", "Air Conditioning", "Housekeeping"],
+      description: null,
+      noCostEmi: false,
     },
     // {
     //   name: "Lemon Tree Premier, Mumbai International Airport",
@@ -355,19 +357,24 @@ export default function RoomListing() {
       <div className="flex flex-col w-full font-Poppins pt-[110px] ">
         {/* <div className="hero-background"></div> */}
 
-        <div className="md:w-[80%] w-[95%] pb-[30px]   2xl:w-[1400px] gap-[20px] mt-[5px]  md:flex  mx-auto">
-          <div className="md:flex  hidden md:w-[300px] flex-col gap-[3px] h-[300px] mb-6">
-            <img className="rounded-[8px]  w-full" src={banner2} alt="Banner" />
-            <img className="rounded-[8px]  w-full" src={banner1} alt="Banner" />
-            <img className="rounded-[8px]  w-full" src={banner3} alt="Banner" />
+        <div className="md:w-[80%] w-[95%] pb-[30px]   2xl:w-[1400px] gap-[20px] mt-[5px]  flex-col md:flex  mx-auto">
+          <div className=" flex md:flex-row flex-col text-[30px] font-[600] ">
+            Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
+          </div>
+          <div className=" flex w-[100%] gap-[30px]">
+
+
+          <div className="md:flex  hidden md:w-[300px] flex-col gap-[8px] h-[300px] mb-6">
+            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg" alt="Banner" />
+            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/kolbglqkmxapnxjd41gy.jpg" alt="Banner" />
+            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg" alt="Banner" />
           </div>
           <div className="w-[90%] mx-auto   gap-[10px] flex flex-col  ">
-            <div className=" flex md:flex-row flex-col text-[30px] font-[600] ">
-              Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
-            </div>
+
             {hotels.slice(0, 5).map((hotel, index) => (
               <HotelCard key={index} {...hotel} />
             ))}
+          </div>
           </div>
         </div>
 

@@ -38,7 +38,7 @@ export default function Preloader() {
         <div className="flex  justify-center items-center fixed top-0 left-0 w-full h-full z-50">
           <div className="flex flex-col items-center">
             <video autoPlay muted className="w-[100%] h-[100vh]">
-              <source src={video} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dn1jdxyoq/video/upload/v1741842129/rlhszubylif9ie3p2wyr.mp4" type="video/mp4" />
             </video>
 
             {/* <img className="w-[100%] h-[100vh]" src={video} /> */}

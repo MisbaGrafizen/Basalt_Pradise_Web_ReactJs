@@ -366,7 +366,7 @@ import React, { useState, useRef, useEffect } from 'react';
 // import {  ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
 import stars from "../../../public/staffhand/stars1.png";
 import b5 from "../../../public/Basalt/B5.jpg";
-import b9 from "../../../public/Basalt/B9.jpg";
+// import b9 from "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg";
 import b11 from "../../../public/Basalt/B11.jpg";
 import b12 from "../../../public/Basalt/B12.jpg";
 import b13 from "../../../public/Basalt/B13.jpg";
@@ -378,11 +378,11 @@ export default function Gallery() {
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
     const images = [
-        { src: b9, width: "700px" },
-        { src: b5, width: "390px" },
-        { src: b13, width: "490px" },
-        { src: b11, width: "430px" },
-        { src: b12, width: "510px" }
+        { src:"https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg", width: "700px" },
+        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg", width: "390px" },
+        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/b48d99soq9yyzak7xgtt.jpg", width: "490px" },
+        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg", width: "430px" },
+        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/cexy9hffqbeezzj1ekqn.jpg", width: "510px" }
     ];
 
     // useEffect(() => {
@@ -455,7 +455,7 @@ export default function Gallery() {
     };
 
     return (
-        <section className='  md:w-[85%] md:px-[40px] px-[35px] relative  flex-col font-Poppins  md:overflow-visible overflow-x-hidden   gap-[30px] w-[100%] flex mx-auto   2xl:w-[1390px]'>
+        <section className='  md:w-[85%] md:px-[40px] px-[35px] relative  flex-col font-Poppins  md:overflow-visible overflow-x-hidden   gap-[30px] w-[100%] flex mx-auto   2xl:w-[1290px]'>
             <h1 className="flex text-[30px] font-Poppins">
                 Actual
                 <span className="text-[#fcaf17] font-[600] px-[6px]">

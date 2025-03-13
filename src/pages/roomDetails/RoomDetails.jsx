@@ -73,7 +73,7 @@ export default function RoomDetails() {
               <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4">
                 <div className="relative rounded-lg">
                   <img
-                    src={mainimg1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif"
                     alt="Hotel exterior"
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
@@ -88,7 +88,7 @@ export default function RoomDetails() {
                       className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
                     >
                       <img
-                        src={mainimg2}
+                        src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif"
                         alt={`Hotel interior ${photo}`}
                         className="w-full h-full object-cover"
                       />
@@ -146,7 +146,7 @@ export default function RoomDetails() {
 
             <div className=" mx-auto font-Poppins space-y-4">
               <div className="rounded-[10px] border bg-white px-5 py-[15px]">
-                <h1 className="text-[20px] font-[600]">Zen Room Only </h1>
+                <h1 className="text-[20px] font-[600]">Zen Room  </h1>
                 <p className="text-[15px] mb-4">Fits 2 Adults</p>
 
                 <ul className="space-y-1 mb-6">
@@ -250,13 +250,13 @@ export default function RoomDetails() {
                 <h2 className="text-lg font-medium mb-">Vila with Private Pool</h2>
                 <div className="relative mb-4">
                   <img
-                    src={mainimg23}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842060/uolxy7hbgtewokozst4b.avif"
                     alt="Deluxe Room"
                     className="w-full h-[200px] object-cover rounded-md"
                   />
-                  <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
+                  {/* <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
                     +11 Photos
-                  </button>
+                  </button> */}
                 </div>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">
@@ -398,13 +398,13 @@ export default function RoomDetails() {
                 <h2 className="text-lg font-medium mb-">Zen Room</h2>
                 <div className="relative mb-4">
                   <img
-                    src={mainimg33}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
                     alt="Deluxe Room"
                     className="w-full h-[200px] object-cover rounded-md"
                   />
-                  <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
+                  {/* <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
                     +11 Photos
-                  </button>
+                  </button> */}
                 </div>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center gap-2">

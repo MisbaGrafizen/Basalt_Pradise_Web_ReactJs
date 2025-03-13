@@ -12,7 +12,7 @@ export default function BlogDetails() {
                 {/* Hero Banner */}
                 <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
                     <img
-                        src={blog1}
+                        src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg"
                         alt="Basalt Paradise Resort"
                         fill
                         className="object-cover w-[100%] h-[100%]"

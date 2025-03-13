@@ -50,7 +50,7 @@ export default function Celebration() {
               </p>
             </div>
             <div ref={scrollContainerRef} className=" flex   order-1 md:order-2  gap-[20px] overflow-y-auto md:w-[42%]">
-            {[image1, image1, image1].map((img, index) => (
+            {["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/txggysorxbhfslfza7jd.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/vjmfvqt05kt7rudiw06h.jpg"].map((img, index) => (
               <img
                 key={index}
                 className="rounded-[10px] w-[230px] h-[320px] object-cover"

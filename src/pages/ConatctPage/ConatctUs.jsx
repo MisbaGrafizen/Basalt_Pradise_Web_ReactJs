@@ -226,7 +226,7 @@ export default function ContactUs() {
                         free to drop us an email.
                       </p>
                     </div>
-                    <div className="border-[1px] bg-[#fff] shadow-lg py-[15px] px-[18px] rounded-[10px] mt-[13px] md:mt-[0px] gap-[7px] flex flex-col w-[100%]">
+                    <div className="border-[1px] bg-[#fff] shadow-lg py-[15px] px-[18px] rounded-[10px] mt-[17px] md:mt-[0px] gap-[7px] flex flex-col w-[100%]">
                       <div className="flex  gap-[20px] border-b-[1.5px] pb-[7px] justify-start">
                         <i className=" text-[20px] mt-[5px] basalt-text text-[#ffa93a] fa-solid fa-phone-volume"></i>
                         <div>
@@ -276,7 +276,7 @@ export default function ContactUs() {
                   </div>
 
                   {/* Form Inputs */}
-                  <div autoComplete='off' className="md:w-[45%] gap-[20px] border-[#ffa93a] border  bg-[#ffffff] rounded-[10px] shadow-lg p-[20px] md:p-[30px] mt-[20px] md:mt-[10px] flex flex-col">
+                  <div autoComplete='off' className="md:w-[45%] gap-[20px] border-[#ffa93a] border  bg-[#ffffff] rounded-[10px] shadow-lg p-[20px] md:py-[18px] md:px-[30px] mt-[20px] md:mt-[10px] flex flex-col">
                     <div className="flex w-[100%] justify-between gap-[20px] font-Poppins">
                       <div className="w-[49%] h-[40px]  flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input

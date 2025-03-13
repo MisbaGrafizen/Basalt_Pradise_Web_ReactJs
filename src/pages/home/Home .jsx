@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <Preloader />
       <div className=" w-[100%] bg-[#ffffffc5]">
-        <div className=" 2xl:w-[1400px] !bg-[#]    flex flex-col gap-[62px] h-[100%] mx-auto">
+        <div className=" 2xl:w-[1270px] !bg-[#]    flex flex-col gap-[62px] h-[100%] mx-auto">
           <HeroSection />
           <Gallery />
           <Review />

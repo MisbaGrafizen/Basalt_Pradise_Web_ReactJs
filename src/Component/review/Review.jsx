@@ -310,19 +310,19 @@ Review({
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/b9zn3wzx5ekvwxi4u9o1.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/cexy9hffqbeezzj1ekqn.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
@@ -358,25 +358,25 @@ Review({
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/kolbglqkmxapnxjd41gy.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/yexlwgv1odu7gks0zut7.jpg"
                   />
                 </div>
                 <div className=" flex w-[60px] md:w-[70px] h-[60px] rounded-[10px]">
                   <img
                     className=" w-[100%] h-[100%] object-cover rounded-[10px]"
-                    src={image1}
+                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg"
                   />
                 </div>
               </div>
