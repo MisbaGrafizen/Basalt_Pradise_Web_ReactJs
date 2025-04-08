@@ -39,7 +39,7 @@ const spotlightData1 = [
             "Surrounded by lush landscapes and crystal-clear waters, Basalt Paradise offers an exquisite blend of nature and sophistication. Enjoy bespoke services, gourmet dining, and unparalleled tranquility in a destination designed for the discerning traveler."
     },
     {
-        image:firstimage ,
+        image: firstimage,
         "title": "Beyond Expectations: The Ultimate Luxury Experience at Basalt Paradise",
         "description":
             "Step into a world of exclusivity at Basalt Paradise, where impeccable service and breathtaking surroundings create a truly unforgettable stay. From private yacht excursions to sunset dining on the beach, every experience is tailored for the ultimate in luxury travel."
@@ -49,11 +49,18 @@ const spotlightData1 = [
 export default function SpotLight() {
     return (
         <>
-<Header />
+            <Header />
 
             <div className="md:w-[80%] w-[95%] px-[15px] md:pt-[120px] pt-[120px] pb-[80px] font-Poppins flex mx-auto">
                 <div className="flex flex-col gap-[30px] justify-between relative w-[100%]">
-
+                    <div className="flex flex-col">
+                        <h1 className="flex font-[700] text-[35px] font-Poppins">
+                            In The <span className="text-[#fcaf17] pl-[10px]">Spotlight</span>
+                        </h1>
+                        <p className="flex font-[500] text-[#515151] text-[17px]">
+                            Dive into a World of Ideas, Stories, News and Inspiration
+                        </p>
+                    </div>
                     <div className="flex w-[100%] overflow-x-auto py-[10px] justify-between gap-[20px]">
                         {spotlightData.map((item, index) => (
                             <div

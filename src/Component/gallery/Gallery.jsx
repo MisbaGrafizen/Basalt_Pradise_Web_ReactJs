@@ -370,6 +370,7 @@ import b5 from "../../../public/Basalt/B5.jpg";
 import b11 from "../../../public/Basalt/B11.jpg";
 import b12 from "../../../public/Basalt/B12.jpg";
 import b13 from "../../../public/Basalt/B13.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Gallery() {
     const scrollRef = useRef(null);
@@ -377,12 +378,13 @@ export default function Gallery() {
     const [showRightArrow, setShowRightArrow] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
+    const navigate =useNavigate()
     const images = [
-        { src:"https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg", width: "700px" },
-        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg", width: "390px" },
-        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/b48d99soq9yyzak7xgtt.jpg", width: "490px" },
-        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg", width: "430px" },
-        { src: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/cexy9hffqbeezzj1ekqn.jpg", width: "510px" }
+        { src:"https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/hyona5bkitk3qvifmzcy.jpg", width: "700px" },
+        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/bnavgquv9tmp64fh7eeh.jpg", width: "390px" },
+        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg", width: "490px" },
+        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/hhy1mhdldlptxc5odgk5.jpg", width: "430px" },
+        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006365/anoirryt55vkwffchlfk.jpg", width: "510px" }
     ];
 
     // useEffect(() => {
@@ -454,8 +456,13 @@ export default function Gallery() {
         setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
+    const handleNavigate =()=>{
+
+        navigate("/gallery")
+    }
+
     return (
-        <section className='  md:w-[85%] md:px-[40px] px-[35px] relative  flex-col font-Poppins  md:overflow-visible overflow-x-hidden   gap-[30px] w-[100%] flex mx-auto   2xl:w-[1290px]'>
+        <section className='  md:w-[85%] md:px-[40px] px-[35px] relative  flex-col font-Poppins  md:overflow-visible overflow-x-hidden   gap-[10px] md:gap-[30px] w-[100%] flex mx-auto   2xl:w-[1300px]'>
             <h1 className="flex text-[30px] font-Poppins">
                 Actual
                 <span className="text-[#fcaf17] font-[600] px-[6px]">
@@ -466,7 +473,7 @@ export default function Gallery() {
 
             {showLeftArrow && (
                 <button
-                    className='absolute left-[14px] top-[52%] z-[60] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
+                    className='absolute left-[14px] top-[52%] z-[10] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
                     onClick={() => scroll('left')}
                 >
                     <ChevronLeft className="text-[#3b22ff] w-6 h-6" />
@@ -475,7 +482,7 @@ export default function Gallery() {
 
             {showRightArrow && (
                 <button
-                    className='absolute right-[14px] top-[52%] z-[60] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
+                    className='absolute right-[14px] top-[52%] z-[10] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
                     onClick={() => scroll('right')}
                 >
                     <ChevronRight className="text-[#3b22ff] w-6 h-6" />
@@ -484,13 +491,13 @@ export default function Gallery() {
 
             <div ref={scrollRef} className='flex w-full overflow-x-auto gap-[14px] h-[340px] scroll-smooth no-scrollbar'>
             {images.map((image, index) => (
-                    <img key={index} src={image.src} className={`object-cover rounded-[8px] h-[100%] cursor-pointer`} style={{ width: image.width }} alt={`Gallery ${index + 1}`} onClick={() => openLightbox(index)} />
+                    <img key={index}  src={image.src}  className={`object-cover rounded-[8px] h-[100%] cursor-pointer`} style={{ width: image.width }} alt={`Gallery ${index + 1}`} onClick={() => openLightbox(index)} />
                 ))}
                 <div className=' flex items-center ml-[20px]  h-[100%]'>
                     <div className=' basalt flex w-[2px]  items-center h-[60%]'>
 
                     </div>
-                    <div className=' flex  justify-center font-Poppins hover:underline-offset-3  cursor-pointer hover:underline  w-[120px] font-[500] items-center basalt-text  gap-[10px]  '>
+                    <div className=' flex  justify-center font-Poppins hover:underline-offset-3  cursor-pointer hover:underline  w-[120px] font-[500] items-center basalt-text  gap-[10px]  ' onClick={handleNavigate}>
                         View All <i className="fa-regular fa-arrow-right"></i>
                     </div>
                 </div>

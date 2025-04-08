@@ -7,6 +7,8 @@ import {
   ModalContent,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import StarBorder from "../Reactbits/StarBorder";
+
 export default function Header() {
   const location = useLocation(); // Get the current path
   const [selected, setSelected] = useState(location.pathname); // Track selected route
@@ -29,7 +31,8 @@ export default function Header() {
 
 
   const handleloginOpen = () => {
-    setIsModalOpen(true)
+    // setIsModalOpen(true)
+    navigate("/all-rooms")
   }
   useEffect(() => {
     setIsLoggedIn(false);
@@ -183,9 +186,9 @@ export default function Header() {
       alert("Please enter your name and email.");
       return;
     }
-  
+
     console.log("User details submitted:", { name, email });
-  
+
     // Here, you can call an API to store user details
     // Example:
     // fetch("https://your-api.com/register", {
@@ -200,23 +203,23 @@ export default function Header() {
     //   setIsModalOpen(false);
     // })
     // .catch(error => console.error("Error registering user:", error));
-  
+
     // Simulate successful registration
     setIsLoggedIn(true);
     setIsModalOpen(false);
   };
-  
+
   return (
     <>
-      <div className="bg-white flex w-full font-Poppins z-[100] mx-auto fixed">
-        <div className="flex md:w-[80%]  w-[90%] h-[70px] mt-[20px] mx-auto  flex-col">
+      <div className="bg-white flex w-full font-Poppins !z-[1350] mx-auto fixed">
+        <div className="flex md:w-[80%] 2xl:w-[1330px]  w-[90%] h-[70px] mt-[20px] mx-auto  flex-col">
           <div className="flex w-full">
             <div className="flex w-full">
               <div className="flex w-full relative justify-between">
-              <Link className="w-fit" to={"/"}>
-                <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Logo" />
+                <Link className="w-fit" to={"/"}>
+                  <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Basalt Logo" />
                 </Link>
-                <div className="flex w-[68%]  mt-[5px] items-center md:items-start justify-between">
+                <div className="flex md:w-[63%] 2xl:w-[750px]  mt-[5px] items-center md:items-start justify-between">
                   <div>
                     <div className="xl:text-[15px] gap-[15px] text-[#000] items-center pl-[20px] font-Montserrat mt-[-0.4%] flex font-[600] justify-end md36:hidden md:flex">
                       <Link
@@ -256,7 +259,7 @@ export default function Header() {
                         Accommodation
                       </Link>
 
-                  <span className="flex h-[24px] w-[1px] bg-black"></span>
+                      {/* <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link
                         to="/amenities"
@@ -267,9 +270,23 @@ export default function Header() {
                           }`}
                       >
                         Amenities
-                      </Link> 
+                      </Link> */}
+
+                      {/* <span className="flex h-[24px] w-[1px] bg-black"></span>
+
+                      <Link
+                        to="/memories"
+                        onClick={() => handleLinkClick("/memories")}
+                        className={`cursor-pointer font-[400] font-Poppins ${selected === "/memories"
+                          ? "text-yellow-500 hover:text-yellow-500"
+                          : " text-[#515151]"
+                          }`}
+                      >
+                        Memories
+                      </Link> */}
 
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
+
 
                       <Link
                         to="/blogs"
@@ -281,18 +298,18 @@ export default function Header() {
                       >
                         Blogs
                       </Link>
-                      {/* <span className="flex h-[24px] w-[1px] bg-black"></span> */}
+                      <span className="flex h-[24px] w-[1px] bg-black"></span>
 
-                      {/* <Link
-                        to="/memories"
-                        onClick={() => handleLinkClick("/memories")}
-                        className={`cursor-pointer font-[400] font-Poppins ${selected === "/memories"
+                      <Link
+                        to="/gallery"
+                        onClick={() => handleLinkClick("/gallery")}
+                        className={`cursor-pointer font-[400] font-Poppins ${selected === "/gallery"
                           ? "text-yellow-500 hover:text-yellow-500"
                           : "  text-[#515151]"
                           }`}
                       >
-                        Memories
-                      </Link> */}
+                        Gallery
+                      </Link>
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
                       <Link
@@ -307,11 +324,25 @@ export default function Header() {
                       </Link>
                     </div>
                   </div>
-                  <button className="md:mt-[-7px] flex w-[90px] gap-[10px] h-[33px] text-[14px] font-[500] rounded-[5px] basalt text-[#fff] text-center justify-center items-center" onClick={handleloginOpen}>
+                  {/* <button className="md:mt-[-7px] flex w-[126px] gap-[10px] h-[33px] text-[14px] font-[500] rounded-[5px] basalt text-[#fff] text-center justify-center items-center" onClick={handleloginOpen}>
                     <i className="fa-solid fa-user"></i>
                     <span className="bg-white flex w-[2px] h-[20px]"></span>
-                    Login
-                  </button>
+                    Book Now
+                  </button> */}
+<div className=" mt-[-13px] w-fit" onClick={handleloginOpen}>
+
+
+                  <StarBorder
+
+                    as="button"
+                    className="custom-class "
+                    color="#00FFFF"
+                    speed="5s"
+                  >
+                    Book Now
+                  </StarBorder>
+                  </div>
+
                   <span className="absolute h-[0.5px] bg-[#13002f] top-[36.5px] hidden right-[-0.2%] md:flex w-[87.5%]"></span>
                 </div>
               </div>

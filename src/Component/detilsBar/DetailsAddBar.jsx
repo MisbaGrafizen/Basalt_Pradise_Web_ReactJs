@@ -122,10 +122,10 @@ export default function DetailsAddBar() {
 
   return (
     <>
-      <div className=" flex  relative z-[10] shadow-md   pb-[10px] rounded-[10px] pt-[10px] items-center x` 2xl:w-[1400px]  mt-[20px] w-[79%]  mb-[10px] px-[30px] mx-auto  border justify-center  flex-col ">
-        <div className=" flex w-[100%]  ">
+      <div className=" flex  relative z-[10] shadow-md   pb-[10px] rounded-[10px] pt-[10px] font-Poppins items-center x` 2xl:w-[1300px]  mt-[20px] md:w-[79%] w-[90%]  mb-[10px] px-[20px] md:px-[30px] mx-auto  border justify-center  flex-col ">
+        <div className=" flex md:flex-row flex-col w-[100%]  ">
           <div className=" w-[100%] flex flex-col h-[px] ">
-            <div className="col md:w-[66%] w-[81%] justify-between  mt-[11px] flex">
+            <div className="col md:w-[66%] w-[73%] justify-between  mt-[11px] flex">
               <p className="w-50 text-[12px] lg:!text-[14px] opacity-50  font-lucida-bright-regular font-[600] px-1">
                 Check In
               </p>
@@ -134,7 +134,7 @@ export default function DetailsAddBar() {
               </p>
             </div>
             <div className=" w-[100%]  ">
-              <div className=" absolute top-[28px] start-[16%] font-lucida-bright-regular  translate-middle z-10 px-2 md:w-[80px] py-[3px] text-center  rounded-full text-[11px] lg:!text-[12px] font-semibold basalt  tx-white tx-5 ">
+              <div className=" absolute top-[28px] md:start-[16%] start-[30%] font-lucida-bright-regular  translate-middle z-10 px-2 md:w-[80px] py-[3px] text-center  rounded-full text-[11px] lg:!text-[12px] font-semibold basalt  tx-white tx-5 ">
                
                 <p>
                   {numOfNights} {numOfNights === 1 ? "Night" : "Nights"}
@@ -160,7 +160,7 @@ export default function DetailsAddBar() {
               />
             </div>
           </div>
-          <div className=" items-center flex flex-row  lg:!items-center py-[5px] px-2 w-[100%] justify-between border-b-[1px] border-gray-200 relative">
+          <div className=" items-center flex md:flex-row  lg:!items-center py-[5px] px-2 w-[100%] justify-between border-b-[1px] border-gray-200 relative">
             <div
               className="w-100 lg:!w-[50%] pointer"
               onClick={handleGuestDetails}
@@ -269,7 +269,7 @@ export default function DetailsAddBar() {
               </div>
             )}
 
-            <div className="cursor-pointer translate-middle text-select-none left-0  basalt   w-fit lg:!w-[140px] text-center duration-400 rounded-full px-[10px]  active:!px-[10px] py-[6px]">
+            <div className="cursor-pointer md:flex  hidden translate-middle text-select-none left-0  basalt  justify-center  w-fit lg:!w-[140px] text-center duration-400 rounded-full px-[10px]  active:!px-[10px] py-[6px]">
               <button
                 className="tx-white  font-Roboto text-[20px] md:text-[18px] font-bold"
                 type="submit"
@@ -278,6 +278,14 @@ export default function DetailsAddBar() {
               </button>
             </div>
           </div>
+          <div className="cursor-pointer flex md:hidden  mt-[20px]  w-[100%] justify-center translate-middle text-select-none left-0  basalt    lg:!w-[140px] text-center duration-400 rounded-full px-[10px]  active:!px-[10px] py-[6px]">
+              <button
+                className="tx-white  font-Roboto  text-center text-[16px] md:text-[18px] font-bold"
+                type="submit"
+              >
+                Update
+              </button>
+            </div>
         </div>
       </div>
     </>

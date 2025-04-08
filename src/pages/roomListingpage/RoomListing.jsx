@@ -10,14 +10,16 @@ import image11 from "../../../public/Gallery/img1.jpg";
 import image22 from "../../../public/Gallery/img2.jpg";
 import image33 from "../../../public/Gallery/img3.jpg";
 import image44 from "../../../public/Gallery/img4.jpg";
+import swimmingpool from "../../../public/Basalt/B12.jpg"
 
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Star,
   MapPin,
   Dumbbell,
   UtensilsCrossed,
   Clock,
-  ChevronRight,
+
   Bath,
   Check,
 } from "lucide-react";
@@ -34,6 +36,7 @@ import Footer from "../../Component/footer/Footer";
 import { Review } from "../../Component/review/Review";
 import BannerSection from "../../Component/bannerSection/BannerSection";
 import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
+import Gallery from "../../Component/gallery/Gallery";
 
 // interface RoomProps {
 //   name: string;
@@ -66,16 +69,54 @@ const HotelCard = ({
   features,
   description,
   noCostEmi,
+  openLightbox, // 👈 passed from parent
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const navigate = useNavigate();
+  const handleDetails = (roomType) => {
+    if (roomType === "villa") {
+      navigate("/private-vila-details");
+    } else if (roomType === "zen-room") {
+      navigate("/room-details");
+    } else {
+      navigate("/room-details"); // Default fallback
+    }
+  };
 
-  const handleDetails = () => {
-    navigate("/room-details");
+
+
+
+
+
+
+
+
+  // const openLightbox = (images, index) => {
+  //   setLightboxImages(images);
+  //   setCurrentImageIndex(index);
+  //   setIsOpen(true);
+  // };
+
+  const closeLightbox = () => {
+    setIsOpen(false);
+    setCurrentImageIndex(0);
+    setLightboxImages([]);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? lightboxImages.length - 1 : prev - 1
+    );
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === lightboxImages.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
-    <div className="bg-white  border-[#e5eaff] w-[100%] rounded-lg border mb-[10px] relative flex flex-col   overflow-hidden">
+    <div className="bg-white  border-[#e5eaff] w-[100%] rounded-lg  border mb-[10px] relative flex flex-col   overflow-hidden">
       <div className="flex  flex-col relative  w-[100%]   md:flex-row">
         {/* Left Section - Image Gal lery */}
         <div className="relative  h-[243px] md:w-[275px]">
@@ -94,19 +135,21 @@ const HotelCard = ({
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentImageIndex}
+                onClick={() => openLightbox(images, 0)}// ✅ Call parent function
                 src={images[currentImageIndex]}
                 alt={`${name} view ${currentImageIndex + 1}`}
-                className="!w-[400px] h-[162px] rounded-[4px] object-cover"
+                className="!w-[400px] h-[162px] rounded-[4px] object-cover cursor-pointer"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               />
+
             </AnimatePresence>
           </div>
 
           {/* Thumbnails */}
-          <div className="absolute bottom-3 left-[9px] w-[93%] flex gap-[5px]">
+          <div className="absolute bottom-3 md:left-[9px] md:w-[93%] w-[94%] left-[10px] flex gap-[5px]">
             {images.slice(0, 3).map((img, index) => (
               <button
                 key={index}
@@ -121,16 +164,30 @@ const HotelCard = ({
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
+                {/* <img
+  src={img}
+  alt={`Thumbnail ${index + 1}`}
+  className="w-full h-full object-cover cursor-pointer"
+  onClick={() => {
+    setCurrentImageIndex(index);             // Update the main image
+    openLightbox(images, index);            // 👈 Open popup at clicked index
+  }}
+/> */}
+
               </button>
             ))}
-            <button className="md:w-[60px] w-[40%] h-[55px] bg-black/50 text-white rounded flex items-center justify-center text-xs">
+            <button
+              className="md:w-[60px] w-[42%] h-[55px] bg-black/50 text-white rounded flex items-center justify-center text-xs"
+              onClick={() => openLightbox(images, currentImageIndex)} // ✅ Use currentImageIndex
+            >
               View All
             </button>
+
           </div>
         </div>
 
         {/* Right Section - Details */}
-        <div className="flex-1 py-[8px] font-Poppins  md:w-[40%] pr-[30px] pl-[10px]">
+        <div className="flex-1 py-[8px] font-Poppins  md:w-[38%] pr-[30px] pl-[10px]">
           <div className="flex justify-between items-start gap-4">
             <div>
               <h2 className="text-[20px] font-[600] leading-7   text-gray-900">
@@ -140,7 +197,7 @@ const HotelCard = ({
               <div className="mt-1">
                 <a
                   href="#"
-                  className="text-[#1f569e] text-[14px] leading-4 font-[500] hover:underline"
+                  className="text-[#1f569e]  hover:text-[#1f569e]  text-[14px] leading-4 font-[500] "
                 >
                   {location}
                 </a>
@@ -181,38 +238,38 @@ const HotelCard = ({
                 {amenity === "Swimming Pool" && (
                   <Bath className="w-[15px] h-[15px] mr-[5px] text-[#005f94]" />
                 )}
-                <span className="text-[12px] ">{amenity}</span>
+                <span className="text-[11px] ">{amenity}</span>
               </div>
             ))}
           </div>
 
           <div className=" flex relative ">
             <div className=" w-[80%] flex  flex-col gap-[5px] mt-[23px]">
-              {features.map((feature, index) => (
+              {/* {features.map((feature, index) => (
                 <div key={index} className="flex  gap-2">
                   <i class="fa-duotone fa-solid mt-[2px]  text-[#b18f2a] fa-check"></i>
                   <span className="text-[#b18f2a]  text-[13px]">{feature}</span>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
-        <div className="flex-1 py-[8px]  px-[10px]  font-Poppins md:max-w-[220px] border-l md:pr-[20px]">
+        <div className="flex-1 py-[8px]  px-[10px]  font-Poppins md:max-w-[220px] \ md:pr-[20px]">
           <div className="text-left md:text-right flex flex-col  gap-[5px]">
-            <div className="text-[#0066b2] text-[13px]  font-bold">
+            {/* <div className="text-[#0066b2] text-[13px]  font-bold">
               {ratingText}
             </div>
             <div className="text-[#005f94]   text-[28px] font-bold leading-8">
               {rating}
-            </div>
-            <div className="text-[#4a4a4a]   text-[12px]">
+            </div> */}
+            {/* <div className="text-[#4a4a4a]   text-[12px]">
               ({ratings} Ratings)
-            </div>
+            </div> */}
           </div>
 
-          <div className="flex w-[100%] md:w-[100%]   z-[12]  relative  md:justify-end justify-start">
+          <div className="flex w-[100%] md:w-[100%] h-[165px]   z-[12]  relative  md:justify-end justify-start">
             <div className="text-left md:text-right w-[100%] ">
-              {originalPrice && (
+              {/* {originalPrice && (
                 <div className="text-[#4a4a4a] text-[10px] line-through text-base">
                   ₹{originalPrice.toLocaleString()}
                 </div>
@@ -224,11 +281,11 @@ const HotelCard = ({
               </div>
               <div className="text-sm text-[400] text -[12] text-[#4a4a4a]  ">
                 + ₹{taxes.toLocaleString()} taxes & fees
-              </div>
-              <div className=" flex justify-center mt-[5px]">
+              </div> */}
+              <div className=" flex justify-center ">
                 <div
-                  className=" flex md:w-[120px] w-[98%]   md:absolute bottom-[-60px] right-[0px]  ab cursor-pointer h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
-                  onClick={handleDetails}
+                  className=" flex md:w-[120px] w-[98%]   md:absolute bottom-[-50px] right-[0px]  ab cursor-pointer mt-[40px] md:mt-0 h-[36px] text-[13px] justify-center items-center py-[2px] basalt font-[500] font-Poppins px-[10px] text-white rounded-[30px]"
+                  onClick={() => handleDetails(name.toLowerCase().includes("villa") ? "villa" : "zen-room")}
                 >
                   <p>View Details</p>
                 </div>
@@ -251,11 +308,40 @@ export default function RoomListing() {
   const [startDate, setStartDate] = useState(dayjs());
   const [numOfDays, setNumOfDays] = useState(null);
   const [endDate, setEndDate] = useState(dayjs());
-
+  const [isOpen, setIsOpen] = useState(false);
   const formatPlaceholder = (dates) => { };
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const handleGuestDetails = () => {
     setGuestDetails((prevCheck) => !prevCheck);
   };
+
+
+  const openLightbox = (images, index) => {
+    setLightboxImages(images);
+    setCurrentImageIndex(index);
+    setIsOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsOpen(false);
+    setCurrentImageIndex(0);
+    setLightboxImages([]);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? lightboxImages.length - 1 : prev - 1
+    );
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === lightboxImages.length - 1 ? 0 : prev + 1
+    );
+  };
+
 
   // useEffect(() => {
   //   // Set default values for today and tomorrow
@@ -278,17 +364,17 @@ export default function RoomListing() {
 
     {
       name: "Villa with Private Pool",
-      location: "Garden View | King Bed",
-      distance: "Halol, 15 minutes walk to Champaner-Pavagadh Archaeological Park",
-      rating: 4.1,
+      location: "Garden View | King Bed | Premium Villa Stay",
+      distance: "10.0 km drive to Champaner-Pavagadh Archaeological Park",
+      // rating: 4.8,
       ratingText: "Very Good",
       ratings: 8074,
       sponsored: false,
       originalPrice: 18400,
-      discountedPrice: 15640,
-      taxes: 4968,
-      amenities: ["Gym", "Restaurant", "24-hour Room Service"],
-      images: ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842102/axhoce3n8tmipx5fi5hm.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842060/uolxy7hbgtewokozst4b.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842061/lxbincg1s3j6bmwenbhl.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif"],
+      discountedPrice: 16560,
+      taxes: 5152,
+      amenities: ["Gym", "Restaurant", "24-hour Room Service", "Free Cancellation (up to 24 hours before )"],
+      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",swimmingpool, "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif",],
       features: ["Breakfast Included", "Free Cancellation till 24 hrs before check in"],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
@@ -297,17 +383,17 @@ export default function RoomListing() {
 
     {
       name: "Zen Room",
-      location: " Fits 2 Adults ",
-      distance: "Experience a serene stay in our Zen Room,",
-      rating: 4.7,
+      location: "Fits 2 Adults | Tranquil Stay for a Relaxing Getaway ",
+      distance: "10.0 km drive to Champaner-Pavagadh Archaeological Park ",
+      // rating: 4.7,
       ratingText: "Excellent",
-      ratings: 29,
+      ratings: 8074,
       sponsored: true,
       originalPrice: 5900,
-      discountedPrice: 5015,
-      taxes: 1239,
-      amenities: ["Gym", "Restaurant", "24-hour Room Service"],
-      images: ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/dek6p48b0ypsfe5rgt8t.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif"],
+      discountedPrice: 5293,
+      taxes: 1298,
+      amenities: ["Wi-Fi & Air Conditioning", "Restaurant", "24-hour Room Service", "Housekeeping"],
+      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif"],
       features: ["Wi-Fi", "Air Conditioning", "Housekeeping"],
       description: null,
       noCostEmi: false,
@@ -350,6 +436,14 @@ export default function RoomListing() {
     // },
   ];
 
+
+
+  const sidebarImages = [
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/hhy1mhdldlptxc5odgk5.jpg",
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/vsleist01ypkkiovgftn.jpg",
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/pturvwl713cgrxgenpcj.jpg",
+  ];
+
   return (
     <>
       <Header />
@@ -357,29 +451,38 @@ export default function RoomListing() {
       <div className="flex flex-col w-full font-Poppins pt-[110px] ">
         {/* <div className="hero-background"></div> */}
 
-        <div className="md:w-[80%] w-[95%] pb-[30px]   2xl:w-[1400px] gap-[20px] mt-[5px]  flex-col md:flex  mx-auto">
+        <div className="md:w-[80%] w-[90%] pb-[30px]   2xl:w-[1270px] gap-[20px] mt-[5px]  flex-col md:flex  mx-auto">
           <div className=" flex md:flex-row flex-col text-[30px] font-[600] ">
-            Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
+            Welcome To <span className=" text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex md:pl-[10px] leading-5 md:leading-[45px] text-[]">Basalt Paradise</span>  <img className=" mt-[px]  md:flex hidden w-[30px] h-[40px]" src={stars} />
           </div>
           <div className=" flex w-[100%] gap-[30px]">
 
 
-          <div className="md:flex  hidden md:w-[300px] flex-col gap-[8px] h-[300px] mb-6">
-            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg" alt="Banner" />
-            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/kolbglqkmxapnxjd41gy.jpg" alt="Banner" />
-            <img className="rounded-[8px]  w-full" src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg" alt="Banner" />
-          </div>
-          <div className="w-[90%] mx-auto   gap-[10px] flex flex-col  ">
+            <div className="md:flex hidden md:w-[300px] flex-col gap-[8px] h-[300px] mb-6">
+              {sidebarImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Sidebar ${index + 1}`}
+                  className="rounded-[8px] w-full cursor-pointer"
+                  onClick={() => openLightbox(sidebarImages, index)} // 👈 this opens lightbox for just these 3
+                />
+              ))}
+            </div>
 
-            {hotels.slice(0, 5).map((hotel, index) => (
-              <HotelCard key={index} {...hotel} />
-            ))}
-          </div>
+            <div className="w-[100%] mx-auto  md:mt-0 mt-[20px]  gap-[10px] flex flex-col  ">
+
+              {hotels.slice(0, 5).map((hotel, index) => (
+                <HotelCard key={index} {...hotel} openLightbox={openLightbox} />
+              ))}
+            </div>
           </div>
         </div>
 
       </div>
-      <div className=" 2xl:w-[1400px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+      <div className=" 2xl:w-[1400px] !bg-[#]  pb-[20px] pt-[40px]  w-[100%]  flex flex-col gap-[62px] h-[100%] mx-auto">
+      <Gallery />
+    
         <Review />
         <BannerSection />
         <div className=" w-[90%] mx-auto">
@@ -387,6 +490,43 @@ export default function RoomListing() {
         </div>
 
       </div>
+      {isOpen && (
+        <div className="fixed inset-0 z-[7000] flex flex-col items-center justify-center bg-black/80 p-4">
+          {/* Close Button */}
+          <button className="absolute top-5 right-5 text-white hover:text-gray-300" onClick={closeLightbox}>
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Previous & Next Buttons */}
+          <button className="absolute left-5 text-white hover:text-gray-300" onClick={prevImage}>
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          <button className="absolute right-5 text-white hover:text-gray-300" onClick={nextImage}>
+            <ChevronRight className="w-8 h-8" />
+          </button>
+
+          {/* Main Image */}
+          <img
+            src={lightboxImages[currentImageIndex]}
+            alt={`Gallery ${currentImageIndex + 1}`}
+            className="max-h-[80vh] max-w-full rounded-md object-contain mb-4"
+          />
+
+          {/* Thumbnail Strip */}
+          <div className="flex gap-2 overflow-x-auto max-w-full px-2">
+            {lightboxImages.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Thumbnail ${index + 1}`}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${currentImageIndex === index ? "border-yellow-400" : "border-transparent"
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
 
 

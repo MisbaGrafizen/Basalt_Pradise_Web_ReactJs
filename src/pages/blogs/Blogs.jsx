@@ -1,72 +1,157 @@
 import React, { useState } from 'react'
-import blog1 from "../../../public/Basalt/B5.jpg"
-import blog2 from "../../../public/Basalt/B6.jpg"
+import pavagadhbannernew from "../../../public/10Blogs/all.png"
+import tours from "../../../public/Blog2/photogrid.jpg"
+import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
+import Jambughoda from "../../../public/10Blogs/Jambughoda-Wildlife-Sanctuary-banner.jpg"
+import Hathnimatafall from "../../../public/10Blogs/Hathnimatafall.jpg"
+import sou from "../../../public/10Blogs/SOU.jpg"
+import general from "../../../public/10Blogs/general-view.jpg"
+import kada from "../../../public/10Blogs/kada-dam.jpg"
+
+import Cbeautifulitadel from "../../../public/10Blogs/beautiful-kevdi-monsoon.jpeg"
+import kaliniketang from "../../../public/10Blogs/kali-niketan-chhota-udepur-vadodara-hotels-1gdlmzq.avif"
+import Siddheshwar from "../../../public/10Blogs/Siddheshwar_Mahadev_Temple_at_Visavada_Gujarat_India_1523534041t.jpg"
+// import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import blog3 from "../../../public/Basalt/B7.jpg"
 import Header from '../../Component/header/Header'
 import Footer from '../../Component/footer/Footer'
 import { useNavigate } from 'react-router-dom'
 import { Button } from 'antd'
+import blog1cover from "../../../public/BlogsCoverS/basalt_blog1.jpg"
+import blog2cover from "../../../public/BlogsCoverS/basalt_blog2.jpg"
+import blog3cover from "../../../public/BlogsCoverS/basalt_blog3.jpg"
+import blog4cover from "../../../public/BlogsCoverS/basalt_blog4.jpg"
+import blog5cover from "../../../public/BlogsCoverS/basalt_blog5.jpg"
+
+
+
 
 
 const blogdata = [
     {
         id: 1,
-        date: "02-05-2025",
-        image: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg",
-        description: " Lorem ipsum dolor sit amet, cre et dolore magna aliqua.dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ",
-
+        category: "Local Attractions & Experiences",
+        route: "/blog-details", // Unique route
+        disatnce: "Discover the Hidden Gems Around Pavagadh & Halol!",
+        image: blog1cover,
+        tittle: "10 Must-Visit Places Near Basalt Paradise",
+        description: "Planning a short getaway to Halol & Pavagadh? Whether you're a history lover, nature enthusiast, or spiritual traveler...",
+        fullContent: "This is the full content for Blog 1..."
     },
     {
         id: 2,
-        date: "03-05-2025",
-        image: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pvzwlffwtndejk1oofkw.jpg",
-        description: " hello ipsum dolor sit amet, cre et dolore magna aliqua.dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ",
-
+        category: "Travel Tips & Guides",
+        route: "/travel-tips", // Unique route
+        disatnce: "Explore Travel Hacks for Your Trip!",
+        image: blog5cover,
+        tittle: "A Perfect 2-Day Itinerary for Halol & Pavagadh",
+        description: "Nestled in the scenic beauty of Pavagadh, Basalt Paradise is the perfect getaway for travelers seeking nature, history, and adventure...",
+        fullContent: "This is the full content for Blog 2..."
     },
     {
         id: 3,
-        date: "04-05-2025",
-        image: "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/kolbglqkmxapnxjd41gy.jpg",
-        description: " hello ipsum dolor sit amet, cre et dolore magna aliqua.dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ",
-
+        category: "Offbeat Destinations Near Halol",
+        route: "/offbeat-destinations", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: blog3cover,
+        tittle: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        description: "Tired of crowded tourist places? Looking for hidden gems that offer peace, nature, and unique experiences ? Halol, known for its historical significance and natural beauty, has some breathtaking offbeat destinations waiting to be explored.",
+        fullContent: "This is the full content for Blog 2..."
     },
-]
+    {
+        id: 4,
+        category: "Best Nature Spots Near Halol",
+        route: "/nature-spots", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: blog4cover,
+        tittle: "Escape Into Nature: Discover Halol’s Hidden Scenic Wonders!",
+        description: "Need a peaceful break from city life? The region around Halol & Pavagadh is filled with serene lakes, lush green landscapes, waterfalls, and wildlife sanctuaries—perfect for nature lovers! Here’s a guide to the best nature spots near Halol for a refreshing getaway.",
+        fullContent: "This is the full content for Blog 2..."
+    },
+    {
+        id: 5,
+        category: " Activities Near Basalt",
+        route: "/adventure-activities", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: blog2cover,
+        tittle: "Experience Thrill & Adventure Near Basalt Paradise – A Must-Try Guide!",
+        description: "If you’re visiting Basalt Paradise and looking for an adrenaline rush, you're in for a treat! The area around Halol & Pavagadh isn’t just about history and nature—it’s also packed with thrilling adventure activities. Whether you love trekking, water sports, or wildlife safaris, this guide will take you through the top adventure experiences you can’t miss!",
+        fullContent: "This is the full content for Blog 2..."
+    },
+    {
+        id: 6,
+        category: "Weekend from Ahmedabad",
+        route: "/weekend", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: tours,
+        tittle: "Looking for a quick escape from Ahmedabad? Here’s why Basalt Paradise should be your next weekend destination!",
+        description: "Life in Ahmedabad is exciting, but let’s be honest—it can get hectic! If you’re craving a peaceful weekend away from the city’s hustle, Basalt Paradise in Halol is the perfect retreat. Just a few hours’ drive from Ahmedabad, this hidden gem offers lush greenery, historical sites, adventure activities, and a relaxing atmosphere.",
+        fullContent: ""
+    },
 
+];
 
 
 
 export default function Blogs() {
-    const navigate = useNavigate()
-
+    const navigate = useNavigate();
+    const [selectedCategory, setSelectedCategory] = useState("Local Attractions & Experiences");
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(null);
 
     const buttons = [
         "Local Attractions & Experiences",
         "Travel Tips & Guides",
-        "Resort & Hospitality Insights",
-        "Special Events & Festivities",
-    
+        "Offbeat Destinations Near Halol",
+        "Best Nature Spots Near Halol",
+        " Activities Near Basalt",
+        "Weekend from Ahmedabad"
     ];
 
-    const handleClick = (buttonName) => {
-        setSelectedButton(buttonName);
+    const handleClick = (category) => {
+        setSelectedCategory(category);
     };
-    const [selectedButton, setSelectedButton] = useState(buttons[0]);
-    const handleblogDetails = () => {
-        navigate("/blog-details")
-    }
+
+    const handleBlogDetails = (route) => {
+        navigate(route);
+    };
+
+    const filteredBlogs = blogdata.filter(blog => blog.category === selectedCategory);
+    const openLightbox = (index) => {
+        setCurrentIndex(index);
+        setIsOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setIsOpen(false);
+        setCurrentIndex(null);
+    };
+
+    const prevImage = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? filteredBlogs.length - 1 : prevIndex - 1
+        );
+    };
+
+    const nextImage = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === filteredBlogs.length - 1 ? 0 : prevIndex + 1
+        );
+    };
     return (
         <>
 
 
             <Header />
-            <div className=' select-none flex  mb-[40px] flex-col gap-[30px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
+            <section className=' select-none flex  mb-[40px] flex-col gap-[30px] 2xl:w-[1300px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
                 <div className=' md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%]   overflow-x-auto    gap-[10px] '>
                     {buttons.map((buttonName) => (
                         <button
                             key={buttonName}
                             onClick={() => handleClick(buttonName)}
-                            className={`w-fit py-[7px] px-[18px] rounded-[20px] border-[1.2px]  flex-shrink-0
-                      ${selectedButton === buttonName
+                            className={`w-fit py-[7px] px-[18px] rounded-[20px] border-[1.2px] flex-shrink-0
+                      ${selectedCategory === buttonName
                                     ? "bg-[#fcaf17] text-white border-[#fcaf17]"
                                     : "bg-transparent text-[#fcaf17] border-[#fcaf17]"
                                 }`}
@@ -86,39 +171,35 @@ export default function Blogs() {
 
 
 
-                        {blogdata.map((blog) => (
+                        {filteredBlogs.map((blog, index) => (
                             <div key={blog.id} className=' flex flex-col gap-[10px] '>
                                 <img
-                                    className='flex w-[100%] h-[240px] md:h-[400px] object-cover rounded-[8px] transition-transform duration-300 ease-in-out scale-[0.98] hover:scale-[1]'
+                                    onClick={() => openLightbox(index)}
+                                    className='cursor-pointer flex w-[100%] h-[240px] md:h-[400px] rounded-[8px] transition-transform duration-300 ease-in-out scale-[0.98] hover:scale-[1]'
                                     src={blog.image}
-                                    alt="Blog"
+                                    alt="Blogs"
                                 />
-
-                                <div className=' flex w-[100%] md:flex-row flex-col  justify-between md:items-center  gap-[20px]'>
-
-
+                                <div className=' flex w-[100%] md:flex-row flex-col  justify-between md:items-end  gap-[14px]'>
                                     <div className=' flex w-[100%] gap-[10px] flex-col '>
-
-
                                         <div className=' cursor-default flex items-center gap-[10px]  px-[10px] text-[#7442ff] '>
-                                            <i className="fa-light fa-calendar-days"></i>
-                                            <p className=' mt-[2px] flex'>
-                                                {blog.date}
+
+                                            <p className=' gap-[10px] mt-[2px] flex'>
+                                                <b className=' text-[18px] font-[400]'>{blog.disatnce} </b>
                                             </p>
                                         </div>
-                                        <div className=' text-[17px] flex text-justify  px-[10px] md:w-[85%]'>
+                                        <h1 className=' px-[10px] font-[500] text-[19px]'>
+                                            {blog.tittle}
+                                        </h1>
+                                        <div className=' text-[15px] flex text-justify  px-[10px] md:w-[98%]'>
                                             <p>
                                                 {blog.description}
                                             </p>
                                         </div>
                                     </div>
-
-                                    <div className='flex gap-[10px] cursor-pointer pl-[10px]  text-[#7442ff] w-[150px] items-center  ' onClick={handleblogDetails}>
-                                        <p className='hover:underline'>
-                                            Read More
-                                        </p>
+                                    <button className='flex gap-[10px] cursor-pointer pr-[10px] text-[#7442ff] w-[150px] items-center' onClick={() => handleBlogDetails(blog.route)}>
+                                        <p className='hover:underline'>Read More</p>
                                         <i className="fa-regular fa-arrow-right"></i>
-                                    </div>
+                                    </button>
                                 </div>
                                 <span className=' flex w-[100%] border-t-[1.3px] border-[#7442ff] mt-[20px] border-dashed '>
 
@@ -127,10 +208,12 @@ export default function Blogs() {
                         ))}
                     </div>
 
-                    <div className=" h-[550px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[17px] rounded-[10px]">
+                    <div className=" h-[390px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
-                                {/* Search Bar */}
+
+
+
                                 <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
                                     <input
                                         type="text"
@@ -158,33 +241,12 @@ export default function Blogs() {
                                 {/* Popular Categories */}
                                 <div className="sidebar-section px-[10px]">
                                     <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Popular Categories
+                                        Influencer Guests
                                     </h5>
                                     <ul className="flex flex-col gap-[4px]">
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Energy-Efficient Fans</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Designe Ceiling Fans</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Smart Fans with IoT</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Industrial  Fans</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">Outdoor Fans</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">High-Speed Fans</a>
-                                        </li>
+                                        <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
+
+
                                     </ul>
                                 </div>
                                 <div className="ak-height-50 ak-height-lg-30"></div>
@@ -192,32 +254,33 @@ export default function Blogs() {
                                 {/* Popular Tags */}
                                 <div className="sidebar-section  mt-[20px] px-[10px]">
                                     <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Popular Tags
+                                        Popular Blogs
                                     </h5>
-                                    <ul className="flex  flex-col gap-[5px]">
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">EnergyEfficient</a>
+                                    <ul className="flex  flex-col gap-[8px]">
+                                        <li className='  flex'>
+                                            <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blog-details">Local Attractions & Experiences</a>
                                         </li>
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">DesignerFans</a>
+                                        <li className=' items-center flex'>
+                                            <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
                                         </li>
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">SmartFans</a>
+
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/offbeat-destinations">         Offbeat Destinations Near Halol</a>
                                         </li>
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">IndustrialUse</a>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/nature-spots">      Best Nature Spots Near Halol</a>
                                         </li>
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">OutdoorComfort</a>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
                                         </li>
-                                        <li>
-                                            <i className="fa-sharp text-[5px] mr-[10px]  text-[#fcaf17] !mt-[-px] fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="#">HighSpeed</a>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/weekend">   Weekend from Ahmedabad</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -225,8 +288,36 @@ export default function Blogs() {
                         </div>
                     </div>
                 </div>
+                {isOpen && currentIndex !== null && (
+                    <div className="fixed inset-0 z-[7000] flex items-center justify-center bg-black/80 p-4">
+                        <button
+                            className="absolute top-5 right-5 text-white hover:text-gray-300"
+                            onClick={closeLightbox}
+                        >
+                            <X className="w-6 h-6" />
+                        </button>
+                        <button
+                            className="absolute left-5 text-white hover:text-gray-300"
+                            onClick={prevImage}
+                        >
+                            <ChevronLeft className="w-8 h-8" />
+                        </button>
+                        <button
+                            className="absolute right-5 text-white hover:text-gray-300"
+                            onClick={nextImage}
+                        >
+                            <ChevronRight className="w-8 h-8" />
+                        </button>
+                        <img
+                            src={filteredBlogs[currentIndex].image}
+                            alt={`Blog ${currentIndex + 1}`}
+                            className="max-h-full max-w-[80%] rounded-md object-contain"
+                        />
+                    </div>
+                )}
 
-            </div>
+
+            </section>
             <Footer />
         </>
     )

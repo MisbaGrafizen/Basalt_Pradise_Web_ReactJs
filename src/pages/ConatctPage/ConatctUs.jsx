@@ -209,7 +209,7 @@ export default function ContactUs() {
 
       <section className=" w-[100%]  ">
         <Header />
-        <div className=" 2xl:w-[1250px]   pt-[130px]  w-[100%] h-[100%] mx-auto">
+        <div className=" 2xl:w-[1300px]   pt-[130px]  w-[100%] h-[100%] mx-auto">
           <div className=" md:w-[80%] relative mb-[30px] mx-auto bg-[] z-[1] flex flex-col  md150:w-[1200px]">
 
             <form className="w-[100%] ] px-[20px] h-[100%]">
@@ -226,15 +226,15 @@ export default function ContactUs() {
                         free to drop us an email.
                       </p>
                     </div>
-                    <div className="border-[1px] bg-[#fff] shadow-lg py-[15px] px-[18px] rounded-[10px] mt-[17px] md:mt-[0px] gap-[7px] flex flex-col w-[100%]">
+                    <div className="border-[1px] bg-[#fff] shadow-lg py-[15px] px-[18px] rounded-[10px] mt-[17px] md:mt-[23px] gap-[7px] flex flex-col w-[100%]">
                       <div className="flex  gap-[20px] border-b-[1.5px] pb-[7px] justify-start">
                         <i className=" text-[20px] mt-[5px] basalt-text text-[#ffa93a] fa-solid fa-phone-volume"></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular  text-[17px]">
-                            Customer Care Number
+                            Customer care number
                           </p>
                           <p className="w-[100%]  text-[15px]  font-Roboto md:text-[14px] font-[400]font-lucida-bright-regular text-[#646464]">
-                            +91 9876543210
+                            +91 87994 54980
                           </p>
                         </div>
                       </div>
@@ -245,7 +245,7 @@ export default function ContactUs() {
                             Business inquiry
                           </p>
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular  text-[#646464]">
-                            mail@basaltparadise.com
+                          info@basaltparadise.com
                           </p>
                         </div>
                       </div>
@@ -256,7 +256,7 @@ export default function ContactUs() {
                             Customer care
                           </p>
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular  text-[#646464]">
-                            help@basaltparadise .com
+                            help@basaltparadise.com
                           </p>
                         </div>
                       </div>
@@ -264,11 +264,11 @@ export default function ContactUs() {
                         <i className=" text-[20px] mt-[5px] basalt-text text-yellow-500 fa-solid fa-location-dot "></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular  text-[17px]">
-                            Company Info
+                             Address
                           </p>
 
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular text-[#646464]">
-                            813, B Wing, Om Decora 9 Square, Nana mauva road, St 9, beside Marwadi, Rajkot, Gujarat 360005
+                          Nurpura, On Halol-Vadodara Highway
                           </p>
                         </div>
                       </div>
@@ -374,9 +374,9 @@ export default function ContactUs() {
       </section>
 
 
-          <div className=" 2xl:w-[1400px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+          <div className=" 2xl:w-[1300px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
               <Review />
-              <TheSpotLight />
+              {/* <TheSpotLight /> */}
               <div className=" w-[90%] mx-auto">
                 <AlertBanner />
               </div>

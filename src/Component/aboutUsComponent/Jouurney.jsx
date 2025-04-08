@@ -77,12 +77,13 @@ export default function Jouurney() {
                 <img
                   className=" flex  rounded-[8px] object-cover"
                   src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/yexlwgv1odu7gks0zut7.jpg"
+                  alt="2011"
                 />
               </div>
 
               <div className=" md:flex  hidden bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
                 <h1 className=" text-center text-[40px] text-[#ff8000]">
-                  2011
+                  2021
                 </h1>
                 <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
@@ -105,7 +106,7 @@ export default function Jouurney() {
                 </div>
 
                 <p className=" flex  text-[14px] md:text-[16px] text-justify font-[400]  ">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
+                The foundation of Basalt Paradise was laid with a vision to create an unparalleled retreat amidst nature. Inspired by the stunning landscapes and tranquil surroundings, we began our journey to craft a resort that blends comfort with adventure. What started as a dream soon took shape, as we meticulously planned and built the initial infrastructure, ensuring every detail exuded elegance and serenity.
                 </p>
               </div>
             </div>
@@ -117,12 +118,12 @@ export default function Jouurney() {
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
+                With growing recognition and an increasing number of visitors, we expanded our offerings to elevate guest experiences. We introduced premium accommodations, exclusive amenities, and immersive activities, making Basalt Paradise a preferred choice for travelers, honeymooners, and corporate retreats.
                 </p>
               </div>
               <div className=" md:flex  hidden bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
                 <h1 className=" text-center text-[40px] text-[#ff8000]">
-                  2014
+                  2022
                 </h1>
                 <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
@@ -130,6 +131,7 @@ export default function Jouurney() {
                 <img
                   className=" flex  rounded-[8px] object-cover"
                   src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pvzwlffwtndejk1oofkw.jpg"
+                             alt="2014"
                 />
               </div>
             </div>
@@ -138,11 +140,12 @@ export default function Jouurney() {
                 <img
                   className=" flex  rounded-[8px] object-cover"
                   src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/txggysorxbhfslfza7jd.jpg"
+                             alt="2019"
                 />
               </div>
               <div className=" md:flex  hidden bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
                 <h1 className=" text-center text-[40px] text-[#ff8000]">
-                  2019
+                  2023
                 </h1>
                 <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
@@ -153,7 +156,7 @@ export default function Jouurney() {
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
+                Our commitment to excellence led us to significant milestones. This year marked the introduction of state-of-the-art dining experiences, world-class wellness facilities, and a hospitality service that redefined luxury. We also received industry accolades for our outstanding contributions to the tourism and hospitality sector.
                 </p>
               </div>
             </div>
@@ -162,16 +165,17 @@ export default function Jouurney() {
               <div className=" flex  flex-col order-2 md:order-1  gap-[20px] w-[95%] md:w-[43%]  ">
                 <div>
                   <h1 className=" flex font-[700] text-[28px] ">
-                  Sed ut perspiciatis unde omnis iste natus 
+                   Elevating Luxury, Redefining Hospitality
+
                   </h1>
                 </div>
                 <p className=" flex  text-[16px] text-justify font-[400]  ">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam .
+                Today, Basalt Paradise stands as a symbol of sophistication and warmth, welcoming guests from across the globe. Our latest renovations and expansions feature exquisite architecture, a rejuvenating spa, and sustainable tourism initiatives, ensuring a seamless blend of opulence and responsibility toward nature
                 </p>
               </div>
               <div className=" md:flex  hidden bg-[#f4f6f9]  font-[600] pb-[10px]   absolute left-0 right-0 mx-auto w-[150px] flex-col gap-[1x]">
                 <h1 className=" text-center text-[40px] text-[#ff8000]">
-                  2023
+                  2024
                 </h1>
                 <div className="  w-[40px] h-[40px] rounded-[100%] mx-auto  basalt-button"></div>
               </div>
@@ -179,6 +183,7 @@ export default function Jouurney() {
                 <img
                   className=" flex  rounded-[8px] object-cover"
                   src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg"
+                             alt="2023"
                 />
               </div>
             </div>

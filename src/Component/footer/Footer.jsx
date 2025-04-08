@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../../../public/Basalt_White_Logo.png";
 import india from "../../../public/footer/india.jpeg";
 import { useNavigate } from "react-router-dom";
+import PixelCard from "../Reactbits/Pixelcard";
+import b3 from "../../../public/Basalt/B3.jpg"
 
 export default function Footer() {
   const countries = [
@@ -115,10 +117,15 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
+
+
+
           {/* Links Section */}
-          <div className="md:grid  w-[100%]  md:w-fit flex md:grid-cols-3 mb-[40px] gap-[10px] md:gap-[80px] md:mb-5">
+          <div className="md:grid  w-[100%] md:w-[800px] md:ml-[70px]  flex md:grid-cols-3 md:mb-[40px] gap-[10px] md:gap-[30px] ">
+
             {/* Discover us */}
-            <div>
+            <div className="">
               <h3 className="text-lg font-semibold mb-4">Discover us</h3>
               <ul className="  flex flex-col gap-[7px]">
                 <li>
@@ -135,6 +142,14 @@ export default function Footer() {
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/all-rooms"
+                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
+                  >
+                    How To Book
                   </a>
                 </li>
                 {/* <li>
@@ -154,15 +169,7 @@ export default function Footer() {
                   </a>
                 </li> */}
 
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
-                  >
-                    Careers{" "}
-                    <span className="text-[#F4D03F]">We're Hiring!</span>
-                  </a>
-                </li>
+    
                 {/* <li>
                   <a
                     href="#"
@@ -183,7 +190,7 @@ export default function Footer() {
             </div>
 
             {/* Support */}
-            <div>
+            <div className=" ">
               <h3 className="text-lg font-semibold mb-4">Support</h3>
               <ul className=" flex flex-col gap-[7px]">
                 <li>
@@ -205,14 +212,7 @@ export default function Footer() {
                   </a>
 
                 </li>
-                <li>
-                  <a
-                    href="/all-rooms"
-                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
-                  >
-                    How To Book
-                  </a>
-                </li>
+    
                 <li>
                   <a
                     href="/faqs"
@@ -256,42 +256,36 @@ export default function Footer() {
               </ul>
             </div>
 
+
             {/* Resources */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className=" flex flex-col gap-[7px]">
-                <li>
+                {/* <li>
                   <a
                     href="/spotlight"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Spotlight
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a
                     href="/blogs"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Blog
+                    Blogs
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-[14px] font-[300]"
-                  >
-                    Podcasts
-                  </a>
-                </li>
-                <li>
+
+                {/* <li>
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
                     Video casts
                   </a>
-                </li>
+                </li> */}
                 {/* <li>
                   <a
                     href="#"
@@ -335,7 +329,17 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+          <div className="  flex mb-[30px] gap-[40px]">
+            <PixelCard variant="pink">
+              <img className=" w-[100%] h-[100%] overflow-hidden object-cover" src={b3} />
+            </PixelCard>
 
+
+            <PixelCard variant="pink">
+              <img className=" w-[100%] h-[100%] overflow-hidden object-cover" src={b3} />
+            </PixelCard>
+
+          </div>
           {/* Caution Message */}
         </div>
         <div className="mb-[10px]">

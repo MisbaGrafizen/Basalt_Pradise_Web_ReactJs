@@ -31,12 +31,12 @@ export default function Preloader() {
     showLoader && (
       <div
         id="preloader"
-        className={`preloader !bg-white ${
+        className={`preloader w-[100%] !bg-white ${
           hideAnimation ? "hide-transform" : "show-transform"
         }`}
       >
-        <div className="flex  justify-center items-center fixed top-0 left-0 w-full h-full z-50">
-          <div className="flex flex-col items-center">
+        <div className="flex  w-[100%] justify-center items-center fixed top-0 left-0  h-full z-50">
+          <div className="flex w-[100%] flex-col items-center">
             <video autoPlay muted className="w-[100%] h-[100vh]">
               <source src="https://res.cloudinary.com/dn1jdxyoq/video/upload/v1741842129/rlhszubylif9ie3p2wyr.mp4" type="video/mp4" />
             </video>

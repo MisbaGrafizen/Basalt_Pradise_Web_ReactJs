@@ -28,13 +28,21 @@ import Terms from "./pages/Terms";
 import Faq from "./pages/faqs/Faq";
 import SpotLight from "./pages/spotlight/SpotLight";
 import Testimonials from "./pages/testimonials/Testimonials";
+import Memories from "./pages/memories/Memories";
+import PrivateVillas from "./pages/roomDetails/PrivateVilla";
 
-
+import UseGoogleAnalytics from "./Component/useGoogleAnalytics";
+import BlogdetailsSecond from "./pages/blogs/BlogdetailsSecond";
+import Blog3details from "./pages/blogs/Blog3details";
+import Blogs4 from "./pages/blogs/Blogs4";
+import Blog5Details from "./pages/blogs/Blog5Details";
+import Blog6Details from "./pages/blogs/Blog6Details";
+import Gallery from "./pages/gallery/Gallery";
 
 function App() {
   const [loading, setLoading] = useState(false);
 
- 
+  UseGoogleAnalytics();
 
 
   useEffect(() => {
@@ -61,11 +69,21 @@ function App() {
           <Route path="/blogs" element={loading ? <Loader /> : <Blogs />} />
           <Route path="/bookings" element={loading ? <Loader /> : <MyBookings />} />
           <Route path="/blog-details" element={loading ? <Loader /> : <BlogDetails />} />
+          <Route path="/travel-tips" element={loading ? <Loader /> : <BlogdetailsSecond />} />
           <Route path="/privacy-policy" element={loading ? <Loader /> : <PrivacyPolicy />} />
           <Route path="/terms" element={loading ? <Loader /> : <Terms />} />
           <Route path="/faqs" element={loading ? <Loader /> : <Faq />} />
           <Route path="/spotlight" element={loading ? <Loader /> : <SpotLight />} />
           <Route path="/testimonials" element={loading ? <Loader /> : <Testimonials />} />
+          <Route path="/memories" element={loading ? <Loader /> : <Memories />} />
+          <Route path="/private-vila-details" element={loading ? <Loader /> : <PrivateVillas />} />
+          <Route path="/offbeat-destinations" element={loading ? <Loader /> : <Blog3details />} />
+          <Route path="/nature-spots" element={loading ? <Loader /> : <Blogs4 />} />
+          <Route path="/adventure-activities" element={loading ? <Loader /> : <Blog5Details />} />
+          <Route path="/weekend" element={loading ? <Loader /> : <Blog6Details />} />
+          <Route path="/gallery" element={loading ? <Loader /> : <Gallery />} />
+
+
 
 
 

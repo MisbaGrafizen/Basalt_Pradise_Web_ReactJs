@@ -12,14 +12,15 @@ import Preloader from "../../Component/preloader/Preloader";
 import Faq from "../../Component/calculativeSection/Faq";
 import Gallery from "../../Component/gallery/Gallery";
 import CalculativeSection from "../../Component/calculativeSection/CalculativeSection ";
+import CircularGallery from "../../Component/Reactbits/CircularGallery";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Preloader />
+      {/* <Preloader /> */}
       <div className=" w-[100%] bg-[#ffffffc5]">
-        <div className=" 2xl:w-[1270px] !bg-[#]    flex flex-col gap-[62px] h-[100%] mx-auto">
+        <div className=" 2xl:w-[1300px] !bg-[#]    flex flex-col gap-[62px] h-[100%] mx-auto">
           <HeroSection />
           <Gallery />
           <Review />
@@ -29,13 +30,20 @@ export default function Home() {
           <BookingAillence />
           <BannerSection />
           <Faq />
-          <TheSpotLight />
+          {/* <div className=" flex flex-col mx-auto w-[75%] scale-105" style={{ height: '400px', position: 'relative' }}>
+
+           
+
+            <CircularGallery />
+          </div> */}
+          {/* <TheSpotLight /> */}
           <div>
 
 
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

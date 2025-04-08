@@ -4,11 +4,16 @@ import Header from '../Component/header/Header'
 
 export default function PrivacyPolicy() {
   return (
-   <>
-   <Header />
+    <>
+      <Header />
 
-<section className="flex md:w-[75%] 2xl:w-[1200px] flex-col pb-[40px] pt-[130px] mx-auto">
-      
+      <section className="flex  flex-col  md:w-[75%] 2xl:w-[1300px]  pb-[40px] pt-[130px] mx-auto">
+      <div className="flex flex-col">
+          <h1 className="flex font-[700] text-[35px] font-Poppins">
+             Privacy & Policy
+          </h1>
+        
+        </div>
 
         <div className="flex w-[100%]">
           <div className="space-y-8 pb-[30px] text-gray-700">
@@ -25,10 +30,12 @@ export default function PrivacyPolicy() {
             {/* Section 1 */}
             <section className="space-y-4">
               <h2 className="text-2xl font-[500] font-Poppins text-gray-900">
-                1. Information We Collect
+                1.Information Collection
+
               </h2>
               <p className="font-Poppins font-[500]">
-                We collect the following types of personal information:
+              We collect personal information when you make a reservation, subscribe to our newsletter, or contact us. This may include your name, email address, phone number, and payment details.
+
               </p>
               <ul className="list-disc text-[15px] pl-6 space-y-2">
                 <li className="font-Poppins font-[400]">
@@ -55,12 +62,14 @@ export default function PrivacyPolicy() {
             {/* Section 2 */}
             <section className="space-y-3">
               <h2 className="text-[20px] font-[600] font-Poppins text-gray-900">
-                2. How We Use Your Information
+                2. Use of Information
+
               </h2>
               <p className="font-Poppins font-[600]">
-                We use the collected information for:
+              Your information is used to process reservations, improve our services, and send promotional materials (with your consent).
+
               </p>
-              <ul className="list-disc pl-6 font-Poppins space-y-2">
+              {/* <ul className="list-disc pl-6 font-Poppins space-y-2">
                 <li className="font-Poppins font-[400]">
                   Processing bookings and providing hospitality services.
                 </li>
@@ -73,17 +82,16 @@ export default function PrivacyPolicy() {
                 <li className="font-Poppins font-[400]">
                   Complying with legal obligations and security measures.
                 </li>
-              </ul>
+              </ul> */}
             </section>
 
             {/* Section 3 */}
             <section className="space-y-3">
               <h2 className="text-[20px] font-[500] font-Poppins text-gray-900">
-                3. Data Sharing & Security
+                3. Data Sharing
               </h2>
               <p className="font-Poppins font-[500]">
-                We do not sell or trade your personal information. However, we
-                may share data with:
+              We implement security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li className="font-Poppins font-[400]">
@@ -102,21 +110,20 @@ export default function PrivacyPolicy() {
 
             <section className="space-y-3">
               <h2 className="text-[20px] font-[500] font-Poppins text-gray-900">
-                4. Data Retention & Rights
+                4. Your Rights
               </h2>
               <p className="font-Poppins font-[400]">
-                You have the right to access, update, or delete your personal
-                data. Retention policies comply with legal requirements.
+              You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at (insert contact information).
               </p>
             </section>
 
             <section className="space-y-2">
               <h2 className="text-[20px] font-[500] font-Poppins text-gray-900">
-                5. Cookies & Tracking
+                5. Changes to This Policy
               </h2>
               <p className="font-Poppins font-[400]">
-                We use cookies to improve user experience and analyze website
-                traffic. You can manage cookie settings via your browser.
+              We may update this policy periodically. Changes will be posted on this page with an updated revision date.
+
               </p>
             </section>
 
@@ -134,6 +141,6 @@ export default function PrivacyPolicy() {
       </section>
 
       <Footer />
-   </>
+    </>
   )
 }

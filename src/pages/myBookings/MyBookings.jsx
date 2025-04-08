@@ -32,7 +32,7 @@ const handleBack = () => {
   return (
     <>
     <Header />
-      <div className=" 2xl:w-[1400px] !bg-[#] pt-[120px]   w-[75%]  flex flex-col gap-[62px] h-[100%] mx-auto">
+      <div className=" 2xl:w-[1300px] !bg-[#] pt-[120px]   w-[75%]  flex flex-col gap-[62px] h-[100%] mx-auto">
         <div className="space-y-6">
           {bookingData.map((booking) => (
             <div

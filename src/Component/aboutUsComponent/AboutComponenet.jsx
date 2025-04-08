@@ -104,7 +104,7 @@ export default function AboutComponent() {
     <>
       <div className="w-[100%] px-[10px] font-Poppins flex mx-auto">
         <div className="flex justify-between relative w-[100%]">
-          <div className="md:w-[67%] pl-[10px]  h-[75%] mx-auto flex">
+          <div className="md:w-[67%] pl-[10px] h-[75%] mx-auto flex">
             <video
               className="w-full object-cover scale-[1.5] text rounded-[8px]"
               autoPlay
@@ -112,10 +112,10 @@ export default function AboutComponent() {
               muted
               controls={false}
             >
-              <source src="https://res.cloudinary.com/dn1jdxyoq/video/upload/v1741842010/tl8c1c2gazeaeef8mfja.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/demjxtyj8/video/upload/v1744007460/hezkhe4nn5axktmsjwwz.mp4" type="video/mp4" />
             </video>
 
-{/* <img className="w-full object-cover scale-[1.5] text rounded-[8px]" src={aboutvideogif} /> */}
+
             <div className="md:w-[51%] absolute text-[#fff] bottom-[15%] left-[6%] z-[10] items-start py-[10px] flex">
               <div className="flex flex-col">
                 <h1
@@ -129,6 +129,7 @@ export default function AboutComponent() {
           </div>
         </div>
       </div>
+    
     </>
   );
 }

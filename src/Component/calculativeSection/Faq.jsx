@@ -5,28 +5,28 @@ export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
   const faqs = [
     {
-      question: "What types of accommodations does Basalt Paradise offer?",
+      question: "What types of rooms are available at Basalt Paradise Resort and Spa?",
       answer:
-        "Basalt Paradise offers a variety of luxurious accommodations, including ocean-view suites, private villas, and elegant guest rooms designed for comfort and relaxation.",
+    " The resort offers two distinct room types designed to cater to various preferences. Detailed descriptions, images, and current availability can be found in accommodation section. Click here",
     },
     {
-      question: "Are there any eco-friendly initiatives at Basalt Paradise?",
+      question: "Where is Basalt Paradise Resort and Spa located?",
       answer:
-        "Yes, Basalt Paradise is committed to sustainability, featuring energy-efficient lighting, water conservation practices, and eco-friendly amenities to minimize environmental impact.",
+        "The resort is situated at Gopipura, Halol, Panchmahals, Gujarat. This location provides convenient access to local attractions, including the Champaner-Pavagadh Archaeological Park.",
     },
     {
-      question: "Does Basalt Paradise have outdoor recreational activities?",
+      question: "What are the check-in and check-out times at the resort?",
       answer:
-        "Yes, guests can enjoy a range of outdoor activities, including private beach access, guided nature trails, water sports, and relaxing poolside experiences.",
+        "Standard check-in time is at 12 PM, and check-out is at 10 AM. Early check-ins and late check-outs may be accommodated based on availability; it's advisable to contact the resort directly for special requests.",
     },
     {
-      question: "What is the cancellation policy at Basalt Paradise?",
+      question: "What are some nearby tourist attractions?",
       answer:
-        "Our cancellation policy varies based on the type of booking. Standard reservations can be canceled up to 48 hours before arrival, while special packages may have different terms. Please check your booking details for more information.",
+        "The resort is in proximity to several attractions, notably the Champaner-Pavagadh Archaeological Park, a UNESCO World Heritage Site renowned for its historical and architectural significance.",
     },
     // {
-    //     question: 'Does Basalt Paradise offer spa and wellness services?',
-    //     answer: 'Yes, our full-service spa offers massages, facials, and wellness treatments to ensure a relaxing and rejuvenating stay. Contact our concierge for appointments.',
+    //   question: 'Are pets allowed at the resort?',
+    //   answer: "For information regarding the resort's pet policy, it's recommended to contact the property directly to confirm whether accommodations can be made for pets.",
     // }
   ];
 
@@ -37,14 +37,20 @@ export default function Faq() {
 
   return (
     <div className="md:w-[80%] w-[95%]  px-[10px] flex flex-col gap-[30px]  mx-auto">
-      <div className="w-[100%] flex flex-col md:gap-[20px]">
+      <div className="w-[100%] flex flex-col md:gap-[10px]">
+      <div className="flex flex-col">
+          <h1 className="flex font-[600] text-[35px] font-Poppins">
+          Frequently Asked <span className="text-[#fcaf17] font-[700] pl-[10px]"> Questions</span>
+          </h1>
+   
+        </div>
 
         <div className="flex w-[100%] gap-[30px] mt-[20px] flex-col justify-between">
           <div className="w-[100%] flex md:flex-row flex-col justify-between">
             <div className="md:w-[30%]  ">
               <img
                 className=" w-[100%] md:h-[300px]  rounded-[10px]  shadow-md"
-                src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg"
+                src="https://res.cloudinary.com/demjxtyj8/image/upload/v1744006365/anoirryt55vkwffchlfk.jpg"
                 alt="FAQ"
               />
             </div>

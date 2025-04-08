@@ -706,7 +706,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .shadow-2 {
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.199) !important;
+  box-shadow: 1px 1px 10px rgba(202, 202, 202, 0.199),1px 1px 10px rgba(153, 153, 153, 0.199) !important;
 }
 
 .shadow-3 {
@@ -1958,4 +1958,8 @@ background-size: 100% auto;
   100% {
     transform: translateX(1px);
   }
+}
+
+.bggradiant{
+  background: linear-gradient(5deg, rgb(255, 255, 255), rgb(211, 231, 255));
 }

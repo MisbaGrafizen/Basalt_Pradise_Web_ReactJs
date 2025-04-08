@@ -51,15 +51,15 @@ export default function CalculativeSection() {
 
   return (
     <>
-    <div className="w-[81%] py-[20px] bg-white mx-auto font-Poppins overflow-x-auto">
+    <div className="md:w-[81%] w-[90%] py-[20px] bg-white mx-auto font-Poppins overflow-x-auto">
       <div className="w-[100%] mx-auto ">
-        <div className="flex flex-row justify-between min-w-max md:min-w-0">
+        <div className="flex flex-row justify-between gap-[25px] md:gap-0 min-w-max md:min-w-0">
           {statsData.map((stat, index) => (
-            <div key={index} className="relative flex flex-col items-center text-center px-6 md:px-3">
+            <div key={index} className="relative flex flex-col items-center text-center px-2 md:px-3">
               {/* Divider line (except for the first item) */}
               {index > 0 && (
                 <div
-                  className="absolute left-[-18px] top-0 h-full w-[1px] bg-gray-200 rotate-12"
+                  className="absolute md:left-[-18px]  left-[-10px] top-0 h-full w-[1px] bg-gray-200 rotate-12"
                   style={{ transform: "rotate(12deg)", height: "90%", top: "10%" }}
                 ></div>
               )}

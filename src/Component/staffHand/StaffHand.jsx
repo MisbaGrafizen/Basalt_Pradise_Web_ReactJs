@@ -9,42 +9,55 @@ import stars from "../../../public/staffhand/stars1.png";
 // import image33 from "../../../public/Basalt/B1.jpg";
 // import image333 from "../../../public/Basalt/B3.jpg";
 // import breakicon from "../../../public/staffhand/brekfast.jpeg";
+
 import { Utensils, Coffee } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function StaffHand() {
   const [currentImage1, setCurrentImage1] = useState(0);
   const [currentImage2, setCurrentImage2] = useState(0);
   const [currentImage3, setCurrentImage3] = useState(0);
+  const navigate = useNavigate();
 
-  const images1 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/snedkwmmskjnfq6ksinr.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg"];
+  const images1 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/frunjegx6vqf17iabe02.jpg"];
 
-  const images2 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/cexy9hffqbeezzj1ekqn.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/b9zn3wzx5ekvwxi4u9o1.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840372/heljocujwz8lnxypzrbt.jpg"];
-  const images3 = ["https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/pk5n5ozp1wvgfagnvwug.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840370/yexlwgv1odu7gks0zut7.jpg", "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840371/txggysorxbhfslfza7jd.jpg"];
+  const images2 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006365/abibbtlccdthx7kmcmjw.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/bnavgquv9tmp64fh7eeh.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/vz1d5qrwnk6v7kspsulx.jpg"];
+  const images3 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/pturvwl713cgrxgenpcj.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006363/ufyu6gjnwapxv830blrd.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/hyona5bkitk3qvifmzcy.jpg"];
 
   useEffect(() => {
     const interval1 = setInterval(() => {
       setCurrentImage1((prev) => (prev + 1) % images1.length);
-    }, 1200); 
+    }, 1200);
     return () => clearInterval(interval1);
   }, [images1.length]);
 
   useEffect(() => {
     const interval2 = setInterval(() => {
       setCurrentImage2((prev) => (prev + 1) % images2.length);
-    }, 1200); 
+    }, 1200);
     return () => clearInterval(interval2);
   }, [images2.length]);
 
   useEffect(() => {
     const interval3 = setInterval(() => {
       setCurrentImage3((prev) => (prev + 1) % images2.length);
-    }, 1200); 
+    }, 1200);
     return () => clearInterval(interval3);
   }, [images3.length]);
 
+
+
+
+  const handleZenroom = () => {
+    navigate("/room-details")
+  }
+  const handlePrivaterVila = () => {
+    navigate("/private-vila-details")
+  }
+
   return (
     <>
-      <div className=" px-[10px] 2xl:w-[1400px] items-center  gap-[30px] flex !bg-[#] w-[95%] md:w-[80%] mt-[0px]   h-[90%] mx-auto">
+      <div className=" px-[10px] 2xl:w-[1300px] items-center  gap-[30px] flex !bg-[#] w-[95%] md:w-[80%] mt-[0px]   h-[90%] mx-auto">
         <div className=" flex  flex-col  gap-[30px] w-[100%] ">
           <div>
             <h1 className=" flex text-[30px] font-Poppins ">
@@ -92,20 +105,23 @@ export default function StaffHand() {
 
                     <div className=" flex  items-center gap-[6px]">
                       <div className=" flex text-[18px] text-[#fff]  font-Poppins font-[500] ">
-                        <p>INR 45,000</p>
+                        <p>INR  5,015</p>
                       </div>
                       <div className=" flex flex-col relative">
                         <p className=" flex  pl-[4px] text-[16px] text-[#d4d4d4]  font-Poppins font-[300] ">
-                          INR 74,002
+                          INR 5,900
                         </p>
                         <span className=" flex w-[85px] left-0 right-0 absolute top-[10px] h-[1px] bg-[#d4d4d4]"></span>
                       </div>
                     </div>
                     <div className=" flex  gap-[10px] mt-[15px]">
-                      <div className=" w-[50px]  border-[1.5px] border-[#ffff]   flex justify-center items-center h-[50px] rounded-[6px]">
-                        <i class=" text-[#fff] text-[21px]  fa-solid fa-phone"></i>
-                      </div>
-                      <div className=" flex w-[80%]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff]">
+                      <a href="tel:8799454980">
+                        <div className="w-[50px] border-[1.5px] border-[#ffff] flex justify-center items-center h-[50px] rounded-[6px]">
+                          <i className="text-[#fff] text-[21px] fa-solid fa-phone"></i>
+                        </div>
+                      </a>
+
+                      <div className=" flex w-[80%]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff] cursor-pointer" onClick={handleZenroom}>
                         <p>Reserve now</p>
                       </div>
                     </div>
@@ -138,22 +154,26 @@ export default function StaffHand() {
 
                     <div className=" flex  items-center gap-[6px]">
                       <div className=" flex text-[18px] text-[#fff]  font-Poppins font-[500] ">
-                        <p>INR 45,000</p>
+                        <p>INR 15,640</p>
                       </div>
                       <div className=" flex flex-col relative">
                         <p className=" flex  pl-[4px] text-[16px] text-[#d4d4d4]  font-Poppins font-[300] ">
-                          INR 74,002
+                          INR 18,400
                         </p>
                         <span className=" flex w-[85px] left-0 right-0 absolute top-[10px] h-[1px] bg-[#d4d4d4]"></span>
                       </div>
                     </div>
                     <div className=" flex  gap-[10px] mt-[15px]">
-                      <div className=" w-[50px]  border-[1.5px] border-[#ffff]   flex justify-center items-center h-[50px] rounded-[6px]">
-                        <i class=" text-[#fff] text-[21px]  fa-solid fa-phone"></i>
-                      </div>
-                      <div className=" flex w-[80%]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff]">
-                        <p>Reserve now</p>
-                      </div>
+                      <a href="tel:8799454980">
+                        <div className="w-[50px] border-[1.5px] border-[#ffff] flex justify-center items-center h-[50px] rounded-[6px]">
+                          <i className="text-[#fff] text-[21px] fa-solid fa-phone"></i>
+                        </div>
+                      </a>
+                      <a className=" w-[100%] " href="tel:8799454980">
+                        <div className=" flex h-[50px] w-[100%]  justify-center cursor-pointer items-center text-[15px]  font-Poppins rounded-md bg-[#fff]" onClick={handlePrivaterVila}>
+                          <p>Reserve now</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -188,22 +208,26 @@ export default function StaffHand() {
 
                     <div className=" flex  items-center gap-[6px]">
                       <div className=" flex text-[18px] text-[#fff]  font-Poppins font-[500] ">
-                        <p>INR 45,000</p>
+                        <p>INR 1500</p>
                       </div>
-                      <div className=" flex flex-col relative">
+                      {/* <div className=" flex flex-col relative">
                         <p className=" flex  pl-[4px] text-[16px] text-[#d4d4d4]  font-Poppins font-[300] ">
                           INR 74,002
                         </p>
                         <span className=" flex w-[85px] left-0 right-0 absolute top-[10px] h-[1px] bg-[#d4d4d4]"></span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className=" flex  gap-[10px] mt-[15px]">
-                      <div className=" w-[50px]  border-[1.5px] border-[#ffff]   flex justify-center items-center h-[50px] rounded-[6px]">
-                        <i className=" text-[#fff] text-[21px]  fa-solid fa-phone"></i>
-                      </div>
-                      <div className=" flex w-[80%]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff]">
-                        <p>Reserve now</p>
-                      </div>
+                      <a href="tel:8799454980">
+                        <div className="w-[50px] border-[1.5px] border-[#ffff] flex justify-center items-center h-[50px] rounded-[6px]">
+                          <i className="text-[#fff] text-[21px] fa-solid fa-phone"></i>
+                        </div>
+                      </a>
+                      <a  className=" w-[100%]" href="https://wa.me/918799454980" target="_blank" rel="noopener noreferrer">
+                        <div className=" flex w-[100%] h-[50px]  justify-center items-center text-[15px]  font-Poppins rounded-md bg-[#fff]">
+                          <p>Reserve now</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>

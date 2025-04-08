@@ -24,13 +24,29 @@ export default {
         'Potua':['Potua'],
         'OpenSan': ['"Open Sans", "Roboto", "Arial", "sans-serif"'],
         'Lato': ['"Lato", serif'],
-        'Jersy': ['"Jersey 25"']
+        'Jersy': ['"Jersey 25"'],
+        'Cursive':['"Cedarville Cursive", cursive']
       },
+      
       screens: {
         'md150': '1650px',
         'md11': '1160px',
         'md77': '770px',
         'md36': '300px',  
+      },
+      keyframes: {
+        'star-movement-bottom': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(500%)' },
+        },
+        'star-movement-top': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(500%)' },
+        },
+      },
+      animation: {
+        'star-movement-bottom': 'star-movement-bottom linear infinite',
+        'star-movement-top': 'star-movement-top linear infinite',
       },
     },
   },

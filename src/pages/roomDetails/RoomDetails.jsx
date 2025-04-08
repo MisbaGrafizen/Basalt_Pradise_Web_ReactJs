@@ -8,7 +8,9 @@ import {
   Check,
   Users,
   UtensilsCrossed,
+  ParkingCircle
 } from "lucide-react";
+import stars from "../../../public/staffhand/stars1.png";
 
 import { motion, AnimatePresence } from "framer-motion";
 import mainimg1 from "../../../public/newRoom/image1.avif";
@@ -22,15 +24,22 @@ import Header from "../../Component/header/Header";
 import { ChevronDown, X } from "lucide-react";
 import DetailsAddBar from "../../Component/detilsBar/DetailsAddBar";
 import Footer from "../../Component/footer/Footer";
+import { Review } from "../../Component/review/Review";
+import Faq from "../../Component/calculativeSection/Faq";
+import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
+import LocationMap from "../../Component/hotelLocations/LocationMap";
+import PropertyRules from "../../Component/propertyRules/PropertyRules";
+import GussetPhotos from "../../Component/GussetPhotos";
 const amenities = [
-  { name: "Spa", icon: "🧖‍♀️" },
-  { name: "Swimming Pool", icon: "🏊‍♂️" },
-  { name: "Gym", icon: "🏋️‍♂️" },
-  { name: "Restaurant", icon: "🍽️" },
-  { name: "24-hour Room Service", icon: "🕒" },
-  { name: "Lounge", icon: "🛋️" },
-  { name: "Bar", icon: "🍸" },
-  { name: "Steam and Sauna", icon: "♨️" },
+
+
+
+  // { name: "Swimming Pool", icon: "🏊" },
+  { name: "Elevator/Lift", icon: "🛗" },
+  { name: "WIFI", icon: "🛜" },
+  { name: "Parking", icon: "🚘" },
+  { name: "Aircondition", icon: "❄️" },
+  { name: "HouseKepping", icon: "🏡" }
 ];
 
 const luxuryFeatures = [
@@ -57,32 +66,97 @@ export default function RoomDetails() {
     navigate("/cheackout");
   };
 
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const openLightbox = (images, index) => {
+    setLightboxImages(images);
+    setCurrentImageIndex(index);
+    setIsOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsOpen(false);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? lightboxImages.length - 1 : prev - 1
+    );
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === lightboxImages.length - 1 ? 0 : prev + 1
+    );
+  };
+  const galleryImages = [
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif",
+
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif",
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",
+  ];
+
+  const galleryImages1 = [
+    " https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/frunjegx6vqf17iabe02.jpg"
+  ];
+  const galleryImages2 = [
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg "
+  ];
+  const galleryImages3 = [
+    // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
+    // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
+    "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
+  ];
+
   return (
     <>
       <Header />
-      <div className="w-full pt-[100px] pb-[40px] ">
-        <div className=" flex  relative z-[10]  rounded-[10px] py-[20px] border bg-white 2xl:w-[1160px]  mt-[20px] w-[79%]  px-[30px] mx-auto  shadow-sm  justify-center  flex-col ">
+      <div className="w-full pt-[100px]  pb-[40px] ">
+        {/* <div className=" flex  relative z-[10]  rounded-[10px] py-[20px] border bg-white 2xl:w-[1160px]  mt-[20px] w-[79%]  px-[30px] mx-auto  shadow-sm  justify-center  flex-col ">
 
           <h1 className="text-2xl  font-Poppins font-[600]  text-left flex  gap-2">
-          Zen Room Only
+          Zen Room 
           </h1>
+        </div> */}
+
+        <div className="flex  mb-[20px] relative z-[10]  rounded-[10px]  bg-white 2xl:w-[1300px]  mt-[20px] md:w-[79%] w-[90%]  mx-auto   justify-center  flex-col">
+          <h1 className=" flex text-[30px] font-[600] font-Poppins ">
+
+            <span
+              style={{
+                color: "#ffc02d",
+                textShadow: "0 2px 4px rgba(224, 224, 222, 0.4)",
+              }}
+              className="  text-[#fcaf17] drop-shadow-2xl [text-shadow:_0_2px_4px_rgb(196, 196, 196)]  flex font-[600] px-[6px] font-Poppins"
+            >
+              Zen
+            </span>
+            Room{" "}
+            {/* <img className=" w-[30px]" src={stars} /> */}
+          </h1>
+
         </div>
-        <div className=" w-[84%] mx-auto shadow-custom font-Poppins   p-6 lg:p-10  relative mb-[30px]  bg-white rounded-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-6">
+        <div className=" md:w-[84%] mx-auto shadow-custom font-Poppins   px-6 pb-6 lg:px-10 lg:pb-10  relative mb-[30px]  bg-white rounded-lg">
+          <div className="grid grid-cols-1  lg:grid-cols-[2fr,1fr] gap-6">
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4">
-                <div className="relative rounded-lg">
-                  <img
-                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif"
-                    alt="Hotel exterior"
-                    className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
-                  />
-                  {/* <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                    +103 Property Photos
-                  </div> */}
-                </div>
-                <div className="space-y-4">
-                  {[1, 2].map((photo) => (
+              {/* <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4">
+                {galleryImages1.map((src, index) => (
+                  <>
+                    <div className="relative rounded-lg" onClick={() => openLightbox(galleryImages, index)}>
+                      <img
+                        // src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842057/rzsbdaylisdvcyrixm23.avif"
+                        // alt="Hotel exterior"
+                        src={src}
+                        alt={`Gallery ${index + 1}`}
+                        className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
+                      />
+               
+                    </div>
+                  </>
+                ))}
+                {/* <div className="space-y-4">
+                  {[1].map((photo) => (
                     <div
                       key={photo}
                       className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
@@ -92,28 +166,85 @@ export default function RoomDetails() {
                         alt={`Hotel interior ${photo}`}
                         className="w-full h-full object-cover"
                       />
-                      {/* {photo === 2 && (
-                        <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                          +1222 Guest Photos
-                        </div>
-                      )} */}
+       
+                    </div>
+                  ))}
+                  {[1].map((photo) => (
+                    <div
+                      key={photo}
+                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
+                    >
+                      <img
+                        src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg"
+                        alt={`Hotel interior ${photo}`}
+                        className="w-full h-full object-cover"
+                      />
+          
+                    </div>
+                  ))}
+                </div> 
+                <div className="space-y-4">
+                  {galleryImages.map((src, index) => (
+                    <div
+                      key={index}
+                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px] cursor-pointer"
+                      onClick={() => openLightbox(galleryImages, index)}
+                    >
+                      <img
+                        src={src}
+                        alt={`Gallery ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+              </div> */}
+
+              <div className="grid grid-cols-2 md:grid-cols-[2fr,1fr] gap-[7px] md:gap-4">
+                {/* Main Image */}
+                <div
+                  className="relative rounded-lg cursor-pointer"
+                  onClick={() => openLightbox(galleryImages, 0)} // 👈 index 0 for first image
+                >
+                  <img
+                    src={galleryImages[0]}
+                    alt="Main image"
+                    className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
+                  />
+                </div>
+
+                {/* Side Images */}
+                <div className="md:space-y-4 space-y-2">
+                  {galleryImages.slice(1).map((img, i) => (
+                    <div
+                      key={i + 1}
+                      className="relative rounded-lg overflow-hidden h-[146px] md:h-[191px] cursor-pointer"
+                      onClick={() => openLightbox(galleryImages, i + 1)} // 👈 use correct index
+                    >
+                      <img
+                        src={img}
+                        alt={`Gallery ${i + 2}`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   ))}
                 </div>
               </div>
+
               <div className="mt-6  font-Poppins text-[#666666]">
-                Tui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                <button className="text-[#0066b2] hover:underline">
+                Garden View | Double Bed
+                {/* <button className="text-[#0066b2] hover:underline">
                   {" "}
                   More
-                </button>
+                </button> */}
               </div>
               <div className="flex flex-wrap gap-4 mt-6">
                 <button
                   onClick={() => setActiveTab("food")}
                   className={`flex items-center gap-2  font-Poppins px-4 py-2 rounded-full ${activeTab === "food"
-                      ? "bg-[#EBF3FF] text-[#0066b2]"
-                      : "bg-[#F8F8F8] text-[#666666]"
+                    ? "bg-[#EBF3FF] text-[#0066b2]"
+                    : "bg-[#F8F8F8] text-[#666666]"
                     }`}
                 >
                   🍽️ Food and Dining
@@ -121,8 +252,8 @@ export default function RoomDetails() {
                 <button
                   onClick={() => setActiveTab("location")}
                   className={`flex items-center  font-Poppins gap-2 px-4 py-2 rounded-full ${activeTab === "location"
-                      ? "bg-[#EBF3FF] text-[#0066b2]"
-                      : "bg-[#F8F8F8] text-[#666666]"
+                    ? "bg-[#EBF3FF] text-[#0066b2]"
+                    : "bg-[#F8F8F8] text-[#666666]"
                     }`}
                 >
                   📍 Location & Surroundings
@@ -156,46 +287,39 @@ export default function RoomDetails() {
                   </li>
                   <li className="flex items-center  text-[15px] gap-2 text-gray-600">
                     <span className="w-1.5 h-1.5 bg-gray-600 rounded-full" />
-                    Non-Refundable
+                    Non-Refundable, but date change allowed (until 24 hrs before check-in)
                   </li>
                 </ul>
-
+{/* 
                 <div className="mb-3">
                   <div className="text-gray-600 text-[12px] font-[500]">
                     Per Night:
                   </div>
                   <div className="flex items-baseline  gap-2">
-                    <span className="text-[25px] font-[600]">₹4,668</span>
+                    <span className="text-[25px] font-[600]">₹5,293</span>
                     <span className="text-gray-600 text-[13px]">
-                      + ₹1,180 taxes & fees
+                      + ₹1,298 taxes & fees
                     </span>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-center gap-4">
+                <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
                   <button className=" basalt py-[10px] rounded-[7px]   w-[160px] font-[500] text-[13px] text-[#fff] px-[10px]">
                     BOOK THIS NOW
                   </button>
+                  </a>
                   {/* <button className="text-[#4169E1]  text-[13px] font-[400] hover:underline">
                     11 More Options
                   </button> */}
                 </div>
+
+
               </div>
 
               <div className="rounded-[10px] relative  border bg-white p-4">
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center gap-3">
-                    <div className=" basalt text-white text-[18px] font-[600] w-[70px] h-[40px] rounded-md flex items-center justify-center">
-                      4.0
-                    </div>
-                    <div>
-                      <span className="text-[19px] font-[600] ">
-                        Very Good{" "}
-                      </span>
-                      <span className="text-gray-600 text-[13px]">
-                        (1695 ratings)
-                      </span>
-                    </div>
                   </div>
                 </div>
 
@@ -211,9 +335,9 @@ export default function RoomDetails() {
                     <div>
 
                       <p className="text-gray-600   text- text-[13px] ">
-                      
-                      
-                        15 minutes walk to Champaner-Pavagadh Archaeological Park
+
+
+                      10.0 km drive to Champaner-Pavagadh Archaeological Park
                       </p>
                     </div>
                   </div>
@@ -238,310 +362,646 @@ export default function RoomDetails() {
             <div className="p-4 font-medium mr-[30px]">Price</div>
           </div>  */}
 
-          <DetailsAddBar />
+          {/* <DetailsAddBar /> */}
 
           {/* Room Details */}
-          <div className=" flex  w-[79%] mx-auto flex-col">
 
 
-            <div className=" flex   w-[100%] border rounded-[10px] mx-auto  mt-[10px] border-[#E5E5E5] p-6 shadow-lg gap-6">
-              {/* Left Column - Room Info */}
-              <div className=" flex flex-col w-[30%] gap-[20px]">
-                <h2 className="text-lg font-medium mb-">Vila with Private Pool</h2>
-                <div className="relative mb-4">
-                  <img
-                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842060/uolxy7hbgtewokozst4b.avif"
-                    alt="Deluxe Room"
-                    className="w-full h-[200px] object-cover rounded-md"
-                  />
-                  {/* <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
-                    +11 Photos
-                  </button> */}
-                </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path d="M3 21h18M5 21V3h14v18M9 8h6" strokeWidth="1.5" />
-                    </svg>
-                    <span>110 sq.ft (10 sq.mt)</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M2 18h20M4 18V8a2 2 0 012-2h12a2 2 0 012 2v10M6 14h12"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>Double Bed</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M12 12a4 4 0 100-8 4 4 0 000 8zM20 21a8 8 0 10-16 0"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>Max 4 Guests</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>City View</span>
-                  </div>
-                </div>
-                {/* <button className="text-[#4169E1] text-sm mt-4">
-                  View More Details
-                </button> */}
-              </div>
-              <div className=" flex w-[100%] flex-col gap-[20px]">
-                {/* Middle Column - Room Options */}
-                <div className="grid grid-cols-1 gap-4 rounded-lg  transition-transform duration-600  hover:border-[#1c55f1] border p-4 lg:grid-cols-3">
-                  <div className="col-span-2">
-                    <h3 className="font-medium"> Room Only</h3>
-                    <div className="mt-2 text-[13px] text-gray-600">
 
-                    </div>
-                    <div className="mt-2 flex items-center gap-2 text-red-500">
-                      <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                      <span className=" flex text-[13px]">Non-Refundable</span>
-                    </div>
-                    <button className="mt-1 text-[11px] text-blue-600 hover:underline">
-                      View plan details & policies
-                    </button>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[13px] text-gray-500 line-through">
-                      ₹18,400
-                    </div>
-                    <div className="text-[25px] font-[600]">₹15,180</div>
-                    <div className="text-[12px] text-gray-600">
-                      + ₹4,784 taxes & fees
-                    </div>
-                    <div className="mb-2 text-[13px]">
-                      <span className="font-medium">1 Room</span>
-                      <span className="text-gray-500"> per night</span>
-                    </div>
-                    <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                      SELECT ROOM
-                    </button>
-                    <div className="mt-2 text-[11px] text-blue-600">
-                      Login Now to unlock best deals and offers!
-                    </div>
-                  </div>
-                </div>
 
-                {/* Room with Breakfast */}
-                <div className="grid grid-cols-1 gap-4 rounded-lg  transition-transform duration-600  hover:border-[#1c55f1] border p-4 lg:grid-cols-3">
-                  <div className="col-span-2">
-                    <h3 className="font-medium">Room With Breakfast</h3>
-                    <div className="mt-2 text-[13px] text-gray-600">
-                      Free Breakfast 
-                    </div>
-                    <div className="mt-2 flex items-center gap-2 text-red-500">
-                      <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                      <span className=" flex text-[13px]">Non-Refundable</span>
-                    </div>
-                    <button className="mt-1 text-[11px] text-blue-600 hover:underline">
-                      View plan details & policies
-                    </button>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[13px] text-gray-500 line-through">
-                      ₹19,800
-                    </div>
-                    <div className="text-[25px] font-[600]">₹16,335</div>
-                    <div className="text-[12px] text-gray-600">
-                      + ₹5,148 taxes & fees
-                    </div>
-                    <div className="mb-2 text-[13px]">
-                      <span className="font-medium">1 Room</span>
-                      <span className="text-gray-500"> per night</span>
-                    </div>
-                    <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                      SELECT ROOM
-                    </button>
-                    <div className="mt-2 text-[11px] text-blue-600">
-                      Login Now to unlock best deals and offers!
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+
+
+          <div className=" flex font-Poppins  flex-col  2xl:w-[1300px]     overflow-hidden md:w-[79%] mx-auto w-[90%] border rounded-[10px]  mt-[10px] border-[#E5E5E5]  shadow-lg ">
+            {/* Left Column - Room Info */}
+            <div className=" flex w-[100%] px-5 border-b text-[13px] text-[#828282] py-[14px] l bggradiant b ">
+              Enjoy Free Breakfast throughout your stay for just ₹595 more!
             </div>
+            <div className="  flex md:flex-row flex-col  gap-[25px]">
 
-            <div className=" flex font-Poppins   w-[100%] border rounded-[10px]  mt-[10px] border-[#E5E5E5] p-6 shadow-lg gap-6">
-              {/* Left Column - Room Info */}
-              <div className=" flex flex-col w-[30%] gap-[20px]">
-                <h2 className="text-lg font-medium mb-">Zen Room</h2>
-                <div className="relative mb-4">
-                  <img
-                    src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
-                    alt="Deluxe Room"
-                    className="w-full h-[200px] object-cover rounded-md"
-                  />
-                  {/* <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
-                    +11 Photos
-                  </button> */}
+
+              <div className="flex md:border-r border-b md:border-b-0 px-6  pt-[20px] pb-[20px] flex-col md:w-[42%] gap-[10px]">
+                {galleryImages1.map((src, index) => (
+                  <>
+
+
+                    <div key={index} className=" cursor-pointer relative mb-2" onClick={() => openLightbox(galleryImages1, index)}>
+                      <img
+                        // src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg "
+                        // alt="Deluxe Room"
+                        src={src}
+                        alt={`Gallery ${index + 1}`}
+                        className="w-full h-[200px] object-cover rounded-[20px]"
+                      />
+
+                    </div>
+                  </>
+                ))}
+                <div className=" mb-[10px]">
+                  <h2 className="text-lg font-[600] ">Zen Room</h2>
+                  <p className=" flex text-[14px]">
+                    (Garden View | Double Bed)
+                  </p>
                 </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path d="M3 21h18M5 21V3h14v18M9 8h6" strokeWidth="1.5" />
-                    </svg>
-                    <span>110 sq.ft (10 sq.mt)</span>
+                <div className=" gap-[10px] justify-between w-[100%]  flex">
+                  <div className="space-y-2 text-[13px]">
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span className=" text-[#4e4d4d]">Mineral Water</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>Housekeeping</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>Bathroom</span>
+                    </div>
+                    {/* <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>City View</span>
+                    </div> */}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M2 18h20M4 18V8a2 2 0 012-2h12a2 2 0 012 2v10M6 14h12"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>ZenRoom - 2 Pax</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M12 12a4 4 0 100-8 4 4 0 000 8zM20 21a8 8 0 10-16 0"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>Max 4 Guests</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                    >
-                      <path
-                        d="M4 4h16M4 8h16M4 12h16M4 16h16M4 20h16"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span>City View</span>
+                  <div className="space-y-2 mb-[10px] text-[13px]">
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span className=" text-[#4e4d4d]">Air Conditioning
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>
+                        Wi-Fi</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>Room Service</span>
+                    </div>
+
                   </div>
                 </div>
+
                 {/* <button className="text-[#4169E1] text-sm mt-4">
                   View More Details
                 </button> */}
               </div>
-              <div className=" flex w-[100%] flex-col gap-[20px]">
+              <div className=" flex w-[100%]  flex-col gap-[20px]">
                 {/* Middle Column - Room Options */}
-                <div className="grid grid-cols-1 gap-4 rounded-lg  transition-transform duration-600  hover:border-[#1c55f1] border p-4 lg:grid-cols-3">
+                <div className="grid relative grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
                   <div className="col-span-2">
-                    <h3 className="font-medium">ZenRoom </h3>
-                    <div className="mt-2 text-[13px] text-gray-600">
-               
-                    </div>
-                    <div className="mt-2 flex items-center gap-2 text-red-500">
-                      <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                      <span className=" flex text-[13px]">Non-Refundable</span>
-                    </div>
-                    <button className="mt-1 text-[11px] text-blue-600 hover:underline">
-                      View plan details & policies
-                    </button>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[13px] text-gray-500 line-through">
-                      ₹16,200
-                    </div>
-                    <div className="text-[25px] font-[600]">₹4,000</div>
-                    <div className="text-[12px] text-gray-600">
-                      + ₹4,050 taxes & fees
-                    </div>
-                    <div className="mb-2 text-[13px]">
-                      <span className="font-medium">1 Room</span>
-                      <span className="text-gray-500"> per night</span>
-                    </div>
-                    <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                      SELECT ROOM
-                    </button>
-                    <div className="mt-2 text-[11px] text-blue-600">
-                      Login Now to unlock best deals and offers!
-                    </div>
-                  </div>
-                </div>
+                    <h3 className="font-medium">Room with Breakfast </h3>
+                    <div className=" flex items-center mt-[10px] gap-[10px]">
+                      <div className=" w-[9px] mt-2 h-[9px] rounded-full bg-[#7d7d7d]">
 
-                {/* Room with Breakfast */}
-                <div className="grid grid-cols-1 gap-4 rounded-lg  transition-transform duration-600  hover:border-[#1c55f1] border p-4 lg:grid-cols-3">
-                  <div className="col-span-2">
-                    <h3 className="font-medium">Zen Room </h3>
-                    <div className="mt-2 text-[13px] text-gray-600">
-                      Free Breakfast
+                      </div>
+                      <div className="mt-2 text-[13px] text-gray-600">
+                        Free Breakfast
+                      </div>
                     </div>
-                    <div className="mt-2 flex items-center gap-2 text-red-500">
+
+                    <div className="mt-2 flex  gap-2 text-0">
                       <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                      <span className=" flex text-[13px]">Non-Refundable</span>
+                      <span className=" flex  text-gray-600 text-[13px]">
+                        Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
                     </div>
-                    <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                    {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
-                    </button>
+                    </button> */}
                   </div>
-                  <div className="text-right">
-                    <div className="text-[13px] text-gray-500 line-through">
+                  <div className="text-right space-y-2">
+                    {/* <div className="text-[13px] text-gray-500 line-through">
                       ₹6,600
                     </div>
-                    <div className="text-[25px] font-[600]">₹5,440</div>
+                    <div className="text-[25px] font-[600]">₹5,921</div>
                     <div className="text-[12px] text-gray-600">
-                      + ₹1,320 taxes & fees
+                      + ₹1,452 taxes & fees
                     </div>
                     <div className="mb-2 text-[13px]">
                       <span className="font-medium">1 Room</span>
                       <span className="text-gray-500"> per night</span>
-                    </div>
-                    <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                      SELECT ROOM
-                    </button>
-                    <div className="mt-2 text-[11px] text-blue-600">
-                      Login Now to unlock best deals and offers!
-                    </div>
+                    </div> */}
+                    <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+  <button className="md:absolute basalt bottom-[-240px] right-[20px] py-[7px] text-[#fff] mt-[20px] font-[500] rounded-[7px] text-[14px] w-[140px]">
+    BOOK THIS NOW
+  </button>
+</a>
+
+
                   </div>
                 </div>
+
+                {/* Room with Breakfast */}
+
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+          <div className=" flex  w-[100%] mx-auto flex-col">
+
+            <div className=" flex font-Poppins  flex-col   overflow-hidden md:w-[79%] w-[90%] 2xl:w-[1300px]    mx-auto border rounded-[10px]  mt-[10px] border-[#E5E5E5]  shadow-lg ">
+              {/* Left Column - Room Info */}
+              {/* <div className=" flex w-[100%] px-5 border-b text-[13px] text-[#828282] py-[14px] l bggradiant b ">
+              Enjoy Free Breakfast throughout your stay for just ₹595 more!
+            </div> */}
+              <div className="  flex md:flex-row flex-col  gap-[25px] ">
+
+
+                <div className=" flex md:border-r border-b md:border-b-0 px-6  pt-[20px] pb-[20px] flex-col md:w-[42%] gap-[10px]">
+
+                  {/* <div className="relative mb-2">
+                    <img
+                      src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif  "
+                      alt="Deluxe Room"
+                      className="w-full h-[200px] object-cover rounded-[20px]"
+                    />
+                    {/* <button className="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded text-sm">
+                    +11 Photos
+                  </button> 
+                  </div> */}
+
+                  {galleryImages2.map((src, index) => (
+                    <>
+
+
+                      <div key={index} className=" cursor-pointer relative mb-2" onClick={() => openLightbox(galleryImages2, index)}>
+                        <img
+
+                          src={src}
+                          alt={`Gallery ${index + 1}`}
+                          className="w-full h-[200px] object-cover rounded-[20px]"
+                        />
+
+                      </div>
+                    </>
+                  ))}
+                  <div className=" mb-[10px]">
+                    <h2 className="text-lg font-[600] ">Zen Room</h2>
+                    <p className=" flex text-[14px]">
+                      (Garden View | Double Bed)
+                    </p>
+                  </div>
+                  <div className=" gap-[10px] justify-between w-[100%]  flex">
+                    <div className="space-y-2 text-[13px]">
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span className=" text-[#4e4d4d]">Mineral Water</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>Housekeeping</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>Bathroom</span>
+                      </div>
+                      {/* <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>City View</span>
+                    </div> */}
+                    </div>
+                    <div className="space-y-2 mb-[10px] text-[13px]">
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span className=" text-[#4e4d4d]">Air Conditioning
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>
+                          Wi-Fi</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>Room Service</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {/* <button className="text-[#4169E1] text-sm mt-4">
+                  View More Details
+                </button> */}
+                </div>
+                <div className=" flex w-[100%] relative  flex-col gap-[0px]">
+                  {/* Middle Column - Room Options */}
+                  <div className="grid grid-cols-1 gap-4  border-b  transition-transform duration-600    p-6 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room Only </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          No meals included
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+
+                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> */}
+                    </div>
+                    <div className="text-right relative space-y-2">
+                      {/* <div className="text-[13px] text-gray-500 line-through">
+                        ₹5,900
+                      </div>
+                      <div className="text-[25px] font-[600]"> ₹5,293</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹1,298 taxes & fees per night
+                      </div> */}
+                  
+                    <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                      <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                      BOOK THIS NOW
+                      </button>
+</a>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 border-b gap-4 transition-transform duration-600    p-4 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room with Breakfast </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Breakfast
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> */}
+                    </div>
+                    <div className="text-right relative space-y-1">
+                      {/* <div className="text-[13px] text-gray-500 line-through">
+                        ₹6,600
+                      </div>
+                      <div className="text-[25px] font-[600]">₹5,921</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹1,452 taxes & fees
+                      </div>
+                      <div className="mb-2 text-[13px]">
+                        <span className="font-medium">1 Room</span>
+                        <span className="text-gray-500"> per night</span>
+                      </div> */}
+                      <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                      <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                       BOOK THIS NOW
+                      </button>
+</a>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room With Breakfast + Lunch + Dinner </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Breakfast
+                        </div>
+                      </div>
+                      <div className=" flex items-center mt-[px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                        Free Lunch
+                        </div>
+                      </div>
+                      <div className=" flex items-center  gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                        Free Dinner  
+                        </div>
+                      </div>
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> */}
+                    </div>
+                    <div className="text-right relative space-y-1">
+                      {/* <div className="text-[13px] text-gray-500 line-through">
+                        ₹9,800
+                      </div>
+                      <div className="text-[25px] font-[600]">₹8,820</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹2,744 taxes & fees
+                      </div>
+                      <div className="mb-2 text-[13px]">
+                        <span className="font-medium">1 Room</span>
+                        <span className="text-gray-500"> per night</span>
+                      </div> */}
+                      <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                      <button className="  basalt mt-[20px] bottom-[5px] right-0 md:absolute  py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                  BOOK THIS NOW
+                      </button>
+</a>
+                    </div>
+                  </div>
+
+                  {/* Room with Breakfast */}
+
+                </div>
+              </div>
+            </div>
+
+
+            {/* <div className=" flex font-Poppins  flex-col  2xl:w-[1300px]     overflow-hidden w-[79%] mx-auto border rounded-[10px]  mt-[10px] border-[#E5E5E5]  shadow-lg ">
+       
+       
+              <div className="  flex ">
+
+
+                <div className=" flex border-r px-6  pt-[20px] pb-[20px] flex-col w-[42%] gap-[10px]">
+
+                  {/* <div className="relative mb-2">
+                    <img
+                      src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
+                      alt="Deluxe Room"
+                      className="w-full h-[200px] object-cover rounded-[20px]"
+                    />
+
+                  </div> 
+
+
+                  {galleryImages3.map((src, index) => (
+                    <>
+
+
+                      <div key={index} className=" cursor-pointer relative mb-2" onClick={() => openLightbox(galleryImages3, index)}>
+                        <img
+
+                          src={src}
+                          alt={`Gallery ${index + 1}`}
+                          className="w-full h-[200px] object-cover rounded-[20px]"
+                        />
+
+                      </div>
+                    </>
+                  ))}
+                  <div className=" mb-[10px]">
+                    <h2 className="text-lg font-[600] ">Villa with Private pool</h2>
+                    <p className=" flex text-[14px]">
+                      (Garden View | King Bed)
+
+                    </p>
+                  </div>
+                  <div className=" gap-[10px] justify-between w-[100%]  flex">
+                    <div className="space-y-2 text-[13px]">
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span className=" text-[#4e4d4d]">Mineral Water</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>Housekeeping</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>Room Service</span>
+                      </div>
+                      {/* <div className="flex items-center gap-2">
+                      <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                      </div>
+                      <span>City View</span>
+                    </div> 
+                    </div>
+                    <div className="space-y-2 mb-[10px] text-[13px]">
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span className=" text-[#4e4d4d]">Air Conditioning
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className=" flex w-[5px] rounded-full bg-[#757575] h-[5px]">
+
+                        </div>
+                        <span>
+                          Wi-Fi</span>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+                  {/* <button className="text-[#4169E1] text-sm mt-4">
+                  View More Details
+                </button> 
+                </div>
+                <div className=" flex w-[100%]  flex-col gap-[0px]">
+                  {/* Middle Column - Room Options 
+                  <div className="grid grid-cols-1 gap-4  border-b  transition-transform duration-600    p-6 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room Only </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          No meals included
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+
+                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> 
+                    </div>
+                    <div className="text-right space-y-2">
+                      <div className="text-[13px] text-gray-500 line-through">
+                        ₹18,400
+                      </div>
+                      <div className="text-[25px] font-[600]">₹15,640</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹4,968 taxes & fees per night
+                      </div>
+                      {/* <div className="mb-2 text-[13px]">
+                      <span className="font-medium">1 Room</span>
+                      <span className="text-gray-500"> per night</span>
+                    </div> 
+                      <a href="https://wa.me/918799454980" target="_blank" rel="noopener noreferrer">
+                        <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          SELECT ROOM
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room with Breakfast </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Breakfast
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> 
+                    </div>
+                    <div className="text-right space-y-1">
+                      <div className="text-[13px] text-gray-500 line-through">
+                        ₹19,800
+                      </div>
+                      <div className="text-[25px] font-[600]">₹16,830</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹5,346 taxes & fees
+                      </div>
+                      <div className="mb-2 text-[13px]">
+                        <span className="font-medium">1 Room</span>
+                        <span className="text-gray-500"> per night</span>
+                      </div>
+                      <a href="https://wa.me/918799454980" target="_blank" rel="noopener noreferrer">
+                        <button className="  basalt py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          SELECT ROOM
+                        </button>
+                      </a>
+
+                    </div>
+                  </div>
+
+                  {/* Room with Breakfast *x`
+
+                </div>
+              </div>
+            </div> */}
+          </div>
+
         </div>
+
+
       </div>
+
+      <div className=" 2xl:w-[1300px] !bg-[#]  md:w-[100%] pb-[20px] pt-[10px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+      <LocationMap />
+      <PropertyRules />
+      <GussetPhotos />
+        <Review />
+        <Faq />
+        <div className=" w-[90%] mx-auto">
+          <AlertBanner />
+        </div>
+
+      </div>
+
+
+
+
+
+
+      {isOpen && (
+        <div className="fixed inset-0 z-[7000] flex flex-col items-center justify-center bg-black/80 p-4">
+          {/* Close Button */}
+          <button className="absolute top-5 right-5 text-white hover:text-gray-300" onClick={closeLightbox}>
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* Previous & Next Buttons */}
+          <button className="absolute left-5 text-white hover:text-gray-300" onClick={prevImage}>
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          <button className="absolute right-5 text-white hover:text-gray-300" onClick={nextImage}>
+            <ChevronRight className="w-8 h-8" />
+          </button>
+
+          {/* Main Image */}
+          <img
+            src={lightboxImages[currentImageIndex]}
+            alt={`Gallery ${currentImageIndex + 1}`}
+            className="max-h-[80vh] max-w-full rounded-md object-contain mb-4"
+          />
+
+          {/* Thumbnail Strip */}
+          <div className="flex gap-2 overflow-x-auto max-w-full px-2">
+            {lightboxImages.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Thumbnail ${index + 1}`}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${currentImageIndex === index ? "border-yellow-400" : "border-transparent"
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
       <Footer />
     </>
   );
