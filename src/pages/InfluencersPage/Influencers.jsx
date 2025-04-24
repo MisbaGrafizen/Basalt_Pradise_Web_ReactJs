@@ -178,10 +178,10 @@ export default function Influencers() {
                     <div className="w-full max-w-5xl">
                         {/* Header */}
                         <div className="text-center mb-8">
-                            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent">
+                            <h1 className="text-[24px] md:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent">
                                 Influencer Registration
                             </h1>
-                            <p className="text-gray-600 mt-2">
+                            <p className="text-gray-600  md:text-[15px] text-[12px] mt-2">
                                 Join our exclusive influencer network and unlock exciting collaboration opportunities
                             </p>
                         </div>
@@ -245,7 +245,7 @@ export default function Influencers() {
                                                     <div className="relative z-20">
                                                         <button
                                                             onClick={() => setShowDropdown(!showDropdown)}
-                                                            className={`flex items-center gap-1 w-[100px] max-w-[100px]  px-[4px] py-[8.5px] border-t mt-[0.2px] border-b border-l border-gray-300 rounded-l-lg text-sm text-gray-700 hover:bg-gray-100 transition ${errors.phoneNumber
+                                                            className={`flex items-center gap-1 w-[80px] md:w-[100px] max-w-[100px]  px-[4px] py-[8.5px] border-t mt-[0.2px] border-b border-l border-gray-300 rounded-l-lg text-sm text-gray-700 hover:bg-gray-100 transition ${errors.phoneNumber
                                                                 ? "border-red-300 bg-red-50"
                                                                 : "border-gray-300"
                                                                 } `}
@@ -306,7 +306,7 @@ export default function Influencers() {
 
 
                                             {/* WhatsApp Number */}
-                                            <div className=" flex items-center gap-[10px]">
+                                            <div className=" md:flex items-center gap-[10px]">
 
 
                                                 <div className="md:w-[240px]">
@@ -338,7 +338,7 @@ export default function Influencers() {
                                                     </div>
                                                     {errors.whatsappNumber && <p className="mt-1 text-sm text-red-600">{errors.whatsappNumber}</p>}
                                                 </div>
-                                                <label className="gap-[6px]  pt-[20px] cursor-pointer  flex items-center">
+                                                <label className="gap-[6px] pt-[8px] md:pt-[20px] cursor-pointer  flex items-center flex-shrink-0">
                                                     <input
                                                         type="checkbox"
                                                         className="appearance-none w-[20px] h-[20px] mt-[2px] border-[1.5px] border-[#229b2e] rounded-md checked:bg-[#229b2e] checked:border-[#229b2e] flex items-center justify-center relative transition-all duration-200
@@ -443,7 +443,7 @@ export default function Influencers() {
                                                 {/* Instagram Link */}
                                                 <div className="mb-4">
                                                     <div className="flex items-center">
-                                                        <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-400 rounded-lg text-white">
+                                                        <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-400 rounded-lg text-white flex-shrink-0">
                                                             <Instagram className="w-5 h-5" />
                                                         </div>
                                                         <input
@@ -452,7 +452,7 @@ export default function Influencers() {
                                                             name="instagramLink"
                                                             value={formData.instagramLink}
                                                             onChange={handleChange}
-                                                            className="flex-1 ml-3 px-4 py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
+                                                            className="flex-1 ml-3 px-4  w-[80%] md:w-full py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
                                                             placeholder="Instagram profile URL"
                                                         />
                                                     </div>
@@ -461,7 +461,7 @@ export default function Influencers() {
                                                 {/* Facebook Link */}
                                                 <div className="mb-4">
                                                     <div className="flex items-center">
-                                                        <div className="w-10 h-10 flex items-center justify-center bg-yellow-500 rounded-lg text-white">
+                                                        <div className="w-10 h-10 flex items-center flex-shrink-0 justify-center bg-yellow-500 rounded-lg text-white">
                                                             <Facebook className="w-5 h-5" />
                                                         </div>
                                                         <input
@@ -470,7 +470,7 @@ export default function Influencers() {
                                                             name="facebookLink"
                                                             value={formData.facebookLink}
                                                             onChange={handleChange}
-                                                            className="flex-1 ml-3 px-4 py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
+                                                            className="flex-1 ml-3  w-[80%] md:w-full px-4 py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
                                                             placeholder="Facebook profile URL"
                                                         />
                                                     </div>
@@ -479,7 +479,7 @@ export default function Influencers() {
                                                 {/* YouTube Link */}
                                                 <div>
                                                     <div className="flex items-center">
-                                                        <div className="w-10 h-10 flex items-center justify-center bg-amber-500 rounded-lg text-white">
+                                                        <div className="w-10 h-10 flex items-center justify-center bg-amber-500 rounded-lg text-white flex-shrink-0">
                                                             <Youtube className="w-5 h-5" />
                                                         </div>
                                                         <input
@@ -488,7 +488,7 @@ export default function Influencers() {
                                                             name="youtubeLink"
                                                             value={formData.youtubeLink}
                                                             onChange={handleChange}
-                                                            className="flex-1 ml-3 px-4 py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
+                                                            className="flex-1 ml-3 px-4 w-[80%] md:w-full py-2 rounded-lg text-[13px] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-colors"
                                                             placeholder="YouTube channel URL"
                                                         />
                                                     </div>
@@ -520,14 +520,14 @@ export default function Influencers() {
 
                                                     <input
                                                         type="checkbox"
-                                                        className="appearance-none w-[20px] h-[20px] border-[1.5px] border-yellow-500 rounded-md checked:bg-yellow-500 checked:border-yellow-500 flex items-center justify-center relative transition-all duration-200
+                                                        className="appearance-none w-[20px] h-[20px] border-[1.5px] border-yellow-500 rounded-md checked:bg-yellow-500 checked:border-yellow-500 flex items-center justify-center relative transition-all duration-200 flex-shrink-0
     before:content-['✓'] before:absolute before:text-white before:text-[18px] before:font-bold before:opacity-0 checked:before:opacity-100"
                                                     />
 
 
 
 
-                                                    <div className="text-center cursor-pointer text-[13px] text-gray-500">
+                                                    <div className=" cursor-pointer text-[13px] text-gray-500">
                                                         By registering, you agree to our{" "}
                                                         <a href="#" className="text-yellow-600 hover:underline">
                                                             Terms of Service
@@ -543,7 +543,7 @@ export default function Influencers() {
                                                 <label className="gap-[6px] cursor-pointer flex items-start">
                                                     <input
                                                         type="checkbox"
-                                                        className="appearance-none w-[20px] h-[20px] mt-[2px] border-[1.5px] border-yellow-500 rounded-md checked:bg-yellow-500 checked:border-yellow-500 flex items-center justify-center relative transition-all duration-200
+                                                        className="appearance-none flex-shrink-0 w-[20px] h-[20px] mt-[2px] border-[1.5px] border-yellow-500 rounded-md checked:bg-yellow-500 checked:border-yellow-500 flex items-center justify-center relative transition-all duration-200
     before:content-['✓'] before:absolute before:text-white before:text-[16px] before:font-bold before:opacity-0 checked:before:opacity-100"
                                                     />
 
