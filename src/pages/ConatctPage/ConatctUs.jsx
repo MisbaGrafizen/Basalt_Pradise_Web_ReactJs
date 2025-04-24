@@ -196,10 +196,50 @@ import Footer from "../../Component/footer/Footer";
 import TheSpotLight from "../../Component/spotlight/TheSpotLight";
 import { Review } from "../../Component/review/Review";
 import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
+import axios from "axios";
 
 
 export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    subject: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState(false);
 
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { name, email, phoneNumber, subject, message } = formData;
+
+      if (!name || !email || !phoneNumber || !subject || !message) {
+        setErrors({
+          name: !name ? "Name is required" : "",
+          email: !email ? "Email is required" : "",
+          phoneNumber: !phoneNumber ? "Phone is required" : "",
+          subject: !subject ? "Subject is required" : "",
+          message: !message ? "Message is required" : "",
+        });
+        return;
+      }
+
+      const res = await axios.post("https://server.grafizen.in/api/v2/hotel/admin/contact-us", formData);
+      console.log("res", res);
+      setSuccess(true);
+      setFormData({ name: "", email: "", phoneNumber: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("Submission failed:", error);
+    }
+  };
 
 
 
@@ -285,8 +325,8 @@ export default function ContactUs() {
                           placeholder="Name"
                           autoComplete="new-name"
                           className="w-[100%] font-lucida-bright-regular outline-none   px-[px] h-[100%] border-none bg-transparent"
-                          // value={formData.name}
-                          // onChange={handleChange}
+                          value={formData.name}
+                          onChange={handleChange}
                           type="text"
                         />
                         {/* {errors.name && (
@@ -299,8 +339,8 @@ export default function ContactUs() {
                           autoComplete='Email'
                           placeholder="Email"
                           className="w-[100%] outline-none font-lucida-bright-regular   h-[100%] border-none bg-transparent"
-                          // value={formData.email}
-                          // onChange={handleChange}
+                          value={formData.email}
+                          onChange={handleChange}
                           type="text"
                         />
                         {/* {errors.email && (
@@ -311,12 +351,12 @@ export default function ContactUs() {
                     <div className="flex w-[100%] mb-[20px] justify-between gap-[20px] font-Poppins">
                       <div className="w-[49%] h-[40px]   font-lucida-bright-regular  flex flex-col rounded-[0px] border-b-[1px] border-[#ffa93a]">
                         <input
-                          name="phone"
+                          name="phoneNumber"
                           autoComplete='number'
                           placeholder="Number"
                           className="w-[100%] outline-none font-lucida-bright-regular  h-[100%] border-none bg-transparent"
-                          // value={formData.phone}
-                          // onChange={handleChange}
+                          value={formData.phoneNumber}
+                          onChange={handleChange}
                           type="tel"
                           maxLength="10"
                         />
@@ -328,8 +368,8 @@ export default function ContactUs() {
                           autoComplete="off"
                           placeholder="Subject"
                           className="w-[100%] outline-none font-lucida-bright-regular h-[100%] border-none bg-transparent"
-                          // value={formData.subject}
-                          // onChange={handleChange}
+                          value={formData.subject}
+                          onChange={handleChange}
                           type="text"
                         />
                         {/* {errors.subject && (
@@ -346,14 +386,14 @@ export default function ContactUs() {
                         autoComplete="off"
                         placeholder="Message"
                         className="w-[100%] h-[100%] font-lucida-bright-regular border-none p-[10px] rounded-[10px] outline-none"
-                      // value={formData.message}
-                      // onChange={handleChange}
+                        value={formData.message}
+                        onChange={handleChange}
                       />
                     </div>
                     <button
                       type="submit"
                       className="flex justify-center basalt text-[#fff] mt-[10px] text-[#000] text-[18px] rounded-[6px] font-lucida-bright-regular  md:mx-0 py-[8px] w-[120px] font-[500] transition-transform duration-200 active:scale-95"
-
+                        onClick={handleSubmit}
                     >
                       Submit
                     </button>
