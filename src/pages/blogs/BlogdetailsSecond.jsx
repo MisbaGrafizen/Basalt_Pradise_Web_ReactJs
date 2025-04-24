@@ -27,7 +27,7 @@ export default function BlogdetailsSecond() {
             <Header />
             <div className='  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto px-2 py-8 gap-[20px] pt-[110px] flex '>
 
-                <div className=' md:w-[80%] w-[100%] gap-[70px] flex flex-col'>
+                <div className=' md:w-[80%] w-[100%] gap-[40px] flex flex-col'>
 
 
                     <div className=" w-[100%]">
@@ -66,6 +66,7 @@ export default function BlogdetailsSecond() {
                             </h1>
                         </article>
                     </div>
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%]">
                         <h1 className=' flex font-[600] mb-[10px]  gap-[10px] text-[18px] md:items-center'> <i className="fa-regular mt-[4px] fa-calendar-days"></i>12:00 PM – Explore the Champaner-Pavagadh Archaeological Park </h1>
                         <div className="relative w-full  md:h-[400px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
@@ -122,7 +123,7 @@ export default function BlogdetailsSecond() {
 
                         </article>
                     </div>
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%] ">
                         <h1 className=' flex md:items-center font-[600] mb-[10px] text-[18px] gap-[10px] '> <i className="fa-solid mt-[4px] text-[#7442ff] fa-fork-knife"></i>                          2:00 PM – Lunch at a Local Gujarati Restaurant  </h1>
 
@@ -155,7 +156,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%]">
                         <h1 className=' md:items-center gap-[10px] flex font-[600] mb-[10px] text-[18px]'>  <i className="fa-regular mt-[4px] fa-calendar-days"></i>  3:30 PM – Nature Retreat at Mahakali Lake </h1>
                         <div className="relative w-full md:h-[400px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
@@ -191,7 +192,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%]">
                         <h1 className=' flex font-[600] mb-[10px] items-center gap-[10px] text-[18px]'> <i className="fa-regular fa-calendar-days"></i> 6:00 PM – Sunset at Kada Dam</h1>
                         <div className="relative w-full md:h-[400px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
@@ -229,7 +230,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
                         <h1 className=' flex font-[600] mb-[10px] md:items-center gap-[10px] text-[18px]'> <i className="fa-regular  mt-[4px] fa-calendar-days"></i> 8:00 PM – Dinner & Stay at Basalt Paradise 🌙</h1>
@@ -268,7 +269,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%]">
                                              <h1 className=' flex font-[600] mb-[10px]  gap-[10px] text-[18px] md:items-center'> <i className="fa-regular mt-[4px] fa-calendar-days"></i>Day 2: Adventure & Leisure</h1>
                         <div className="relative w-full md:h-[400px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
@@ -306,7 +307,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
                                              <h1 className=' flex font-[600] mb-[10px]  gap-[10px] text-[18px] md:items-center'> <i className="fa-regular mt-[4px] fa-calendar-days"></i>10:00 AM – Breakfast at a Local Cafée</h1>
@@ -344,7 +345,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
                                              <h1 className=' flex font-[600] mb-[10px]  gap-[10px] text-[18px] md:items-center'> <i className="fa-regular mt-[4px] fa-calendar-days"></i>11:00 AM – Visit the Hidden Beauty of Hathni Waterfall</h1>
@@ -385,7 +386,7 @@ export default function BlogdetailsSecond() {
                         </article>
                     </div>
 
-
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
                                              <h1 className=' flex font-[600] mb-[10px]  gap-[10px] text-[18px] md:items-center'> <i className="fa-regular mt-[4px] fa-calendar-days"></i>2:00 PM – Lunch & Leisure Time at Basalt Paradise </h1>
@@ -454,12 +455,12 @@ export default function BlogdetailsSecond() {
                             <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
                             <ul className="list-disc ml-4 text-[17px] space-y-2">
                                 <li>
-                                    <a href="/offbeat-destinations" className="text-[#000000] font-[500] hover:underline">
+                                    <a href="/blogs/offbeat-destinations-near-halol" className="text-[#000000] font-[500] hover:underline">
                                     Explore Offbeat Destinations Near Halol
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/nature-spots" className="text-[#000000] font-[500] hover:underline">
+                                    <a href="/blogs/nature-spots-near-halol" className="text-[#000000] font-[500] hover:underline">
                                     Discover Best Nature Spots Near Halol
                                     </a>
                                 </li>
@@ -470,14 +471,14 @@ export default function BlogdetailsSecond() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/blog-details" className="text-[#000000] font-[500] hover:underline">
+                                    <a href="/blogs/must-visit-places-near-basalt-paradise" className="text-[#000000] font-[500] hover:underline">
                                     Complete Guide: 10 Must-Visit Places Near Basalt Paradise
                                     </a>
                                 </li>   
                             </ul>
                         </div>
                 </div>
-                <div className=" h-[390px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                <div className=" h-[430px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
@@ -528,7 +529,7 @@ export default function BlogdetailsSecond() {
                                     <ul className="flex  flex-col gap-[8px]">
                                         <li className='  flex'>
                                             <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blog-details">Local Attractions & Experiences</a>
+                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
                                         </li>
                                         <li className=' items-center flex'>
                                             <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -537,11 +538,11 @@ export default function BlogdetailsSecond() {
 
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/offbeat-destinations">         Offbeat Destinations Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/nature-spots">      Best Nature Spots Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -549,7 +550,7 @@ export default function BlogdetailsSecond() {
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/weekend">   Weekend from Ahmedabad</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
                                         </li>
                                     </ul>
                                 </div>

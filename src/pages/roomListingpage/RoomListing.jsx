@@ -37,6 +37,27 @@ import { Review } from "../../Component/review/Review";
 import BannerSection from "../../Component/bannerSection/BannerSection";
 import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
 import Gallery from "../../Component/gallery/Gallery";
+import zenbed1 from "../../../public/NewZenRoom/zenbed1.jpg"
+import zenbed2 from "../../../public/NewZenRoom/zenbed2.jpg"
+import zenbed3 from "../../../public/NewZenRoom/zenbed3.jpg"
+import villa1 from "../../../public/VilaNewImages/villa1.jpg"
+import villa2 from "../../../public/VilaNewImages/villa2.jpeg"
+import villa3 from "../../../public/VilaNewImages/villa3.jpeg"
+import villa4 from "../../../public/VilaNewImages/villa4.jpeg"
+import villa5 from "../../../public/VilaNewImages/villa5.jpeg"
+import villa6 from "../../../public/VilaNewImages/villa6.jpeg"
+import villa7 from "../../../public/VilaNewImages/villa7.jpeg"
+import villa8 from "../../../public/VilaNewImages/villa8.jpeg"
+
+
+
+
+
+
+
+
+
+
 
 // interface RoomProps {
 //   name: string;
@@ -244,13 +265,10 @@ const HotelCard = ({
           </div>
 
           <div className=" flex relative ">
-            <div className=" w-[80%] flex  flex-col gap-[5px] mt-[23px]">
-              {/* {features.map((feature, index) => (
-                <div key={index} className="flex  gap-2">
-                  <i class="fa-duotone fa-solid mt-[2px]  text-[#b18f2a] fa-check"></i>
-                  <span className="text-[#b18f2a]  text-[13px]">{feature}</span>
-                </div>
-              ))} */}
+            <div className=" w-[100%]   text-[11px] flex-col gap-[5px] mt-[5px]">
+ <b className=" font-[500]">
+ 15-7 days before the event:
+ </b>  25% of the deposit will be forfeited. <b className=" font-[500]">7-3 days before the event: </b>  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited.
             </div>
           </div>
         </div>
@@ -373,9 +391,9 @@ export default function RoomListing() {
       originalPrice: 18400,
       discountedPrice: 16560,
       taxes: 5152,
-      amenities: ["Gym", "Restaurant", "24-hour Room Service", "Free Cancellation (up to 24 hours before )"],
-      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",swimmingpool, "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif",],
-      features: ["Breakfast Included", "Free Cancellation till 24 hrs before check in"],
+      amenities: ["Gym", "Restaurant", "24-hour Room Service", ""],
+      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",swimmingpool, "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif", villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8],
+      features: ["Breakfast Included", "15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited."],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
       noCostEmi: true,
@@ -393,8 +411,8 @@ export default function RoomListing() {
       discountedPrice: 5293,
       taxes: 1298,
       amenities: ["Wi-Fi & Air Conditioning", "Restaurant", "24-hour Room Service", "Housekeeping"],
-      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif"],
-      features: ["Wi-Fi", "Air Conditioning", "Housekeeping"],
+      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",zenbed1,zenbed2,zenbed3],
+      features: ["Wi-Fi", "Air Conditioning", "Housekeeping",""],
       description: null,
       noCostEmi: false,
     },

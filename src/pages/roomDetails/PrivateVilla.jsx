@@ -31,6 +31,19 @@ import swimmingpool from "../../../public/Basalt/B12.jpg"
 import LocationMap from "../../Component/hotelLocations/LocationMap";
 import PropertyRules from "../../Component/propertyRules/PropertyRules";
 import GussetPhotos from "../../Component/GussetPhotos";
+
+
+import villa1 from "../../../public/VilaNewImages/villa1.jpg"
+import villa2 from "../../../public/VilaNewImages/villa2.jpeg"
+import villa3 from "../../../public/VilaNewImages/villa3.jpeg"
+import villa4 from "../../../public/VilaNewImages/villa4.jpeg"
+import villa5 from "../../../public/VilaNewImages/villa5.jpeg"
+import villa6 from "../../../public/VilaNewImages/villa6.jpeg"
+import villa7 from "../../../public/VilaNewImages/villa7.jpeg"
+import villa8 from "../../../public/VilaNewImages/villa8.jpeg"
+
+
+
 const amenities = [
 
 
@@ -98,11 +111,12 @@ export default function PrivateVillas() {
     );
   };
   const galleryImages = [
+    
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",
-
+    swimmingpool,
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif",
     //  " https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/b9zn3wzx5ekvwxi4u9o1.jpg"
-    swimmingpool
+
   ];
 
 
@@ -110,12 +124,20 @@ export default function PrivateVillas() {
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif"
+    
   ];
   const galleryImages4 = [
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/qcderzyc9qwnxhdhvfze.avif"
   ];
+  const galleryImagesmain = [
+
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",
+    swimmingpool,
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif",villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8
+  ];
+
 
 
   return (
@@ -203,7 +225,7 @@ export default function PrivateVillas() {
                 </div>
 
                 {/* Side Images */}
-                <div className="md:space-y-4 space-y-2">
+                <div className="md:space-y-4 relative space-y-2">
                   {galleryImages.slice(1).map((img, i) => (
                     <div
                       key={i + 1}
@@ -217,6 +239,12 @@ export default function PrivateVillas() {
                       />
                     </div>
                   ))}
+                  <div
+                    className="w-[100%] bottom-0 cursor-pointer text-[#fff] text-[29px] flex justify-center items-center rounded-[6px] left-0 mx-auto right-[0px] absolute bg-[#000000a9] h-[48%]"
+                    onClick={() => openLightbox(galleryImagesmain, 0)} // ✅ Open full gallery starting at first image
+                  >
+                    +6
+                  </div>
                 </div>
               </div>
 
@@ -275,7 +303,7 @@ export default function PrivateVillas() {
                   </li>
                   <div className="flex items-start  text-[14px] gap-2 text-gray-600">
                     <span className="w-[10px] h-[6px] mt-[8px] bg-gray-600 rounded-full" />
-                    Non-Refundable, but date change allowed (until 24 hrs before check-in)
+                15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited
                   </div>
                 </ul>
 
@@ -478,8 +506,8 @@ export default function PrivateVillas() {
 
                     <div className="mt-2 flex  gap-2 text-0">
                       <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                      <span className=" flex  text-gray-600 text-[13px]">
-                        Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      <span className=" flex  text-gray-600  text-[12px]">
+                    15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                     </div>
                     {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -633,9 +661,9 @@ export default function PrivateVillas() {
 
                       <div className="mt-2 flex  gap-2 text-0">
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                        <span className=" flex  text-gray-600 text-[13px]">
+                        <span className=" flex  text-gray-600  text-[12px]">
 
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -660,7 +688,7 @@ export default function PrivateVillas() {
 </a>
                     </div>
                   </div>
-                  <div className="grid relative  grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
+                  <div className="grid border-b relative  grid-cols-1 gap-4  transition-transform duration-600    p-4 lg:grid-cols-3">
                     <div className="col-span-2">
                       <h3 className="font-medium">Room With Breakfast + Lunch + Dinner </h3>
                       <div className=" flex items-center mt-[10px] gap-[10px]">
@@ -690,8 +718,8 @@ export default function PrivateVillas() {
 
                       <div className="mt-2 flex  gap-2 text-0">
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
-                        <span className=" flex  text-gray-600 text-[13px]">
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        <span className=" flex  text-gray-600 text-[12px] ">
+                      15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -718,6 +746,71 @@ export default function PrivateVillas() {
 
                   </div>
 
+                  <div className="grid relative  grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
+                    <div className="col-span-2">
+                      <h3 className="font-medium">Room With Breakfast + Lunch + Hi-Tea + Dinner </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[7px] mt-2 ml-[4px] h-[7px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Breakfast
+                        </div>
+                      </div>
+                      <div className=" flex items-center  gap-[10px]">
+                        <div className=" w-[7px] mt-2 ml-[4px] h-[7px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Lunch
+                        </div>
+                      </div>
+                      <div className=" flex items-center  gap-[10px]">
+                        <div className=" w-[7px] mt-2 ml-[4px] h-[7px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Hi Tea
+                        </div>
+                      </div>
+                      <div className=" flex items-center  gap-[10px]">
+                        <div className=" w-[7px] mt-2 ml-[4px] h-[7px] rounded-full bg-[#7d7d7d]">
+
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Dinner
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[12px] ">
+                      15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> */}
+                    </div>
+                    <div className="text-right relative  space-y-1">
+                      {/* <div className="text-[13px] text-gray-500 line-through">
+                        ₹26,200
+                      </div>
+                      <div className="text-[25px] font-[600]">₹23,580</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹7,336  taxes & fees
+                      </div> */}
+                      {/* <div className="mb-2 text-[13px]">
+                        <span className="font-medium">1 Room</span>
+                        <span className="text-gray-500"> per night</span>
+                      </div> */}
+                      <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                      <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                       BOOK THIS NOW
+                      </button>
+</a>
+                    </div>
+
+                  </div>
                   {/* Room with Breakfast */}
 
                 </div>

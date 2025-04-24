@@ -361,7 +361,7 @@ export default function Blog3details() {
                         {/* Main Content */}
                         <article className="space-y-2">
                             <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                            Zarwani Waterfall – An Untouched Beauty
+                                Zarwani Waterfall – An Untouched Beauty
                             </h1>
 
 
@@ -373,7 +373,7 @@ export default function Blog3details() {
                                 </p>
                             </div> */}
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Located inside Shoolpaneshwar Wildlife Sanctuary, about 80 km from Halol, this spot is still unexplored by most tourists. The waterfall flows through a beautiful rocky landscape surrounded by forests.
+                                Located inside Shoolpaneshwar Wildlife Sanctuary, about 80 km from Halol, this spot is still unexplored by most tourists. The waterfall flows through a beautiful rocky landscape surrounded by forests.
                             </p>
                             <div className=' flex flex-col gap-[6px]'>
 
@@ -387,7 +387,7 @@ export default function Blog3details() {
                                             Best time to visit :
                                         </h1>
                                         <p className='  font-[400] text-[14px]'>
-                                        Monsoon and post-monsoon
+                                            Monsoon and post-monsoon
                                         </p>
                                     </div>
                                 </div>
@@ -403,7 +403,7 @@ export default function Blog3details() {
                                             Activities :
                                         </h1>
                                         <p className='  font-[400] text-[14px]'>
-                                        Nature walks, waterfall trekking, and photography
+                                            Nature walks, waterfall trekking, and photography
                                         </p>
                                     </div>
                                 </div>
@@ -414,7 +414,7 @@ export default function Blog3details() {
                                             How to reach :
                                         </div>
                                         <div>
-                                        Carry good trekking shoes as the terrain can be slippery during monsoon.
+                                            Carry good trekking shoes as the terrain can be slippery during monsoon.
 
 
                                         </div>
@@ -505,109 +505,111 @@ export default function Blog3details() {
 
                         </article>
                     </div>
+                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff] mt-[20px] border-dashed '></span>
+
                     <div className="w-full my-2">
-                            <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
-                            <ul className="list-disc ml-4 text-[17px] space-y-2">
-                                <li>
-                                    <a href="/nature-spots" className="text-[#000000] font-[500] hover:underline">
+                        <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
+                        <ul className="list-disc ml-4 text-[17px] space-y-2">
+                            <li>
+                                <a href="/blogs/nature-spots-near-halol" className="text-[#000000] font-[500] hover:underline">
                                     Best Nature Spots Near Halol
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/adventure-activities" className="text-[#000000] font-[500] hover:underline">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/adventure-activities" className="text-[#000000] font-[500] hover:underline">
                                     Adventure Activities Near Basalt Paradise
-                                    </a>
-                                </li>
+                                </a>
+                            </li>
 
-                                <li>
-                                    <a href="/adventure-activities" className="text-[#000000] font-[500] hover:underline">
+                            <li>
+                                <a href="/adventure-activities" className="text-[#000000] font-[500] hover:underline">
                                     10 Must-Visit Places Near Basalt Paradise
-                                    </a>
-                                </li>
+                                </a>
+                            </li>
 
-                            </ul>
-                        </div>
+                        </ul>
+                    </div>
                 </div>
 
-                <div className=" h-[390px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
-                        <div id="infoProduto ">
-                            <div className="blog-sidebar">
+                <div className=" h-[430px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                    <div id="infoProduto ">
+                        <div className="blog-sidebar">
 
 
 
-                                <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
-                                    <input
-                                        type="text"
-                                        className="search-input  outline-none"
-                                        name="Search"
-                                        placeholder="Search "
-                                    />
-                                    <button className="search-btn pr-[10px]" type="submit">
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 16 16"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
-                                                fill="#fcaf17"
-                                            ></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div className="ak-height-50 ak-height-lg-30"></div>
+                            <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
+                                <input
+                                    type="text"
+                                    className="search-input  outline-none"
+                                    name="Search"
+                                    placeholder="Search "
+                                />
+                                <button className="search-btn pr-[10px]" type="submit">
+                                    <svg
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
+                                            fill="#fcaf17"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div className="ak-height-50 ak-height-lg-30"></div>
 
-                                {/* Popular Categories */}
-                                <div className="sidebar-section px-[10px]">
-                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Influencer Guests
-                                    </h5>
-                                    <ul className="flex flex-col gap-[4px]">
-                                        <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
+                            {/* Popular Categories */}
+                            <div className="sidebar-section px-[10px]">
+                                <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
+                                    Influencer Guests
+                                </h5>
+                                <ul className="flex flex-col gap-[4px]">
+                                    <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
 
 
-                                    </ul>
-                                </div>
-                                <div className="ak-height-50 ak-height-lg-30"></div>
+                                </ul>
+                            </div>
+                            <div className="ak-height-50 ak-height-lg-30"></div>
 
-                                {/* Popular Tags */}
-                                <div className="sidebar-section  mt-[20px] px-[10px]">
-                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Popular Blogs
-                                    </h5>
-                                    <ul className="flex  flex-col gap-[8px]">
-                                        <li className='  flex'>
-                                            <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blog-details">Local Attractions & Experiences</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
-                                        </li>
+                            {/* Popular Tags */}
+                            <div className="sidebar-section  mt-[20px] px-[10px]">
+                                <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
+                                    Popular Blogs
+                                </h5>
+                                <ul className="flex  flex-col gap-[8px]">
+                                    <li className='  flex'>
+                                        <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
+                                    </li>
+                                    <li className=' items-center flex'>
+                                        <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
+                                    </li>
 
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/offbeat-destinations">         Offbeat Destinations Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/nature-spots">      Best Nature Spots Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/weekend">   Weekend from Ahmedabad</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <li className='  flex'>
+                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
+                                    </li>
+                                    <li className='  flex'>
+                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
+                                    </li>
+                                    <li className='  flex'>
+                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
+                                    </li>
+                                    <li className='  flex'>
+                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 z-[7000] flex flex-col items-center justify-center bg-black/80 p-4">

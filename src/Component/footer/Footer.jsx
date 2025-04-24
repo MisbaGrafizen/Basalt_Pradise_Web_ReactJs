@@ -169,7 +169,7 @@ export default function Footer() {
                   </a>
                 </li> */}
 
-    
+
                 {/* <li>
                   <a
                     href="#"
@@ -212,7 +212,7 @@ export default function Footer() {
                   </a>
 
                 </li>
-    
+
                 <li>
                   <a
                     href="/faqs"
@@ -222,12 +222,12 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  {/* <a
-                    href="#"
+                  <a
+                    href="/influencers-registration"
                     className="text-gray-400 hover:text-white text-[14px] font-[300]"
                   >
-                    Travel Deals
-                  </a> */}
+                    Influencer
+                  </a>
                 </li>
                 {/* <li>
                   <a

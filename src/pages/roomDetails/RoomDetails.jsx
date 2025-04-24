@@ -30,6 +30,11 @@ import AlertBanner from "../../Component/aboutUsComponent/AlertBanner";
 import LocationMap from "../../Component/hotelLocations/LocationMap";
 import PropertyRules from "../../Component/propertyRules/PropertyRules";
 import GussetPhotos from "../../Component/GussetPhotos";
+import zenbed1 from "../../../public/NewZenRoom/zenbed1.jpg"
+import zenbed2 from "../../../public/NewZenRoom/zenbed2.jpg"
+import zenbed3 from "../../../public/NewZenRoom/zenbed3.jpg"
+
+
 const amenities = [
 
 
@@ -95,6 +100,7 @@ export default function RoomDetails() {
 
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif",
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",
+
   ];
 
   const galleryImages1 = [
@@ -104,9 +110,10 @@ export default function RoomDetails() {
     "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg "
   ];
   const galleryImages3 = [
-    // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
-    // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
-    "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif",
+
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif",
+    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",zenbed1,zenbed2,zenbed3
   ];
 
   return (
@@ -201,7 +208,7 @@ export default function RoomDetails() {
 
               </div> */}
 
-              <div className="grid grid-cols-2 md:grid-cols-[2fr,1fr] gap-[7px] md:gap-4">
+              <div className="grid grid-cols-2  relative md:grid-cols-[2fr,1fr] gap-[7px] md:gap-4">
                 {/* Main Image */}
                 <div
                   className="relative rounded-lg cursor-pointer"
@@ -215,8 +222,8 @@ export default function RoomDetails() {
                 </div>
 
                 {/* Side Images */}
-                <div className="md:space-y-4 space-y-2">
-                  {galleryImages.slice(1).map((img, i) => (
+                <div className="md:space-y-4 relative space-y-2">
+                {galleryImages.slice(1, 3).map((img, i) => (
                     <div
                       key={i + 1}
                       className="relative rounded-lg overflow-hidden h-[146px] md:h-[191px] cursor-pointer"
@@ -229,6 +236,13 @@ export default function RoomDetails() {
                       />
                     </div>
                   ))}
+                  <div
+                    className="w-[100%] bottom-0 cursor-pointer text-[#fff] text-[29px] flex justify-center items-center rounded-[6px] left-0 mx-auto right-[0px] absolute bg-[#000000a9] h-[48%]"
+                    onClick={() => openLightbox(galleryImages3, 0)} // ✅ Open full gallery starting at first image
+                  >
+                    +6
+                  </div>
+
                 </div>
               </div>
 
@@ -285,12 +299,12 @@ export default function RoomDetails() {
                     <span className="w-1.5 h-1.5 bg-gray-600 rounded-full" />
                     No meals included
                   </li>
-                  <li className="flex items-center  text-[15px] gap-2 text-gray-600">
+                  <li className="flex items-center  text-[13px] gap-2 text-gray-600">
                     <span className="w-1.5 h-1.5 bg-gray-600 rounded-full" />
-                    Non-Refundable, but date change allowed (until 24 hrs before check-in)
+                  15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited
                   </li>
                 </ul>
-{/* 
+                {/* 
                 <div className="mb-3">
                   <div className="text-gray-600 text-[12px] font-[500]">
                     Per Night:
@@ -304,10 +318,10 @@ export default function RoomDetails() {
                 </div> */}
 
                 <div className="flex items-center gap-4">
-                <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
-                  <button className=" basalt py-[10px] rounded-[7px]   w-[160px] font-[500] text-[13px] text-[#fff] px-[10px]">
-                    BOOK THIS NOW
-                  </button>
+                  <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                    <button className=" basalt py-[10px] rounded-[7px]   w-[160px] font-[500] text-[13px] text-[#fff] px-[10px]">
+                      BOOK THIS NOW
+                    </button>
                   </a>
                   {/* <button className="text-[#4169E1]  text-[13px] font-[400] hover:underline">
                     11 More Options
@@ -337,7 +351,7 @@ export default function RoomDetails() {
                       <p className="text-gray-600   text- text-[13px] ">
 
 
-                      10.0 km drive to Champaner-Pavagadh Archaeological Park
+                        10.0 km drive to Champaner-Pavagadh Archaeological Park
                       </p>
                     </div>
                   </div>
@@ -476,7 +490,7 @@ export default function RoomDetails() {
                     <div className="mt-2 flex  gap-2 text-0">
                       <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                       <span className=" flex  text-gray-600 text-[13px]">
-                        Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                      15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                     </div>
                     {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -495,10 +509,10 @@ export default function RoomDetails() {
                       <span className="text-gray-500"> per night</span>
                     </div> */}
                     <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
-  <button className="md:absolute basalt bottom-[-240px] right-[20px] py-[7px] text-[#fff] mt-[20px] font-[500] rounded-[7px] text-[14px] w-[140px]">
-    BOOK THIS NOW
-  </button>
-</a>
+                      <button className="md:absolute basalt bottom-[-240px] right-[20px] py-[7px] text-[#fff] mt-[20px] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                        BOOK THIS NOW
+                      </button>
+                    </a>
 
 
                   </div>
@@ -637,7 +651,7 @@ export default function RoomDetails() {
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                         <span className=" flex  text-gray-600 text-[13px]">
 
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -651,12 +665,12 @@ export default function RoomDetails() {
                       <div className="text-[12px] text-gray-600">
                         + ₹1,298 taxes & fees per night
                       </div> */}
-                  
-                    <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
-                      <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                      BOOK THIS NOW
-                      </button>
-</a>
+
+                      <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                        <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          BOOK THIS NOW
+                        </button>
+                      </a>
                     </div>
                   </div>
                   <div className="grid grid-cols-1 border-b gap-4 transition-transform duration-600    p-4 lg:grid-cols-3">
@@ -674,7 +688,7 @@ export default function RoomDetails() {
                       <div className="mt-2 flex  gap-2 text-0">
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                         <span className=" flex  text-gray-600 text-[13px]">
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -693,13 +707,13 @@ export default function RoomDetails() {
                         <span className="text-gray-500"> per night</span>
                       </div> */}
                       <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
-                      <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                       BOOK THIS NOW
-                      </button>
-</a>
+                        <button className="  basalt py-[7px] bottom-[5px] right-0 md:absolute mt-[20px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          BOOK THIS NOW
+                        </button>
+                      </a>
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 gap-4 rounded-[20px]  transition-transform duration-600  hover:border-[#1c55f1]  p-4 lg:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-4   border-b  transition-transform duration-600    p-4 lg:grid-cols-3">
                     <div className="col-span-2">
                       <h3 className="font-medium">Room With Breakfast + Lunch + Dinner </h3>
                       <div className=" flex items-center mt-[10px] gap-[10px]">
@@ -713,20 +727,20 @@ export default function RoomDetails() {
                         <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
                         </div>
                         <div className="mt-2 text-[13px] text-gray-600">
-                        Free Lunch
+                          Free Lunch
                         </div>
                       </div>
                       <div className=" flex items-center  gap-[10px]">
                         <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
                         </div>
                         <div className="mt-2 text-[13px] text-gray-600">
-                        Free Dinner  
+                          Free Dinner
                         </div>
                       </div>
                       <div className="mt-2 flex  gap-2 text-0">
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                         <span className=" flex  text-gray-600 text-[13px]">
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -745,14 +759,72 @@ export default function RoomDetails() {
                         <span className="text-gray-500"> per night</span>
                       </div> */}
                       <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
-                      <button className="  basalt mt-[20px] bottom-[5px] right-0 md:absolute  py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
-                  BOOK THIS NOW
-                      </button>
-</a>
+                        <button className="  basalt mt-[20px] bottom-[5px] right-0 md:absolute  py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          BOOK THIS NOW
+                        </button>
+                      </a>
                     </div>
                   </div>
 
-                  {/* Room with Breakfast */}
+                  <div className="grid grid-cols-1    gap-4 transition-transform duration-600  p-4 lg:grid-cols-3">
+                    <div className="col-span-2   ">
+                      <h3 className="font-medium">Room With Breakfast + Lunch + Hi-Tea + Dinner </h3>
+                      <div className=" flex items-center mt-[10px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Breakfast
+                        </div>
+                      </div>
+                      <div className=" flex items-center mt-[px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Lunch
+                        </div>
+                      </div>
+                      <div className=" flex items-center mt-[px] gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Hi Tea
+                        </div>
+                      </div>
+                      <div className=" flex items-center  gap-[10px]">
+                        <div className=" w-[9px] mt-2 ml-[4px] h-[9px] rounded-full bg-[#7d7d7d]">
+                        </div>
+                        <div className="mt-2 text-[13px] text-gray-600">
+                          Free Dinner
+                        </div>
+                      </div>
+                      <div className="mt-2 flex  gap-2 text-0">
+                        <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
+                        <span className=" flex  text-gray-600 text-[13px]">
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
+                      </div>
+                      {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
+                      View plan details & policies
+                    </button> */}
+                    </div>
+                    <div className="text-right relative space-y-1">
+                      {/* <div className="text-[13px] text-gray-500 line-through">
+                        ₹9,800
+                      </div>
+                      <div className="text-[25px] font-[600]">₹8,820</div>
+                      <div className="text-[12px] text-gray-600">
+                        + ₹2,744 taxes & fees
+                      </div>
+                      <div className="mb-2 text-[13px]">
+                        <span className="font-medium">1 Room</span>
+                        <span className="text-gray-500"> per night</span>
+                      </div> */}
+                      <a href="https://asiatech.in/booking_engine/index3?token=NjU4MQ==" target="_blank" rel="noopener noreferrer">
+                        <button className="  basalt mt-[20px] bottom-[5px] right-0 md:absolute  py-[7px] text-[#fff] font-[500] rounded-[7px] text-[14px] w-[140px]">
+                          BOOK THIS NOW
+                        </button>
+                      </a>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -868,7 +940,7 @@ export default function RoomDetails() {
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                         <span className=" flex  text-gray-600 text-[13px]">
 
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -908,7 +980,7 @@ export default function RoomDetails() {
                       <div className="mt-2 flex  gap-2 text-0">
                         <i className="fa-solid  text-[#ff1414] fa-circle-xmark"></i>
                         <span className=" flex  text-gray-600 text-[13px]">
-                          Non-Refundable, but date change allowed (until 24 hrs before check-in)</span>
+                        15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited</span>
                       </div>
                       {/* <button className="mt-1 text-[11px] text-blue-600 hover:underline">
                       View plan details & policies
@@ -948,9 +1020,9 @@ export default function RoomDetails() {
       </div>
 
       <div className=" 2xl:w-[1300px] !bg-[#]  md:w-[100%] pb-[20px] pt-[10px]   flex flex-col gap-[62px] h-[100%] mx-auto">
-      <LocationMap />
-      <PropertyRules />
-      <GussetPhotos />
+        <LocationMap />
+        <PropertyRules />
+        <GussetPhotos />
         <Review />
         <Faq />
         <div className=" w-[90%] mx-auto">

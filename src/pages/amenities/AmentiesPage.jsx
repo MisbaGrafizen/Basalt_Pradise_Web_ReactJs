@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../../Component/header/Header'
 const buttons = [
-  "Local Attractions & Experiences",
+  "10 Must-Visit Places Near Basalt Paradise",
   "Travel Tips & Guides",
   "Resort & Hospitality Insights",
   "Guest Blogs",

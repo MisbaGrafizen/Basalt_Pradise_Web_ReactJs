@@ -424,7 +424,7 @@ export default function Blogs4() {
                             <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
                             <ul className="list-disc ml-4 text-[17px] space-y-2">
                                 <li>
-                                    <a href="/offbeat-destinations" className="text-[#000000] font-[500] hover:underline">
+                                    <a href="/blogs/offbeat-destinations-near-halol" className="text-[#000000] font-[500] hover:underline">
                                     Offbeat Destinations Near Halol
                                     </a>
                                 </li>
@@ -434,7 +434,7 @@ export default function Blogs4() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/blog-details" className="text-[#000000] font-[500] hover:underline">
+                                    <a href="/blogs/must-visit-places-near-basalt-paradise" className="text-[#000000] font-[500] hover:underline">
                                     10 Must-Visit Places Near Basalt Paradise
                                     </a>
                                 </li>
@@ -443,7 +443,7 @@ export default function Blogs4() {
 
                 </div>
 
-                <div className=" h-[390px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                <div className=" h-[430px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
@@ -494,7 +494,7 @@ export default function Blogs4() {
                                     <ul className="flex  flex-col gap-[8px]">
                                         <li className='  flex'>
                                             <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blog-details">Local Attractions & Experiences</a>
+                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
                                         </li>
                                         <li className=' items-center flex'>
                                             <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -503,11 +503,11 @@ export default function Blogs4() {
 
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/offbeat-destinations">         Offbeat Destinations Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/nature-spots">      Best Nature Spots Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -515,7 +515,7 @@ export default function Blogs4() {
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/weekend">   Weekend from Ahmedabad</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
                                         </li>
                                     </ul>
                                 </div>

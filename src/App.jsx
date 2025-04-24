@@ -38,6 +38,7 @@ import Blogs4 from "./pages/blogs/Blogs4";
 import Blog5Details from "./pages/blogs/Blog5Details";
 import Blog6Details from "./pages/blogs/Blog6Details";
 import Gallery from "./pages/gallery/Gallery";
+import Influencers from "./pages/InfluencersPage/Influencers";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -68,7 +69,7 @@ function App() {
           <Route path="/contact-us" element={loading ? <Loader /> : <ConatctUs />} />
           <Route path="/blogs" element={loading ? <Loader /> : <Blogs />} />
           <Route path="/bookings" element={loading ? <Loader /> : <MyBookings />} />
-          <Route path="/blog-details" element={loading ? <Loader /> : <BlogDetails />} />
+          <Route path="/blogs/must-visit-places-near-basalt-paradise" element={loading ? <Loader /> : <BlogDetails />} />
           <Route path="/travel-tips" element={loading ? <Loader /> : <BlogdetailsSecond />} />
           <Route path="/privacy-policy" element={loading ? <Loader /> : <PrivacyPolicy />} />
           <Route path="/terms" element={loading ? <Loader /> : <Terms />} />
@@ -77,11 +78,13 @@ function App() {
           <Route path="/testimonials" element={loading ? <Loader /> : <Testimonials />} />
           <Route path="/memories" element={loading ? <Loader /> : <Memories />} />
           <Route path="/private-vila-details" element={loading ? <Loader /> : <PrivateVillas />} />
-          <Route path="/offbeat-destinations" element={loading ? <Loader /> : <Blog3details />} />
-          <Route path="/nature-spots" element={loading ? <Loader /> : <Blogs4 />} />
+          <Route path="/blogs/offbeat-destinations-near-halol" element={loading ? <Loader /> : <Blog3details />} />
+          <Route path="/blogs/nature-spots-near-halol" element={loading ? <Loader /> : <Blogs4 />} />
           <Route path="/adventure-activities" element={loading ? <Loader /> : <Blog5Details />} />
-          <Route path="/weekend" element={loading ? <Loader /> : <Blog6Details />} />
+          <Route path="/blogs/weekend-getaway-from-ahmedabad" element={loading ? <Loader /> : <Blog6Details />} />
           <Route path="/gallery" element={loading ? <Loader /> : <Gallery />} />
+          <Route path="/influencers-registration" element={loading ? <Loader /> : <Influencers />} />
+
 
 
 

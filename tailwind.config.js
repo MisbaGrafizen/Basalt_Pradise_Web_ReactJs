@@ -25,7 +25,8 @@ export default {
         'OpenSan': ['"Open Sans", "Roboto", "Arial", "sans-serif"'],
         'Lato': ['"Lato", serif'],
         'Jersy': ['"Jersey 25"'],
-        'Cursive':['"Cedarville Cursive", cursive']
+        'Cursive':['"Cedarville Cursive", cursive'],
+        'LukleyCursive':['"Leckerli One", cursive']
       },
       
       screens: {

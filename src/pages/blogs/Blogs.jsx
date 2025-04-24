@@ -31,8 +31,8 @@ import blog5cover from "../../../public/BlogsCoverS/basalt_blog5.jpg"
 const blogdata = [
     {
         id: 1,
-        category: "Local Attractions & Experiences",
-        route: "/blog-details", // Unique route
+        category: "10 Must-Visit Places Near Basalt Paradise",
+        route: "/blogs/must-visit-places-near-basalt-paradise", // Unique route
         disatnce: "Discover the Hidden Gems Around Pavagadh & Halol!",
         image: blog1cover,
         tittle: "10 Must-Visit Places Near Basalt Paradise",
@@ -49,24 +49,25 @@ const blogdata = [
         description: "Nestled in the scenic beauty of Pavagadh, Basalt Paradise is the perfect getaway for travelers seeking nature, history, and adventure...",
         fullContent: "This is the full content for Blog 2..."
     },
+
     {
         id: 3,
-        category: "Offbeat Destinations Near Halol",
-        route: "/offbeat-destinations", // Unique route
-        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: blog3cover,
-        tittle: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        description: "Tired of crowded tourist places? Looking for hidden gems that offer peace, nature, and unique experiences ? Halol, known for its historical significance and natural beauty, has some breathtaking offbeat destinations waiting to be explored.",
-        fullContent: "This is the full content for Blog 2..."
-    },
-    {
-        id: 4,
         category: "Best Nature Spots Near Halol",
-        route: "/nature-spots", // Unique route
+        route: "/blogs/nature-spots-near-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: blog4cover,
         tittle: "Escape Into Nature: Discover Halol’s Hidden Scenic Wonders!",
         description: "Need a peaceful break from city life? The region around Halol & Pavagadh is filled with serene lakes, lush green landscapes, waterfalls, and wildlife sanctuaries—perfect for nature lovers! Here’s a guide to the best nature spots near Halol for a refreshing getaway.",
+        fullContent: "This is the full content for Blog 2..."
+    },
+    {
+        id: 4,
+        category: "Offbeat Destinations Near Halol",
+        route: "/blogs/offbeat-destinations-near-halol", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: blog3cover,
+        tittle: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        description: "Tired of crowded tourist places? Looking for hidden gems that offer peace, nature, and unique experiences ? Halol, known for its historical significance and natural beauty, has some breathtaking offbeat destinations waiting to be explored.",
         fullContent: "This is the full content for Blog 2..."
     },
     {
@@ -81,8 +82,8 @@ const blogdata = [
     },
     {
         id: 6,
-        category: "Weekend from Ahmedabad",
-        route: "/weekend", // Unique route
+        category: "Weekend Getaway from Ahmedabad",
+        route: "/blogs/weekend-getaway-from-ahmedabad", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
         tittle: "Looking for a quick escape from Ahmedabad? Here’s why Basalt Paradise should be your next weekend destination!",
@@ -96,12 +97,12 @@ const blogdata = [
 
 export default function Blogs() {
     const navigate = useNavigate();
-    const [selectedCategory, setSelectedCategory] = useState("Local Attractions & Experiences");
+    const [selectedCategory, setSelectedCategory] = useState("10 Must-Visit Places Near Basalt Paradise");
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
 
     const buttons = [
-        "Local Attractions & Experiences",
+        "10 Must-Visit Places Near Basalt Paradise",
         "Travel Tips & Guides",
         "Offbeat Destinations Near Halol",
         "Best Nature Spots Near Halol",
@@ -208,7 +209,7 @@ export default function Blogs() {
                         ))}
                     </div>
 
-                    <div className=" h-[390px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                    <div className=" h-[430px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
@@ -259,7 +260,7 @@ export default function Blogs() {
                                     <ul className="flex  flex-col gap-[8px]">
                                         <li className='  flex'>
                                             <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blog-details">Local Attractions & Experiences</a>
+                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
                                         </li>
                                         <li className=' items-center flex'>
                                             <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -268,11 +269,11 @@ export default function Blogs() {
 
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/offbeat-destinations">         Offbeat Destinations Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/nature-spots">      Best Nature Spots Near Halol</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
@@ -280,7 +281,7 @@ export default function Blogs() {
                                         </li>
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/weekend">   Weekend from Ahmedabad</a>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
                                         </li>
                                     </ul>
                                 </div>

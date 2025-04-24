@@ -219,7 +219,7 @@ export default function Header() {
                 <Link className="w-fit" to={"/"}>
                   <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Basalt Logo" />
                 </Link>
-                <div className="flex md:w-[63%] 2xl:w-[750px]  mt-[5px] items-center md:items-start justify-between">
+                <div className="flex md:w-[75%] 2xl:w-[750px]  mt-[5px] items-center md:items-start justify-between">
                   <div>
                     <div className="xl:text-[15px] gap-[15px] text-[#000] items-center pl-[20px] font-Montserrat mt-[-0.4%] flex font-[600] justify-end md36:hidden md:flex">
                       <Link
@@ -312,6 +312,17 @@ export default function Header() {
                       </Link>
                       <span className="flex h-[24px] w-[1px] bg-black"></span>
 
+                      <Link
+                        to="/influencers-registration"
+                        onClick={() => handleLinkClick("/influencers-registration")}
+                        className={`cursor-pointer font-[400] font-Poppins ${selected === "/influencers-registration"
+                          ? "text-yellow-500 hover:text-yellow-500"
+                          : "  text-[#515151]"
+                          }`}
+                      >
+                        Influencers
+                      </Link>
+                      <span className="flex h-[24px] w-[1px] bg-black"></span>
                       <Link
                         to="/contact-us"
                         onClick={() => handleLinkClick("/contact-us")}
