@@ -392,7 +392,7 @@ export default function RoomListing() {
       discountedPrice: 16560,
       taxes: 5152,
       amenities: ["Gym", "Restaurant", "24-hour Room Service", ""],
-      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",swimmingpool, "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif", villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8],
+      images: ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819860/private-2_lsgoip.avif",swimmingpool, "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819860/private-2_lsgoip.avif", villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8],
       features: ["Breakfast Included", "15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited."],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
@@ -411,7 +411,7 @@ export default function RoomListing() {
       discountedPrice: 5293,
       taxes: 1298,
       amenities: ["Wi-Fi & Air Conditioning", "Restaurant", "24-hour Room Service", "Housekeeping"],
-      images: ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",zenbed1,zenbed2,zenbed3],
+      images: ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818035/B15_bufg5g.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",zenbed1,zenbed2,zenbed3],
       features: ["Wi-Fi", "Air Conditioning", "Housekeeping",""],
       description: null,
       noCostEmi: false,
@@ -457,9 +457,9 @@ export default function RoomListing() {
 
 
   const sidebarImages = [
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/hhy1mhdldlptxc5odgk5.jpg",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/vsleist01ypkkiovgftn.jpg",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/pturvwl713cgrxgenpcj.jpg",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B13_z3wlof.jpg",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818031/B7_h7wsjz.jpg",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818030/B6_ubw9i6.jpg",
   ];
 
   return (

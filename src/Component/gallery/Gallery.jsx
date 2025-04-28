@@ -380,11 +380,11 @@ export default function Gallery() {
     const [currentIndex, setCurrentIndex] = useState(null);
     const navigate =useNavigate()
     const images = [
-        { src:"https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/hyona5bkitk3qvifmzcy.jpg", width: "700px" },
-        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/bnavgquv9tmp64fh7eeh.jpg", width: "390px" },
-        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg", width: "490px" },
-        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/hhy1mhdldlptxc5odgk5.jpg", width: "430px" },
-        { src: "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006365/anoirryt55vkwffchlfk.jpg", width: "510px" }
+        { src:"https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", width: "700px" },
+        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818028/B1_wa3352.jpg", width: "390px" },
+        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B13_z3wlof.jpg", width: "490px" },
+        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818081/B8_qwdomx.jpg", width: "430px" },
+        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B3_lu2wbv.jpg", width: "510px" }
     ];
 
     // useEffect(() => {

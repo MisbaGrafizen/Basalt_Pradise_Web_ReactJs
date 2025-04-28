@@ -16,7 +16,7 @@ export default function HeroSection() {
             muted
             controls={false}
           >
-            <source src="https://res.cloudinary.com/demjxtyj8/video/upload/v1744007082/lbqythqrgp72m9dcyojv.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dtqzhmivb/video/upload/v1745822314/Alphabet_For_Web_iomfij.mp4" type="video/mp4" />
           </video>
 
           {/* <img className="  w-[100%] h-[100%] scale-[0.1px]  rounded-[7px] object-cover  mx-auto" src={mainbg} /> */}

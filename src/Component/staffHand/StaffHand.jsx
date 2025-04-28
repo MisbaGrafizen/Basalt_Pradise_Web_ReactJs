@@ -19,10 +19,10 @@ export default function StaffHand() {
   const [currentImage3, setCurrentImage3] = useState(0);
   const navigate = useNavigate();
 
-  const images1 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/frunjegx6vqf17iabe02.jpg"];
+  const images1 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818033/B10_kc7ob9.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818035/B15_bufg5g.jpg"];
 
-  const images2 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006365/abibbtlccdthx7kmcmjw.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/bnavgquv9tmp64fh7eeh.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/vz1d5qrwnk6v7kspsulx.jpg"];
-  const images3 = ["https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/pturvwl713cgrxgenpcj.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006363/ufyu6gjnwapxv830blrd.jpg", "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006364/hyona5bkitk3qvifmzcy.jpg"];
+  const images2 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819840/image3_aiqxqe.avif", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B12_ksdot2.jpg"];
+  const images3 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818028/B1_wa3352.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B3_lu2wbv.jpg"];
 
   useEffect(() => {
     const interval1 = setInterval(() => {
