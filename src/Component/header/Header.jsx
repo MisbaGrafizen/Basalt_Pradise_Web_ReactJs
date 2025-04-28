@@ -219,7 +219,7 @@ export default function Header() {
                 <Link className="w-fit" to={"/"}>
                   <img className="flex w-[140px] md:w-[145px]" src={logo} alt="Basalt Logo" />
                 </Link>
-                <div className="flex md:w-[75%] 2xl:w-[750px]  mt-[5px] items-center md:items-start justify-between">
+                <div className="flex md:w-[75%] 2xl:w-[830px]  mt-[5px] items-center md:items-start justify-between">
                   <div>
                     <div className="xl:text-[15px] gap-[15px] text-[#000] items-center pl-[20px] font-Montserrat mt-[-0.4%] flex font-[600] justify-end md36:hidden md:flex">
                       <Link
