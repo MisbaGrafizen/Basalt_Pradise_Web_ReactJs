@@ -123,13 +123,13 @@ export default function PrivateVillas() {
   const galleryImages3 = [
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/jrgalwkuhi1zdp7mte9j.avif"
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg"
     
   ];
   const galleryImages4 = [
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/qcderzyc9qwnxhdhvfze.avif"
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B12_ksdot2.jpg"
   ];
   const galleryImagesmain = [
 
