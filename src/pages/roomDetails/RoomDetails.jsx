@@ -96,24 +96,24 @@ export default function RoomDetails() {
     );
   };
   const galleryImages = [
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif",
 
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",
 
   ];
 
   const galleryImages1 = [
-    " https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/frunjegx6vqf17iabe02.jpg"
+    " https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif"
   ];
   const galleryImages2 = [
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744006366/ajjbreyc412xcdxlspu0.jpg "
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif"
   ];
   const galleryImages3 = [
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009555/mkncpwtolvdmdz6qyl4b.avif",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",
 
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009559/au6x84olza4r21cfzrfp.avif",
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009557/ko4qzyo7eusuv6gfty4y.avif",zenbed1,zenbed2,zenbed3
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",
+    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",zenbed1,zenbed2,zenbed3
   ];
 
   return (

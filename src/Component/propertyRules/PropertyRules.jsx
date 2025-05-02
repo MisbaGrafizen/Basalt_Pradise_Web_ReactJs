@@ -93,7 +93,7 @@ export default function PropertyRules() {
                 <h2 className="text-[17px] font-[600] text-gray-900">Property Rules</h2>
                 <div className="flex text-sm text-gray-700 mt-0.5 mb-4">
                     <span><b className=' font-[600]'>Check-in :</b> 11 AM</span>
-                    <span className="mx-6"><b className=' font-[600]'>Check-out :</b> 10 AM</span>
+                    <span className="mx-6"><b className=' font-[600]'>Check-out :</b> 1 PM</span>
                 </div>
 
                 <div className="border-t border-gray-200 pt-[10px]"></div>

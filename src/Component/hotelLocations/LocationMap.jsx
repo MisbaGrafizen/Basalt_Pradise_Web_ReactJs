@@ -115,7 +115,7 @@
 //                         <div className="flex">
 //                             <div className="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center mr-3 flex-shrink-0">
 //                           <img className=' flex w-[100%] ' src={chatgpt} />
-                                
+
 //                             </div>
 //                             <p className="text-gray-700 text-[12px]">
 //                                 Guests consistently praised the property's excellent location, noting its proximity to major attractions
@@ -160,9 +160,9 @@
 
 //                         {/* Map container */}
 //                         {/* <div className="h-[500px] w-full relative" ref={mapRef}>
-                   
+
 //                             <div className="w-full h-full bg-[#e8f0e8]">
-                             
+
 //                                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-2 py-1 rounded text-sm">
 //                                     This Hotel
 //                                 </div>
@@ -184,9 +184,9 @@
 //                         </MapContainer>
 
 //                         {/* Map controls */}
-              
 
-                
+
+
 
 //                         {/* Key Landmarks panel */}
 //                         <div className="w-[500px] max-w-full flex flex-col   md:order-2   order-1 bg-white rounded-md shadow-md">
@@ -360,9 +360,9 @@ export default function LocationMap() {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(toRad(lat1)) *
-        Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+      Math.cos(toRad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return (R * c).toFixed(1) + " Km";
   };
@@ -412,7 +412,27 @@ export default function LocationMap() {
   return (
     <div className="md:w-[78%] w-[90%] mx-auto font-Poppins border rounded-lg">
       <div className="bg-white rounded-lg shadow-sm md:p-6 p-4 mb-4">
-        <h2 className="text-xl font-bold mb-4">Location</h2>
+        <h2 className="text-xl font-bold mb-2">Location</h2>
+        <div className="flex items-center mb-4">
+          <div className="w-6 h-6 mr-2 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-5 h-5 text-gray-500"
+            >
+              <path
+                fillRule="evenodd"
+                d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+          <span className="text-gray-700">Location rated </span>
+          <span className="text-blue-600 font-bold mx-1">4.8</span>
+          <span className="text-gray-700">by guests</span>
+        </div>
+
         <div className="border rounded-lg p-4 mb-2">
           <h3 className="font-bold mb-2">What guests said</h3>
           <div className="flex">
@@ -455,9 +475,8 @@ export default function LocationMap() {
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`h-5 w-5 text-blue-500 transform ${
-                  keyLandmarksExpanded ? "rotate-180" : ""
-                }`}
+                className={`h-5 w-5 text-blue-500 transform ${keyLandmarksExpanded ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

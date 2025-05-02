@@ -342,13 +342,9 @@ import GussePoll2 from "../../../public/myTripGallery/gussetPhotos/pool2.avif"
 import GussePoll3 from "../../../public/myTripGallery/gussetPhotos/pool3.webp"
 import GussePoll4 from "../../../public/myTripGallery/gussetPhotos/pool4.avif"
 import GussePoll5 from "../../../public/myTripGallery/gussetPhotos/pool5.webp"
+
 import { useLocation } from "react-router-dom"
-import Footer from "../../Component/footer/Footer";
-
-
-
-
-
+import Footer from "../../Component/footer/Footer"
 
 
 
@@ -418,8 +414,6 @@ export default function Gallery() {
     const GuestOutdoors = [GusseOutdoors1,GusseOutdoors2,GusseOutdoors3,GusseOutdoors4,GusseOutdoors5,GusseOutdoors6,GusseOutdoors7,GusseOutdoors8,GusseOutdoors10,GusseOutdoors11,GusseOutdoors12,GusseOutdoors13,GusseOutdoors14,GusseOutdoors15,GusseOutdoors16]
 
     const Guestpool = [GussePoll1,GussePoll2,GussePoll3,GussePoll4,GussePoll5,]
-
-
 
 
     const openLightbox = (images, index) => {
