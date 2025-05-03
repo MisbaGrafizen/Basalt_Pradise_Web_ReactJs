@@ -40,6 +40,7 @@ import Blog6Details from "./pages/blogs/Blog6Details";
 import Gallery from "./pages/gallery/Gallery";
 import Influencers from "./pages/InfluencersPage/Influencers";
 import DayPicnicBooking from "./pages/DayPicnicBooking";
+import RomanticGatewayBadodra from "./pages/blogs/RomanticGatewayBadodra";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -86,6 +87,8 @@ function App() {
           <Route path="/gallery" element={loading ? <Loader /> : <Gallery />} />
           <Route path="/influencers-registration" element={loading ? <Loader /> : <Influencers />} />
           <Route path="/resort-booking" element={loading ? <Loader /> : <DayPicnicBooking />} />
+          <Route path="/blogs/romantic-getaways-near-vadodara" element={loading ? <Loader /> : <RomanticGatewayBadodra />} />
+
 
 
 
