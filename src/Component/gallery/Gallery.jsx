@@ -323,40 +323,40 @@ import { Star, ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
 //                 </section> */}
 
 
-                // {isOpen && currentIndex !== null && (
-                //     <div className="fixed inset-0 z-[7000] hidden md:flex items-center justify-center bg-black/80 p-4">
-                //         {/* Close Button */}
-                //         <button
-                //             className="absolute top-5 right-5 text-white hover:text-gray-300"
-                //             onClick={closeLightbox}
-                //         >
-                //             <X className="w-6 h-6" />
-                //         </button>
+// {isOpen && currentIndex !== null && (
+//     <div className="fixed inset-0 z-[7000] hidden md:flex items-center justify-center bg-black/80 p-4">
+//         {/* Close Button */}
+//         <button
+//             className="absolute top-5 right-5 text-white hover:text-gray-300"
+//             onClick={closeLightbox}
+//         >
+//             <X className="w-6 h-6" />
+//         </button>
 
-                //         {/* Prev Button */}
-                //         <button
-                //             className="absolute left-5 text-white hover:text-gray-300"
-                //             onClick={prevImage}
-                //         >
-                //             <ChevronLeft className="w-8 h-8" />
-                //         </button>
+//         {/* Prev Button */}
+//         <button
+//             className="absolute left-5 text-white hover:text-gray-300"
+//             onClick={prevImage}
+//         >
+//             <ChevronLeft className="w-8 h-8" />
+//         </button>
 
-                //         {/* Next Button */}
-                //         <button
-                //             className="absolute right-5 text-white hover:text-gray-300"
-                //             onClick={nextImage}
-                //         >
-                //             <ChevronRight className="w-8 h-8" />
-                //         </button>
+//         {/* Next Button */}
+//         <button
+//             className="absolute right-5 text-white hover:text-gray-300"
+//             onClick={nextImage}
+//         >
+//             <ChevronRight className="w-8 h-8" />
+//         </button>
 
-                //         {/* Fullscreen Image */}
-                //         <img
-                //             src={memories[currentIndex].src}
-                //             alt={memories[currentIndex].alt}
-                //             className="max-h-full max-w-full object-contain"
-                //         />
-                //     </div>
-                // )}
+//         {/* Fullscreen Image */}
+//         <img
+//             src={memories[currentIndex].src}
+//             alt={memories[currentIndex].alt}
+//             className="max-h-full max-w-full object-contain"
+//         />
+//     </div>
+// )}
 //             </section>
 
 //         </>
@@ -378,9 +378,9 @@ export default function Gallery() {
     const [showRightArrow, setShowRightArrow] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
-    const navigate =useNavigate()
+    const navigate = useNavigate()
     const images = [
-        { src:"https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", width: "700px" },
+        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", width: "700px" },
         { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818028/B1_wa3352.jpg", width: "390px" },
         { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B13_z3wlof.jpg", width: "490px" },
         { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818081/B8_qwdomx.jpg", width: "430px" },
@@ -416,20 +416,20 @@ export default function Gallery() {
                 setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1); // Adding -1 to handle precision errors
             }
         };
-    
+
         const scrollElement = scrollRef.current;
         if (scrollElement) {
             scrollElement.addEventListener('scroll', handleScroll);
             handleScroll(); // Initial check
         }
-    
+
         return () => {
             if (scrollElement) {
                 scrollElement.removeEventListener('scroll', handleScroll);
             }
         };
     }, []);
-    
+
     const scroll = (direction) => {
         if (scrollRef.current) {
             const scrollAmount = 300;
@@ -456,7 +456,7 @@ export default function Gallery() {
         setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
-    const handleNavigate =()=>{
+    const handleNavigate = () => {
 
         navigate("/gallery")
     }
@@ -482,7 +482,7 @@ export default function Gallery() {
 
             {showRightArrow && (
                 <button
-                    className='absolute right-[14px] top-[52%] z-[10] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
+                    className='absolute right-[14px] top-[48%] md:top-[52%] z-[10] bg-white border-[1.2px] border-[#3b22ff] rounded-[50%] w-[45px] h-[45px] flex items-center justify-center'
                     onClick={() => scroll('right')}
                 >
                     <ChevronRight className="text-[#3b22ff] w-6 h-6" />
@@ -490,8 +490,8 @@ export default function Gallery() {
             )}
 
             <div ref={scrollRef} className='flex w-full overflow-x-auto gap-[14px] h-[340px] scroll-smooth no-scrollbar'>
-            {images.map((image, index) => (
-                    <img key={index}  src={image.src}  className={`object-cover rounded-[8px] h-[100%] cursor-pointer`} style={{ width: image.width }} alt={`Gallery ${index + 1}`} onClick={() => openLightbox(index)} />
+                {images.map((image, index) => (
+                    <img key={index} src={image.src} className={`object-cover rounded-[8px] h-[100%] cursor-pointer`} style={{ width: image.width }} alt={`Gallery ${index + 1}`} onClick={() => openLightbox(index)} />
                 ))}
                 <div className=' flex items-center ml-[20px]  h-[100%]'>
                     <div className=' basalt flex w-[2px]  items-center h-[60%]'>
@@ -501,7 +501,10 @@ export default function Gallery() {
                         View All <i className="fa-regular fa-arrow-right"></i>
                     </div>
                 </div>
+
+
             </div>
+
             {isOpen && currentIndex !== null && (
                 <div className="fixed inset-0 z-[7000] flex items-center justify-center bg-black/80 p-4">
                     <button className="absolute top-5 right-5 text-white hover:text-gray-300" onClick={closeLightbox}>
@@ -516,6 +519,13 @@ export default function Gallery() {
                     <img src={images[currentIndex].src} alt={`Gallery ${currentIndex + 1}`} className="max-h-full max-w-full rounded-md object-contain" />
                 </div>
             )}
+            <div className=" pt-[20px]">
+
+                <button className=" flex font-[500]  gap-[10px]  px-[13px] rounded-[6px] text-[#fff] basalt w-fit h-[45px] items-center justify-center" onClick={handleNavigate}>
+                    View Gallery <i className="fa-regular fa-arrow-right"></i>
+                </button>
+
+            </div>
 
         </section>
     );

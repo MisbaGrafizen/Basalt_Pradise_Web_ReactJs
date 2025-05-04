@@ -27,7 +27,6 @@ import blog5cover from "../../../public/BlogsCoverS/basalt_blog5.jpg"
 
 
 
-
 const blogdata = [
     {
         id: 1,
@@ -122,8 +121,7 @@ const blogdata = [
     },    {
         id: 10,
         category: "Birdwatching & Eco-Tourism Near Halol",
-        route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
-        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        route: "/blogs/birdwatching-and-eco-tourism-halol", // Unique route
         image: tours,
         tittle: "Birdwatching & Eco-tourism Near Halol: a nature lover’s escape",
         description: "Tucked between rolling hills and lush green plains, the region is also a peaceful haven for migratory birds, rare flora, and eco-conscious travelers. Whether you're a nature photographer, a trekking enthusiast, or someone",
@@ -171,7 +169,8 @@ export default function Blogs() {
         "Romantic Getaways Near Vadodara",
         "Spritual Trails Near Halol",
         "Best Time to Visit Pavagadh & Halol",
-        "Birdwatching & Eco-Tourism Near Halol"
+        "Birdwatching & Eco-Tourism Near Halol",
+        "Hidden Waterfalls Near Basalt Paradise",
     ];
 
     const handleClick = (category) => {

@@ -88,6 +88,32 @@ import villa44 from "../../../public/VilaNewImages/villa7.jpeg"
 import villa55 from "../../../public/VilaNewImages/villa8.jpeg"
 import b5 from "../../../public/Basalt/B5.jpg"
 import b6 from "../../../public/Basalt/B6.jpg"
+import forest1  from "../../../public/ForestAreaImges/ground1.jpeg"
+import forest2  from "../../../public/ForestAreaImges/ground2.jpeg"
+import forest3  from "../../../public/ForestAreaImges/ground3.jpeg"
+import forest4  from "../../../public/ForestAreaImges/ground4.jpeg"
+import forest5  from "../../../public/ForestAreaImges/ground5.jpeg"
+import forest6  from "../../../public/ForestAreaImges/ground6.jpeg"
+import forest7  from "../../../public/ForestAreaImges/ground7.jpeg"
+import playArea11  from "../../../public/ForestAreaImges/playarea1.jpeg"
+import playArea22  from "../../../public/ForestAreaImges/playarea2.jpeg"
+import playArea33  from "../../../public/ForestAreaImges/playarea3.jpeg"
+import playArea44  from "../../../public/ForestAreaImges/playarea4.jpeg"
+import playArea55  from "../../../public/ForestAreaImges/playarea5.jpeg"
+import playArea66  from "../../../public/ForestAreaImges/playarea6.jpeg"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -122,7 +148,7 @@ export default function Gallery() {
     const zenRoomRef = useRef(null)
     const restaurantRef = useRef(null)
 
-    const gardenRef = useRef(null)
+    const forestRef = useRef(null)
     const commonAreaRef = useRef(null)
     const othersRef = useRef(null)
 
@@ -164,8 +190,8 @@ export default function Gallery() {
     const outdoorImages = [nightGreenArea, zen1, b5, drone1, b6, outdoor4, outdoor5, poolnignt1, garden1, garden2, garden3, outdoor3, outdoor2, poolnignt, outdoor1, poolnight2, pool1,]
     const villaRoom = [room6, room7, room8, villaGa, villa11, villa22, villa33, villa44, villa55]
     const restaurantImages = [resturant1, resturant77, resturant33, resturant44, banquet, resturant55, resturant66, resturant11,]
-    const playArea = [PlayArea1, PlayArea2, PlayArea3, PlayArea4, PlayArea5]
-    const garden = [garden1, garden2, garden3]
+    const playArea = [PlayArea1, PlayArea2, PlayArea4, PlayArea5,playArea11,playArea33,playArea44, playArea55,playArea66]
+    const forest = [forest1,forest2,forest3,forest4,forest6,forest7 ,forest5]
     const CommonArea = [commonArea1, commonArea2, commonArea3, commonArea4]
     const OtherS = [outdoor1, outdoor2, outdoor3, outdoor4, outdoor5]
 
@@ -195,6 +221,7 @@ export default function Gallery() {
     const sectionRefs = {
         Outdoors: outdoorsRef,
         "Restaurant & Banquet": restaurantRef,
+        "Forest Area": forestRef,
         "Kids Play Area": playAreaRef,
         "Private Villa": villaRef,
         "Zen Room": zenRoomRef,
@@ -203,14 +230,16 @@ export default function Gallery() {
     const buttonPositions = {
         Outdoors: 10,
         "Restaurant & Banquet": 125,
-        "Kids Play Area": 340,
-        "Private Villa": 492,
-        "Zen Room": 620,
+        "Forest Area": 340,
+        "Kids Play Area": 470,
+        "Private Villa": 612,
+        "Zen Room": 750,
     };
 
     const buttonWidths = {
         Outdoors: 100,
         "Restaurant & Banquet": 200,
+        "Forest Area":115,
         "Kids Play Area": 138,
         "Private Villa": 120,
         "Zen Room": 115,
@@ -359,8 +388,8 @@ export default function Gallery() {
                             <>
 
 
-                                <div className="flex flex-col  h-fit fixed top-[145px] z-[20] overflow-x-auto \ pb-[10px] bg-white 2xl:w-[1300px] md:w-[78%]">
-                                    <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1370px] shadow-md rounded-br-[20px] w-[72%]  border-[#E5E5E5] relative z-[20] bg-white ">
+                                <div className="flex flex-col  h-fit fixed top-[145px] z-[20] overflow-x-auto  w-[100%] pb-[10px] bg-white 2xl:w-[1300px] md:w-[78%]">
+                                    <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1370px] shadow-md rounded-br-[20px] w-[72%]  overflow-x-auto border-[#E5E5E5] relative z-[20] bg-white ">
                                         <div className="max-w-[1400px] mx-auto relative">
                                             {/* Sliding Highlight */}
                                             <div
@@ -415,6 +444,17 @@ export default function Gallery() {
                                             {restaurantImages.map((src, index) => (
                                                 <div key={index} className="rounded-lg overflow-hidden h-64">
                                                     <img src={src} onClick={() => openLightbox(restaurantImages, index)} alt={`Play Area ${index + 1}`} className="w-full h-full object-cover" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div ref={forestRef} data-section="Forest Area" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                        <h2 className="text-xl font-medium relative top-[-10px] mb"> Forest Area</h2>
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            {forest.map((src, index) => (
+                                                <div key={index} className="rounded-lg overflow-hidden h-64">
+                                                    <img onClick={() => openLightbox(forest, index)} src={src} alt={`Play Area ${index + 1}`} className="w-full h-full object-cover" />
                                                 </div>
                                             ))}
                                         </div>
