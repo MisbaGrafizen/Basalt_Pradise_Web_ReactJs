@@ -153,6 +153,12 @@ import RomanticGatewayBadodra from "./pages/blogs/RomanticGatewayBadodra";
 import SpiritualTrails from "./pages/blogs/SpiritualTrails";
 import BestPlaceTo from "./pages/blogs/BestPlaceTo";
 import BirdWatching from "./pages/blogs/BirdWatching";
+import HiddenTemple from "./pages/blogs/HiddenTemple";
+import WhyMonsoon from "./pages/blogs/WhyMonsoon";
+import TopPhotography from "./pages/blogs/TopPhotography";
+import OneDay from "./pages/blogs/OneDay";
+import History from "./pages/blogs/History";
+import Bugdet from "./pages/blogs/Bugdet";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -273,8 +279,21 @@ function App() {
             path="/blogs/birdwatching-and-eco-tourism-halol"
             element={loading ? <Loader /> : <BirdWatching />}
           />
+           <Route path="/blogs/hidden-temples-spiritual-sites-pavagadh" element={loading ? <Loader/> : <HiddenTemple/>}/>
+        
+           <Route path="/blogs/best-time-to-visit-pavagadh-monsoon-guide" element={loading ? <Loader/> : <WhyMonsoon/>}/>
+           <Route path="/blogs/photography-places-halol-instagram-reels" element={loading ? <Loader/> : <TopPhotography/>}/>
+           <Route path="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary" element={loading ? <Loader/> : <OneDay/>}/>
+          <Route path="/blogs/history-of-champaner-pavagadh-heritage-guide" element={loading ? <Loader/> : <History/>}/>
+          <Route path="/blogs/budget-travel-halol-pavagadh-guide" element={loading ? <Loader/> : <Bugdet/>}/>
         </Routes>
+
+       
+    
+    
+    
       </div>
+      
 
       <BottomBar />
     </>

@@ -11,14 +11,40 @@ import kadaDam from "../../../public/Blog4images/kadaDam2.jpeg";
 import kadaDam1 from "../../../public/Blog4images/kadaDam1.jpg";
 import kadaDam2 from "../../../public/Blog4images/kadaDam.jpg";
 
+
+import Bhadrakali1 from "../../../public/lBlogdetailsImgae/Bhadrakali1.webp"
+import Bhadrakali2 from "../../../public/lBlogdetailsImgae/Bhadrakali2.webp"
+import jain1 from "../../../public/lBlogdetailsImgae/jain1.avif"
+import jain2 from "../../../public/lBlogdetailsImgae/jain2.avif"
+import jain3 from "../../../public/lBlogdetailsImgae/jain3.avif"
+import Lakulisa1 from "../../../public/lBlogdetailsImgae/Lakulisa1.webp"
+import Lakulisa2 from "../../../public/lBlogdetailsImgae/Lakulisa2.webp"
+import NavlakhaKothar1 from "../../../public/lBlogdetailsImgae/NavlakhaKothar1.jpg"
+import NavlakhaKothar2 from "../../../public/lBlogdetailsImgae/NavlakhaKothar2.jpg"
+
+
+
+
+
+
+
+
+
 import Footer from "../../Component/footer/Footer";
 
-const praragavhill = [blog1, blog11, blog111];
+const navlakha = [NavlakhaKothar2, NavlakhaKothar1];
 
-const FlyingBird = [flyingBird1, flyingBird2, flyingBird3];
+const jain = [jain1,jain2,jain3];
+const laukshia = [Lakulisa1,Lakulisa2];
+const bhadraKali = [Bhadrakali1,Bhadrakali2];
+const hill3= [blog1,blog11,blog111];
+
+
+
+
 const kadaDamMain = [kadaDam, kadaDam1, kadaDam2];
 
-export default function BestPlaceTo() {
+export default function HiddenTemple() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentIndexFlying, setCurrentIndexFlying] = useState(0);
   const [currentIndexkada, setCurrentIndexKada] = useState(0);
@@ -50,7 +76,7 @@ export default function BestPlaceTo() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % praragavhill.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % navlakha.length);
     }, 2500); // Change image every 2 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
@@ -58,11 +84,40 @@ export default function BestPlaceTo() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % FlyingBird.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % hill3.length);
     }, 2500); // Change image every 2 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
+
+
+
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % jain.length);
+    }, 2500); // Change image every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % laukshia.length);
+    }, 2500); // Change image every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % bhadraKali.length);
+    }, 2500); // Change image every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -78,13 +133,13 @@ export default function BestPlaceTo() {
       <div className="  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto px-2 py-8 gap-[20px] pt-[110px] flex ">
         <div className=" md:w-[80%] gap-[40px] flex flex-col">
           <div className=" w-[100%]">
-            <h1 className="text-[18px] mb-[10px] md:text-[23px] font-[600] text-gray-900">
-              Best Time To Visit Pavagadh & Halol: Weather Guide For Travels
+            <h1 className="text-[14px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+              Navlakha Kothar
             </h1>
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
-                src={praragavhill[currentIndex]}
-                onClick={() => openLightbox(praragavhill, currentIndex)}
+                src={NavlakhaKothar1}
+                onClick={() => openLightbox(navlakha, currentIndex)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
@@ -103,15 +158,14 @@ export default function BestPlaceTo() {
                             </h1> */}
 
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                Planning a trip to the historic hills of Pavagadh or the scenic
-                town of Halol? Great idea! Whether you're coming for the
-                majestic Kalika Mata Temple, the rich heritage of Champaner, or
-                a cozy escape at Basalt Paradise — timing matters.{" "}
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] ">Location:</b> <p> South side of Champaner Fort Complex </p></h1>
+              </p>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                A lesser-visited archaeological marvel, Navlakha Kothar was originally a granary but later developed sacred connotations among villagers. The structures now hold miniature shrines and Shivlings surrounded by old banyan trees.
               </p>
 
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                Here's your complete guide to choosing the perfect season for
-                your visit.
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] "> Vibe:</b> <p>  Quiet, meditative, untouched by tourist chaos.     </p></h1>
               </p>
             </article>
           </div>
@@ -122,8 +176,8 @@ export default function BestPlaceTo() {
             {/* Hero Banner */}
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
-                src={FlyingBird[currentIndexFlying]}
-                onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
+                src={jain2}
+                onClick={() => openLightbox(jain, currentIndexFlying)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
@@ -133,45 +187,19 @@ export default function BestPlaceTo() {
             <article className="space-y-2">
               <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
-                SEASON-WISE TRAVEL BREAKDOWN
+                Jain Temple Cluster (Kalimati Temple & Others)
               </h1>
 
-              <h3 className="font-semibold">
-                {" "}
-                WINTER (November to February) → The Most Pleasant Season
-              </h3>
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                If you're someone who loves cool breezes, clear skies, and
-                scenic walks — this is your ideal time.
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] ">Location:</b> <p> En route to Mahakali summit, inside heritage ruins</p></h1>
               </p>
-              <div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    {" "}
-                    Average Temp: 12°C to 25°C
-                  </p>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    {" "}
-                    Why Visit: Ideal for treks, sightseeing, ropeway rides &
-                  </p>
-                  temple visits
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    Bonus: Winter festivals like Navratri (if October overlaps)
-                    and Christmas add charm
-                  </p>
-                </div>
-              </div>
-              <h1 class=" font-[500] text-[16px] ">
-                <b class=" font-[600]  text-[#7442ff] "> Tip:</b>Book your stay
-                at Basalt Paradise in advance — this is peak season.
-              </h1>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                These 14th-century Jain temples are tucked into the lower plateau area of Pavagadh. Unlike the main climb to Mahakali, this path is serene, flanked by stone pillars and overgrowth.
+              </p>
+
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                <h1 class=" font-[500] text-[16px] "><b class=" font-[600]  text-[#7442ff] ">  Don’t miss:</b> The Kalimati Temple’s ornate carving and empty sanctum — a photographer’s delight.</h1>
+              </p>
             </article>
           </div>
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
@@ -180,8 +208,8 @@ export default function BestPlaceTo() {
             {/* Hero Banner */}
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
-                src={FlyingBird[currentIndexFlying]}
-                onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
+                src={laukshia[currentIndexFlying]}
+                onClick={() => openLightbox(laukshia, currentIndexFlying)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
@@ -189,58 +217,36 @@ export default function BestPlaceTo() {
 
             {/* Main Content */}
             <article className="space-y-2">
-              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  font-[500] text-gray-900">
-                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle mt-[10px]"></i>
-                SUMMER (March to June) → For Budget Travelers & Sunrise Lovers
+              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
+                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
+                Lakulisa Temple – The Lost Shrine of Shaivism
+
               </h1>
 
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                Summers in Gujarat can be warm, but mornings and evenings still
-                offer beauty — especially if you're an early riser or exploring
-                without crowds.
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] ">Location:</b> <p> Near Dudhiya Talav, Champaner </p></h1>
               </p>
-              <div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    {" "}
-                    Average Temp: 12°C to 25°C
-                  </p>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    {" "}
-                    Why Visit: Fewer tourists, discounted hotel rates, early
-                    morning hikes temple visits
-                  </p>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    Tip: Carry sunscreen, water bottles & plan your outings
-                    before 11 AM or after 5 PM
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-[600] text-[#7442ff]">Good For: </span>{" "}
-                <p> Solo travelers, photographers, off-season explorers</p>
-              </div>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                These 14th-century Jain temples are tucked into the lower plateau area of Pavagadh. Unlike the main climb to Mahakali, this path is serene, flanked by stone pillars and overgrowth.
+              </p>
+
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                <h1 class=" font-[500] text-[16px] "><b class=" font-[600]  text-[#7442ff] "> Fun fact: </b>  The temple faces the morning sun and is believed to radiate spiritual energy at dawn.</h1>
+              </p>
             </article>
           </div>
 
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
           <h1 className="text-[18px] md:text-[27px] font-[600] text-gray-900">
-            Nearby Romantic Spots (Perfect for Day Outings)
+            Bhadrakali Temple (Not to Be Confused With Mahakali)
           </h1>
 
           <div className=" w-[100%]">
             {/* Hero Banner */}
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
-                src={kadaDamMain[currentIndexkada]}
-                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                src={Bhadrakali2}
+                onClick={() => openLightbox(bhadraKali, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
@@ -253,51 +259,63 @@ export default function BestPlaceTo() {
                         </div> */}
             {/* Main Content */}
             <article className="space-y-2">
-              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex font-[500] text-gray-900">
-                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle mt-[10px]"></i>
-                MONSOON (July to October) → For Nature Enthusiasts & Romantic
-                Getaways
-              </h1>
+              {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
+                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
+                Pavagadh Ropeway & Kalika Mata Temple
+              </h1> */}
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] ">Location:</b> <p> Off-route inside dense forest path beyond Pavagadh Hill</p></h1>
+              </p>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                Local priests and sadhus believe this is an ancient Shaktipeeth where tantrik sadhanas were once practiced.              </p>
 
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                Monsoons completely transform Pavagadh & Halol. The hills turn
-                lush green, clouds kiss the temples, and waterfalls spring to
-                life.{" "}
+                <h1 class=" font-[500] text-[16px] "><b class=" font-[600]  text-[#7442ff] "> Best For:  </b>   Spiritual explorers and those into mysticism and tantric history.</h1>
               </p>
-
-              <div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    {" "}
-                    Average Temp: 22°C to 30°C
-                  </p>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    Why Visit: Green landscapes, fewer tourists, photogenic
-                    vibes
-                  </p>
-                </div>
-                <div className="flex items-center gap-[5px]">
-                  <i className="fa-regular fa-circle-check text-[#7442ff]"></i>{" "}
-                  <p className="font-400 text-[14px]">
-                    Warning: Ropeway might close during heavy rain; wear sturdy
-                    footwear
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-[600] text-[#7442ff]">Must-click: </span>{" "}
-                <p> Pavagadh hills covered in fog after a light drizzle</p>
-              </div>
-
               <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
             </article>
           </div>
 
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
+          <h1 className="text-[18px] md:text-[27px] font-[600] text-gray-900">
+            Ganga Yamuna Kund
+          </h1>
+          <div className=" w-[100%]">
+            {/* Hero Banner */}
+            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+
+
+              <img
+                src={hill3[currentIndexkada]}
+                onClick={() => openLightbox(hill3, currentIndexkada)}
+                alt="Basalt Paradise Resort"
+                className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
+              />
+            </div>
+
+            <article className="space-y-2">
+              {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  font-[500] text-gray-900">
+                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle mt-[10px]"></i>
+                Sacred Heart Catholic Church, Halol – A Hidden Gem of Peace
+              </h1> */}
+
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                <h1 class=" font-[500] text-[16px] flex items-center gap-1"><b class=" font-[600]  text-[#7442ff] ">Location:</b> <p> Midway on Pavagadh Hill</p></h1>
+              </p>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                A twin-stepwell and water tank considered sacred by pilgrims. Most climbers pass by without realizing its historical or religious significance.</p>
+
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                <h1 class=" font-[500] text-[16px] "><b class=" font-[600]  text-[#7442ff] ">  Why Visit:  </b>   It’s a peaceful detour for those seeking blessings and a moment of solitude.</h1>
+              </p>
+              <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
+            </article>
+          </div>
+
+          <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
+          <h1 className="text-[18px] md:text-[27px] font-[600] text-gray-900">
+            Local Wisdom:
+          </h1>
           <div className=" w-[100%]">
             {/* Hero Banner */}
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
@@ -310,101 +328,49 @@ export default function BestPlaceTo() {
             </div>
 
             <article className="space-y-2">
-              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
+              {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
-                VERDICT: WHEN SHOULD YOU GO?
-              </h1>
-              <div>
-                <p className="text-gray-600 md:text-[16px] text-[14px]">
-                  For comfort & festivals{" "}
-                  <i className="fa-duotone fa-thin fa-arrow-right text-[#7442ff]"></i>{" "}
-                  November to February
-                </p>
-                <p className="text-gray-600 md:text-[16px] text-[14px]">
-                For romantic, green scenery {" "}
-                  <i className="fa-duotone fa-thin fa-arrow-right text-[#7442ff]"></i>{" "}
-                  July to September
-                </p>
-                <p className="text-gray-600 md:text-[16px] text-[14px]">
-                For budget travel {" "}
-                  <i className="fa-duotone fa-thin fa-arrow-right text-[#7442ff]"></i>{" "}
-                  March to early June
-                </p>
+                Local Wisdom:
+              </h1> */}
 
-              <p className="text-gray-600 md:text-[16px] text-[14px]">  Halol is a year-round destination — you just need to match your mood and purpose.</p>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                “People often come to Pavagadh for darshan, but few pause to discover the real sanctity of this place. The air holds energy if you stop and breathe.”
+              </p>
 
-
-              </div>
+              <p className="text-gray-600 md:text-[16px] text-[14px]">
+                Pujari from Kalimati Temple
+              </p>
               <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
             </article>
           </div>
 
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
-{/* 
+     
           <div className=" w-[100%]">
-        
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
-              <img
-                src={kadaDamMain[currentIndexkada]}
-                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
-                alt="Basalt Paradise Resort"
-                className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
-              />
-            </div>
+          <h1 className="text-[18px] md:text-[27px] font-[600] text-gray-900">
+            Tips for Temple Trekkers:
+          </h1>
 
-            <article className="space-y-2">
-              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
-                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
-                Ajwa Water Park (30–40 mins drive)
-              </h1>
+
+            <article className="  ">
+
 
               <p className="text-gray-600 md:text-[16px] text-[14px]">
-                For adventurous couples who like to add some fun and laughter to
-                their romantic getaway.
+                Wear sturdy footwear — most sites involve uneven terrain.
+
+                Visit early morning (before 10 AM) for best light and peaceful surroundings.
+
+                Respect local customs — remove shoes, avoid loud conversations, and don’t photograph interiors without permission.
               </p>
 
-              <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
+
             </article>
           </div>
 
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
-
-          <div className=" w-[100%]">
-          
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
-              <img
-                src={kadaDamMain[currentIndexkada]}
-                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
-                alt="Basalt Paradise Resort"
-                className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
-              />
-            </div>
-
-            <article className="space-y-2">
-              <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
-                <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
-                Candlelight Dinner & In-Room Dining
-              </h1>
-
-              <p className="text-gray-600 md:text-[16px] text-[14px]">
-                Basalt Paradise can arrange a private candlelight dinner upon
-                request — either in the garden or on your balcony. Whether you
-                prefer Gujarati thalis or continental platters, our curated menu
-                delights all palates.
-              </p>
-
-              <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
-            </article>
-          </div> */}
-          {/* <h1 className=" font-[500] text-[16px] ">
-            <b className=" font-[600]  text-[#7442ff] ">Pro tip:</b> Don’t miss
-            our local sweet dish “Malai Dudhi Halwa” — a comforting dessert to
-            end the night on a warm note.
-          </h1> */}
-          {/* <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span> */}
           <div className="w-full my-">
             <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">
-              Related Blogs
+              Related Blogs :
             </h1>
             <ul className="list-disc ml-4 text-[17px] space-y-2">
               <li>
@@ -412,7 +378,7 @@ export default function BestPlaceTo() {
                   href="/blogs/nature-spots-near-halol"
                   className="text-[#000000] font-[500] hover:underline"
                 >
-                  Adventure Activities Near Basalt Paradise
+                  10 Must-Visit Places Near Basalt Paradise
                 </a>
               </li>
               <li>
@@ -420,7 +386,7 @@ export default function BestPlaceTo() {
                   href="/blogs/must-visit-places-near-basalt-paradise"
                   className="text-[#000000] font-[500] hover:underline"
                 >
-                Spiritual Trails Near Halol
+                  Cultural Sites Near Basalt Paradise
                 </a>
               </li>
               <li>
@@ -428,15 +394,25 @@ export default function BestPlaceTo() {
                   href="/blogs/weekend-getaway-from-ahmedabad"
                   className="text-[#000000] font-[500] hover:underline"
                 >
-                 Offbeat Destinations Near Halol
-
+                  History of Champaner-Pavagadh – A Heritage Explorer’s Guide
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blogs/weekend-getaway-from-ahmedabad"
+                  className="text-[#000000] font-[500] hover:underline"
+                >
+                  Day Trip from Vadodara to Pavagadh
                 </a>
               </li>
             </ul>
           </div>
 
+
+
           <h1 className=" font-[500] text-[16px] ">
-          Planning your trip? Book your stay with Basalt Paradise and let nature, culture, and comfort meet.
+            Planning a spiritual retreat at Basalt Paradise? These hidden gems are just a short ride (or hike) away. Let your soul wander.
+
           </h1>
         </div>
 
@@ -593,11 +569,10 @@ export default function BestPlaceTo() {
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
                 onClick={() => setLightboxIndex(index)}
-                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${
-                  lightboxIndex === index
+                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${lightboxIndex === index
                     ? "border-yellow-400"
                     : "border-transparent"
-                }`}
+                  }`}
               />
             ))}
           </div>

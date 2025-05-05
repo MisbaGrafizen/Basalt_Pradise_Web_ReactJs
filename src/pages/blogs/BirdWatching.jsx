@@ -79,7 +79,7 @@ export default function BirdWatching() {
         <div className=" md:w-[80%] gap-[40px] flex flex-col">
           <div className=" w-[100%]">
             <h1 className="text-[14px] mb-[10px] md:text-[25px] font-[600] text-gray-900">
-            BIRDWATCHING & ECO-TOURISM NEAR HALOL: A NATURE LOVER’S ESCAPE
+            Birdwatching & Eco-Tourism Near Halol: A Nature Lover’s Escape
             </h1>
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img

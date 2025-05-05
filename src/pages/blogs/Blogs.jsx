@@ -23,6 +23,20 @@ import blog2cover from "../../../public/BlogsCoverS/basalt_blog2.jpg"
 import blog3cover from "../../../public/BlogsCoverS/basalt_blog3.jpg"
 import blog4cover from "../../../public/BlogsCoverS/basalt_blog4.jpg"
 import blog5cover from "../../../public/BlogsCoverS/basalt_blog5.jpg"
+import hidedenTemple from "../../../public/lBlogdetailsImgae/covarsBlogs/hiddentemple.jpg"
+import moonsoon from "../../../public/lBlogdetailsImgae/covarsBlogs/moonsoon.webp"
+import photogarphy from "../../../public/lBlogdetailsImgae/covarsBlogs/photographyreel.jpg"
+import onedaytrip from "../../../public/lBlogdetailsImgae/covarsBlogs/onedaytripplan.jpg"
+import champaner from "../../../public/lBlogdetailsImgae/covarsBlogs/champner-pavagadh.jpg"
+import budget from "../../../public/lBlogdetailsImgae/covarsBlogs/budgetTravel.jpeg"
+import { time } from 'framer-motion'
+
+
+
+
+
+
+
 
 
 
@@ -34,6 +48,8 @@ const blogdata = [
         route: "/blogs/must-visit-places-near-basalt-paradise", // Unique route
         disatnce: "Discover the Hidden Gems Around Pavagadh & Halol!",
         image: blog1cover,
+        date: "24-03-2025",
+        time: "06:34 PM",
         tittle: "10 Must-Visit Places Near Basalt Paradise",
         description: "Planning a short getaway to Halol & Pavagadh? Whether you're a history lover, nature enthusiast, or spiritual traveler...",
         fullContent: "This is the full content for Blog 1..."
@@ -44,6 +60,8 @@ const blogdata = [
         route: "/travel-tips", // Unique route
         disatnce: "Explore Travel Hacks for Your Trip!",
         image: blog5cover,
+        date: "26-03-2025",
+        time: "06:42 PM",
         tittle: "A Perfect 2-Day Itinerary for Halol & Pavagadh",
         description: "Nestled in the scenic beauty of Pavagadh, Basalt Paradise is the perfect getaway for travelers seeking nature, history, and adventure...",
         fullContent: "This is the full content for Blog 2..."
@@ -55,6 +73,8 @@ const blogdata = [
         route: "/blogs/nature-spots-near-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: blog4cover,
+        date: "29-03-2025",
+        time: "06:10 PM",
         tittle: "Escape Into Nature: Discover Halol’s Hidden Scenic Wonders!",
         description: "Need a peaceful break from city life? The region around Halol & Pavagadh is filled with serene lakes, lush green landscapes, waterfalls, and wildlife sanctuaries—perfect for nature lovers! Here’s a guide to the best nature spots near Halol for a refreshing getaway.",
         fullContent: "This is the full content for Blog 2..."
@@ -65,6 +85,8 @@ const blogdata = [
         route: "/blogs/offbeat-destinations-near-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: blog3cover,
+        date: "28-03-2025",
+        time: "06:10 PM",
         tittle: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         description: "Tired of crowded tourist places? Looking for hidden gems that offer peace, nature, and unique experiences ? Halol, known for its historical significance and natural beauty, has some breathtaking offbeat destinations waiting to be explored.",
         fullContent: "This is the full content for Blog 2..."
@@ -75,6 +97,8 @@ const blogdata = [
         route: "/adventure-activities", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: blog2cover,
+        date: "31-03-2025",
+        time: "06:20 PM",
         tittle: "Experience Thrill & Adventure Near Basalt Paradise – A Must-Try Guide!",
         description: "If you’re visiting Basalt Paradise and looking for an adrenaline rush, you're in for a treat! The area around Halol & Pavagadh isn’t just about history and nature—it’s also packed with thrilling adventure activities. Whether you love trekking, water sports, or wildlife safaris, this guide will take you through the top adventure experiences you can’t miss!",
         fullContent: "This is the full content for Blog 2..."
@@ -85,6 +109,8 @@ const blogdata = [
         route: "/blogs/weekend-getaway-from-ahmedabad", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+        date: "02-04-2025",
+        time: "06:26 PM",
         tittle: "Looking for a quick escape from Ahmedabad? Here’s why Basalt Paradise should be your next weekend destination!",
         description: "Life in Ahmedabad is exciting, but let’s be honest—it can get hectic! If you’re craving a peaceful weekend away from the city’s hustle, Basalt Paradise in Halol is the perfect retreat. Just a few hours’ drive from Ahmedabad, this hidden gem offers lush greenery, historical sites, adventure activities, and a relaxing atmosphere.",
         fullContent: ""
@@ -95,6 +121,8 @@ const blogdata = [
         route: "/blogs/romantic-getaways-near-vadodara", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+        date: "04-04-2025",
+        time: "06:14 PM",
         tittle: "Romantic Getaways Near Vadodara – Why Couples Love Basalt Paradise",
         description: "Looking for a peaceful and romantic escape away from the chaos of city life? Whether it’s an anniversary celebration, honeymoon, or just a spontaneous weekend trip, Basalt Paradise is fast becoming a favorite for couples in Gujarat seeking intimacy, luxury, and scenic charm — all within driving distance from Vadodara.",
         fullContent: ""
@@ -105,6 +133,8 @@ const blogdata = [
         route: "/blogs/spiritual-trails-near-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+        date: "07-04-2025",
+        time: "06:20 PM",
         tittle: "Spritual Trails Near Halol – Exploring sacred spaces around basalt paradise",
         description: "If you’re someone who finds peace in prayers, solace in temples, and joy in age-old spiritual traditions — then Halol and the surrounding Pavagadh region have a lot to offer. This serene land is home to sacred temples, ancient Jain monuments, peaceful mosques, and even a tranquil church — making it a truly soulful destination.",
         fullContent: ""
@@ -115,14 +145,19 @@ const blogdata = [
         route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+            date: "09-04-2025",
+            time: "06:56 PM",
         tittle: "Best Time to Visit Pavagadh & Halol: Weather guide for travelers",
         description: "Planning a trip to the historic hills of Pavagadh or the scenic town of Halol? Great idea! Whether you're coming for the majestic Kalika Mata Temple, the rich heritage of Champaner, or a cozy escape at Basalt Paradise — timing matters.",
         fullContent: ""
-    },    {
+    }, {
         id: 10,
         category: "Birdwatching & Eco-Tourism Near Halol",
         route: "/blogs/birdwatching-and-eco-tourism-halol", // Unique route
         image: tours,
+
+        date: "11-04-2025",
+        time: "06:44 PM",
         tittle: "Birdwatching & Eco-tourism Near Halol: a nature lover’s escape",
         description: "Tucked between rolling hills and lush green plains, the region is also a peaceful haven for migratory birds, rare flora, and eco-conscious travelers. Whether you're a nature photographer, a trekking enthusiast, or someone",
         fullContent: ""
@@ -133,6 +168,8 @@ const blogdata = [
         route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+        date: "14-04-2025",
+        time: "07:05 PM",
         tittle: "Birdwatching & Eco-tourism Near Halol: a nature lover’s escape",
         description: "Tucked between rolling hills and lush green plains, the region is also a peaceful haven for migratory birds, rare flora, and eco-conscious travelers. Whether you're a nature photographer, a trekking enthusiast, or someone",
         fullContent: ""
@@ -143,11 +180,85 @@ const blogdata = [
         route: "/blogs/hidden-waterfalls-near-basalt-paradise", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: tours,
+        date: "16-04-2025",
+        time: "07:02 PM",
         tittle: "Hidden Waterfalls Near Basalt Paradise: a nature escape awaits",
         description: "If the gentle sound of cascading water and the serenity of untouched nature excite you more than bustling tourist hubs, this one’s for you. The hills and forests around Pavagadh and Halol are home to some of Gujarat’s lesser-known gems — secret waterfalls that come alive during and post-monsoon.",
         fullContent: ""
     },
 
+    {
+        id: 13,
+        category: " Hidden Temples & Spiritual Sites Around Pavagadh",
+        route: "/blogs/hidden-temples-spiritual-sites-pavagadh", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: hidedenTemple,
+        date: "18-04-2025",
+        time: "07:08 PM",
+        tittle: "Hidden Temples & Spiritual Sites Around Pavagadh: A Divine Trail Less Traveled",
+        description: "Tucked within the vibrant hills and lush greenery of Pavagadh lies a spiritual trail that often goes unnoticed by hurried tourists. Beyond the grand Mahakali Temple and UNESCO-tagged Champaner complex, there’s a deeper soul to this region — a quiet world of ancient shrines, centuries-old steps, and peaceful sanctuaries that locals revere but few visitors know about.If you’re a seeker of silence, heritage, or offbeat experiences — this blog is your gateway. ",
+        fullContent: ""
+    },
+    {
+        id: 14,
+        category: "Why Monsoon Is the Best Season to Visit Pavagadh",
+        route: "/blogs/best-time-to-visit-pavagadh-monsoon-guide", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: moonsoon,
+        date: "21-04-2025",
+        time: "07:05 PM",
+        tittle: "Why Monsoon Is the Best Season to Visit Pavagadh: Nature, Mist & Magic",
+        description: "If you think Pavagadh is only meant for spiritual treks or scorching summer temple visits — think again. ",
+        fullContent: ""
+    },
+    {
+        id: 15,
+        category: "Top Photography Spots Near Halol",
+        route: "/blogs/photography-places-halol-instagram-reels",
+
+        image: photogarphy,
+        date: "28-04-2025",
+        time: "07:28 PM",
+        tittle: "Top Photography Spots Near Halol",
+        description: "If your camera roll isn’t filled with misty hills, ancient steps, and vibrant temple backdrops — have you even been to Halol and Pavagadh?",
+        fullContent: ""
+    },
+    {
+        id: 16,
+        category: "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
+        route: "/blogs/one-day-trip-pavagadh-from-vadodara-itinerary", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: onedaytrip,
+        date: "30-04-2025",
+        time: "07:14 PM",
+        tittle: "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
+        description: "Looking for a quick weekend getaway that’s rich in history, spirituality, and natural beauty — all within 1.5 hours of Vadodara?",
+        fullContent: ""
+    },
+    {
+        id: 17,
+        category: "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
+        route: "/blogs/history-of-champaner-pavagadh-heritage-guide", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: champaner,
+        date: "02-05-2025",
+        time: "07:23 PM",
+        tittle: "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
+        description: "Tucked in the Aravalli foothills near Halol lies a treasure trove of forgotten dynasties, Islamic architecture, Hindu shrines, and centuries-old stepwells — all waiting to be discovered.",
+        fullContent: ""
+    },
+    {
+        id: 18,
+        category: "Budget Travel Tips for Exploring Halol & Pavagadh",
+        route: "/blogs/budget-travel-halol-pavagadh-guide", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: budget,
+        date: "23-04-2025",
+        time: "07:28 PM",
+        tittle: "Budget Travel Tips for Exploring Halol & Pavagadh",
+        description: "Traveling doesn’t have to break the bank — especially if you’re exploring a place as enriching and scenic as Halol and Pavagadh. Whether you're a student, solo backpacker, or someone who just loves to make every rupee count, this guide will help you enjoy a rich experience without overspending.",
+        fullContent: ""
+    },
 ];
 
 
@@ -170,7 +281,12 @@ export default function Blogs() {
         "Spritual Trails Near Halol",
         "Best Time to Visit Pavagadh & Halol",
         "Birdwatching & Eco-Tourism Near Halol",
-        "Hidden Waterfalls Near Basalt Paradise",
+        " Hidden Temples & Spiritual Sites Around Pavagadh",
+        "Why Monsoon Is the Best Season to Visit Pavagadh",
+        "Top Photography Spots Near Halol",
+        "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
+        "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
+        "Budget Travel Tips for Exploring Halol & Pavagadh"
     ];
 
     const handleClick = (category) => {
@@ -247,6 +363,10 @@ export default function Blogs() {
                                     src={blog.image}
                                     alt="Blogs"
                                 />
+                                <div className=' px-[10px] text-[14px] items-center  flex text-[#7442ff] gap-[10px]'>
+                                    <i class="fa-regular mb-[2px] text-[16px] fa-calendar-days"></i>
+                                    {blog.date} - {blog.time}
+                                </div>
                                 <div className=' flex w-[100%] md:flex-row flex-col  justify-between md:items-end  gap-[14px]'>
                                     <div className=' flex w-[100%] gap-[10px] flex-col '>
                                         <div className=' cursor-default flex items-center gap-[10px]  px-[10px] text-[#7442ff] '>
@@ -276,7 +396,7 @@ export default function Blogs() {
                         ))}
                     </div>
 
-                    <div className=" h-[430px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                    <div className=" h-fit  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
