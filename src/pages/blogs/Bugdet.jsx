@@ -4,20 +4,20 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import blog1 from "../../../public/Blog4images/praragavhill3.webp";
 import blog11 from "../../../public/10Blogs/Hathnimatafall2.jpg";
 import blog111 from "../../../public/10Blogs/Hathnimatafall3.jpg";
-import flyingBird1 from "../../../public/blog5Images/paragrvdhHill1.jpeg";
+import flyingBird1 from "../../../public/Basalt/B11.jpg";
 import flyingBird2 from "../../../public/blog5Images/paragrvdhHill2.jpg";
 import flyingBird3 from "../../../public/blog5Images/paragrvdhHill3.jpg";
-import kadaDam from "../../../public/Blog4images/kadaDam2.jpeg";
-import kadaDam1 from "../../../public/Blog4images/kadaDam1.jpg";
+import kadaDam from "../../../public/lBlogdetailsImgae/history/imgs.jpg";
+import kadaDam1 from "../../../public/lBlogdetailsImgae/history/11.jpg";
 import kadaDam2 from "../../../public/Blog4images/kadaDam.jpg";
 
 import Footer from "../../Component/footer/Footer";
 
 const praragavhill = [blog1, blog11, blog111];
 
-const FlyingBird = [flyingBird1, flyingBird2, flyingBird3];
-const kadaDamMain = [kadaDam, kadaDam1, kadaDam2];
-
+const FlyingBird = [flyingBird1];
+const kadaDamMain = [kadaDam];
+const kadaDamMains = [kadaDam1];
 export default function Bugdet() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentIndexFlying, setCurrentIndexFlying] = useState(0);
@@ -71,6 +71,13 @@ export default function Bugdet() {
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndexKada((prevIndex) => (prevIndex + 1) % kadaDamMains.length);
+    }, 2500); // Change image every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <>
@@ -117,14 +124,14 @@ export default function Bugdet() {
               Get There Cheaply{" "}
             </h1>
             {/* Hero Banner */}
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+            {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
                 src={FlyingBird[currentIndexFlying]}
                 onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
-            </div>
+            </div> */}
 
             {/* Main Content */}
             <article className="space-y-2">
@@ -204,14 +211,14 @@ export default function Bugdet() {
             Eat Local, Save Big
             </h1>
             {/* Hero Banner */}
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+            {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
                 src={kadaDamMain[currentIndexkada]}
                 onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
-            </div>
+            </div> */}
             {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -248,14 +255,14 @@ export default function Bugdet() {
             DIY Instead of Tour Packages
                         </h1>
             {/* Hero Banner */}
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+            {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
                 src={kadaDamMain[currentIndexkada]}
                 onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
-            </div>
+            </div> */}
 
             <article className="space-y-2">
               {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
@@ -329,8 +336,8 @@ export default function Bugdet() {
             {/* Hero Banner */}
             <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
-                src={kadaDamMain[currentIndexkada]}
-                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                src={kadaDamMains[currentIndexkada]}
+                onClick={() => openLightbox(kadaDamMains, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
@@ -363,14 +370,14 @@ export default function Bugdet() {
             Bonus Tips:
             </h1>
             {/* Hero Banner */}
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+            {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
                 src={kadaDamMain[currentIndexkada]}
                 onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
-            </div>
+            </div> */}
 
             <article className="space-y-2">
               {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
@@ -399,14 +406,14 @@ export default function Bugdet() {
               Final Word:
             </h1>
             {/* Hero Banner */}
-            <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+            {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
               <img
                 src={kadaDamMain[currentIndexkada]}
                 onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
                 alt="Basalt Paradise Resort"
                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
               />
-            </div>
+            </div> */}
 
             <article className="space-y-2">
               {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">

@@ -1,31 +1,41 @@
 import Header from '../../Component/header/Header'
 import React, { useEffect, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import blog1 from "../../../public/Blog4images/praragavhill3.webp";
-import blog11 from "../../../public/10Blogs/Hathnimatafall2.jpg";
-import blog111 from "../../../public/10Blogs/Hathnimatafall3.jpg";
-import flyingBird1 from "../../../public/blog5Images/paragrvdhHill1.jpeg"
-import flyingBird2 from "../../../public/blog5Images/paragrvdhHill2.jpg"
-import flyingBird3 from "../../../public/blog5Images/paragrvdhHill3.jpg"
-import kadaDam from "../../../public/Blog4images/kadaDam2.jpeg"
-import kadaDam1 from "../../../public/Blog4images/kadaDam1.jpg"
-import kadaDam2 from "../../../public/Blog4images/kadaDam.jpg"
-
+import blog1 from "../../../public/Basalt/B5.jpg";
+import blog11 from "../../../public/Basalt/B12.jpg";
+// import blog111 from "../../../public/";
+import flyingBird1 from "../../../public/Basalt/B7.jpg"
+import flyingBird2 from "../../../public/Basalt/B13.jpg"
+import pool1 from "../../../public/Basalt/B1.jpg"
+import pool2 from "../../../public/Basalt/B14.jpg"
+// import flyingBird3 from "../../../public/blog5Images/paragrvdhHill3.jpg"
+// import kadaDam from "../../../public/Blog4images/kadaDam2.jpeg"
+import kadaDam1 from "../../../public/lBlogdetailsImgae/BestTime/BestTime-2.jpg"
+import kadaDam2 from "../../../public/lBlogdetailsImgae/Spiritual/Kalika-Mata-Temple.webp"
+import champaner1 from "../../../public/lBlogdetailsImgae/covarsBlogs/champner-pavagadh.jpg"
+import champaner2 from "../../../public/lBlogdetailsImgae/covarsBlogs/champaner.jpg"
+import park1 from "../../../public/lBlogdetailsImgae/Ajwa-Water-Park/paark.jpg"
+import park2 from "../../../public/lBlogdetailsImgae/Ajwa-Water-Park/Ajwa-Drone-Photo-scaled.jpg"
+import dinner1 from "../../../public/lBlogdetailsImgae/candle-light/inroomdining.jpg"
+import dinner2 from "../../../public/lBlogdetailsImgae/candle-light/candle-light.webp"
 
 
 import Footer from '../../Component/footer/Footer';
 
-const praragavhill = [blog1, blog11, blog111]
+const praragavhill = [blog1, blog11]
 
-const FlyingBird = [flyingBird1, flyingBird2, flyingBird3]
-const kadaDamMain = [kadaDam, kadaDam1, kadaDam2]
-
+const FlyingBird = [flyingBird1, flyingBird2]
+const pool = [pool1,pool2]
+const kadaDamMain = [kadaDam1, kadaDam2]
+const champaner = [champaner1, champaner2]
+const waterpark = [park1, park2]
+const dinner = [dinner1, dinner2]
 
 export default function RomanticGatewayBadodra() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentIndexFlying, setCurrentIndexFlying] = useState(0);
     const [currentIndexkada, setCurrentIndexKada] = useState(0);
-
+    const [currentIndexpool, setCurrentIndexpool] = useState(0);
 
 
     const [isOpen, setIsOpen] = useState(false);
@@ -64,12 +74,48 @@ export default function RomanticGatewayBadodra() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % FlyingBird.length);
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % currentIndexpool.length);
         }, 2500); // Change image every 2 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % champaner.length);
+        }, 2500); // Change image every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % pool.length);
+        }, 2500); // Change image every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % FlyingBird.length);
+        }, 2500); // Change image every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % waterpark.length);
+        }, 2500); // Change image every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndexFlying((prevIndex) => (prevIndex + 1) % dinner.length);
+        }, 2500); // Change image every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
 
 
     useEffect(() => {
@@ -167,8 +213,8 @@ export default function RomanticGatewayBadodra() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={FlyingBird[currentIndexFlying]}
-                                onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
+                                src={pool[currentIndexFlying]}
+                                onClick={() => openLightbox(pool, currentIndexFlying)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -241,8 +287,8 @@ export default function RomanticGatewayBadodra() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={champaner[currentIndexkada]}
+                                onClick={() => openLightbox(champaner, currentIndexkada)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -274,8 +320,8 @@ export default function RomanticGatewayBadodra() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={waterpark[currentIndexkada]}
+                                onClick={() => openLightbox(waterpark, currentIndexkada)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -308,8 +354,8 @@ export default function RomanticGatewayBadodra() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={dinner[currentIndexkada]}
+                                onClick={() => openLightbox(dinner, currentIndexkada)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -369,91 +415,125 @@ export default function RomanticGatewayBadodra() {
                     </h1>
                 </div>
 
-                <div className=" h-[460px]  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
-                    <div id="infoProduto ">
-                        <div className="blog-sidebar">
+                <div className=" h-fit  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+                        <div id="infoProduto ">
+                            <div className="blog-sidebar">
 
 
 
-                            <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
-                                <input
-                                    type="text"
-                                    className="search-input  outline-none"
-                                    name="Search"
-                                    placeholder="Search "
-                                />
-                                <button className="search-btn pr-[10px]" type="submit">
-                                    <svg
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
-                                            fill="#fcaf17"
-                                        ></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div className="ak-height-50 ak-height-lg-30"></div>
+                                <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
+                                    <input
+                                        type="text"
+                                        className="search-input  outline-none"
+                                        name="Search"
+                                        placeholder="Search "
+                                    />
+                                    <button className="search-btn pr-[10px]" type="submit">
+                                        <svg
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
+                                                fill="#fcaf17"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div className="ak-height-50 ak-height-lg-30"></div>
 
-                            {/* Popular Categories */}
-                            <div className="sidebar-section px-[10px]">
-                                <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                    Influencer Guests
-                                </h5>
-                                <ul className="flex flex-col gap-[4px]">
-                                    <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
+                                {/* Popular Categories */}
+                                <div className="sidebar-section px-[10px]">
+                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
+                                        Influencer Guests
+                                    </h5>
+                                    <ul className="flex flex-col gap-[4px]">
+                                        <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
 
 
-                                </ul>
-                            </div>
-                            <div className="ak-height-50 ak-height-lg-30"></div>
+                                    </ul>
+                                </div>
+                                <div className="ak-height-50 ak-height-lg-30"></div>
 
-                            {/* Popular Tags */}
-                            <div className="sidebar-section  mt-[20px] px-[10px]">
-                                <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                    Popular Blogs
-                                </h5>
-                                <ul className="flex  flex-col gap-[8px]">
-                                    <li className='  flex'>
-                                        <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
-                                    </li>
-                                    <li className=' items-center flex'>
-                                        <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
-                                    </li>
+                                {/* Popular Tags */}
+                                <div className="sidebar-section  mt-[20px] px-[10px]">
+                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
+                                        Popular Blogs
+                                    </h5>
+                                    <ul className="flex  flex-col gap-[8px]">
+                                        <li className='  flex'>
+                                            <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
+                                        </li>
+                                        <li className=' items-center flex'>
+                                            <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
+                                        </li>
 
-                                    <li className='  flex'>
-                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
-                                    </li>
-                                    <li className='  flex'>
-                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
-                                    </li>
-                                    <li className='  flex'>
-                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
-                                    </li>
-                                    <li className='  flex'>
-                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
-
-                                    </li>
-                                    <li className='  flex'>
-                                        <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                        <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/romantic-getaways-near-vadodara"> Romantic Getaways Near Vadodara</a>
-
-                                    </li>
-                                </ul>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/romantic-getaways-near-vadodara">   Romantic Getaways Near Vadodara</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/spiritual-trails-near-halol">   Spiritual Trails Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-halol">   Best Time To Visit Pavagadh Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/birdwatching-and-eco-tourism-halol">   Birdwatching & Eco-Tourism halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/hidden-temples-spiritual-sites-pavagadh">   Hidden Temples & Spiritual Sites Pavagadh</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-monsoon-guide">   Best Time To Visit Pavagadh Monsoon Guide</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/photography-places-halol-instagram-reels">   Top Photography Spots Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary">  One Day Trip Pavagadh From Vadodara</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/history-of-champaner-pavagadh-heritage-guide"> History Of Champaner Pavagadh</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 z-[7000] flex flex-col items-center justify-center bg-black/80 p-4">

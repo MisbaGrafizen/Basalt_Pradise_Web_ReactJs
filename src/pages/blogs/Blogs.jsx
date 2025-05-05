@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import pavagadhbannernew from "../../../public/10Blogs/all.png"
-import tours from "../../../public/Blog2/photogrid.jpg"
+import ahemdabad from "../../../public/lBlogdetailsImgae/covarsBlogs/WeekendsAhmd.jpg"
 import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
 import Jambughoda from "../../../public/10Blogs/Jambughoda-Wildlife-Sanctuary-banner.jpg"
 import Hathnimatafall from "../../../public/10Blogs/Hathnimatafall.jpg"
 import sou from "../../../public/10Blogs/SOU.jpg"
+import spiritual from "../../../public/lBlogdetailsImgae/covarsBlogs/Spiritual-cover.webp"
+import besttime from "../../../public/lBlogdetailsImgae/covarsBlogs/BestTime-cover1.jpg"
+import tours from "../../../public/lBlogdetailsImgae/covarsBlogs/romantic.jpg"
+import birdwatching from "../../../public/lBlogdetailsImgae/covarsBlogs/BirdWatching-cover.jpg"
 import general from "../../../public/10Blogs/general-view.jpg"
 import kada from "../../../public/10Blogs/kada-dam.jpg"
 
@@ -108,7 +112,7 @@ const blogdata = [
         category: "Weekend from Ahmedabad",
         route: "/blogs/weekend-getaway-from-ahmedabad", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: tours,
+        image: ahemdabad,
         date: "02-04-2025",
         time: "06:26 PM",
         tittle: "Looking for a quick escape from Ahmedabad? Here’s why Basalt Paradise should be your next weekend destination!",
@@ -132,7 +136,7 @@ const blogdata = [
         category: "Spritual Trails Near Halol",
         route: "/blogs/spiritual-trails-near-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: tours,
+        image: spiritual,
         date: "07-04-2025",
         time: "06:20 PM",
         tittle: "Spritual Trails Near Halol – Exploring sacred spaces around basalt paradise",
@@ -144,30 +148,19 @@ const blogdata = [
         category: "Best Time to Visit Pavagadh & Halol",
         route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: tours,
+        image: besttime,
             date: "09-04-2025",
             time: "06:56 PM",
         tittle: "Best Time to Visit Pavagadh & Halol: Weather guide for travelers",
         description: "Planning a trip to the historic hills of Pavagadh or the scenic town of Halol? Great idea! Whether you're coming for the majestic Kalika Mata Temple, the rich heritage of Champaner, or a cozy escape at Basalt Paradise — timing matters.",
         fullContent: ""
-    }, {
+    },
+    {
         id: 10,
         category: "Birdwatching & Eco-Tourism Near Halol",
         route: "/blogs/birdwatching-and-eco-tourism-halol", // Unique route
-        image: tours,
-
-        date: "11-04-2025",
-        time: "06:44 PM",
-        tittle: "Birdwatching & Eco-tourism Near Halol: a nature lover’s escape",
-        description: "Tucked between rolling hills and lush green plains, the region is also a peaceful haven for migratory birds, rare flora, and eco-conscious travelers. Whether you're a nature photographer, a trekking enthusiast, or someone",
-        fullContent: ""
-    },
-    {
-        id: 11,
-        category: "Birdwatching & Eco-Tourism Near Halol",
-        route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: tours,
+        image: birdwatching,
         date: "14-04-2025",
         time: "07:05 PM",
         tittle: "Birdwatching & Eco-tourism Near Halol: a nature lover’s escape",
@@ -175,7 +168,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 12,
+        id: 11,
         category: "Hidden Waterfalls Near Basalt Paradise",
         route: "/blogs/hidden-waterfalls-near-basalt-paradise", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -188,7 +181,7 @@ const blogdata = [
     },
 
     {
-        id: 13,
+        id: 12,
         category: " Hidden Temples & Spiritual Sites Around Pavagadh",
         route: "/blogs/hidden-temples-spiritual-sites-pavagadh", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -200,7 +193,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 14,
+        id: 13,
         category: "Why Monsoon Is the Best Season to Visit Pavagadh",
         route: "/blogs/best-time-to-visit-pavagadh-monsoon-guide", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -212,7 +205,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 15,
+        id: 14,
         category: "Top Photography Spots Near Halol",
         route: "/blogs/photography-places-halol-instagram-reels",
 
@@ -224,7 +217,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 16,
+        id: 15,
         category: "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
         route: "/blogs/one-day-trip-pavagadh-from-vadodara-itinerary", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -236,7 +229,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 17,
+        id: 16,
         category: "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
         route: "/blogs/history-of-champaner-pavagadh-heritage-guide", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -248,7 +241,7 @@ const blogdata = [
         fullContent: ""
     },
     {
-        id: 18,
+        id: 17,
         category: "Budget Travel Tips for Exploring Halol & Pavagadh",
         route: "/blogs/budget-travel-halol-pavagadh-guide", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
@@ -469,6 +462,46 @@ export default function Blogs() {
                                         <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/romantic-getaways-near-vadodara">   Romantic Getaways Near Vadodara</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/spiritual-trails-near-halol">   Spiritual Trails Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-halol">   Best Time To Visit Pavagadh Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/birdwatching-and-eco-tourism-halol">   Birdwatching & Eco-Tourism halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/hidden-temples-spiritual-sites-pavagadh">   Hidden Temples & Spiritual Sites Pavagadh</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-monsoon-guide">   Best Time To Visit Pavagadh Monsoon Guide</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/photography-places-halol-instagram-reels">   Top Photography Spots Near Halol</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary">  One Day Trip Pavagadh From Vadodara</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/history-of-champaner-pavagadh-heritage-guide"> History Of Champaner Pavagadh</a>
+                                        </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                                         </li>
                                     </ul>
                                 </div>
