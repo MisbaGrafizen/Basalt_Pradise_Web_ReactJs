@@ -112,9 +112,9 @@ export default function PrivateVillas() {
   };
   const galleryImages = [
     
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",
+    villa5,
     swimmingpool,
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif",
+    villa3,
     //  " https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/b9zn3wzx5ekvwxi4u9o1.jpg"
 
   ];
@@ -133,9 +133,9 @@ export default function PrivateVillas() {
   ];
   const galleryImagesmain = [
 
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009580/zcgj0fys0vfc6vlnvemz.avif",
+    villa1,
     swimmingpool,
-    "https://res.cloudinary.com/demjxtyj8/image/upload/v1744009562/onfamcrvpztf2zlknn7o.avif",villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8
+    villa5,villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8
   ];
 
 
