@@ -159,6 +159,11 @@ import TopPhotography from "./pages/blogs/TopPhotography";
 import OneDay from "./pages/blogs/OneDay";
 import History from "./pages/blogs/History";
 import Bugdet from "./pages/blogs/Bugdet";
+import LocalMarkets from "./pages/blogs/LocalMarkets";
+import BestSunrise from "./pages/blogs/BestSunrise";
+import HowToReach from "./pages/blogs/HowToReach";
+import TopWaterfall from "./pages/blogs/TopWaterfall";
+import LocalFoods from "./pages/blogs/LocalFoods";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -286,6 +291,15 @@ function App() {
            <Route path="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary" element={loading ? <Loader/> : <OneDay/>}/>
           <Route path="/blogs/history-of-champaner-pavagadh-heritage-guide" element={loading ? <Loader/> : <History/>}/>
           <Route path="/blogs/budget-travel-halol-pavagadh-guide" element={loading ? <Loader/> : <Bugdet/>}/>
+         <Route path="/blogs/local-markets-handicrafts-halol-shopping-guide" element={loading ? <Loader/> : <LocalMarkets/>}/>
+                <Route path="/blogs/best-sunrise-sunset-points-pavagadh-halol" element={loading ? <Loader/> : <BestSunrise/>}/>
+                <Route path="/blogs/how-to-reach-pavagadh-vadodara-ahmedabad-surat" element={loading ? <Loader/> : <HowToReach/>}/>
+         <Route path="/blogs/waterfalls-near-halol-monsoon-travel" element={loading ? <Loader/> : <TopWaterfall/>}/>
+                <Route path="/blogs/local-food-guide-halol-pavagadh" element={loading ? <Loader/> : <LocalFoods/>}/>
+
+       
+       
+       
         </Routes>
 
        

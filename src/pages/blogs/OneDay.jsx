@@ -1,25 +1,30 @@
 import Header from '../../Component/header/Header'
 import React, { useEffect, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import blog1 from "../../../public/Blog4images/praragavhill3.webp";
-import blog11 from "../../../public/10Blogs/Hathnimatafall2.jpg";
-import blog111 from "../../../public/10Blogs/Hathnimatafall3.jpg";
-import flyingBird1 from "../../../public/blog5Images/paragrvdhHill1.jpeg"
-import flyingBird2 from "../../../public/blog5Images/paragrvdhHill2.jpg"
-import flyingBird3 from "../../../public/blog5Images/paragrvdhHill3.jpg"
-import kadaDam from "../../../public/Blog4images/kadaDam2.jpeg"
-import kadaDam1 from "../../../public/Blog4images/kadaDam1.jpg"
-import kadaDam2 from "../../../public/Blog4images/kadaDam.jpg"
+import blog11 from "../../../public/10Blogs/onedaynew.png";
+import blog111 from "../../../public/10Blogs/morning.jpg";
+import flyingBird1 from "../../../public/10Blogs/newkalikamatatemple.jpg"
+import flyingBird2 from "../../../public/10Blogs/newchampaner.jpg"
+import flyingBird3 from "../../../public/10Blogs/LunchHalol.webp"
+import kadaDam from "../../../public/10Blogs/Hiddentemple.jpg"
+import kadaDam1 from "../../../public/10Blogs/amba-handicraft.avif"
+import kadaDam2 from "../../../public/10Blogs/teaandsunset.jpeg"
+import kadaDam3 from "../../../public/NewDriveImage/graden.jpg"
 
 
 
 import Footer from '../../Component/footer/Footer';
 
-const praragavhill = [blog1, blog11, blog111]
 
-const FlyingBird = [flyingBird1, flyingBird2, flyingBird3]
-const kadaDamMain = [kadaDam, kadaDam1, kadaDam2]
-
+const praragavhill1 = [blog11]
+const praragavhill2 = [blog111]
+const FlyingBird = [flyingBird1]
+const FlyingBird1 = [flyingBird2]
+const FlyingBird2= [flyingBird3]
+const kadaDamMain = [kadaDam]
+const kadaDamMain1 = [kadaDam1]
+const kadaDamMain2 = [kadaDam2]
+const kadaDamMain3 = [kadaDam3]
 
 export default function OneDay() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,13 +59,13 @@ export default function OneDay() {
 
 
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % praragavhill.length);
-        }, 2500); // Change image every 2 seconds
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex((prevIndex) => (prevIndex + 1) %  praragavhill.length);
+    //     }, 2500);
 
-        return () => clearInterval(interval); // Cleanup on unmount
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -97,8 +102,8 @@ export default function OneDay() {
                         </h1>
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={praragavhill[currentIndex]}
-                                onClick={() => openLightbox(praragavhill, currentIndex)}
+                                src={praragavhill1}
+                                onClick={() => openLightbox(praragavhill1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -135,14 +140,14 @@ export default function OneDay() {
 
                     <div className=" w-[100%]">
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird[currentIndexFlying]}
                                 onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Main Content */}
                         <article className="space-y-2">
@@ -183,8 +188,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={FlyingBird[currentIndexFlying]}
-                                onClick={() => openLightbox(FlyingBird, currentIndexFlying)}
+                                src={praragavhill2}
+                                onClick={() => openLightbox(praragavhill2)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -222,8 +227,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={FlyingBird}
+                                onClick={() => openLightbox(FlyingBird)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -276,8 +281,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={FlyingBird1}
+                                onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -321,8 +326,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={FlyingBird2}
+                                onClick={() => openLightbox(FlyingBird2)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -370,8 +375,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={kadaDamMain}
+                                onClick={() => openLightbox(kadaDamMain)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -413,8 +418,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={kadaDamMain1}
+                                onClick={() => openLightbox(kadaDamMain1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -446,8 +451,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={kadaDamMain2}
+                                onClick={() => openLightbox(kadaDamMain2)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
@@ -475,14 +480,14 @@ export default function OneDay() {
 
                     <div className=" w-[100%]">
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={kadaDamMain[currentIndexkada]}
                                 onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         <article className="space-y-2">
                             {/* <h1 className="text-[18px] md:text-[23px] gap-[10px] flex  items-center font-[500] text-gray-900">
@@ -512,8 +517,8 @@ export default function OneDay() {
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
-                                src={kadaDamMain[currentIndexkada]}
-                                onClick={() => openLightbox(kadaDamMain, currentIndexkada)}
+                                src={kadaDamMain3}
+                                onClick={() => openLightbox(kadaDamMain3)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />

@@ -711,6 +711,7 @@ export default function WhyMonsoon() {
               <img
                 key={index}
                 src={img}
+             
                 alt={`Thumbnail ${index + 1}`}
                 onClick={() => setLightboxIndex(index)}
                 className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${

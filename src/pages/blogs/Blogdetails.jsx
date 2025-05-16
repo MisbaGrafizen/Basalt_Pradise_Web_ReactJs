@@ -5,7 +5,7 @@ import blog111 from "../../../public/10Blogs/pavagadhbannernew3.jpeg";
 
 import blog2 from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg";
 
-import blog3 from "../../../public/10Blogs/Jambughoda-Wildlife-Sanctuary-banner.jpg";
+import blog3 from "../../../public/10Blogs/Jambughoda.jpg";
 import blog4 from "../../../public/10Blogs/Hathnimatafall.jpg";
 import blog5 from "../../../public/10Blogs/SOU.jpg";
 import blog6 from "../../../public/10Blogs/general-view.jpg";

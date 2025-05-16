@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import pavagadhbannernew from "../../../public/10Blogs/all.png"
 import ahemdabad from "../../../public/lBlogdetailsImgae/covarsBlogs/WeekendsAhmd.jpg"
 import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
-import Jambughoda from "../../../public/10Blogs/Jambughoda-Wildlife-Sanctuary-banner.jpg"
 import Hathnimatafall from "../../../public/10Blogs/Hathnimatafall.jpg"
 import sou from "../../../public/10Blogs/SOU.jpg"
 import spiritual from "../../../public/lBlogdetailsImgae/covarsBlogs/Spiritual-cover.webp"
@@ -33,6 +32,11 @@ import photogarphy from "../../../public/lBlogdetailsImgae/covarsBlogs/photograp
 import onedaytrip from "../../../public/lBlogdetailsImgae/covarsBlogs/onedaytripplan.jpg"
 import champaner from "../../../public/lBlogdetailsImgae/covarsBlogs/champner-pavagadh.jpg"
 import budget from "../../../public/lBlogdetailsImgae/covarsBlogs/budgetTravel.jpeg"
+import LocalMarkets from "../../../public/lBlogdetailsImgae/LocalMarket/localmarketcover.avif"
+import bestsunrise from "../../../public/lBlogdetailsImgae/BestSunset/newcover.jpg"
+import hoetoreach from "../../../public/lBlogdetailsImgae/HowToReach/cover.jpeg"
+import waterfalls from "../../../public/lBlogdetailsImgae/TopWaterfalls/top.jpg"
+import local from "../../../public/lBlogdetailsImgae/LocalFood/LocalFoodCover.png"
 import { time } from 'framer-motion'
 
 
@@ -251,6 +255,73 @@ const blogdata = [
         tittle: "Budget Travel Tips for Exploring Halol & Pavagadh",
         description: "Traveling doesn’t have to break the bank — especially if you’re exploring a place as enriching and scenic as Halol and Pavagadh. Whether you're a student, solo backpacker, or someone who just loves to make every rupee count, this guide will help you enjoy a rich experience without overspending.",
         fullContent: ""
+        
+    },
+
+      {
+        id: 18,
+        category: "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
+        route: "/blogs/local-markets-handicrafts-halol-shopping-guide", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: LocalMarkets,
+        date: "25-04-2025",
+        time: "05:43 PM",
+        tittle: "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
+        description: "Halol isn’t just about heritage and hills — it’s also a hidden haven for colorful bazaars, handcrafted goods, and authentic Gujarati culture. If you’re staying at Basalt Paradise or visiting nearby Pavagadh, don’t miss the chance to shop local and take a piece of the region home with you.Here’s your insider guide to shopping in and around Halol — affordably, responsibly, and like a true traveler.",
+        fullContent: ""
+        
+    },
+          {
+        id: 19,
+        category: "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
+        route: "/blogs/best-sunrise-sunset-points-pavagadh-halol", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: bestsunrise,
+        date: "28-04-2025",
+        time: "11:15 AM",
+        tittle: "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
+        description: "If you love golden hour light, dramatic landscapes, and peaceful moments with nature, the Pavagadh-Halol region is a dream come true. Whether you're a photographer, a romantic traveler, or just want a perfect start or end to your day, we’ve got you covered.Here are the most scenic sunrise and sunset viewpoints near Basalt Paradise — all tried and loved by locals.",
+ fullContent: ""
+        
+    },
+       {
+        id: 20,
+        category: "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
+        route: "/blogs/how-to-reach-pavagadh-vadodara-ahmedabad-surat", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: hoetoreach,
+        date: "30-04-2025",
+        time: "11:21 AM",
+        tittle: "How to Reach Pavagadh from Vadodara, Ahmedabad & Surat – Complete Travel Guide",
+        description: "Planning a getaway to the historic hills of Pavagadh and Halol? Whether you're coming for the Kalika Mata Temple, the UNESCO Champaner ruins, or a weekend at Basalt Paradise, this travel guide makes your journey stress-free.  Here’s how to reach Pavagadh from Gujarat’s biggest cities — including travel tips, routes, and local transit options.",
+ fullContent: ""
+        
+    },
+     {
+        id: 21,
+        category: "Top Waterfalls Near Halol to Explore This Monsoon",
+        route: "/blogs/waterfalls-near-halol-monsoon-travel", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: waterfalls,
+        date: "03-05-2025",
+        time: "06:30 PM",
+        tittle: " Top Waterfalls Near Halol to Explore This Monsoon",
+        description: "The Pavagadh region isn’t just about temples and history — it transforms into a lush green paradise during monsoon. If you’re planning a visit to Halol between June and September, don’t miss out on these seasonal gems: stunning waterfalls just a short ride or trek away from Basalt Paradise.Whether you're a weekend hiker, nature lover, or Instagram explorer, here are the best waterfalls near Halol for the perfect rainy-day escape.",
+ fullContent: ""
+        
+    },
+    {
+        id: 22,
+        category: "Local Food Guide: What to Eat in Halol & Around Pavagadh",
+        route: "/blogs/local-food-guide-halol-pavagadh", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "07-05-2025",
+        time: "06:30 PM",
+        tittle: " Local Food Guide: What to Eat in Halol & Around Pavagadh",
+        description: "When you're exploring the scenic hills of Pavagadh or the ancient UNESCO city of Champaner, your journey isn’t complete without indulging in the local flavors of Gujarat. From traditional thalis to spicy farsan, this food guide will take your taste buds on a journey just as rewarding as the destination.Here’s what (and where) to eat in and around Halol and Pavagadh.",
+ fullContent: ""
+        
     },
 ];
 
@@ -279,7 +350,12 @@ export default function Blogs() {
         "Top Photography Spots Near Halol",
         "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
         "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
-        "Budget Travel Tips for Exploring Halol & Pavagadh"
+        "Budget Travel Tips for Exploring Halol & Pavagadh",
+        "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
+        "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
+        "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
+        "Top Waterfalls Near Halol to Explore This Monsoon",
+        "Local Food Guide: What to Eat in Halol & Around Pavagadh",
     ];
 
     const handleClick = (category) => {
@@ -503,6 +579,11 @@ export default function Blogs() {
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                                         </li>
+                                            <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
+                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
