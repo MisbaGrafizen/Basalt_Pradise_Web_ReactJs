@@ -153,8 +153,8 @@ const blogdata = [
         route: "/blogs/best-time-to-visit-pavagadh-halol", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: besttime,
-            date: "09-04-2025",
-            time: "06:56 PM",
+        date: "09-04-2025",
+        time: "06:56 PM",
         tittle: "Best Time to Visit Pavagadh & Halol: Weather guide for travelers",
         description: "Planning a trip to the historic hills of Pavagadh or the scenic town of Halol? Great idea! Whether you're coming for the majestic Kalika Mata Temple, the rich heritage of Champaner, or a cozy escape at Basalt Paradise — timing matters.",
         fullContent: ""
@@ -255,10 +255,10 @@ const blogdata = [
         tittle: "Budget Travel Tips for Exploring Halol & Pavagadh",
         description: "Traveling doesn’t have to break the bank — especially if you’re exploring a place as enriching and scenic as Halol and Pavagadh. Whether you're a student, solo backpacker, or someone who just loves to make every rupee count, this guide will help you enjoy a rich experience without overspending.",
         fullContent: ""
-        
+
     },
 
-      {
+    {
         id: 18,
         category: "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
         route: "/blogs/local-markets-handicrafts-halol-shopping-guide", // Unique route
@@ -269,9 +269,9 @@ const blogdata = [
         tittle: "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
         description: "Halol isn’t just about heritage and hills — it’s also a hidden haven for colorful bazaars, handcrafted goods, and authentic Gujarati culture. If you’re staying at Basalt Paradise or visiting nearby Pavagadh, don’t miss the chance to shop local and take a piece of the region home with you.Here’s your insider guide to shopping in and around Halol — affordably, responsibly, and like a true traveler.",
         fullContent: ""
-        
+
     },
-          {
+    {
         id: 19,
         category: "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
         route: "/blogs/best-sunrise-sunset-points-pavagadh-halol", // Unique route
@@ -281,10 +281,10 @@ const blogdata = [
         time: "11:15 AM",
         tittle: "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
         description: "If you love golden hour light, dramatic landscapes, and peaceful moments with nature, the Pavagadh-Halol region is a dream come true. Whether you're a photographer, a romantic traveler, or just want a perfect start or end to your day, we’ve got you covered.Here are the most scenic sunrise and sunset viewpoints near Basalt Paradise — all tried and loved by locals.",
- fullContent: ""
-        
+        fullContent: ""
+
     },
-       {
+    {
         id: 20,
         category: "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
         route: "/blogs/how-to-reach-pavagadh-vadodara-ahmedabad-surat", // Unique route
@@ -294,10 +294,10 @@ const blogdata = [
         time: "11:21 AM",
         tittle: "How to Reach Pavagadh from Vadodara, Ahmedabad & Surat – Complete Travel Guide",
         description: "Planning a getaway to the historic hills of Pavagadh and Halol? Whether you're coming for the Kalika Mata Temple, the UNESCO Champaner ruins, or a weekend at Basalt Paradise, this travel guide makes your journey stress-free.  Here’s how to reach Pavagadh from Gujarat’s biggest cities — including travel tips, routes, and local transit options.",
- fullContent: ""
-        
+        fullContent: ""
+
     },
-     {
+    {
         id: 21,
         category: "Top Waterfalls Near Halol to Explore This Monsoon",
         route: "/blogs/waterfalls-near-halol-monsoon-travel", // Unique route
@@ -307,8 +307,8 @@ const blogdata = [
         time: "06:30 PM",
         tittle: " Top Waterfalls Near Halol to Explore This Monsoon",
         description: "The Pavagadh region isn’t just about temples and history — it transforms into a lush green paradise during monsoon. If you’re planning a visit to Halol between June and September, don’t miss out on these seasonal gems: stunning waterfalls just a short ride or trek away from Basalt Paradise.Whether you're a weekend hiker, nature lover, or Instagram explorer, here are the best waterfalls near Halol for the perfect rainy-day escape.",
- fullContent: ""
-        
+        fullContent: ""
+
     },
     {
         id: 22,
@@ -320,8 +320,110 @@ const blogdata = [
         time: "06:30 PM",
         tittle: " Local Food Guide: What to Eat in Halol & Around Pavagadh",
         description: "When you're exploring the scenic hills of Pavagadh or the ancient UNESCO city of Champaner, your journey isn’t complete without indulging in the local flavors of Gujarat. From traditional thalis to spicy farsan, this food guide will take your taste buds on a journey just as rewarding as the destination.Here’s what (and where) to eat in and around Halol and Pavagadh.",
- fullContent: ""
-        
+        fullContent: ""
+
+    },
+    {
+        id: 23,
+        category: "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
+        route: "/blogs/basalt-paradise-has-the-most-magical", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "10-05-2025",
+        time: "11:06 AM",
+        tittle: "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
+        description: "There’s something strangely hypnotic about sunsets at Basalt Paradise. Maybe it's the way the sky blushes in soft pinks and golds. Or how the light hits the jagged basalt cliffs just right, making them glow as if they were alive. Ask any guest, and they’ll tell you the same thing: sunsets here feel different.But why? What makes the golden hour at Basalt Paradise more magical than anywhere else?Let’s dig into the beautiful blend of science and nature that makes this daily show unforgettable.",
+        fullContent: ""
+
+    },
+      {
+        id: 24,
+        category: "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
+        route: "/blogs/stories-from-has-the-people", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "13-05-2025",
+        time: "11:03 AM",
+        tittle: "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
+        description: "Most people come to Basalt Paradise for the views. The cliffs, the ocean, the golden sunsets. But there’s something else here—something you won’t find in guidebooks or Instagram stories.",
+        fullContent: ""
+
+    },
+       {
+        id: 25,
+        category: "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
+        route: "/blogs/what-you’ll-discover-on-our-hidden", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "16-05-2025",
+        time: "10:03 AM",
+        tittle: "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
+        description: "At first glance, the tide pools near Basalt Paradise might look like nothing more than shallow puddles in the rocks, left behind by the retreating sea. But take a closer look—and a whole hidden world begins to stir.Tiny fish dart between crevices. Sea anemones open and close like underwater flowers. Crabs scuttle sideways, half-camouflaged against the basalt. It’s quiet, intimate, and alive. And for those who slow down enough to notice, it’s one of the most magical experiences Basalt Paradise has to offer.",
+        fullContent: ""
+
+    },
+      {
+        id: 26,
+        category: "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
+        route: "/blogs/architecture-that-makes-basalt-paradise-unforgettable", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "16-05-2025",
+        time: "10:03 AM",
+        tittle: "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
+        description: "There are places that impress you the moment you arrive—and then there are places that slowly reveal themselves, detail by detail, until you realize you’re standing inside a story.Basalt Paradise is the latter.From the curves of the roofline that mimic the waves, to the cool, quiet hush of natural stone underfoot—every element here is intentional. Not just built, but designed to blend, breathe, and belong.This isn’t just a resort. It’s architecture with soul.",
+        fullContent: ""
+
+    },
+      {
+        id: 27,
+        category: "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
+        route: "/blogs/the-ultimate-weekend-itinerary", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "19-05-2025",
+        time: "10:45 AM",
+        tittle: "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
+        description: "You’ve booked your escape. The calendar is blocked. The suitcase is (almost) packed. But what should you actually do once you arrive at Basalt Paradise?You could let the ocean breeze decide—or you could follow our handpicked 72-hour itinerary, crafted for those who want a perfect balance of adventure, rest, flavor, and soul.This isn’t just a schedule. It’s a weekend you’ll remember for a long, long time.",
+        fullContent: ""
+
+    },
+       {
+        id: 28,
+        category: "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
+        route: "/blogs/local-brews-you’ll-only", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "22-05-2025",
+        time: "06:15 PM",
+        tittle: "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
+        description: "There’s coffee—and then there’s coffee at Basalt Paradise. It’s not just a drink here; it’s a ritual. A slow, sensory moment woven into the rhythm of the resort. Whether you're perched on a cliffside deck watching the morning mist rise or sipping under a banyan tree as the breeze moves through your hair—coffee tastes different when it’s brewed in a place like this.But it’s not just about the view. At Basalt Paradise, we take our beans as seriously as we take our sunsets. Let’s take you through the most memorable brews—and the breathtaking spots you’ll want to savor them in.",
+        fullContent: ""
+
+    },
+    {
+        id: 29,
+        category: "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
+        route: "/blogs/what-makes-nighttime-basalt", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "26-05-2025",
+        time: "06:35 PM",
+        tittle: "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
+        description: "When the sun sets at Basalt Paradise, the day doesn’t end—it simply changes rhythm.The heat softens. The ocean hushes. And a different kind of beauty rises with the moon.This isn’t nightlife in the loud, neon sense. It’s quieter. Dreamier. The kind of night that feels like a secret whispered just to you.Here’s why nighttime at Basalt Paradise is not to be missed—and might just become your favorite part of the day.",
+        fullContent: ""
+    },
+     {
+        id: 30,
+        category: "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
+        route: "/blogs/basalt-paradise-balances-nature", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: local,
+        date: "29-05-2025",
+        time: "11:15 AM",
+        tittle: "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
+        description: "Luxury often conjures up images of opulence, excess, and escape. But at Basalt Paradise, we believe true luxury means living well without taking too much—from nature, from culture, or from tomorrow.We’re part retreat, part responsibility. A place where the earth is treated with as much reverence as our guests. And every detail—from your villa’s stonework to the soap in your shower—has been chosen with care, conscience, and a deep respect for the land that holds us.This is what eco-luxury looks like when it's done not as a trend, but as a truth.",
+        fullContent: ""
     },
 ];
 
@@ -356,6 +458,14 @@ export default function Blogs() {
         "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
         "Top Waterfalls Near Halol to Explore This Monsoon",
         "Local Food Guide: What to Eat in Halol & Around Pavagadh",
+        "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
+        "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
+        "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
+        "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
+        "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
+        "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
+        "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
+        "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
     ];
 
     const handleClick = (category) => {
@@ -579,11 +689,11 @@ export default function Blogs() {
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                                         </li>
-                                            <li className='  flex'>
+                                        <li className='  flex'>
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>

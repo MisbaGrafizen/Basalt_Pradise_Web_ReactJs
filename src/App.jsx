@@ -164,6 +164,14 @@ import BestSunrise from "./pages/blogs/BestSunrise";
 import HowToReach from "./pages/blogs/HowToReach";
 import TopWaterfall from "./pages/blogs/TopWaterfall";
 import LocalFoods from "./pages/blogs/LocalFoods";
+import MagicalGolden from "./pages/blogs/MagicalGolden";
+import StoriesFromPeople from "./pages/blogs/StoriesFromPeople";
+import WhatYouDiscover from "./pages/blogs/WhatYouDiscover";
+import DesignDiaries from "./pages/blogs/DesignDiaries";
+import Hours from "./pages/blogs/72Hours";
+import CoffeeWithView from "./pages/blogs/CoffeeWithView";
+import MoonlightMagix from "./pages/blogs/MoonlightMagix";
+import EcoLuxury from "./pages/blogs/EcoLuxury";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -284,30 +292,34 @@ function App() {
             path="/blogs/birdwatching-and-eco-tourism-halol"
             element={loading ? <Loader /> : <BirdWatching />}
           />
-           <Route path="/blogs/hidden-temples-spiritual-sites-pavagadh" element={loading ? <Loader/> : <HiddenTemple/>}/>
-        
-           <Route path="/blogs/best-time-to-visit-pavagadh-monsoon-guide" element={loading ? <Loader/> : <WhyMonsoon/>}/>
-           <Route path="/blogs/photography-places-halol-instagram-reels" element={loading ? <Loader/> : <TopPhotography/>}/>
-           <Route path="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary" element={loading ? <Loader/> : <OneDay/>}/>
-          <Route path="/blogs/history-of-champaner-pavagadh-heritage-guide" element={loading ? <Loader/> : <History/>}/>
-          <Route path="/blogs/budget-travel-halol-pavagadh-guide" element={loading ? <Loader/> : <Bugdet/>}/>
-         <Route path="/blogs/local-markets-handicrafts-halol-shopping-guide" element={loading ? <Loader/> : <LocalMarkets/>}/>
-                <Route path="/blogs/best-sunrise-sunset-points-pavagadh-halol" element={loading ? <Loader/> : <BestSunrise/>}/>
-                <Route path="/blogs/how-to-reach-pavagadh-vadodara-ahmedabad-surat" element={loading ? <Loader/> : <HowToReach/>}/>
-         <Route path="/blogs/waterfalls-near-halol-monsoon-travel" element={loading ? <Loader/> : <TopWaterfall/>}/>
-                <Route path="/blogs/local-food-guide-halol-pavagadh" element={loading ? <Loader/> : <LocalFoods/>}/>
+          <Route path="/blogs/hidden-temples-spiritual-sites-pavagadh" element={loading ? <Loader /> : <HiddenTemple />} />
 
-       
-       
-       
+          <Route path="/blogs/best-time-to-visit-pavagadh-monsoon-guide" element={loading ? <Loader /> : <WhyMonsoon />} />
+          <Route path="/blogs/photography-places-halol-instagram-reels" element={loading ? <Loader /> : <TopPhotography />} />
+          <Route path="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary" element={loading ? <Loader /> : <OneDay />} />
+          <Route path="/blogs/history-of-champaner-pavagadh-heritage-guide" element={loading ? <Loader /> : <History />} />
+          <Route path="/blogs/budget-travel-halol-pavagadh-guide" element={loading ? <Loader /> : <Bugdet />} />
+          <Route path="/blogs/local-markets-handicrafts-halol-shopping-guide" element={loading ? <Loader /> : <LocalMarkets />} />
+          <Route path="/blogs/best-sunrise-sunset-points-pavagadh-halol" element={loading ? <Loader /> : <BestSunrise />} />
+          <Route path="/blogs/how-to-reach-pavagadh-vadodara-ahmedabad-surat" element={loading ? <Loader /> : <HowToReach />} />
+          <Route path="/blogs/waterfalls-near-halol-monsoon-travel" element={loading ? <Loader /> : <TopWaterfall />} />
+          <Route path="/blogs/local-food-guide-halol-pavagadh" element={loading ? <Loader /> : <LocalFoods />} />
+          <Route path="/blogs/basalt-paradise-has-the-most-magical" element={loading ? <Loader /> : <MagicalGolden />} />
+          <Route path="/blogs/stories-from-has-the-people" element={loading ? <Loader /> : <StoriesFromPeople />} />
+          <Route path="/blogs/what-you’ll-discover-on-our-hidden" element={loading ? <Loader /> : <WhatYouDiscover />} />
+          <Route path="/blogs/architecture-that-makes-basalt-paradise-unforgettable" element={loading ? <Loader /> : <DesignDiaries />} />
+          <Route path="/blogs/the-ultimate-weekend-itinerary" element={loading ? <Loader /> : <Hours />} />
+          <Route path="/blogs/local-brews-you’ll-only" element={loading ? <Loader /> : <CoffeeWithView />} />
+          <Route path="/blogs/what-makes-nighttime-basalt" element={loading ? <Loader /> : <MoonlightMagix />} />
+          <Route path="/blogs/basalt-paradise-balances-nature" element={loading ? <Loader /> : <EcoLuxury />} />
         </Routes>
 
-       
-    
-    
-    
+
+
+
+
       </div>
-      
+
 
       <BottomBar />
     </>
