@@ -31,7 +31,7 @@ import swimmingpool from "../../../public/Basalt/B12.jpg"
 import LocationMap from "../../Component/hotelLocations/LocationMap";
 import PropertyRules from "../../Component/propertyRules/PropertyRules";
 import GussetPhotos from "../../Component/GussetPhotos";
-
+import villa11 from "../../../public/Basalt/B11.jpg"
 
 import villa1 from "../../../public/VilaNewImages/villa1.jpg"
 import villa2 from "../../../public/VilaNewImages/villa2.jpeg"
@@ -123,13 +123,13 @@ export default function PrivateVillas() {
   const galleryImages3 = [
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg"
+villa11
     
   ];
   const galleryImages4 = [
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842058/q8suxzia7dqo1ivhu5im.avif",
     // "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840375/vt6u7bcp4kfmdmkizqwu.jpg",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B12_ksdot2.jpg"
+swimmingpool
   ];
   const galleryImagesmain = [
 
@@ -171,48 +171,8 @@ export default function PrivateVillas() {
         <div className=" md:w-[84%] mx-auto shadow-custom font-Poppins   px-6 pb-6 lg:px-10 lg:pb-10  relative mb-[30px]  bg-white rounded-lg">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-6">
             <div>
-              {/*  <div className="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4">
-
-       <div className="space-y-4">
-                  {[1].map((photo) => (
-                    <div
-                      key={photo}
-                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
-                    >
-                      <img
-                        src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842059/mlwklc0y0vxyqrfjr8vl.avif"
-                        alt={`Hotel interior ${photo}`}
-                        className="w-full h-full object-cover"
-                      />
-                      {/* {photo === 2 && (
-                        <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                          +1222 Guest Photos
-                        </div>
-                      )} 
-                    </div>
-                  ))}
-                  {[1].map((photo) => (
-                    <div
-                      key={photo}
-                      className="relative rounded-lg overflow-hidden h-[150px] md:h-[191px]"
-                    >
-                      <img
-                        src="https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741842102/axhoce3n8tmipx5fi5hm.avif"
-                        alt={`Hotel interior ${photo}`}
-                        className="w-full h-full object-cover"
-                      />
-                      {/* {photo === 2 && (
-                        <div className="absolute bottom-4  font-Poppins left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                          +1222 Guest Photos
-                        </div>
-                      )} 
-                    </div>
-                  ))}
-
-                </div> */}
-
+            
               <div className="grid grid-cols-2 md:grid-cols-[2fr,1fr] gap-[7px] md:gap-4">
-                {/* Main Image */}
                 <div
                   className="relative rounded-lg cursor-pointer"
                   onClick={() => openLightbox(galleryImages, 0)} // 👈 index 0 for first image

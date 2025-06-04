@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import stars from "../../../public/staffhand/stars1.png";
-// import image1 from "../../../public/Basalt/B10.jpg";
-// import image11 from "../../../public/Basalt/B15.jpg";
-// import image2 from "../../../public/Basalt/B12.jpg";
-// import image22 from "../../../public/Basalt/B14.jpg";
-// import image222 from "../../../public/Basalt/B11.jpg";
-// import image3 from "../../../public/Basalt/B5.jpg";
-// import image33 from "../../../public/Basalt/B1.jpg";
-// import image333 from "../../../public/Basalt/B3.jpg";
+import image1 from "../../../public/Basalt/B10.jpg";
+import image11 from "../../../public/Basalt/B15.jpg";
+import image2 from "../../../public/Basalt/B12.jpg";
+import image22 from "../../../public/Basalt/B14.jpg";
+import image222 from "../../../public/Basalt/B11.jpg";
+import image3 from "../../../public/Basalt/B5.jpg";
+import image33 from "../../../public/Basalt/B1.jpg";
+import image333 from "../../../public/Basalt/B3.jpg";
 // import breakicon from "../../../public/staffhand/brekfast.jpeg";
 
 import { Utensils, Coffee } from "lucide-react";
@@ -19,10 +19,10 @@ export default function StaffHand() {
   const [currentImage3, setCurrentImage3] = useState(0);
   const navigate = useNavigate();
 
-  const images1 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818033/B10_kc7ob9.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818035/B15_bufg5g.jpg"];
+  const images1 = [image1, image11];
 
-  const images2 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819840/image3_aiqxqe.avif", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B12_ksdot2.jpg"];
-  const images3 = ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818028/B1_wa3352.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B3_lu2wbv.jpg"];
+  const images2 = [image222,image22, image2];
+  const images3 = [image3, image33, image333];
 
   useEffect(() => {
     const interval1 = setInterval(() => {

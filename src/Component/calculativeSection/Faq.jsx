@@ -50,7 +50,7 @@ export default function Faq() {
             <div className="md:w-[30%]  ">
               <img
                 className=" w-[100%] md:h-[300px]  rounded-[10px]  shadow-md"
-                src="https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818033/B9_bes3cn.jpg"
+                src={faq}
                 alt="FAQ"
               />
             </div>

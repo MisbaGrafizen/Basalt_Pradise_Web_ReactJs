@@ -28,6 +28,14 @@ import { motion, AnimatePresence } from "framer-motion";
 // import banner1 from "../../../public/Basalt/B7.jpg";
 import banner2 from "../../../public/Basalt/B11.jpg";
 import banner3 from "../../../public/Basalt/B10.jpg";
+import zen1 from "../../../public/myTripGallery/room4.avif"
+import zen2 from "../../../public/myTripGallery/room5.avif"
+import b13 from "../../../public/Basalt/B13.jpg";
+import b7 from "../../../public/Basalt/B7.jpg";
+import b6 from "../../../public/Basalt/B6.jpg";
+
+
+
 
 
 import { useNavigate } from "react-router-dom";
@@ -392,7 +400,7 @@ export default function RoomListing() {
       discountedPrice: 16560,
       taxes: 5152,
       amenities: ["Gym", "Restaurant", "24-hour Room Service", ""],
-      images: ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818076/B11_bfc4tg.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819860/private-2_lsgoip.avif",swimmingpool, "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819860/private-2_lsgoip.avif", villa1,villa2,villa3,villa4,villa5,villa6,villa7,villa8],
+      images: [ villa1,banner2,swimmingpool,villa2,villa3,villa4,villa5,villa6,villa7,villa8],
       features: ["Breakfast Included", "15-7 days before the event:  25% of the deposit will be forfeited. 7-3 days before the event:  50% of the deposit will be forfeited. Less than 3 days (72 hours) before the event:  No refund. Entire deposit is forfeited."],
       description:
         "Grand, picturesque lobby, delicious food, well-equipped gym and pool near the airport",
@@ -411,7 +419,7 @@ export default function RoomListing() {
       discountedPrice: 5293,
       taxes: 1298,
       amenities: ["Wi-Fi & Air Conditioning", "Restaurant", "24-hour Room Service", "Housekeeping"],
-      images: ["https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818035/B15_bufg5g.jpg", "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",zenbed1,zenbed2,zenbed3],
+      images: [zen1, zen2,zenbed1,zenbed2,zenbed3],
       features: ["Wi-Fi", "Air Conditioning", "Housekeeping",""],
       description: null,
       noCostEmi: false,
@@ -457,9 +465,7 @@ export default function RoomListing() {
 
 
   const sidebarImages = [
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B13_z3wlof.jpg",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818031/B7_h7wsjz.jpg",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818030/B6_ubw9i6.jpg",
+   b13,b7,b6
   ];
 
   return (

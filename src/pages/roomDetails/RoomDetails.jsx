@@ -96,24 +96,23 @@ export default function RoomDetails() {
     );
   };
   const galleryImages = [
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif",
+   mainimg1
+,
+   mainimg2,
 
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",
-
+zenbed1
   ];
 
   const galleryImages1 = [
-    " https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif"
+zenbed1
   ];
   const galleryImages2 = [
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819838/image1_umxshc.avif"
+ mainimg2
   ];
   const galleryImages3 = [
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",
-
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819824/image4_wy0gkd.avif",
-    "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745819853/image2_no7cge.avif",zenbed1,zenbed2,zenbed3
+   mainimg1
+,
+   mainimg2,zenbed1,zenbed2,zenbed3
   ];
 
   return (

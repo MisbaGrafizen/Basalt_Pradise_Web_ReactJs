@@ -112,7 +112,7 @@ export default function AboutComponent() {
               muted
               controls={false}
             >
-              <source src="https://res.cloudinary.com/dtqzhmivb/video/upload/v1745819126/Deepmala_2_ktlq3l.mp4" type="video/mp4" />
+              <source src={aboutvideo} type="video/mp4" />
             </video>
 
 

@@ -366,7 +366,7 @@ import React, { useState, useRef, useEffect } from 'react';
 // import {  ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
 import stars from "../../../public/staffhand/stars1.png";
 import b5 from "../../../public/Basalt/B5.jpg";
-// import b9 from "https://res.cloudinary.com/dn1jdxyoq/image/upload/v1741840373/odsq0dpiz2usacvwrnak.jpg";
+import b9 from "../../../public/Basalt/B9.jpg";
 import b11 from "../../../public/Basalt/B11.jpg";
 import b12 from "../../../public/Basalt/B12.jpg";
 import b13 from "../../../public/Basalt/B13.jpg";
@@ -380,11 +380,11 @@ export default function Gallery() {
     const [currentIndex, setCurrentIndex] = useState(null);
     const navigate = useNavigate()
     const images = [
-        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B5_ohq2xp.jpg", width: "700px" },
-        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818028/B1_wa3352.jpg", width: "390px" },
-        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818034/B13_z3wlof.jpg", width: "490px" },
-        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818081/B8_qwdomx.jpg", width: "430px" },
-        { src: "https://res.cloudinary.com/dtqzhmivb/image/upload/v1745818029/B3_lu2wbv.jpg", width: "510px" }
+        { src: b5, width: "700px" },
+        { src: b11, width: "390px" },
+        { src:b12, width: "490px" },
+        { src: b13, width: "430px" },
+        { src: b9, width: "510px" }
     ];
 
     // useEffect(() => {
