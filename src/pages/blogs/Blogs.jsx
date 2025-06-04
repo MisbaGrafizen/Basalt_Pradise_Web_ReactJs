@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useRef,useEffect} from 'react'
 import pavagadhbannernew from "../../../public/10Blogs/all.png"
 import ahemdabad from "../../../public/lBlogdetailsImgae/covarsBlogs/WeekendsAhmd.jpg"
 import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
@@ -37,6 +37,20 @@ import bestsunrise from "../../../public/lBlogdetailsImgae/BestSunset/newcover.j
 import hoetoreach from "../../../public/lBlogdetailsImgae/HowToReach/cover.jpeg"
 import waterfalls from "../../../public/lBlogdetailsImgae/TopWaterfalls/top.jpg"
 import local from "../../../public/lBlogdetailsImgae/LocalFood/LocalFoodCover.png"
+import magic from "../../../public/BlogsCoverS/NewBlogCover/1.png"
+import basalt from "../../../public/BlogsCoverS/NewBlogCover/2.png"
+import secret from "../../../public/BlogsCoverS/NewBlogCover/3.png"
+import architecture from "../../../public/BlogsCoverS/NewBlogCover/4.png"
+import hours from "../../../public/BlogsCoverS/NewBlogCover/5.png"
+import coffee from "../../../public/BlogsCoverS/NewBlogCover/6.png"
+import moonllight from "../../../public/BlogsCoverS/NewBlogCover/7.png"
+
+
+
+
+
+
+
 import { time } from 'framer-motion'
 
 
@@ -328,7 +342,7 @@ const blogdata = [
         category: "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
         route: "/blogs/basalt-paradise-has-the-most-magical", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: magic,
         date: "10-05-2025",
         time: "11:06 AM",
         tittle: "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
@@ -336,12 +350,12 @@ const blogdata = [
         fullContent: ""
 
     },
-      {
+    {
         id: 24,
         category: "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
         route: "/blogs/stories-from-has-the-people", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: basalt,
         date: "13-05-2025",
         time: "11:03 AM",
         tittle: "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
@@ -349,12 +363,12 @@ const blogdata = [
         fullContent: ""
 
     },
-       {
+    {
         id: 25,
         category: "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
         route: "/blogs/what-you’ll-discover-on-our-hidden", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: secret,
         date: "16-05-2025",
         time: "10:03 AM",
         tittle: "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
@@ -362,12 +376,12 @@ const blogdata = [
         fullContent: ""
 
     },
-      {
+    {
         id: 26,
         category: "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
         route: "/blogs/architecture-that-makes-basalt-paradise-unforgettable", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: architecture,
         date: "16-05-2025",
         time: "10:03 AM",
         tittle: "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
@@ -375,12 +389,12 @@ const blogdata = [
         fullContent: ""
 
     },
-      {
+    {
         id: 27,
         category: "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
         route: "/blogs/the-ultimate-weekend-itinerary", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: hours,
         date: "19-05-2025",
         time: "10:45 AM",
         tittle: "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
@@ -388,12 +402,12 @@ const blogdata = [
         fullContent: ""
 
     },
-       {
+    {
         id: 28,
         category: "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
         route: "/blogs/local-brews-you’ll-only", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: coffee,
         date: "22-05-2025",
         time: "06:15 PM",
         tittle: "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
@@ -406,14 +420,14 @@ const blogdata = [
         category: "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
         route: "/blogs/what-makes-nighttime-basalt", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: moonllight,
         date: "26-05-2025",
         time: "06:35 PM",
         tittle: "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
         description: "When the sun sets at Basalt Paradise, the day doesn’t end—it simply changes rhythm.The heat softens. The ocean hushes. And a different kind of beauty rises with the moon.This isn’t nightlife in the loud, neon sense. It’s quieter. Dreamier. The kind of night that feels like a secret whispered just to you.Here’s why nighttime at Basalt Paradise is not to be missed—and might just become your favorite part of the day.",
         fullContent: ""
     },
-     {
+    {
         id: 30,
         category: "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
         route: "/blogs/basalt-paradise-balances-nature", // Unique route
@@ -502,13 +516,61 @@ export default function Blogs() {
             prevIndex === filteredBlogs.length - 1 ? 0 : prevIndex + 1
         );
     };
+
+  const scrollRef = useRef(null);
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  useEffect(() => {
+    const slider = scrollRef.current;
+
+    const mouseDownHandler = (e) => {
+      isDragging = true;
+      slider.classList.add('cursor-grabbing');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    };
+
+    const mouseLeaveHandler = () => {
+      isDragging = false;
+      slider.classList.remove('cursor-grabbing');
+    };
+
+    const mouseUpHandler = () => {
+      isDragging = false;
+      slider.classList.remove('cursor-grabbing');
+    };
+
+    const mouseMoveHandler = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // scroll speed
+      slider.scrollLeft = scrollLeft - walk;
+    };
+
+    slider.addEventListener('mousedown', mouseDownHandler);
+    slider.addEventListener('mouseleave', mouseLeaveHandler);
+    slider.addEventListener('mouseup', mouseUpHandler);
+    slider.addEventListener('mousemove', mouseMoveHandler);
+
+    return () => {
+      slider.removeEventListener('mousedown', mouseDownHandler);
+      slider.removeEventListener('mouseleave', mouseLeaveHandler);
+      slider.removeEventListener('mouseup', mouseUpHandler);
+      slider.removeEventListener('mousemove', mouseMoveHandler);
+    };
+  }, []);
+
+
     return (
         <>
 
 
             <Header />
             <section className=' select-none flex  mb-[40px] flex-col gap-[30px] 2xl:w-[1300px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
-                <div className=' md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%]   overflow-x-auto    gap-[10px] '>
+                <div className='md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%] overflow-x-auto gap-[10px]'  ref={scrollRef}>
                     {buttons.map((buttonName) => (
                         <button
                             key={buttonName}

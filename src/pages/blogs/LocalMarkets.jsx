@@ -27,7 +27,7 @@ export default function LocalMarkets() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentIndexFlying, setCurrentIndexFlying] = useState(0);
   const [currentIndexkada, setCurrentIndexKada] = useState(0);
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [lightboxImages, setLightboxImages] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -53,8 +53,9 @@ export default function LocalMarkets() {
     );
   };
 
-const handlenavigate = () => {
-    navigate("/all-rooms");}
+  const handlenavigate = () => {
+    navigate("/all-rooms");
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -374,7 +375,7 @@ When to Go Shopping?
           <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
           <div className=" w-[100%]">
-               
+
             <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
               Where to Stay?
             </h1>
@@ -404,7 +405,7 @@ When to Go Shopping?
                 className="custom-class rounded-[5px]"
                 color="#00FFFF"
                 speed="5s"
-            >
+              >
                 Book Now
               </StarBorder>
 
@@ -436,13 +437,16 @@ When to Go Shopping?
               <div className="  flex mt-[10px] flex-col gap-[6px]"></div>
             </article>
           </div>
-               <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
-       
+          <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
+
         </div>
 
-        <div className=" h-fit  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+        <div className=" h-fit  max-w-[300px] right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
           <div id="infoProduto ">
             <div className="blog-sidebar">
+
+
+
               <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
                 <input
                   type="text"
@@ -473,9 +477,9 @@ When to Go Shopping?
                   Influencer Guests
                 </h5>
                 <ul className="flex flex-col gap-[4px]">
-                  <h1 className=" flex  font-cu font-[600] basalt-text">
-                    Coming Soon . . .
-                  </h1>
+                  <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
+
+
                 </ul>
               </div>
               <div className="ak-height-50 ak-height-lg-30"></div>
@@ -486,176 +490,76 @@ When to Go Shopping?
                   Popular Blogs
                 </h5>
                 <ul className="flex  flex-col gap-[8px]">
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[13px] text-[#5c5b5b] "
-                      href="/blogs/must-visit-places-near-basalt-paradise"
-                    >
-                      10 Must-Visit Places Near Basalt Paradise
-                    </a>
+                    <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
                   </li>
-                  <li className=" items-center flex">
+                  <li className=' items-center flex'>
                     <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/travel-tips"
-                    >
-                      Travel Tips & Guides
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
                   </li>
 
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/offbeat-destinations-near-halol"
-                    >
-                      {" "}
-                      Offbeat Destinations Near Halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/nature-spots-near-halol"
-                    >
-                      {" "}
-                      Best Nature Spots Near Halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/adventure-activities"
-                    >
-                      {" "}
-                      Activities Near Basalt{" "}
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/weekend-getaway-from-ahmedabad"
-                    >
-                      {" "}
-                      Weekend from Ahmedabad
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/romantic-getaways-near-vadodara"
-                    >
-                      {" "}
-                      Romantic Getaways Near Vadodara
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/romantic-getaways-near-vadodara">   Romantic Getaways Near Vadodara</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/spiritual-trails-near-halol"
-                    >
-                      {" "}
-                      Spiritual Trails Near Halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/spiritual-trails-near-halol">   Spiritual Trails Near Halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/best-time-to-visit-pavagadh-halol"
-                    >
-                      {" "}
-                      Best Time To Visit Pavagadh Halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-halol">   Best Time To Visit Pavagadh Halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/birdwatching-and-eco-tourism-halol"
-                    >
-                      {" "}
-                      Birdwatching & Eco-Tourism halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/birdwatching-and-eco-tourism-halol">   Birdwatching & Eco-Tourism halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/hidden-temples-spiritual-sites-pavagadh"
-                    >
-                      {" "}
-                      Hidden Temples & Spiritual Sites Pavagadh
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/hidden-temples-spiritual-sites-pavagadh">   Hidden Temples & Spiritual Sites Pavagadh</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/best-time-to-visit-pavagadh-monsoon-guide"
-                    >
-                      {" "}
-                      Best Time To Visit Pavagadh Monsoon Guide
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-monsoon-guide">   Best Time To Visit Pavagadh Monsoon Guide</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/photography-places-halol-instagram-reels"
-                    >
-                      {" "}
-                      Top Photography Spots Near Halol
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/photography-places-halol-instagram-reels">   Top Photography Spots Near Halol</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary"
-                    >
-                      {" "}
-                      One Day Trip Pavagadh From Vadodara
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary">  One Day Trip Pavagadh From Vadodara</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/history-of-champaner-pavagadh-heritage-guide"
-                    >
-                      {" "}
-                      History Of Champaner Pavagadh
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/history-of-champaner-pavagadh-heritage-guide"> History Of Champaner Pavagadh</a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/budget-travel-halol-pavagadh-guide"
-                    >
-                      {" "}
-                      Budget Travel Halol Pavagadh{" "}
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                   </li>
-                  <li className="  flex">
+                  <li className='  flex'>
                     <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                    <a
-                      className="  font-[400] text-[14px] text-[#5c5b5b] "
-                      href="/blogs/budget-travel-halol-pavagadh-guide"
-                    >
-                      {" "}
-                      Local Markets & Handicrafts in Halol – Where to Shop Like
-                      a Local{" "}
-                    </a>
+                    <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -694,11 +598,10 @@ When to Go Shopping?
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
                 onClick={() => setLightboxIndex(index)}
-                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${
-                  lightboxIndex === index
+                className={`h-[70px] w-[100px] object-cover rounded cursor-pointer border-2 ${lightboxIndex === index
                     ? "border-yellow-400"
                     : "border-transparent"
-                }`}
+                  }`}
               />
             ))}
           </div>

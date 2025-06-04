@@ -20,7 +20,7 @@ const praragavhill1 = [blog11]
 const praragavhill2 = [blog111]
 const FlyingBird = [flyingBird1]
 const FlyingBird1 = [flyingBird2]
-const FlyingBird2= [flyingBird3]
+const FlyingBird2 = [flyingBird3]
 const kadaDamMain = [kadaDam]
 const kadaDamMain1 = [kadaDam1]
 const kadaDamMain2 = [kadaDam2]
@@ -98,7 +98,7 @@ export default function OneDay() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                        Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan
+                            Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan
                         </h1>
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -126,10 +126,10 @@ export default function OneDay() {
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
 
-                            A one-day trip to Pavagadh from Vadodara is just what your travel-hungry soul needs. From sacred temples to ancient stepwells, jungle trails to street food, this itinerary packs it all — and still lets you return home by dinner.                            </p>
+                                A one-day trip to Pavagadh from Vadodara is just what your travel-hungry soul needs. From sacred temples to ancient stepwells, jungle trails to street food, this itinerary packs it all — and still lets you return home by dinner.                            </p>
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Let’s plan your perfect 1-day escape!
-</p>
+                                Let’s plan your perfect 1-day escape!
+                            </p>
 
 
                         </article>
@@ -157,21 +157,21 @@ export default function OneDay() {
 
                             </h1> */}
 
-<div className="f">
-                <b className="font-[600] text-[#7442ff]">Total Distance:  </b>{" "}
-                ~55 km from Vadodara
-                
-              </div>
-              <div className="f">
-                <b className="font-[600] text-[#7442ff]"> Travel Time: </b>{" "}
-                1.5 hours by car or hired cab
-                
-              </div>
-              <div className="f">
-                <b className="font-[600] text-[#7442ff]"> Ideal Trip Time:  </b>{" "}
-                6:00 AM – 8:00 PM
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]">Total Distance:  </b>{" "}
+                                ~55 km from Vadodara
 
-              </div>
+                            </div>
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]"> Travel Time: </b>{" "}
+                                1.5 hours by car or hired cab
+
+                            </div>
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]"> Ideal Trip Time:  </b>{" "}
+                                6:00 AM – 8:00 PM
+
+                            </div>
 
 
                             {/* <p className="text-gray-600 md:text-[16px] text-[14px]">
@@ -202,15 +202,15 @@ export default function OneDay() {
                                 Pool Access & Couple-Friendly Rooms
                             </h1> */}
 
-<div className="f">
-                <b className="font-[600] text-[#7442ff]">  6:00 AM -  </b>{" "}
-                Start Early from Vadodara
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]">  6:00 AM -  </b>{" "}
+                                Start Early from Vadodara
 
-              </div>
+                            </div>
 
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Beat the traffic and enjoy a smooth ride via Halol Highway. Carry water and snacks, or stop for tea and breakfast at roadside dhabas near Halol.                            </p>
+                                Beat the traffic and enjoy a smooth ride via Halol Highway. Carry water and snacks, or stop for tea and breakfast at roadside dhabas near Halol.                            </p>
 
 
                         </article>
@@ -240,19 +240,19 @@ export default function OneDay() {
                             </p>
                         </div> */}
 
-<div className="f">
-                <b className="font-[600] text-[#7442ff]">  7:30 AM – </b>{" "}
-                Reach Pavagadh & Begin the Ascent
-                Head straight to the famous Kalika Mata Temple atop Pavagadh Hill. You can hike up the 1,800+ steps (takes about 1.5 hrs) or take the ropeway for a quicker, scenic route.
+                        <div className="f">
+                            <b className="font-[600] text-[#7442ff]">  7:30 AM – </b>{" "}
+                            Reach Pavagadh & Begin the Ascent
+                            Head straight to the famous Kalika Mata Temple atop Pavagadh Hill. You can hike up the 1,800+ steps (takes about 1.5 hrs) or take the ropeway for a quicker, scenic route.
 
-              </div>
+                        </div>
 
-              <div className="f">
-                <b className="font-[600] text-[#7442ff]">   Optional: </b>{" "}
-                Visit nearby Jain temples en route to the summit if time allows.
-              </div>
+                        <div className="f">
+                            <b className="font-[600] text-[#7442ff]">   Optional: </b>{" "}
+                            Visit nearby Jain temples en route to the summit if time allows.
+                        </div>
 
-                            {/* <p className="text-gray-600 md:text-[16px] text-[14px]">
+                        {/* <p className="text-gray-600 md:text-[16px] text-[14px]">
                             Beat the traffic and enjoy a smooth ride via Halol Highway. Carry water and snacks, or stop for tea and breakfast at roadside dhabas near Halol.                            </p> */}
 
                         {/* Main Content */}
@@ -294,24 +294,24 @@ export default function OneDay() {
                                 Champaner Archaeological Park
                             </h1> */}
 
-<div className="f">
-                <b className="font-[600] text-[#7442ff]"> 10:00 AM –</b>{" "}
-                Explore Champaner-Pavagadh Archaeological Park
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]"> 10:00 AM –</b>{" "}
+                                Explore Champaner-Pavagadh Archaeological Park
 
-              </div>
+                            </div>
 
-                  <p className="text-gray-600 md:text-[16px] text-[14px]">
-                  This UNESCO World Heritage Site is a treasure trove of Indo-Islamic architecture, forts, mosques, stepwells, and ruined palaces.</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                This UNESCO World Heritage Site is a treasure trove of Indo-Islamic architecture, forts, mosques, stepwells, and ruined palaces.</p>
 
-              <div className="f">
-                <b className="font-[600] text-[#7442ff]">   Must-see highlights: </b>{" "}
-             <li>Jami Masjid (perfectly preserved)</li>
-             <li>Saat Kaman (Seven Arches)</li>
-             <li>Helical Stepwell</li>
-              </div>
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]">   Must-see highlights: </b>{" "}
+                                <li>Jami Masjid (perfectly preserved)</li>
+                                <li>Saat Kaman (Seven Arches)</li>
+                                <li>Helical Stepwell</li>
+                            </div>
 
 
-                        
+
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -340,20 +340,20 @@ export default function OneDay() {
                             </h1> */}
 
 
-<div className="f">
-                <b className="font-[600] text-[#7442ff]">  12:30 PM – </b>{" "}
-                Lunch Break in Halol
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]">  12:30 PM – </b>{" "}
+                                Lunch Break in Halol
 
-              </div>
+                            </div>
 
-                  <p className="text-gray-600 md:text-[16px] text-[14px]">
-                  Head to a local restaurant or dhaba for a hearty Gujarati thali or Kathiyawadi meal.</p>
-              <div className="f">
-                <b className="font-[600] text-[#7442ff]">  Recommendations: </b>{" "}
-             <li>Hotel Tulsi or local food joints near the highway</li>
-             <li>Street-side stalls for buttermilk, bhajiyas, and farsan)</li>
-             {/* <li>Helical Stepwell</li> */}
-              </div>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                Head to a local restaurant or dhaba for a hearty Gujarati thali or Kathiyawadi meal.</p>
+                            <div className="f">
+                                <b className="font-[600] text-[#7442ff]">  Recommendations: </b>{" "}
+                                <li>Hotel Tulsi or local food joints near the highway</li>
+                                <li>Street-side stalls for buttermilk, bhajiyas, and farsan)</li>
+                                {/* <li>Helical Stepwell</li> */}
+                            </div>
 
 
 
@@ -387,19 +387,19 @@ export default function OneDay() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
- <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> 2:00 PM – </b> Hidden Temple or Nature Stop
-                        Choose one based on your vibe:
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> 2:00 PM – </b> Hidden Temple or Nature Stop
+                                Choose one based on your vibe:
+                            </h1>
 
-                    <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> For Spiritual:  </b> Visit Bhadrakali or Lakulisa Temple
-                        Choose one based on your vibe:
-                    </h1>
-                    <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '>For Nature:</b>Take a short detour to Jambughoda Wildlife Sanctuary 
-                        Choose one based on your vibe:
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> For Spiritual:  </b> Visit Bhadrakali or Lakulisa Temple
+                                Choose one based on your vibe:
+                            </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '>For Nature:</b>Take a short detour to Jambughoda Wildlife Sanctuary
+                                Choose one based on your vibe:
+                            </h1>
 
 
                             {/* <p className="text-gray-600 md:text-[16px] text-[14px]">
@@ -430,13 +430,13 @@ export default function OneDay() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
- <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> 4:00 PM –  </b> Quick Local Market Stop
-                      
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> 4:00 PM –  </b> Quick Local Market Stop
+
+                            </h1>
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Grab souvenirs, local snacks, or spiritual trinkets from shops near the temple base or Halol market.                            </p>
+                                Grab souvenirs, local snacks, or spiritual trinkets from shops near the temple base or Halol market.                            </p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
@@ -445,7 +445,7 @@ export default function OneDay() {
 
                         </article>
                     </div>
-                   
+
 
                     <div className=" w-[100%]">
                         {/* Hero Banner */}
@@ -463,13 +463,13 @@ export default function OneDay() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
- <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> 5:00 PM –   </b>Tea & Sunset Point
-                      
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> 5:00 PM –   </b>Tea & Sunset Point
+
+                            </h1>
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Enjoy a cup of tea with a view at a hillside dhaba or Basalt Paradise’s cafe (if open for walk-ins). Great photo ops here!</p>
+                                Enjoy a cup of tea with a view at a hillside dhaba or Basalt Paradise’s cafe (if open for walk-ins). Great photo ops here!</p>
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -494,17 +494,17 @@ export default function OneDay() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
- <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> Packing Tips: </b>Comfortable walking shoes.
-                      
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> Packing Tips: </b>Comfortable walking shoes.
+
+                            </h1>
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                           <li>Hat/cap, sunglasses, and sunscreen</li>
-                           <li>Camera or phone with good battery</li>
-                           <li>Cash for entry tickets and local stalls</li>
-                           <li>Rain gear (if visiting in monsoon)</li>
-                           </p>
+                                <li>Hat/cap, sunglasses, and sunscreen</li>
+                                <li>Camera or phone with good battery</li>
+                                <li>Cash for entry tickets and local stalls</li>
+                                <li>Rain gear (if visiting in monsoon)</li>
+                            </p>
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -529,44 +529,44 @@ export default function OneDay() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
- <h1 className=' font-[500] text-[16px] '>
-                        <b className=' font-[600]  text-[#7442ff] '> Bonus:   </b>Stay at Basalt Paradise
-                      
-                    </h1>
+                            <h1 className=' font-[500] text-[16px] '>
+                                <b className=' font-[600]  text-[#7442ff] '> Bonus:   </b>Stay at Basalt Paradise
+
+                            </h1>
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            If you fall in love with the serenity and want to stay overnight, Basalt Paradise is the ideal retreat — calm, nature-rich, and just 15–20 mins from all the major sites.</p>                            <div className='  flex mt-[10px] flex-col gap-[6px]'>
+                                If you fall in love with the serenity and want to stay overnight, Basalt Paradise is the ideal retreat — calm, nature-rich, and just 15–20 mins from all the major sites.</p>                            <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
 
 
                         </article>
                     </div>
-                   
+
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className="w-full my-">
                         <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
                         <ul className="list-disc ml-4 text-[17px] space-y-2">
                             <li>
                                 <a href="/blogs/nature-spots-near-halol" className="text-[#000000] font-[500] hover:underline">
-                                Why Monsoon Is the Best Time to Visit Pavagadh
+                                    Why Monsoon Is the Best Time to Visit Pavagadh
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/must-visit-places-near-basalt-paradise" className="text-[#000000] font-[500] hover:underline">
-                                 
-Hidden Temples Around Pavagadh
+
+                                    Hidden Temples Around Pavagadh
 
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/weekend-getaway-from-ahmedabad" className="text-[#000000] font-[500] hover:underline">
-                                Local Food Guide: What to Eat in Halol
+                                    Local Food Guide: What to Eat in Halol
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/weekend-getaway-from-ahmedabad" className="text-[#000000] font-[500] hover:underline">
-                                10 Must-Visit Places Near Basalt Paradise
+                                    10 Must-Visit Places Near Basalt Paradise
                                 </a>
                             </li>
                         </ul>
@@ -576,10 +576,10 @@ Hidden Temples Around Pavagadh
 
 
                     <h1 className=' font-[500] text-[16px] '>
-                    Ready for your one-day getaway? Pavagadh’s waiting with open arms and ancient stones.                    </h1>
+                        Ready for your one-day getaway? Pavagadh’s waiting with open arms and ancient stones.                    </h1>
                 </div>
 
-                <div className=" h-fit  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+               <div className=" h-fit  max-w-[300px] right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
@@ -693,6 +693,11 @@ Hidden Temples Around Pavagadh
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                                         </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>

@@ -130,7 +130,7 @@ export default function TopPhotography() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                        Top Photography Spots Near Halol – For Instagram & Reels
+                            Top Photography Spots Near Halol – For Instagram & Reels
                         </h1>
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -154,10 +154,10 @@ export default function TopPhotography() {
                             </h1> */}
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            This guide is your perfect visual checklist — from panoramic viewpoints to heritage architecture, hidden stepwells to aesthetic cafés — all spots that scream “reel-worthy.”                            </p>
+                                This guide is your perfect visual checklist — from panoramic viewpoints to heritage architecture, hidden stepwells to aesthetic cafés — all spots that scream “reel-worthy.”                            </p>
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            Whether you’re a professional with a DSLR or a content creator armed with an iPhone, these are the must-visit photography places in and around Halol.                            </p>
-                           
+                                Whether you’re a professional with a DSLR or a content creator armed with an iPhone, these are the must-visit photography places in and around Halol.                            </p>
+
                         </article>
                     </div>
 
@@ -165,8 +165,8 @@ export default function TopPhotography() {
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Kalika Mata Temple, Pavagadh                    </h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Kalika Mata Temple, Pavagadh                    </h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -186,27 +186,27 @@ export default function TopPhotography() {
                             </h1> */}
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            What to Capture: Long stairways, dramatic hilltop views, misty sunrise shots.
+                                What to Capture: Long stairways, dramatic hilltop views, misty sunrise shots.
                             </p>
-                            
+
                             <div className=" gap-2">
-                <b className="font-[600] text-[#7442ff]">Reel Idea: </b>{" "}
-               Time-lapse of your trek up the hill or the clouds moving over the temple dome.
-               
-              </div>
-              <div className="flex items-center gap-2">
-                <b className="font-[600] text-[#7442ff]">Tip: </b>{" "}
-                <p> Use the ropeway for sweeping aerial shots (from the station or your GoPro).
-                </p>
-              </div>
-             
+                                <b className="font-[600] text-[#7442ff]">Reel Idea: </b>{" "}
+                                Time-lapse of your trek up the hill or the clouds moving over the temple dome.
+
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <b className="font-[600] text-[#7442ff]">Tip: </b>{" "}
+                                <p> Use the ropeway for sweeping aerial shots (from the station or your GoPro).
+                                </p>
+                            </div>
+
                         </article>
                     </div>
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Jami Masjid, Champaner</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Jami Masjid, Champaner</h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -228,26 +228,26 @@ export default function TopPhotography() {
 
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            What to Capture: Arched corridors, intricate jalis (lattice windows), symmetrical stone design.</p>
+                                What to Capture: Arched corridors, intricate jalis (lattice windows), symmetrical stone design.</p>
                             <div className="flex items-center gap-2">
-                <span className="font-[600] text-[#7442ff]">Best Time:</span>{" "}
-                <p>  Golden hour (around 8–9 AM or 5 PM).
-                </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-[600] text-[#7442ff]">Vibe:</span>{" "}
-                <p> Feels like stepping into a Mughal photo set.
-                </p>
-              </div>
+                                <span className="font-[600] text-[#7442ff]">Best Time:</span>{" "}
+                                <p>  Golden hour (around 8–9 AM or 5 PM).
+                                </p>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span className="font-[600] text-[#7442ff]">Vibe:</span>{" "}
+                                <p> Feels like stepping into a Mughal photo set.
+                                </p>
+                            </div>
                         </article>
                     </div>
 
 
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                
+
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Helical Stepwell</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Helical Stepwell</h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -270,23 +270,23 @@ export default function TopPhotography() {
                                 Pavagadh Ropeway & Kalika Mata Temple
                             </h1> */}
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            What to Capture: Spiral stairs, shadow-play, ancient stone textures.</p>
+                                What to Capture: Spiral stairs, shadow-play, ancient stone textures.</p>
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
                             <div className="flex items-center gap-2">
-                <span className="font-[600] text-[#7442ff]">Reels Idea: </span>{" "}
-                <p> Slow pan following your footsteps on descent + ambient sound.
-                </p>
-              </div>
+                                <span className="font-[600] text-[#7442ff]">Reels Idea: </span>{" "}
+                                <p> Slow pan following your footsteps on descent + ambient sound.
+                                </p>
+                            </div>
 
                         </article>
                     </div>
 
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Dudhiya Talav</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Dudhiya Talav</h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -307,14 +307,14 @@ export default function TopPhotography() {
 
 
                             <p className="text-gray-600 md:text-[16px] text-[14px]">
-                            What to Capture: Calm water reflections, pink lotuses (in season), surrounding trees.</p>
+                                What to Capture: Calm water reflections, pink lotuses (in season), surrounding trees.</p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                            </div>
                             <div className="f">
-                <b className="font-[600] text-[#7442ff]">Mood:</b>{" "}
-                Early morning silence with ripple effects.
-                
-              </div>
+                                <b className="font-[600] text-[#7442ff]">Mood:</b>{" "}
+                                Early morning silence with ripple effects.
+
+                            </div>
 
                         </article>
                     </div>
@@ -322,8 +322,8 @@ export default function TopPhotography() {
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Basalt Paradise (if you stay here) </h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Basalt Paradise (if you stay here) </h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -340,25 +340,25 @@ export default function TopPhotography() {
                                 Ajwa Water Park (30–40 mins drive)
                             </h1> */}
 
-                           <p className="text-gray-600 md:text-[16px] text-[14px]">
-                           What to Capture: Natural stone architecture, monsoon greens, rustic fencing, cozy corners.</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                What to Capture: Natural stone architecture, monsoon greens, rustic fencing, cozy corners.</p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                           </div>
                             <div className="f">
-                <b className="font-[600] text-[#7442ff]">Instagrammable Features:</b>{" "}
-                Earthy textures, boho lighting, open skies.
-                
-              </div>
+                                <b className="font-[600] text-[#7442ff]">Instagrammable Features:</b>{" "}
+                                Earthy textures, boho lighting, open skies.
+
+                            </div>
 
                         </article>
                     </div>
 
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
-                   
+
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Sunset Point Near Ropeway Station </h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Sunset Point Near Ropeway Station </h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -374,17 +374,17 @@ export default function TopPhotography() {
                                 <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
-  <p className="text-gray-600 md:text-[16px] text-[14px]">
-  What to Capture: Sun dipping behind Pavagadh, silhouette shots, orange haze over the fields.</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                What to Capture: Sun dipping behind Pavagadh, silhouette shots, orange haze over the fields.</p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                           </div>
                             <div className="f">
-                <b className="font-[600] text-[#7442ff]">Reel Idea: </b>{" "}
-                Before/after shot of day vs dusk.
-                
-              </div>
+                                <b className="font-[600] text-[#7442ff]">Reel Idea: </b>{" "}
+                                Before/after shot of day vs dusk.
 
-                         
+                            </div>
+
+
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -395,8 +395,8 @@ export default function TopPhotography() {
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Local Streets & Market Scenes</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Local Streets & Market Scenes</h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -413,16 +413,16 @@ export default function TopPhotography() {
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
 
-<p className="text-gray-600 md:text-[16px] text-[14px]">
-What to Capture: Street-side snacks, local artisans, temple prasad stalls, colorful sarees.
-</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                What to Capture: Street-side snacks, local artisans, temple prasad stalls, colorful sarees.
+                            </p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                           </div>
                             <div className="f">
-                <b className="font-[600] text-[#7442ff]">Vibe:  </b>{" "}
-                Real Halol – candid, colorful, and cultural.
-                
-              </div>
+                                <b className="font-[600] text-[#7442ff]">Vibe:  </b>{" "}
+                                Real Halol – candid, colorful, and cultural.
+
+                            </div>
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -433,8 +433,8 @@ What to Capture: Street-side snacks, local artisans, temple prasad stalls, color
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Content Tips for Instagram & Reels:</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Content Tips for Instagram & Reels:</h1>
                         {/* Hero Banner */}
                         <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -451,16 +451,16 @@ What to Capture: Street-side snacks, local artisans, temple prasad stalls, color
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
 
-<p className="text-gray-600 md:text-[16px] text-[14px]">Use trending Gujarati/heritage-style audio with ambient clips.
-</p>
-<p className="text-gray-600 md:text-[16px] text-[14px]">
-Slow-motion or Boomerang formats work great on waterfalls and temple bells.</p>
-<p className="text-gray-600 md:text-[16px] text-[14px]">
-Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
-</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">Use trending Gujarati/heritage-style audio with ambient clips.
+                            </p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                Slow-motion or Boomerang formats work great on waterfalls and temple bells.</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">
+                                Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
+                            </p>
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                           </div>
-                           
+
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -471,8 +471,8 @@ Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
                     <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
 
                     <div className=" w-[100%]">
-                    <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
-                    Final Word:</h1>
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                            Final Word:</h1>
                         {/* Hero Banner */}
                         {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
@@ -489,12 +489,12 @@ Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
                                 Candlelight Dinner & In-Room Dining
                             </h1> */}
 
-<p className="text-gray-600 md:text-[16px] text-[14px]">Halol isn’t just a stop on the map — it’s a visual storybook. Every corner has a story, every trail a backdrop. Bring your lens, your creativity, and a bit of local love — and leave with a reel that’ll make your friends ask, “Where is this magical place?!”
-</p>
+                            <p className="text-gray-600 md:text-[16px] text-[14px]">Halol isn’t just a stop on the map — it’s a visual storybook. Every corner has a story, every trail a backdrop. Bring your lens, your creativity, and a bit of local love — and leave with a reel that’ll make your friends ask, “Where is this magical place?!”
+                            </p>
 
 
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>                           </div>
-                           
+
                             <div className='  flex mt-[10px] flex-col gap-[6px]'>
 
                             </div>
@@ -510,23 +510,23 @@ Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
                         <ul className="list-disc ml-4 text-[17px] space-y-2">
                             <li>
                                 <a href="/blogs/nature-spots-near-halol" className="text-[#000000] font-[500] hover:underline">
-                                One Day Trip Itinerary from Vadodara
+                                    One Day Trip Itinerary from Vadodara
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/must-visit-places-near-basalt-paradise" className="text-[#000000] font-[500] hover:underline">
-                                Hidden Temples Near Pavagadh
+                                    Hidden Temples Near Pavagadh
 
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/weekend-getaway-from-ahmedabad" className="text-[#000000] font-[500] hover:underline">
-                                Monsoon Travel Guide to Pavagadh
+                                    Monsoon Travel Guide to Pavagadh
                                 </a>
                             </li>
                             <li>
                                 <a href="/blogs/weekend-getaway-from-ahmedabad" className="text-[#000000] font-[500] hover:underline">
-                                Local Food Guide: What to Eat in Halol
+                                    Local Food Guide: What to Eat in Halol
                                 </a>
                             </li>
                         </ul>
@@ -534,12 +534,12 @@ Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
 
 
 
-{/* 
+                    {/* 
                     <h1 className=' font-[500] text-[16px] '>
                     Rainy days await. Basalt Paradise is ready                    </h1> */}
                 </div>
 
-                <div className=" h-fit  right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
+    <div className=" h-fit  max-w-[300px] right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
                         <div id="infoProduto ">
                             <div className="blog-sidebar">
 
@@ -653,6 +653,11 @@ Include geo-tags like #PavagadhHill #HalolViews #HiddenGujarat
                                             <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
                                             <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
                                         </li>
+                                        <li className='  flex'>
+                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
+                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
