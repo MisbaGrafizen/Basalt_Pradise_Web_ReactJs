@@ -105,6 +105,37 @@ import playArea66  from "../../../public/ForestAreaImges/playarea6.jpeg"
 
 
 
+import out1 from "../../../public/5june-edit/new1.jpg"
+import out2 from "../../../public/5june-edit/new2.jpg"
+import out3 from "../../../public/5june-edit/new3.jpg"
+import out4 from "../../../public/5june-edit/new4.jpg"
+import out5 from "../../../public/5june-edit/new5.jpg"
+import out6 from "../../../public/5june-edit/new6.jpg"
+import out7 from "../../../public/5june-edit/new7.jpg"
+import out8 from "../../../public/5june-edit/new8.jpg"
+import out9 from "../../../public/5june-edit/new9.jpg"
+import out10 from "../../../public/5june-edit/new10.jpg"
+import out11 from "../../../public/5june-edit/new11.jpg"
+import out12 from "../../../public/5june-edit/new12.jpg"
+import out13 from "../../../public/5june-edit/new13.jpg"
+import out14 from "../../../public/5june-edit/new14.jpg"
+import out15 from "../../../public/5june-edit/new15.jpg"
+import out16 from "../../../public/5june-edit/new16.jpg"
+import out17 from "../../../public/5june-edit/new17.jpg"
+import out18 from "../../../public/5june-edit/new18.jpg"
+import out19 from "../../../public/5june-edit/new19.jpg"
+import out20 from "../../../public/5june-edit/new20.jpg"
+import out21 from "../../../public/5june-edit/new21.jpg"
+import out22 from "../../../public/5june-edit/new22.jpg"
+import out23 from "../../../public/5june-edit/new23.jpg"
+import out24 from "../../../public/5june-edit/new24.jpg"
+import out25 from "../../../public/5june-edit/new25.jpg"
+
+
+
+
+
+
 
 
 
@@ -187,7 +218,7 @@ export default function Gallery() {
 
 
     const roomImages = [room1, room2, room3, room4, room5]
-    const outdoorImages = [nightGreenArea, zen1, b5, drone1, b6, outdoor4, outdoor5, poolnignt1, garden1, garden2, garden3, outdoor3, outdoor2, poolnignt, outdoor1, poolnight2, pool1,]
+    const outdoorImages = [out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,out16,out17,out18,out19,out20,out21,out22,out23,out24,out25,nightGreenArea, zen1, b5, drone1, b6, outdoor4, outdoor5, poolnignt1, garden1, garden2, garden3, outdoor3, outdoor2, poolnignt, outdoor1, poolnight2, pool1,]
     const villaRoom = [room6, room7, room8, villaGa, villa11, villa22, villa33, villa44, villa55]
     const restaurantImages = [resturant1, resturant77, resturant33, resturant44, banquet, resturant55, resturant66, resturant11,]
     const playArea = [PlayArea1, PlayArea2, PlayArea4, PlayArea5,playArea11,playArea33,playArea44, playArea55,playArea66]
