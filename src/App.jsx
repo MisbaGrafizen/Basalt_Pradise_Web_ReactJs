@@ -172,6 +172,10 @@ import Hours from "./pages/blogs/72Hours";
 import CoffeeWithView from "./pages/blogs/CoffeeWithView";
 import MoonlightMagix from "./pages/blogs/MoonlightMagix";
 import EcoLuxury from "./pages/blogs/EcoLuxury";
+import CulnaryJourney from "./pages/blogs/CulinaryJourney";
+import WhyBestResort from "./pages/blogs/WhyBestResort";
+import ExploringHalol from "./pages/blogs/ExploringHalol";
+import RainOrShine from "./pages/blogs/RainOrShine";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -312,6 +316,10 @@ function App() {
           <Route path="/blogs/local-brews-you’ll-only" element={loading ? <Loader /> : <CoffeeWithView />} />
           <Route path="/blogs/what-makes-nighttime-basalt" element={loading ? <Loader /> : <MoonlightMagix />} />
           <Route path="/blogs/basalt-paradise-balances-nature" element={loading ? <Loader /> : <EcoLuxury />} />
+          <Route path="/blogs/culinary-journey-basalt-paradise" element={loading ? <Loader /> : <CulnaryJourney />} />
+          <Route path="/blogs/basalt-paradise-best-resort" element={loading ? <Loader /> : <WhyBestResort />} />
+          <Route path="/blogs/exploring-halol-the-best" element={loading ? <Loader /> : <ExploringHalol />} />
+          <Route path="/blogs/rain-or-shine-what-makes-monsoons" element={loading ? <Loader /> : <RainOrShine />} />
         </Routes>
 
 
