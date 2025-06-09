@@ -1,12 +1,12 @@
-import React, { useState ,useRef,useEffect} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import pavagadhbannernew from "../../../public/10Blogs/all.png"
 import ahemdabad from "../../../public/lBlogdetailsImgae/covarsBlogs/WeekendsAhmd.jpg"
 import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
 import Hathnimatafall from "../../../public/10Blogs/Hathnimatafall.jpg"
 import sou from "../../../public/10Blogs/SOU.jpg"
-import spiritual from "../../../public/lBlogdetailsImgae/covarsBlogs/Spiritual-cover.webp"
+import spiritual from "../../../public/BlogsCoverS/NewBlogCover/Sacred Journeys Begin Here.png"
 import besttime from "../../../public/lBlogdetailsImgae/covarsBlogs/BestTime-cover1.jpg"
-import tours from "../../../public/lBlogdetailsImgae/covarsBlogs/romantic.jpg"
+import tours from "../../../public/BlogsCoverS/NewBlogCover/Why Couples love Basalt Paradise.png"
 import birdwatching from "../../../public/lBlogdetailsImgae/covarsBlogs/BirdWatching-cover.jpg"
 import general from "../../../public/10Blogs/general-view.jpg"
 import kada from "../../../public/10Blogs/kada-dam.jpg"
@@ -44,7 +44,7 @@ import architecture from "../../../public/BlogsCoverS/NewBlogCover/4.png"
 import hours from "../../../public/BlogsCoverS/NewBlogCover/5.png"
 import coffee from "../../../public/BlogsCoverS/NewBlogCover/6.png"
 import moonllight from "../../../public/BlogsCoverS/NewBlogCover/7.png"
-
+import nature from "../../../public/BlogsCoverS/NewBlogCover/8.png"
 
 
 
@@ -432,11 +432,59 @@ const blogdata = [
         category: "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
         route: "/blogs/basalt-paradise-balances-nature", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: local,
+        image: nature,
         date: "29-05-2025",
         time: "11:15 AM",
         tittle: "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
         description: "Luxury often conjures up images of opulence, excess, and escape. But at Basalt Paradise, we believe true luxury means living well without taking too much—from nature, from culture, or from tomorrow.We’re part retreat, part responsibility. A place where the earth is treated with as much reverence as our guests. And every detail—from your villa’s stonework to the soap in your shower—has been chosen with care, conscience, and a deep respect for the land that holds us.This is what eco-luxury looks like when it's done not as a trend, but as a truth.",
+        fullContent: ""
+    },
+    {
+        id: 31,
+        category: "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
+        route: "/blogs/culinary-journey-basalt-paradise", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: nature,
+        date: "31-05-2025",
+        time: "06:03 PM",
+        tittle: "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
+        description: "Tucked between the basalt-rich landscapes of Halol and the golden horizons that frame every sunset, Basalt Paradise is more than a luxurious escape—it’s a sensory experience. And if there’s one thing our guests remember long after their stay, it’s the food.Welcome to our kitchen, where farm-to-table philosophy meets luxury—and where every ingredient tells a local story.",
+        fullContent: ""
+    },
+    {
+        id: 32,
+        category: "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
+        route: "/blogs/basalt-paradise-best-resort", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: nature,
+        date: "03-06-2025",
+        time: "06:20 PM",
+        tittle: "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
+        description: "There are places you visit—and then there are places you celebrate. At Basalt Paradise, we believe in creating unforgettable memories, not just offering a stay. Whether it’s a dreamy anniversary, a surprise birthday bash, an intimate proposal, or even a soulful wedding by the hills, our resort is where special moments come alive.Set amidst the tranquil landscapes of Halol and just a short drive from Vadodara, we offer the perfect blend of luxury, privacy, and personalization—making us the go-to [resort for celebrations Vadodara] has come to love.",
+        fullContent: ""
+    },
+    {
+        id: 33,
+        category: "Exploring Halol: The Best Day Trips from Basalt Paradise",
+        route: "/blogs/exploring-halol-the-best", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: nature,
+        date: "03-06-2025",
+        time: "11:10 AM",
+        tittle: "Exploring Halol: The Best Day Trips from Basalt Paradise",
+        description: "When you stay at Basalt Paradise, you're not just indulging in luxury—you're stepping into the heart of Gujarat’s heritage and natural beauty. Our serene resort in Halol is perfectly positioned for discovering nearby gems—from ancient forts and spiritual shrines to misty waterfalls and wildlife sanctuaries.Here’s your curated guide to the best day trips from Halol, complete with accurate distances and insider tips.",
+        fullContent: ""
+    },
+    {
+        id: 34,
+        category: "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
+        route: "/blogs/rain-or-shine-what-makes-monsoons", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: nature,
+        date: "05-06-2025",
+        time: "11:30 AM",
+        tittle: "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
+        description: "The monsoon in Gujarat has its own rhythm—a slow, poetic unfolding of rain-kissed mornings, misty hills, and vibrant green landscapes. At Basalt Paradise, the rains don’t dampen the experience—they elevate it. Whether you’re watching the clouds drift lazily over the hills or sipping masala chai under a thatched canopy, the monsoon becomes more than just weather—it becomes a feeling.",
         fullContent: ""
     },
 ];
@@ -480,6 +528,10 @@ export default function Blogs() {
         "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
         "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
         "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
+        "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
+        "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
+        "Exploring Halol: The Best Day Trips from Basalt Paradise",
+        "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
     ];
 
     const handleClick = (category) => {
@@ -517,51 +569,51 @@ export default function Blogs() {
         );
     };
 
-  const scrollRef = useRef(null);
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
+    const scrollRef = useRef(null);
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
 
-  useEffect(() => {
-    const slider = scrollRef.current;
+    useEffect(() => {
+        const slider = scrollRef.current;
 
-    const mouseDownHandler = (e) => {
-      isDragging = true;
-      slider.classList.add('cursor-grabbing');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    };
+        const mouseDownHandler = (e) => {
+            isDragging = true;
+            slider.classList.add('cursor-grabbing');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
 
-    const mouseLeaveHandler = () => {
-      isDragging = false;
-      slider.classList.remove('cursor-grabbing');
-    };
+        const mouseLeaveHandler = () => {
+            isDragging = false;
+            slider.classList.remove('cursor-grabbing');
+        };
 
-    const mouseUpHandler = () => {
-      isDragging = false;
-      slider.classList.remove('cursor-grabbing');
-    };
+        const mouseUpHandler = () => {
+            isDragging = false;
+            slider.classList.remove('cursor-grabbing');
+        };
 
-    const mouseMoveHandler = (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // scroll speed
-      slider.scrollLeft = scrollLeft - walk;
-    };
+        const mouseMoveHandler = (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        };
 
-    slider.addEventListener('mousedown', mouseDownHandler);
-    slider.addEventListener('mouseleave', mouseLeaveHandler);
-    slider.addEventListener('mouseup', mouseUpHandler);
-    slider.addEventListener('mousemove', mouseMoveHandler);
+        slider.addEventListener('mousedown', mouseDownHandler);
+        slider.addEventListener('mouseleave', mouseLeaveHandler);
+        slider.addEventListener('mouseup', mouseUpHandler);
+        slider.addEventListener('mousemove', mouseMoveHandler);
 
-    return () => {
-      slider.removeEventListener('mousedown', mouseDownHandler);
-      slider.removeEventListener('mouseleave', mouseLeaveHandler);
-      slider.removeEventListener('mouseup', mouseUpHandler);
-      slider.removeEventListener('mousemove', mouseMoveHandler);
-    };
-  }, []);
+        return () => {
+            slider.removeEventListener('mousedown', mouseDownHandler);
+            slider.removeEventListener('mouseleave', mouseLeaveHandler);
+            slider.removeEventListener('mouseup', mouseUpHandler);
+            slider.removeEventListener('mousemove', mouseMoveHandler);
+        };
+    }, []);
 
 
     return (
@@ -570,7 +622,7 @@ export default function Blogs() {
 
             <Header />
             <section className=' select-none flex  mb-[40px] flex-col gap-[30px] 2xl:w-[1300px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
-                <div className='md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%] overflow-x-auto gap-[10px]'  ref={scrollRef}>
+                <div className='md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%] overflow-x-auto gap-[10px]' ref={scrollRef}>
                     {buttons.map((buttonName) => (
                         <button
                             key={buttonName}
