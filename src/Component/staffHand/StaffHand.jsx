@@ -208,7 +208,7 @@ export default function StaffHand() {
 
                     <div className=" flex  items-center gap-[6px]">
                       <div className=" flex text-[18px] text-[#fff]  font-Poppins font-[500] ">
-                        <p>INR 1500</p>
+                        <p>INR 2150</p>
                       </div>
                       {/* <div className=" flex flex-col relative">
                         <p className=" flex  pl-[4px] text-[16px] text-[#d4d4d4]  font-Poppins font-[300] ">
