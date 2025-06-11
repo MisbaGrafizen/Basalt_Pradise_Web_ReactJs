@@ -4,9 +4,9 @@ import ahemdabad from "../../../public/lBlogdetailsImgae/covarsBlogs/WeekendsAhm
 import Citadel from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg"
 import Hathnimatafall from "../../../public/10Blogs/Hathnimatafall.jpg"
 import sou from "../../../public/10Blogs/SOU.jpg"
-import spiritual from "../../../public/BlogsCoverS/NewBlogCover/Sacred Journeys Begin Here.png"
+import spiritual from "../../../public/BlogsCoverS/NewBlogCover/SacredJourneys.png"
 import besttime from "../../../public/lBlogdetailsImgae/covarsBlogs/BestTime-cover1.jpg"
-import tours from "../../../public/BlogsCoverS/NewBlogCover/Why Couples love Basalt Paradise.png"
+import tours from "../../../public/BlogsCoverS/NewBlogCover/WhyCouple.png"
 import birdwatching from "../../../public/lBlogdetailsImgae/covarsBlogs/BirdWatching-cover.jpg"
 import general from "../../../public/10Blogs/general-view.jpg"
 import kada from "../../../public/10Blogs/kada-dam.jpg"
@@ -45,7 +45,10 @@ import hours from "../../../public/BlogsCoverS/NewBlogCover/5.png"
 import coffee from "../../../public/BlogsCoverS/NewBlogCover/6.png"
 import moonllight from "../../../public/BlogsCoverS/NewBlogCover/7.png"
 import nature from "../../../public/BlogsCoverS/NewBlogCover/8.png"
-
+import culinary from "../../../public/BlogsCoverS/NewBlogCover/Culinary.jpg"
+import whybasalat from "../../../public/BlogsCoverS/NewBlogCover/WhyBasaltParadise.jpg"
+import explore from "../../../public/BlogsCoverS/NewBlogCover/ExploringHalol.jpg"
+import rain from "../../../public/BlogsCoverS/NewBlogCover/FallinLove.jpg"
 
 
 
@@ -444,7 +447,7 @@ const blogdata = [
         category: "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
         route: "/blogs/culinary-journey-basalt-paradise", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: nature,
+        image: culinary,
         date: "31-05-2025",
         time: "06:03 PM",
         tittle: "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
@@ -456,7 +459,7 @@ const blogdata = [
         category: "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
         route: "/blogs/basalt-paradise-best-resort", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: nature,
+        image: whybasalat,
         date: "03-06-2025",
         time: "06:20 PM",
         tittle: "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
@@ -468,7 +471,7 @@ const blogdata = [
         category: "Exploring Halol: The Best Day Trips from Basalt Paradise",
         route: "/blogs/exploring-halol-the-best", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: nature,
+        image: explore,
         date: "03-06-2025",
         time: "11:10 AM",
         tittle: "Exploring Halol: The Best Day Trips from Basalt Paradise",
@@ -480,7 +483,7 @@ const blogdata = [
         category: "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
         route: "/blogs/rain-or-shine-what-makes-monsoons", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
-        image: nature,
+        image: rain,
         date: "05-06-2025",
         time: "11:30 AM",
         tittle: "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
