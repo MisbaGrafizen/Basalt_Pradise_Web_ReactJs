@@ -176,6 +176,7 @@ import CulnaryJourney from "./pages/blogs/CulinaryJourney";
 import WhyBestResort from "./pages/blogs/WhyBestResort";
 import ExploringHalol from "./pages/blogs/ExploringHalol";
 import RainOrShine from "./pages/blogs/RainOrShine";
+import IntegratedBlogDetails from "./pages/blogs/IntegratedBlogDetails";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -320,6 +321,9 @@ function App() {
           <Route path="/blogs/basalt-paradise-best-resort" element={loading ? <Loader /> : <WhyBestResort />} />
           <Route path="/blogs/exploring-halol-the-best" element={loading ? <Loader /> : <ExploringHalol />} />
           <Route path="/blogs/rain-or-shine-what-makes-monsoons" element={loading ? <Loader /> : <RainOrShine />} />
+          <Route path="/blogs/main/:id" element={loading ? <Loader /> : <IntegratedBlogDetails />} />
+
+
         </Routes>
 
 

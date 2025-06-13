@@ -49,8 +49,7 @@ import culinary from "../../../public/BlogsCoverS/NewBlogCover/Culinary.jpg"
 import whybasalat from "../../../public/BlogsCoverS/NewBlogCover/WhyBasaltParadise.jpg"
 import explore from "../../../public/BlogsCoverS/NewBlogCover/ExploringHalol.jpg"
 import rain from "../../../public/BlogsCoverS/NewBlogCover/FallinLove.jpg"
-
-
+import axios from "axios";
 
 
 
@@ -499,6 +498,10 @@ export default function Blogs() {
     const [selectedCategory, setSelectedCategory] = useState("10 Must-Visit Places Near Basalt Paradise");
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
+    const [blogs, setBlogs] = useState([]);
+    const [activeTitle, setActiveTitle] = useState(null);
+
+
 
     const buttons = [
         "All",
@@ -541,6 +544,11 @@ export default function Blogs() {
         setSelectedCategory(category);
     };
 
+    const handleTitleClick = (category) => {
+        setActiveTitle(category);
+    };
+
+
     const handleBlogDetails = (route) => {
         navigate(route);
     };
@@ -576,6 +584,38 @@ export default function Blogs() {
     let isDragging = false;
     let startX;
     let scrollLeft;
+
+    const formatDateTime = (isoDateStr) => {
+  const date = new Date(isoDateStr);
+  const options = {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
+
+  return date
+    .toLocaleString('en-GB', options)
+    .replace(/\//g, '-')
+    .replace(',', ' –')
+    .toUpperCase();
+};
+
+
+      useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/v2/hotel/admin/blog');
+        setBlogs(response.data?.careerData);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
     useEffect(() => {
         const slider = scrollRef.current;
@@ -618,6 +658,14 @@ export default function Blogs() {
         };
     }, []);
 
+    const categoryBlogs = activeTitle
+  ? blogs.filter((blog) => blog.title === activeTitle)
+  : blogs;
+
+  const titles = [...new Set(blogs?.map(blog => blog.title))];
+
+
+console.log('activeTitle', blogs)
 
     return (
         <>
@@ -626,7 +674,24 @@ export default function Blogs() {
             <Header />
             <section className=' select-none flex  mb-[40px] flex-col gap-[30px] 2xl:w-[1300px]  relative font-Poppins justify-between w-[90%] mx-auto md:w-[78%] pt-[110px]  '>
                 <div className='md:text-[14px] text-[12px] md:px-0 px-[10px] font-[500] flex w-[100%] overflow-x-auto gap-[10px]' ref={scrollRef}>
-                    {buttons.map((buttonName) => (
+                    {/* {titles?.map((buttonName) => (
+                        <button
+                            key={buttonName}
+                            onClick={() => handleTitleClick(buttonName)}
+                            className={`w-fit py-[7px] px-[18px] rounded-[20px] border-[1.2px] flex-shrink-0
+                      ${activeTitle === buttonName
+                                    ? "bg-[#fcaf17] text-white border-[#fcaf17]"
+                                    : "bg-transparent text-[#fcaf17] border-[#fcaf17]"
+                                }`}
+                        >
+                            {buttonName}
+                        </button>
+                    ))} */}
+
+
+                       {/* old Buttons   */}
+
+                        {buttons.map((buttonName) => (
                         <button
                             key={buttonName}
                             onClick={() => handleClick(buttonName)}
@@ -647,10 +712,47 @@ export default function Blogs() {
 
 
 
+  {/* {categoryBlogs?.map((blog, index) => (
+                            <div key={blog.id} className=' flex flex-col gap-[10px] '>
+                                <img
+                                    onClick={() => openLightbox(index)}
+                                    className='cursor-pointer flex w-[100%] h-[240px] md:h-[400px] rounded-[8px] transition-transform duration-300 ease-in-out scale-[0.98] hover:scale-[1]'
+                                    src={blog.image}
+                                    alt="Blogs"
+                                />
+                                <div className=' px-[10px] text-[14px] items-center  flex text-[#7442ff] gap-[10px]'>
+                                    <i class="fa-regular mb-[2px] text-[16px] fa-calendar-days"></i>
+                                    {formatDateTime(blog.createdAt)}
+                                </div>
+                                <div className=' flex w-[100%] md:flex-row flex-col  justify-between md:items-end  gap-[14px]'>
+                                    <div className=' flex w-[100%] gap-[10px] flex-col '>
+                                        <div className=' cursor-default flex items-center gap-[10px]  px-[10px] text-[#7442ff] '>
 
+                                            <p className=' gap-[10px] mt-[2px] flex'>
+                                                <b className=' text-[18px] font-[400]'>{blog.disatnce} </b>
+                                            </p>
+                                        </div>
+                                        <div className=' text-[15px] flex text-justify  px-[10px] md:w-[98%]'>
+                                           <div
+  className="prose prose-sm md:prose-base prose-headings:font-semibold prose-p:mb-4"
+  dangerouslySetInnerHTML={{ __html: blog.description }}
+></div>
 
+                                        </div>
+                                    </div>
+                                    <button className='flex gap-[10px] cursor-pointer pr-[10px] text-[#7442ff] w-[150px] items-center'
+                                      onClick={() => navigate(`/blogs/main/${blog._id}`)}>
+                                        <p className='hover:underline'>Read More</p>
+                                        <i className="fa-regular fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <span className=' flex w-[100%] border-t-[1.3px] border-[#7442ff] mt-[20px] border-dashed '>
 
+                                </span>
+                            </div>
+                        ))} */}
 
+{/* 0ld Blogsss */}
                         {filteredBlogs.map((blog, index) => (
                             <div key={blog.id} className=' flex flex-col gap-[10px] '>
                                 <img
