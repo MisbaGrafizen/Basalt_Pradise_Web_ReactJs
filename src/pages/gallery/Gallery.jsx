@@ -131,6 +131,16 @@ import out23 from "../../../public/5june-edit/new23.jpg"
 import out24 from "../../../public/5june-edit/new24.jpg"
 import out25 from "../../../public/5june-edit/new25.jpg"
 
+import gardendrone from "../../../public/Basalt Final/b17.png"
+import zen2 from "../../../public/Basalt Final/b18.jpg"
+import bridge from "../../../public/Basalt Final/b19.jpg"
+import frogCenter from "../../../public/Basalt Final/b20.jpeg"
+import frorest from "../../../public/Basalt Final/b21.jpg"
+import mountain from "../../../public/Basalt Final/b22.jpeg"
+
+
+
+
 
 
 
@@ -218,10 +228,10 @@ export default function Gallery() {
 
 
     const roomImages = [room1, room2, room3, room4, room5]
-    const outdoorImages = [out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,out16,out17,out18,out19,out20,out21,out22,out23,out24,out25,nightGreenArea, zen1, b5, drone1, b6, outdoor4, outdoor5, poolnignt1, garden1, garden2, garden3, outdoor3, outdoor2, poolnignt, outdoor1, poolnight2, pool1,]
+    const outdoorImages = [out8,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,out22,frogCenter,out23,out25,nightGreenArea, zen1, b5,zen2, drone1,  outdoor4, outdoor5, garden2, outdoor2, poolnignt, outdoor1, mountain,]
     const villaRoom = [room6, room7, room8, villaGa, villa11, villa22, villa33, villa44, villa55]
-    const restaurantImages = [resturant1, resturant77, resturant33, resturant44, banquet, resturant55, resturant66, resturant11,]
-    const playArea = [PlayArea1, PlayArea2, PlayArea4, PlayArea5,playArea11,playArea33,playArea44, playArea55,playArea66]
+    const restaurantImages = [ resturant77, resturant33, banquet, resturant55, resturant66,]
+    const playArea = [PlayArea1, PlayArea2,forest1, PlayArea4, PlayArea5,forest7,playArea11,playArea33,forest6,playArea44,]
     const forest = [forest1,forest2,forest3,forest4,forest6,forest7 ,forest5]
     const CommonArea = [commonArea1, commonArea2, commonArea3, commonArea4]
     const OtherS = [outdoor1, outdoor2, outdoor3, outdoor4, outdoor5]
@@ -252,7 +262,7 @@ export default function Gallery() {
     const sectionRefs = {
         Outdoors: outdoorsRef,
         "Restaurant & Banquet": restaurantRef,
-        "Forest Area": forestRef,
+        // "Forest Area": forestRef,
         "Kids Play Area": playAreaRef,
         "Private Villa": villaRef,
         "Zen Room": zenRoomRef,
@@ -261,16 +271,16 @@ export default function Gallery() {
     const buttonPositions = {
         Outdoors: 10,
         "Restaurant & Banquet": 125,
-        "Forest Area": 340,
-        "Kids Play Area": 470,
-        "Private Villa": 612,
-        "Zen Room": 750,
+        // "Forest Area": 340,
+        "Kids Play Area": 340,
+        "Private Villa": 492,
+        "Zen Room": 618,
     };
 
     const buttonWidths = {
         Outdoors: 100,
         "Restaurant & Banquet": 200,
-        "Forest Area":115,
+        // "Forest Area":115,
         "Kids Play Area": 138,
         "Private Villa": 120,
         "Zen Room": 115,
@@ -479,7 +489,7 @@ export default function Gallery() {
                                             ))}
                                         </div>
                                     </div>
-
+{/* 
                                     <div ref={forestRef} data-section="Forest Area" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb"> Forest Area</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -489,10 +499,10 @@ export default function Gallery() {
                                                 </div>
                                             ))}
                                         </div>
-                                    </div>
+                                    </div> */}
 
                                     <div ref={playAreaRef} data-section="Kids Play Area" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
-                                        <h2 className="text-xl font-medium relative top-[-10px] mb"> Kids Play Area</h2>
+                                        <h2 className="text-xl font-medium relative top-[-10px] mb"> Indoor & Outdoor activities</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {playArea.map((src, index) => (
                                                 <div key={index} className="rounded-lg overflow-hidden h-64">
