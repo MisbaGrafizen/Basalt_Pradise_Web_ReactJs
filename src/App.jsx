@@ -177,6 +177,11 @@ import WhyBestResort from "./pages/blogs/WhyBestResort";
 import ExploringHalol from "./pages/blogs/ExploringHalol";
 import RainOrShine from "./pages/blogs/RainOrShine";
 import IntegratedBlogDetails from "./pages/blogs/IntegratedBlogDetails";
+import WellnessByNature from "./pages/blogs/WellnessByNature";
+import Staying from "./pages/blogs/Staying";
+import ADay from "./pages/blogs/ADay";
+import MonsoonWeddings from "./pages/blogs/MonsoonWeddings";
+import BasaltForFamilies from "./pages/blogs/BasaltForFamilies";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -321,6 +326,13 @@ function App() {
           <Route path="/blogs/basalt-paradise-best-resort" element={loading ? <Loader /> : <WhyBestResort />} />
           <Route path="/blogs/exploring-halol-the-best" element={loading ? <Loader /> : <ExploringHalol />} />
           <Route path="/blogs/rain-or-shine-what-makes-monsoons" element={loading ? <Loader /> : <RainOrShine />} />
+          <Route path="/blogs/wellness-by-nature-how-basalt" element={loading ? <Loader /> : <WellnessByNature />} />
+          <Route path="/blogs/day-in-the-life-at-basalt" element={loading ? <Loader /> : <ADay />} />
+          <Route path="/blogs/monsoon-weddings-at-basalt-paradise" element={loading ? <Loader /> : <MonsoonWeddings />} />
+          <Route path="/blogs/staying-with-style-what-makes" element={loading ? <Loader /> : <Staying />} />
+          <Route path="/blogs/basalt-paradise-for-families" element={loading ? <Loader /> : <BasaltForFamilies />} />
+
+
           <Route path="/blogs/main/:id" element={loading ? <Loader /> : <IntegratedBlogDetails />} />
 
 

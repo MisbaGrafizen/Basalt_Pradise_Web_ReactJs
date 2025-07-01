@@ -49,6 +49,11 @@ import culinary from "../../../public/BlogsCoverS/NewBlogCover/Culinary.jpg"
 import whybasalat from "../../../public/BlogsCoverS/NewBlogCover/WhyBasaltParadise.jpg"
 import explore from "../../../public/BlogsCoverS/NewBlogCover/ExploringHalol.jpg"
 import rain from "../../../public/BlogsCoverS/NewBlogCover/FallinLove.jpg"
+import wellness from "../../../public/BlogsCoverS/rencet/Wellness.jpg"
+import stay from "../../../public/BlogsCoverS/rencet/Stayingwith.jpg"
+import day from "../../../public/BlogsCoverS/rencet/ADay.jpg"
+import weddings from "../../../public/BlogsCoverS/rencet/Monsoon.jpg"
+import basalt1 from "../../../public/BlogsCoverS/rencet/Basalt.jpg"
 import axios from "axios";
 
 
@@ -489,6 +494,65 @@ const blogdata = [
         description: "The monsoon in Gujarat has its own rhythm—a slow, poetic unfolding of rain-kissed mornings, misty hills, and vibrant green landscapes. At Basalt Paradise, the rains don’t dampen the experience—they elevate it. Whether you’re watching the clouds drift lazily over the hills or sipping masala chai under a thatched canopy, the monsoon becomes more than just weather—it becomes a feeling.",
         fullContent: ""
     },
+    {
+        id: 35,
+        category: "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
+        route: "/blogs/wellness-by-nature-how-basalt", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: wellness,
+        date: "09-06-2025",
+        time: "11:42 AM",
+        tittle: "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
+        description: "In today’s fast-paced world, the most luxurious thing we can offer ourselves is stillness—a quiet breath, a deeper connection, a place to simply be. Tucked in the basalt-kissed hills of Halol, Basalt Paradise is not just a resort. It’s a retreat for the soul—where wellness is not a product, but a way of living.Whether you're escaping burnout or just craving balance, this is where the journey inward begins.",
+        fullContent: ""
+    },
+    {
+        id: 36,
+        category: "Staying with Style: What Makes Our Villas So Unique",
+        route: "/blogs/staying-with-style-what-makes", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: stay,
+        date: "12-06-2025",
+        time: "06:00 PM",
+        tittle: "Staying with Style: What Makes Our Villas So Unique",
+        description: "A great vacation isn't just about where you go—it's about where you stay. At Basalt Paradise, our villas are more than just rooms. They are private sanctuaries crafted with thoughtful design, natural elegance, and an eye for detail. Whether you’re planning a romantic escape, a solo reset, or a quiet family holiday, our villas give you space to unwind in style and reconnect—with nature, with loved ones, and with yourself.Here’s what sets our villas apart—and why so many guests say their stay feels like home, only better.",
+        fullContent: ""
+    },
+    {
+        id: 37,
+        category: "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
+        route: "/blogs/day-in-the-life-at-basalt", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: day,
+        date: "16-06-2025",
+        time: "06:20 PM",
+        tittle: "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
+        description: "Some places are meant to be seen. Basalt Paradise is meant to be felt. From the first golden light of sunrise to the starry silence of midnight, each moment at our resort flows into the next with an ease that only nature and thoughtful design can create.If you’ve ever wondered what a full day here looks like, consider this your guide to slowing down, tuning in, and experiencing a day of mindful luxury in Halol.",
+        fullContent: ""
+    },
+    {
+        id: 38,
+        category: "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
+        route: "/blogs/monsoon-weddings-at-basalt-paradise", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: weddings,
+        date: "18-06-2025",
+        time: "06:40 PM",
+        tittle: "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
+        description: "For couples who crave intimacy, emotion, and a little magic, a monsoon wedding at Basalt Paradise isn’t just a ceremony—it’s an experience. While many rush to book spring or winter dates, those who choose the monsoon season discover something rare: a celebration wrapped in romance, nature, and spontaneity.Think: mist-draped cliffs, floral mandaps soaked in earthy petrichor, and vows whispered to the rhythm of rain.Welcome to the monsoon wedding you didn’t know you were dreaming of.",
+        fullContent: ""
+    },
+    {
+        id: 39,
+        category: "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
+        route: "/blogs/basalt-paradise-for-families", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: basalt1,
+        date: "20-06-2025",
+        time: "11:10 PM",
+        tittle: "At Basalt Paradise, we understand that a great family vacation is one where everyone feels taken care of—from toddlers to teens, and especially tired parents. Our resort isn’t just peaceful, it’s playful. It’s not just luxurious, it’s thoughtfully designed for families who want to bond, explore, and unwind together.Whether you’re planning a short weekend or a full week away from city noise, here's why Basalt Paradise is one of the best.",
+        fullContent: ""
+    },
 ];
 
 
@@ -538,6 +602,11 @@ export default function Blogs() {
         "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
         "Exploring Halol: The Best Day Trips from Basalt Paradise",
         "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
+        "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
+        "Staying with Style: What Makes Our Villas So Unique",
+        "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
+        "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
+        "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
     ];
 
     const handleClick = (category) => {
@@ -586,36 +655,36 @@ export default function Blogs() {
     let scrollLeft;
 
     const formatDateTime = (isoDateStr) => {
-  const date = new Date(isoDateStr);
-  const options = {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  };
+        const date = new Date(isoDateStr);
+        const options = {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+        };
 
-  return date
-    .toLocaleString('en-GB', options)
-    .replace(/\//g, '-')
-    .replace(',', ' –')
-    .toUpperCase();
-};
-
-
-      useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/api/v2/hotel/admin/blog');
-        setBlogs(response.data?.careerData);
-      } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-      }
+        return date
+            .toLocaleString('en-GB', options)
+            .replace(/\//g, '-')
+            .replace(',', ' –')
+            .toUpperCase();
     };
 
-    fetchBlogs();
-  }, []);
+
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/v2/hotel/admin/blog');
+                setBlogs(response.data?.careerData);
+            } catch (error) {
+                console.error("Failed to fetch blogs:", error);
+            }
+        };
+
+        fetchBlogs();
+    }, []);
 
     useEffect(() => {
         const slider = scrollRef.current;
@@ -659,13 +728,13 @@ export default function Blogs() {
     }, []);
 
     const categoryBlogs = activeTitle
-  ? blogs.filter((blog) => blog.title === activeTitle)
-  : blogs;
+        ? blogs.filter((blog) => blog.title === activeTitle)
+        : blogs;
 
-  const titles = [...new Set(blogs?.map(blog => blog.title))];
+    const titles = [...new Set(blogs?.map(blog => blog.title))];
 
 
-console.log('activeTitle', blogs)
+    console.log('activeTitle', blogs)
 
     return (
         <>
@@ -689,9 +758,9 @@ console.log('activeTitle', blogs)
                     ))} */}
 
 
-                       {/* old Buttons   */}
+                    {/* old Buttons   */}
 
-                        {buttons.map((buttonName) => (
+                    {buttons.map((buttonName) => (
                         <button
                             key={buttonName}
                             onClick={() => handleClick(buttonName)}
@@ -712,7 +781,7 @@ console.log('activeTitle', blogs)
 
 
 
-  {/* {categoryBlogs?.map((blog, index) => (
+                        {/* {categoryBlogs?.map((blog, index) => (
                             <div key={blog.id} className=' flex flex-col gap-[10px] '>
                                 <img
                                     onClick={() => openLightbox(index)}
@@ -752,7 +821,7 @@ console.log('activeTitle', blogs)
                             </div>
                         ))} */}
 
-{/* 0ld Blogsss */}
+                        {/* 0ld Blogsss */}
                         {filteredBlogs.map((blog, index) => (
                             <div key={blog.id} className=' flex flex-col gap-[10px] '>
                                 <img
