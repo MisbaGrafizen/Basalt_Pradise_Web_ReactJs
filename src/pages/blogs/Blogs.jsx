@@ -54,6 +54,18 @@ import stay from "../../../public/BlogsCoverS/rencet/Stayingwith.jpg"
 import day from "../../../public/BlogsCoverS/rencet/ADay.jpg"
 import weddings from "../../../public/BlogsCoverS/rencet/Monsoon.jpg"
 import basalt1 from "../../../public/BlogsCoverS/rencet/Basalt.jpg"
+import quite from "../../../public/BlogsCoverS/rencet/Quiet.jpg"
+import dark from "../../../public/BlogsCoverS/rencet/BasaltAfterDark.jpg"
+import wlidat from "../../../public/BlogsCoverS/rencet/Wild.jpg"
+import rainyretreat from "../../../public/BlogsCoverS/rencet/RainyRetreat.jpg"
+import thehidden from "../../../public/BlogsCoverS/rencet/TheHidden.jpg"
+import wellnesson from "../../../public/BlogsCoverS/rencet/Wellness.jpg"
+import colorof from "../../../public/BlogsCoverS/rencet/ColorofHalol.jpg"
+import unplg from "../../../public/BlogsCoverS/rencet/Unplugto.jpg"
+import offlineescape from "../../../public/BlogsCoverS/rencet/OfflineEscapes.jpg"
+import retreatritual from "../../../public/BlogsCoverS/rencet/RetreatRituals.jpg"
+
+
 import axios from "axios";
 
 
@@ -553,6 +565,126 @@ const blogdata = [
         tittle: "At Basalt Paradise, we understand that a great family vacation is one where everyone feels taken care of—from toddlers to teens, and especially tired parents. Our resort isn’t just peaceful, it’s playful. It’s not just luxurious, it’s thoughtfully designed for families who want to bond, explore, and unwind together.Whether you’re planning a short weekend or a full week away from city noise, here's why Basalt Paradise is one of the best.",
         fullContent: ""
     },
+       {
+        id: 40,
+        category: "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
+        route: "/blogs/quiet-mornings-mountain-mists-waking", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: quite,
+        date: "23-06-2025",
+        time: "11:40 AM",
+        tittle: "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
+        description: "There’s a special kind of peace that only early mornings can offer—the kind where time seems to pause, the air feels softer, and the world hasn’t quite started spinning at full speed. At Basalt Paradise, those quiet mornings aren’t just moments… they’re memories waiting to be made.Whether you’re a morning person or not, here, sunrise has a way of gently inviting you to experience its magic.",
+        fullContent: ""
+    },
+      {
+        id: 41,
+        category: "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
+        route: "/blogs/basalt-paradise-after-dark", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: dark,
+        date: "26-06-2025",
+        time: "11:00 AM",
+        tittle: "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
+        description: "If mornings at Basalt Paradise are a gentle awakening, then nights are a slow, soulful exhale.As the sun dips behind the hills and the sky trades gold for indigo, something magical happens here. The resort doesn’t go quiet — it softens. It glows. It begins to breathe in a whole new rhythm.Here, after dark isn’t about switching off. It’s about tuning in—to yourself, to nature, and to a kind of peace that only arrives with moonlight.",
+        fullContent: ""
+    },
+    {
+        id: 42,
+        category: "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
+        route: "/blogs/wild-at-halol-discovering", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: wlidat,
+        date: "26-06-2025",
+        time: "06:28 PM",
+        tittle: "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
+        description: "When the skies open up and the first raindrops fall on the earth, something magical begins at Basalt Paradise. The dry greens turn lush, the air turns fragrant, and time seems to slow—inviting you to pause, breathe, and sink into comfort.This isn’t just another resort during monsoon. It’s a cocoon. A cozy escape. A place where the rain doesn’t interrupt your plans—it becomes the plan.",
+        fullContent: ""
+    },
+    {
+        id: 43,
+        category: "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
+        route: "/blogs/rainy-cozy-monsoon-moments", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: rainyretreat,
+        date: "30-06-2025",
+        time: "06:15 PM",
+        tittle: "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
+        description: "You might come to Basalt Paradise for peace and luxury—but what stays with you long after your trip is the wild heart of Halol that pulses all around.Here, nature is not a backdrop—it’s the main character. The moment you step beyond your villa, you’re greeted not by walls and Wi-Fi, but by chirps, rustles, fluttering wings, and towering trees that have stood for decades.This is a sanctuary for the soul—and for the senses.",
+        fullContent: ""
+    },
+    {
+        id: 44,
+        category: "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
+        route: "/blogs/the-hidden-corners-five", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: thehidden,
+        date: "03-07-2025",
+        time: "11:09 AM",
+        tittle: "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
+        description: "Not all treasures at Basalt Paradise come with signage or a spotlight. Some are hidden in plain sight—waiting patiently to be stumbled upon by the wanderer, the dreamer, the introvert, or the romantically curious.This blog isn’t about the infinity pool or the spa or the villas. This one’s about the secret places. The ones where time slows down, silence feels like a friend, and nature wraps you in quiet companionship.Here are five hidden corners of Basalt Paradise that many guests discover by chance—and fall in love with for life.",
+        fullContent: ""
+    },
+     {
+        id: 45,
+        category: "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
+        route: "/blogs/wellness-on-the-go", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: wellnesson,
+        date: "05-07-2025",
+        time: "11:37 AM",
+        tittle: "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
+        description: "There’s something deeply rejuvenating about a stay at Basalt Paradise—the still air, the gentle hum of nature, the grounding quiet that settles in without effort. But here’s the best part: the feeling doesn’t have to stay behind when you leave.We believe wellness should travel with you. Inspired by the spa experiences, nature rhythms, and soul-soothing moments at the resort, here are easy, portable rituals you can take back home to reset anytime, anywhere.",
+        fullContent: ""
+    },
+     {
+        id: 46,
+        category: "Color of Halol: Painting the Resort Through Seasonal Hues",
+        route: "/blogs/color-of-halol-painting", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: colorof,
+        date: "07-07-2025",
+        time: "11:48 AM",
+        tittle: "Color of Halol: Painting the Resort Through Seasonal Hues",
+        description: "Some places are best understood through feeling.Basalt Paradise is one of them.But if we had to describe it in color, we’d let the seasons do the talking.Here in Halol, the year doesn't just pass in days—it moves in strokes of color, each one tinting the mood, the light, the memories made in every corner of the resort.Let’s walk you through it—season by season, shade by shade.",
+        fullContent: ""
+    },
+    {
+        id: 46,
+        category: "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
+        route: "/blogs/unplug-to-reconnect-how", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: unplg,
+        date: "09-07-2025",
+        time: "11:12 AM",
+        tittle: "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
+        description: "It starts the moment you arrive.The phone signal begins to flicker. Notifications slow down. The buzz of city life fades into birdsong and rustling leaves. And for the first time in what feels like forever—you exhale. Deeply.At Basalt Paradise, digital detox isn’t forced. It’s just the natural rhythm of things. The world here runs on sunrise glows, afternoon naps, and slow meals under open skies. And without even realizing it, you find yourself letting go… of your phone, your inbox, your to-do list.Here’s how this unplugged escape helps guests reconnect—with nature, with loved ones, and most importantly, with themselves.",
+        fullContent: ""
+    },
+     {
+        id: 47,
+        category: "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
+        route: "/blogs/offline-escapes-a-day", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: offlineescape,
+        date: "11-07-2025",
+        time: "06:17 PM",
+        tittle: "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
+        description: "Imagine a day where your fingers aren’t endlessly scrolling, but wrapped around a warm mug of chai… where eyes aren’t glued to screens, but wide open to misty views and drifting clouds… where silence isn’t awkward, but peaceful.At Basalt Paradise, this kind of day isn’t unusual.It’s just a regular Tuesday.Welcome to the kind of luxury we’ve forgotten—the freedom to be truly offline.",
+        fullContent: ""
+    },
+    {
+        id: 48,
+        category: "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
+        route: "/blogs/retreat-rituals-how-guests", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: retreatritual,
+        date: "14-07-2025",
+        time: "06:38 PM",
+        tittle: "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
+        description: "Some memories stick not because they were loud or grand, but because they were quiet, repeated, and deeply personal.At Basalt Paradise, many guests come for rest—but leave with something far more lasting: their own little rituals.Routines. Rhythms. Moments they look forward to every single day they’re here. And sometimes… even long after they return home.Let’s walk you through how these personal traditions take root—and why they matter.",
+        fullContent: ""
+    },
 ];
 
 
@@ -607,6 +739,16 @@ export default function Blogs() {
         "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
         "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
         "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
+        "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
+        "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
+        "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
+        "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
+        "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
+        "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
+        "Color of Halol: Painting the Resort Through Seasonal Hues",
+        "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
+        "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
+        "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
     ];
 
     const handleClick = (category) => {

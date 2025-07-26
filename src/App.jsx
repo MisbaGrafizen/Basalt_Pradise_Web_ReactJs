@@ -182,6 +182,16 @@ import Staying from "./pages/blogs/Staying";
 import ADay from "./pages/blogs/ADay";
 import MonsoonWeddings from "./pages/blogs/MonsoonWeddings";
 import BasaltForFamilies from "./pages/blogs/BasaltForFamilies";
+import QuietMornings from "./pages/blogs/QuietMornings";
+import BasaltParadiseDark from "./pages/blogs/BasaltParadiseDark";
+import WildAtHalol from "./pages/blogs/WildAtHalol";
+import RainyCozy from "./pages/blogs/RainyCozy";
+import TheHiddenCorners from "./pages/blogs/TheHiddenCorners";
+import WellnessOnThe from "./pages/blogs/WellnessOnThe";
+import ColorOfHalol from "./pages/blogs/ColorOfHalol";
+import UnplugToReconnect from "./pages/blogs/UnplugToReconnect";
+import OfflineEscape from "./pages/blogs/OfflineEscape";
+import RetreatRituals from "./pages/blogs/RetreatRituals";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -331,7 +341,16 @@ function App() {
           <Route path="/blogs/monsoon-weddings-at-basalt-paradise" element={loading ? <Loader /> : <MonsoonWeddings />} />
           <Route path="/blogs/staying-with-style-what-makes" element={loading ? <Loader /> : <Staying />} />
           <Route path="/blogs/basalt-paradise-for-families" element={loading ? <Loader /> : <BasaltForFamilies />} />
-
+          <Route path="/blogs/quiet-mornings-mountain-mists-waking" element={loading ? <Loader /> : <QuietMornings />} />
+          <Route path="/blogs/basalt-paradise-after-dark" element={loading ? <Loader /> : <BasaltParadiseDark />} />
+          <Route path="/blogs/wild-at-halol-discovering" element={loading ? <Loader /> : <WildAtHalol />} />
+          <Route path="/blogs/rainy-cozy-monsoon-moments" element={loading ? <Loader /> : <RainyCozy />} />
+          <Route path="/blogs/the-hidden-corners-five" element={loading ? <Loader /> : <TheHiddenCorners />} />
+          <Route path="/blogs/wellness-on-the-go" element={loading ? <Loader /> : <WellnessOnThe />} />
+          <Route path="/blogs/color-of-halol-painting" element={loading ? <Loader /> : <ColorOfHalol />} />
+          <Route path="/blogs/unplug-to-reconnect-how" element={loading ? <Loader /> : <UnplugToReconnect />} />
+          <Route path="/blogs/offline-escapes-a-day" element={loading ? <Loader /> : <OfflineEscape />} />
+          <Route path="/blogs/retreat-rituals-how-guests" element={loading ? <Loader /> : <RetreatRituals />} />
 
           <Route path="/blogs/main/:id" element={loading ? <Loader /> : <IntegratedBlogDetails />} />
 
