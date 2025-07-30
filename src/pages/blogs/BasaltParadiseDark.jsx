@@ -95,17 +95,18 @@ export default function BasaltParadiseDark() {
             <div className="  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto px-2 py-8 gap-[20px] pt-[110px] flex ">
                 <div className=" md:w-[80%] gap-[40px] flex flex-col">
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                      <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Golden Hour Fades, and the Glow Begins
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill}
                                 onClick={() => openLightbox(praragavhill)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -133,18 +134,18 @@ export default function BasaltParadiseDark() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
-                            {/* <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i> */}
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Candlelight Dinners That Feel Like a Dream
                         </h1>
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill1}
                                 onClick={() => openLightbox(praragavhill1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Main Content */}
                         <article className="space-y-2">
@@ -174,7 +175,7 @@ export default function BasaltParadiseDark() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
-                            {/* <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i> */}
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Starlit Walks and Story-filled Bonfires
                         </h1>
                         {/* Hero Banner */}
@@ -211,17 +212,18 @@ export default function BasaltParadiseDark() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                      <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Rooms That Invite Deep Rest
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird}
                                 onClick={() => openLightbox(FlyingBird)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -258,17 +260,18 @@ export default function BasaltParadiseDark() {
 
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                      <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Why Evenings at Basalt Paradise Feel So Special
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird1}
                                 onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -297,17 +300,18 @@ export default function BasaltParadiseDark() {
 
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Guest Reflections :
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird1}
                                 onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>

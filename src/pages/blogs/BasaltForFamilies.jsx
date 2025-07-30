@@ -94,7 +94,8 @@ export default function BasaltForFamilies() {
             <div className="  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto px-2 py-8 gap-[20px] pt-[110px] flex ">
                 <div className=" md:w-[80%] gap-[40px] flex flex-col">
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Kid-Friendly Spaces Designed with Freedom in Mind
                         </h1>
 
@@ -130,7 +131,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Nature Learning That Feels Like Play
                         </h1>
 
@@ -167,7 +169,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Family Villas That Feel Like Home
                         </h1>
 
@@ -208,7 +211,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Menus That Please Picky Eaters and Foodies Alike
                         </h1>
 
@@ -247,7 +251,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             While They Play, You Unwind
                         </h1>
 
@@ -288,7 +293,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Weekend Bonding, Lifelong Memories
                         </h1>
 
@@ -328,7 +334,8 @@ export default function BasaltForFamilies() {
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
 
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] flex gap-[20px] items-center font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Why Basalt Paradise is One of the Top
                         </h1>
 

@@ -95,17 +95,18 @@ export default function TheHiddenCorners() {
             <div className="  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto px-2 py-8 gap-[20px] pt-[110px] flex ">
                 <div className=" md:w-[80%] gap-[40px] flex flex-col">
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Hammock Grove Behind the Banyan Tree
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill}
                                 onClick={() => openLightbox(praragavhill)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -142,18 +143,18 @@ export default function TheHiddenCorners() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
-                            {/* <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i> */}
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Reading Bench by the Lily Pond
                         </h1>
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill1}
                                 onClick={() => openLightbox(praragavhill1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Main Content */}
                         <article className="space-y-2">
@@ -195,18 +196,18 @@ export default function TheHiddenCorners() {
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
-                            {/* <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i> */}
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Library Nook with the Hidden Skylight
                         </h1>
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill1}
                                 onClick={() => openLightbox(praragavhill1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Main Content */}
                         <article className="space-y-2">
@@ -247,18 +248,18 @@ We encourage guests to take their shoes off and walk barefoot—it’s grounding
 
                     <div className=" w-[100%]">
                         <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
-                            {/* <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i> */}
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Meditation Stone Under the Champa Tree
                         </h1>
                         {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={praragavhill1}
                                 onClick={() => openLightbox(praragavhill1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Main Content */}
                         <article className="space-y-2">
@@ -297,18 +298,19 @@ We encourage guests to take their shoes off and walk barefoot—it’s grounding
 
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             The Secret Sunset Alcove
 
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird1}
                                 onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -346,17 +348,18 @@ We encourage guests to take their shoes off and walk barefoot—it’s grounding
 
                     <span className=" flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed "></span>
                     <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                             Why These Corners Matter
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird1}
                                 onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
@@ -383,17 +386,18 @@ We encourage guests to take their shoes off and walk barefoot—it’s grounding
                     </div>
 
                      <div className=" w-[100%]">
-                        <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] text-gray-900">
+                       <h1 className="text-[18px] mb-[10px] md:text-[27px] font-[600] flex items-center gap-[10px] text-gray-900">
+                            <i className="fa-solid text-[13px] text-[#7442ff] fa-circle"></i>
                        A Note to Future Guests :    
                         </h1>
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
+                        {/* <div className="relative w-full md:h-[400px] h-[200px] mb-3 bg-[#0a192f] rounded-lg overflow-hidden">
                             <img
                                 src={FlyingBird1}
                                 onClick={() => openLightbox(FlyingBird1)}
                                 alt="Basalt Paradise Resort"
                                 className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
                             />
-                        </div>
+                        </div> */}
                         {/* <div className=' cursor-default mb-[10px] flex items-center gap-[10px]   text-[#7442ff] '>
                             <i className="fa-regular text-[20px ] fa-location-dot"></i>
                             <p className=' gap-[10px] mt-[2px] flex'>
