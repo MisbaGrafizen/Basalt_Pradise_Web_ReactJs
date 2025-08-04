@@ -7,7 +7,7 @@ import blog111 from "../../../public/10Blogs/Hathnimatafall3.jpg";
 import flyingBird1 from "../../../public/lBlogdetailsImgae/history/champaner.jpg";
 import flyingBird2 from "../../../public/lBlogdetailsImgae/history/img1.jpg";
 import flyingBird3 from "../../../public/lBlogdetailsImgae/history/img2.jpg";
-import kadaDam from "../../../public/lBlogdetailsImgae/history/pavagadh.avif";
+import kadaDam from "../../../public/lBlogdetailsImgae/history/Pavagadh.avif";
 import kadaDam1 from "../../../public/lBlogdetailsImgae/history/one.jpg";
 import kadaDam2 from "../../../public/lBlogdetailsImgae/history/images.jpg";
 import kadaDam3 from "../../../public/lBlogdetailsImgae/BestTime/pavagadh.jpg";
