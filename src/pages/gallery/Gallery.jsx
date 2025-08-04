@@ -131,56 +131,20 @@ import out23 from "../../../public/5june-edit/new23.jpg"
 import out24 from "../../../public/5june-edit/new24.jpg"
 import out25 from "../../../public/5june-edit/new25.jpg"
 
-import gardendrone from "../../../public/Basalt Final/b17.png"
-import zen2 from "../../../public/Basalt Final/b18.jpg"
-import bridge from "../../../public/Basalt Final/b19.jpg"
-import frogCenter from "../../../public/Basalt Final/b20.jpeg"
-import frorest from "../../../public/Basalt Final/b21.jpg"
-import mountain from "../../../public/Basalt Final/b22.jpeg"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import gardendrone from "../../../public/Basalt Final/B17.png"
+import zen2 from "../../../public/Basalt Final/B18.jpg"
+import bridge from "../../../public/Basalt Final/B19.jpg"
+import frogCenter from "../../../public/Basalt Final/B20.jpeg"
+import frorest from "../../../public/Basalt Final/B21.jpg"
+import mountain from "../../../public/Basalt Final/B22.jpeg"
 
 import { useLocation } from "react-router-dom"
 import Footer from "../../Component/footer/Footer"
 
 
-
-
-
 export default function Gallery() {
     const travellerTabRef = useRef(null);
-
+ 
     const location = useLocation()
     const [photoTab, setPhotoTab] = useState(location?.state?.openGuest ? "guest" : "property")
     const outdoorsRef = useRef(null)
