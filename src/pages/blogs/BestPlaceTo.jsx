@@ -8,7 +8,7 @@ import flyingBird1 from "../../../public/lBlogdetailsImgae/BestTime/winter.webp"
 import flyingBird2 from "../../../public/lBlogdetailsImgae/BestTime/free-photo.jpeg";
 // import flyingBird2 from "../../../public/blog5Images/paragrvdhHill2.jpg";
 // import flyingBird3 from "../../../public/blog5Images/paragrvdhHill3.jpg";
-import kadaDam from "../../../public/lBlogdetailsImgae/BestTime/pavagadh.jpg";
+import kadaDam from "../../../public/lBlogdetailsImgae/BestTime/Pavagadh.jpg";
 import kadaDam1 from "../../../public/lBlogdetailsImgae/BestTime/river.jpg";
 // import kadaDam1 from "../../../public/Blog4images/kadaDam1.jpg";
 // import kadaDam2 from "../../../public/Blog4images/kadaDam.jpg";
