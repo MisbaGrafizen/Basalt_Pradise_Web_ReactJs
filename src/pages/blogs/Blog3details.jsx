@@ -5,7 +5,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import blog1 from "../../../public/10Blogs/Hathnimatafall.jpg";
 import blog11 from "../../../public/10Blogs/Hathnimatafall2.jpg";
 import blog111 from "../../../public/10Blogs/Hathnimatafall3.jpg";
-import kadaDam1 from "../../../public/blog3images/kadadam1.jpg";
+import kadaDam1 from "../../../public/blog3images/Kadadam1.jpg";
 import kadaDam2 from "../../../public/blog3images/kadadam2.jpg";
 import hanuman1 from "../../../public/blog3images/zand-hanuman-temple1.png"
 import hanuman2 from "../../../public/blog3images/zand-hanuman-temple2.png"
