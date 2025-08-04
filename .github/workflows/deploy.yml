@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build (if using React/Vue/etc.)
+      - name: Build (if using React/Vite/etc.)
         run: |
           npm install
           npm run build
@@ -23,6 +23,11 @@ jobs:
         uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Add host to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 65002 213.190.5.79 >> ~/.ssh/known_hosts
 
       - name: Deploy to Hostinger via SCP
         run: |
