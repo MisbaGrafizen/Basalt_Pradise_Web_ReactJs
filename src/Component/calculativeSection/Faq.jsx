@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import faq from "../../../Public/Basalt/B9.jpg";
+import faq from "../../../public/Basalt/B9.jpg";
 
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
