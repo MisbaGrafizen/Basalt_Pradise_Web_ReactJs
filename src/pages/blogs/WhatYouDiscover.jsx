@@ -5,7 +5,7 @@ import blog1 from "../../../public/lBlogdetailsImgae/newblogimgs/Mini.jpg";
 import blog11 from "../../../public/lBlogdetailsImgae/newblogimgs/WhyItMatters.jpg";
 import blog111 from "../../../public/lBlogdetailsImgae/newblogimgs/stories.webp";
 import flyingBird1 from "../../../public/10Blogs/thali.png";
-import flyingBird2 from "../../../public/10Blogs/LocalSweets.avif";
+import flyingBird2 from "../../../public/10Blogs/Localsweets.avif";
 import flyingBird3 from "../../../public/NewDriveImage/mainfull.jpg";
 import kadaDam from "../../../public/lBlogdetailsImgae/history/imgs.jpg";
 import kadaDam1 from "../../../public/lBlogdetailsImgae/history/11.jpg";
