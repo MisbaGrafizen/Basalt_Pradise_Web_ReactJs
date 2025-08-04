@@ -1,0 +1,29 @@
+name: Deploy to basaltparadise
+
+on:
+  push:
+    branches:
+      - main  # or your deployment branch
+
+jobs:
+  deploy:
+    name: Deploy via SCP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build (if using React/Vue/etc.)
+        run: |
+          npm install
+          npm run build
+
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Deploy to Hostinger via SCP
+        run: |
+          scp -P 65002 -r ./dist/* u300909184@213.190.5.79:/home/u300909184/domains/basaltparadise.com/public_html/
