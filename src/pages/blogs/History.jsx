@@ -10,7 +10,7 @@ import flyingBird3 from "../../../public/lBlogdetailsImgae/history/img2.jpg";
 import kadaDam from "../../../public/lBlogdetailsImgae/history/Pavagadh.avif";
 import kadaDam1 from "../../../public/lBlogdetailsImgae/history/one.jpg";
 import kadaDam2 from "../../../public/lBlogdetailsImgae/history/images.jpg";
-import kadaDam3 from "../../../public/lBlogdetailsImgae/BestTime/pavagadh.jpg";
+import kadaDam3 from "../../../public/lBlogdetailsImgae/BestTime/Pavagadh.jpg";
 import kadaDam4 from "../../../public/Basalt/B9.jpg";
 
 import Footer from "../../Component/footer/Footer";
