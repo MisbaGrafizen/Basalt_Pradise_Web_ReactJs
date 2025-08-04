@@ -2,7 +2,7 @@ import Header from "../../Component/header/Header";
 import React, { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import blog1 from "../../../public/10blogs/markets.avif";
+import blog1 from "../../../public/10Blogs/markets.avif";
 import blog11 from "../../../public/10Blogs/amba-handicraft.avif";
 import blog111 from "../../../public/10Blogs/khavda-pottery.jpg";
 import flyingBird1 from "../../../public/10Blogs/kalika-shakti-peeth.webp";
