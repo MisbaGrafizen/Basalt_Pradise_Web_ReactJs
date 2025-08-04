@@ -10,7 +10,6 @@ import kadaDam2 from "../../../public/blog3images/kadadam2.jpg";
 import hanuman1 from "../../../public/blog3images/zand-hanuman-temple1.png"
 import hanuman2 from "../../../public/blog3images/zand-hanuman-temple2.png"
 import hanuman3 from "../../../public/blog3images/zand-hanuman-temple2.jpg"
-
 import shibrajPur from "../../../public/blog3images/shivrajPur.jpg"
 import shibrajPur1 from "../../../public/blog3images/shivrajPur1.jpg"
 import shibrajPur2 from "../../../public/blog3images/shivrajPur3.jpg"
