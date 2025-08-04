@@ -110,7 +110,7 @@
 import React, { useEffect, useState } from "react";
 import "../src/App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "./pages/home/Home ";
+import Home from "./pages/home/Home";
 
 import Loader from "./Component/loader/Loader";
 // import AboutUs from "./pages/aboutus/AboutUs";

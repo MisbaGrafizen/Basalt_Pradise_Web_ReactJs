@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../Component/header/Header";
-import HeroSection from "../../Component/herosection/HeroSection";
+import HeroSection from "../../Component/herosection/Herosection";
 import { Review } from "../../Component/review/Review";
 import StaffHand from "../../Component/staffHand/StaffHand";
 import BannerSection from "../../Component/bannerSection/BannerSection";
