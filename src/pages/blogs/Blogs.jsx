@@ -663,7 +663,7 @@ const blogdata = [
     },
      {
         id: 47,
-        category: "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
+        category: "Offline Escapes: A Day Without Wi-Fi at Basalt Paradise",
         route: "/blogs/offline-escapes-a-day", // Unique route
         // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
         image: offlineescape,
@@ -699,57 +699,110 @@ export default function Blogs() {
 
 
 
+    // const buttons = [
+    //     "All",
+    //     "10 Must-Visit Places Near Basalt Paradise",
+    //     "Travel Tips & Guides",
+    //     "Offbeat Destinations Near Halol",
+    //     "Best Nature Spots Near Halol",
+    //     " Activities Near Basalt",
+    //     "Weekend from Ahmedabad",
+    //     "Romantic Getaways Near Vadodara",
+    //     "Spritual Trails Near Halol",
+    //     "Best Time to Visit Pavagadh & Halol",
+    //     "Birdwatching & Eco-Tourism Near Halol",
+    //     " Hidden Temples & Spiritual Sites Around Pavagadh",
+    //     "Why Monsoon Is the Best Season to Visit Pavagadh",
+    //     "Top Photography Spots Near Halol",
+    //     "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
+    //     "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
+    //     "Budget Travel Tips for Exploring Halol & Pavagadh",
+    //     "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
+    //     "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
+    //     "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
+    //     "Top Waterfalls Near Halol to Explore This Monsoon",
+    //     "Local Food Guide: What to Eat in Halol & Around Pavagadh",
+    //     "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
+    //     "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
+    //     "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
+    //     "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
+    //     "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
+    //     "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
+    //     "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
+    //     "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
+    //     "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
+    //     "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
+    //     "Exploring Halol: The Best Day Trips from Basalt Paradise",
+    //     "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
+    //     "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
+    //     "Staying with Style: What Makes Our Villas So Unique",
+    //     "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
+    //     "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
+    //     "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
+    //     "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
+    //     "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
+    //     "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
+    //     "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
+    //     "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
+    //     "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
+    //     "Color of Halol: Painting the Resort Through Seasonal Hues",
+    //     "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
+    //     "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
+    //     "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
+    // ];
+
+
     const buttons = [
-        "All",
-        "10 Must-Visit Places Near Basalt Paradise",
-        "Travel Tips & Guides",
-        "Offbeat Destinations Near Halol",
-        "Best Nature Spots Near Halol",
-        " Activities Near Basalt",
-        "Weekend from Ahmedabad",
-        "Romantic Getaways Near Vadodara",
-        "Spritual Trails Near Halol",
-        "Best Time to Visit Pavagadh & Halol",
-        "Birdwatching & Eco-Tourism Near Halol",
-        " Hidden Temples & Spiritual Sites Around Pavagadh",
-        "Why Monsoon Is the Best Season to Visit Pavagadh",
-        "Top Photography Spots Near Halol",
-        "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
-        "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
-        "Budget Travel Tips for Exploring Halol & Pavagadh",
-        "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
-        "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
-        "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
-        "Top Waterfalls Near Halol to Explore This Monsoon",
-        "Local Food Guide: What to Eat in Halol & Around Pavagadh",
-        "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
-        "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
-        "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
-        "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
-        "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
-        "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
-        "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
-        "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
-        "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
-        "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
-        "Exploring Halol: The Best Day Trips from Basalt Paradise",
-        "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
-        "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
-        "Staying with Style: What Makes Our Villas So Unique",
-        "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
-        "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
-        "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
-        "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
-        "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
-        "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
-        "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
-        "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
-        "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
-        "Color of Halol: Painting the Resort Through Seasonal Hues",
-        "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
-        "Offline Escapes: A Day Without Wi‑Fi at Basalt Paradise",
-        "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
-    ];
+  "All",
+  "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
+  "Offline Escapes: A Day Without Wi-Fi at Basalt Paradise",
+  "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
+  "Color of Halol: Painting the Resort Through Seasonal Hues",
+  "Wellness on the Go: Quick Spa and Relaxation Rituals Guests Can Do Anywhere",
+  "The Hidden Corners: Five Quiet Spots at Basalt Paradise You Didn’t Know Existed",
+  "Rainy Retreat: Cozy Monsoon Moments at Basalt Paradise",
+  "Wild at Halol: Discovering the Local Flora & Fauna Around the Resort",
+  "Basalt Paradise After Dark: How the Resort Glows When the Day Ends",
+  "Quiet Mornings & Mountain Mists: Waking Up at Basalt Paradise",
+  "Basalt Paradise for Families: Why Kids (and Parents) Love It Here",
+  "Monsoon Weddings at Basalt Paradise: The Dreamy Celebration You Didn’t Know You Needed",
+  "A Day in the Life at Basalt Paradise: From Sunrise to Starlight",
+  "Staying with Style: What Makes Our Villas So Unique",
+  "Wellness by Nature: How Basalt Paradise Nurtures Mind, Body & Soul",
+  "Rain or Shine: What Makes Monsoons at Basalt Paradise So Magical",
+  "Exploring Halol: The Best Day Trips from Basalt Paradise",
+  "Why Basalt Paradise Is the Best Resort for Special Occasions Near Vadodara",
+  "A Culinary Journey at Basalt Paradise: Farm-to-Table Dining in Halol",
+  "Eco-Luxury Redefined: How Basalt Paradise Balances Nature and Indulgence",
+  "Moonlit Magic: What Makes Nighttime at Basalt Paradise So Special",
+  "Coffee with a View: Local Brews You’ll Only Find at Basalt Paradise",
+  "72 Hours in Basalt Paradise: The Ultimate Weekend Itinerary",
+  "Design Diaries: The Architecture That Makes Basalt Paradise Unforgettable",
+  "The Secret Life of Tide Pools: What You’ll Discover on Our Hidden Shorelines",
+  "Basalt Paradise Through a Local Lens: Stories from the People Who Call It Home",
+  "Sunset Science: Why Basalt Paradise Has the Most Magical Golden Hours",
+  "Local Food Guide: What to Eat in Halol & Around Pavagadh",
+  "Top Waterfalls Near Halol to Explore This Monsoon",
+  "How to Reach Pavagadh from Major Cities – Vadodara, Ahmedabad, Surat",
+  "Best Sunrise & Sunset Spots Near Pavagadh for Nature Lovers",
+  "Local Markets & Handicrafts in Halol – Where to Shop Like a Local",
+  "Budget Travel Tips for Exploring Halol & Pavagadh",
+  "History of Champaner-Pavagadh – A Heritage Explorer’s Guide",
+  "Day Trip Itinerary from Vadodara to Pavagadh – The Perfect 1-Day Plan",
+  "Top Photography Spots Near Halol",
+  "Why Monsoon Is the Best Season to Visit Pavagadh",
+  "Hidden Temples & Spiritual Sites Around Pavagadh",
+  "Birdwatching & Eco-Tourism Near Halol",
+  "Best Time to Visit Pavagadh & Halol",
+  "Spritual Trails Near Halol",
+  "Romantic Getaways Near Vadodara",
+  "Weekend from Ahmedabad",
+  "Activities Near Basalt",
+  "Best Nature Spots Near Halol",
+  "Offbeat Destinations Near Halol",
+  "Travel Tips & Guides",
+  "10 Must-Visit Places Near Basalt Paradise",
+];
 
     const handleClick = (category) => {
         setSelectedCategory(category);
@@ -764,10 +817,43 @@ export default function Blogs() {
         navigate(route);
     };
 
-    const filteredBlogs =
-        selectedCategory === "All"
-            ? blogdata
-            : blogdata.filter(blog => blog.category === selectedCategory);
+    // Helper to convert blog date+time to timestamp
+const toMillis = (blog) => {
+  if (blog.date) {
+    const [dd, mm, yyyy] = blog.date.split("-").map(Number);
+    let hh = 0, min = 0;
+
+    if (blog.time) {
+      const [timePart, ampmRaw] = blog.time.split(" ");
+      const [h, m] = timePart.split(":").map(Number);
+      const ampm = (ampmRaw || "").toUpperCase();
+      hh = h % 12 + (ampm === "PM" ? 12 : 0);
+      if (ampm === "AM" && h === 12) hh = 0; // midnight fix
+      min = m || 0;
+    }
+
+    return new Date(yyyy, mm - 1, dd, hh, min).getTime();
+  }
+  return 0;
+};
+
+// Always sort blogdata by newest date first
+const sortedBlogData = [...blogdata].sort((a, b) => toMillis(b) - toMillis(a));
+
+console.log('sortedBlogData', sortedBlogData)
+
+const filteredBlogs =
+  selectedCategory === "All"
+    ? sortedBlogData
+    : sortedBlogData.filter((blog) => blog.category === selectedCategory);
+
+    console.log('filteredBlogs', filteredBlogs)
+
+
+    // const filteredBlogs =
+    //     selectedCategory === "All"
+    //         ? blogdata
+    //         : blogdata.filter(blog => blog.category === selectedCategory);
 
     const openLightbox = (index) => {
         setCurrentIndex(index);
@@ -877,6 +963,7 @@ export default function Blogs() {
 
 
     console.log('activeTitle', blogs)
+    
 
     return (
         <>
