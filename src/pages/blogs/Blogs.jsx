@@ -64,16 +64,16 @@ import colorof from "../../../public/BlogsCoverS/rencet/ColorofHalol.jpg"
 import unplg from "../../../public/BlogsCoverS/rencet/Unplugto.jpg"
 import offlineescape from "../../../public/BlogsCoverS/rencet/OfflineEscapes.jpg"
 import retreatritual from "../../../public/BlogsCoverS/rencet/RetreatRituals.jpg"
-import theart from "../../../public/BlogsCoverS/NewBlogCover/TheArt.jpeg"
+import theart from "../../../public/BlogsCoverS/NewBlogCover/WellnesInTune.jpeg"
 import sunrisestory from "../../../public/BlogsCoverS/NewBlogCover/MorningStay.jpeg"
 import quitecorner from "../../../public/BlogsCoverS/NewBlogCover/FindYour.jpeg"
-import musictune from "../../../public/BlogsCoverS/NewBlogCover/WellnesInTune.jpeg"
+import musictune from "../../../public/BlogsCoverS/NewBlogCover/HearTheMagic.jpeg"
 import seasonal from "../../../public/BlogsCoverS/NewBlogCover/CraftedIn.jpeg"
 import trail from "../../../public/BlogsCoverS/NewBlogCover/WalkThePaths.jpeg"
 import bpday from "../../../public/BlogsCoverS/NewBlogCover/AForest.jpeg"
 import stoe from "../../../public/BlogsCoverS/NewBlogCover/WellnessRooted.jpeg"
 import welltravel from "../../../public/BlogsCoverS/NewBlogCover/WhereHolidayFeels.jpeg"
-import playfulmusic from "../../../public/BlogsCoverS/NewBlogCover/HearTheMagic.jpeg"
+import playfulmusic from "../../../public/BlogsCoverS/NewBlogCover/TheArt.jpeg"
 
 
 import axios from "axios";
@@ -821,7 +821,7 @@ const blogdata = [
 
 export default function Blogs() {
     const navigate = useNavigate();
-    const [selectedCategory, setSelectedCategory] = useState("10 Must-Visit Places Near Basalt Paradise");
+    const [selectedCategory, setSelectedCategory] = useState("All");
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
     const [blogs, setBlogs] = useState([]);
