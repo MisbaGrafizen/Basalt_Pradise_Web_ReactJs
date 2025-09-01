@@ -192,6 +192,16 @@ import ColorOfHalol from "./pages/blogs/ColorOfHalol";
 import UnplugToReconnect from "./pages/blogs/UnplugToReconnect";
 import OfflineEscape from "./pages/blogs/OfflineEscape";
 import RetreatRituals from "./pages/blogs/RetreatRituals";
+import SunriseStories from "./pages/blogs/SunriseStories";
+import TheArtisans from "./pages/blogs/TheArtisans";
+import SeasonalSpa from "./pages/blogs/SeasonalSpa";
+import BasaltByDay from "./pages/blogs/BasaltByDay";
+import MusicInAir from "./pages/blogs/MisicInAir";
+import TrailTails from "./pages/blogs/Trail&Tails";
+import HealingPower from "./pages/blogs/HealingPower";
+import QuiteCorners from "./pages/blogs/QuiteCorners";
+import WellTravel from "./pages/blogs/WellTravel";
+import PlayfulSouls from "./pages/blogs/PlayfulSoules";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -351,6 +361,17 @@ function App() {
           <Route path="/blogs/unplug-to-reconnect-how" element={loading ? <Loader /> : <UnplugToReconnect />} />
           <Route path="/blogs/offline-escapes-a-day" element={loading ? <Loader /> : <OfflineEscape />} />
           <Route path="/blogs/retreat-rituals-how-guests" element={loading ? <Loader /> : <RetreatRituals />} />
+          <Route path="/blogs/sunrise-stories-guests-share" element={loading ? <Loader /> : <SunriseStories />} />
+          <Route path="/blogs/the-artisans-of-halol" element={loading ? <Loader /> : <TheArtisans />} />
+          <Route path="/blogs/seasonal-spa-rituals-treatments" element={loading ? <Loader /> : <SeasonalSpa />} />
+          <Route path="/blogs/basalt-by-day-stars" element={loading ? <Loader /> : <BasaltByDay />} />
+          <Route path="/blogs/music-in-air-how" element={loading ? <Loader /> : <MusicInAir />} />
+          <Route path="/blogs/trail-tales-short-walks" element={loading ? <Loader /> : <TrailTails />} />
+          <Route path="/blogs/healing-power-of-stone" element={loading ? <Loader /> : <HealingPower />} />
+          <Route path="/blogs/quiet-corners-the-best" element={loading ? <Loader /> : <QuiteCorners />} />
+          <Route path="/blogs/well-traveled-well-rested" element={loading ? <Loader /> : <WellTravel />} />
+          <Route path="/blogs/playful-souls-rediscovering-childhood" element={loading ? <Loader /> : <PlayfulSouls />} />
+
 
           <Route path="/blogs/main/:id" element={loading ? <Loader /> : <IntegratedBlogDetails />} />
 

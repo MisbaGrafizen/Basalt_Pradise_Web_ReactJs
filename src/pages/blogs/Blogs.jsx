@@ -64,6 +64,16 @@ import colorof from "../../../public/BlogsCoverS/rencet/ColorofHalol.jpg"
 import unplg from "../../../public/BlogsCoverS/rencet/Unplugto.jpg"
 import offlineescape from "../../../public/BlogsCoverS/rencet/OfflineEscapes.jpg"
 import retreatritual from "../../../public/BlogsCoverS/rencet/RetreatRituals.jpg"
+import theart from "../../../public/BlogsCoverS/NewBlogCover/TheArt.jpeg"
+import sunrisestory from "../../../public/BlogsCoverS/NewBlogCover/MorningStay.jpeg"
+import quitecorner from "../../../public/BlogsCoverS/NewBlogCover/FindYour.jpeg"
+import musictune from "../../../public/BlogsCoverS/NewBlogCover/WellnesInTune.jpeg"
+import seasonal from "../../../public/BlogsCoverS/NewBlogCover/CraftedIn.jpeg"
+import trail from "../../../public/BlogsCoverS/NewBlogCover/WalkThePaths.jpeg"
+import bpday from "../../../public/BlogsCoverS/NewBlogCover/AForest.jpeg"
+import stoe from "../../../public/BlogsCoverS/NewBlogCover/WellnessRooted.jpeg"
+import welltravel from "../../../public/BlogsCoverS/NewBlogCover/WhereHolidayFeels.jpeg"
+import playfulmusic from "../../../public/BlogsCoverS/NewBlogCover/HearTheMagic.jpeg"
 
 
 import axios from "axios";
@@ -685,6 +695,126 @@ const blogdata = [
         description: "Some memories stick not because they were loud or grand, but because they were quiet, repeated, and deeply personal.At Basalt Paradise, many guests come for rest—but leave with something far more lasting: their own little rituals.Routines. Rhythms. Moments they look forward to every single day they’re here. And sometimes… even long after they return home.Let’s walk you through how these personal traditions take root—and why they matter.",
         fullContent: ""
     },
+     {
+        id: 49,
+        category: "Sunrise Stories: Guests Share Their Morning Moments at Basalt Paradise",
+        route: "/blogs/sunrise-stories-guests-share", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: sunrisestory,
+        date: "17-07-2025",
+        time: "06:12 PM",
+        tittle: "Sunrise Stories: Guests Share Their Morning Moments at Basalt Paradise",
+        description: "There’s something magical about mornings at Basalt Paradise. Long before the world outside stirs into motion, the resort awakens with gentle whispers of nature—mist curling over the hills, dew glistening on leaves, and a calmness that makes every breath feel fuller. Guests often say it’s these early hours that linger in memory long after their stay ends.In this blog, we share heartfelt stories of mornings as seen through the eyes of our guests—moments that capture the soul of this resort in Halol near Vadodara.",
+        fullContent: ""
+    },
+      {
+        id: 50,
+        category: "The Artisans of Halol: Handmade Gifts to Take Home from Basalt Paradise",
+        route: "/blogs/the-artisans-of-halol", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: theart,
+        date: "20-07-2025",
+        time: "06:48 PM",
+        tittle: "The Artisans of Halol: Handmade Gifts to Take Home from Basalt Paradise",
+        description: "When you visit Basalt Paradise, the memories you make don’t have to end at check-out. Nestled in the cultural heart of Halol near Vadodara, the resort is surrounded by talented local artisans whose crafts carry centuries of tradition. From handwoven textiles to earthy stone pottery, these treasures allow guests to take a piece of Halol’s soul back home.",
+        fullContent: ""
+    },
+     {
+        id: 51,
+        category: "Seasonal Spa Rituals: Treatments Inspired by Halol’s Changing Weather",
+        route: "/blogs/seasonal-spa-rituals-treatments", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: seasonal,
+        date: "23-07-2025",
+        time: "11:02 AM",
+        tittle: "Seasonal Spa Rituals: Treatments Inspired by Halol’s Changing Weather",
+        description: "At Basalt Paradise, relaxation isn’t just about a massage or a facial—it’s about aligning with the rhythm of nature. Nestled in the tranquil setting of Halol near Vadodara, the resort’s spa draws inspiration from the changing seasons, creating rituals that soothe both body and mind. Guests often say these treatments feel like nature itself wrapping them in comfort.",
+        fullContent: ""
+    },
+     {
+        id: 52,
+        category: "Basalt by Day, Stars by Night: How Light Shapes Your Senses at the Resort",
+        route: "/blogs/basalt-by-day-stars", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: bpday,
+        date: "26-07-2025",
+        time: "11:27 AM",
+        tittle: "Basalt by Day, Stars by Night: How Light Shapes Your Senses at the Resort",
+        description: "At Basalt Paradise in Halol near Vadodara, time isn’t measured by clocks—it’s painted by light. From the very first morning rays spilling across the pool to the soft shimmer of starlight that blankets the villas, every hour at the resort feels different. Guests often describe their stay as “living inside a moving painting,” where the canvas changes with the sun and moon.",
+        fullContent: ""
+    },
+      {
+        id: 53,
+        category: "Music in the Air: How Natural Sounds Become Part of Your Stay",
+        route: "/blogs/music-in-air-how", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: musictune,
+        date: "30-08-2025",
+        time: "06:02 PM",
+        tittle: "Music in the Air: How Natural Sounds Become Part of Your Stay",
+        description: "At Basalt Paradise in Halol near Vadodara, the atmosphere is more than just visual beauty—it’s an experience you can hear. The resort has its own rhythm, shaped not only by design but by the music of nature. Guests often find themselves pausing, eyes closed, just to listen. From bamboo groves swaying to the quiet laughter of a flowing stream, every corner hums with an ambient soundtrack that lingers long after you leave.",
+        fullContent: ""
+    },
+    {
+        id: 54,
+        category: "Trail & Tales: Short Walks That Reveal Halol’s Hidden Stories",
+        route: "/blogs/trail-tales-short-walks", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: trail,
+        date: "03-08-2025",
+        time: "06:38 PM",
+        tittle: "Trail & Tales: Short Walks That Reveal Halol’s Hidden Stories",
+        description: "Every destination has secrets, and in Halol, Gujarat, those secrets often live along its trails. At Basalt Paradise resort, guests don’t just walk for leisure—they wander into stories. Each step reveals a layer of culture, history, or folklore that gives the land its soul. Whether it’s a shaded path lined with ancient trees or a winding route toward forgotten ruins, these short walks become more than exercise—they become time travel.",
+        fullContent: ""
+    },
+     {
+        id: 55,
+        category: "The Healing Power of Stone: How Basalt Shapes Our Well-Being",
+        route: "/blogs/healing-power-of-stone", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: stoe,
+        date: "06-08-2025",
+        time: "06:13 PM",
+        tittle: "The Healing Power of Stone: How Basalt Shapes Our Well-Being",
+        description: "At first glance, Basalt Paradise is named for the rugged stone that defines its architecture. But basalt is more than a building material—it’s an element of balance, grounding, and calm. Across cultures and centuries, stone has carried symbolic and practical healing power, and here in Halol, basalt continues that story.",
+        fullContent: ""
+    },
+     {
+        id: 56,
+        category: "Quiet Corners: The Best Spots to Read, Reflect & Really Be",
+        route: "/blogs/quiet-corners-the-best", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: quitecorner,
+        date: "09-08-2025",
+        time: "11:13 AM",
+        tittle: "Quiet Corners: The Best Spots to Read, Reflect & Really Be",
+        description: "At Basalt Paradise, peace isn’t something you look for—it finds you. The resort is designed with thoughtful nooks and shaded spaces that invite you to pause, breathe, and reconnect. Whether you carry a book, a journal, or simply your own thoughts, these quiet corners are where moments of stillness turn into cherished memories.",
+        fullContent: ""
+    },
+     {
+        id: 57,
+        category: "Well-Traveled, Well-Rested: Guest Tips for Packing Light and Loving Your Stay",
+        route: "/blogs/well-traveled-well-rested", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: playfulmusic,
+        date: "12-08-2025",
+        time: "11:39 AM",
+        tittle: "Well-Traveled, Well-Rested: Guest Tips for Packing Light and Loving Your Stay",
+        description: "At Basalt Paradise, guests often arrive with bags full of clothes, shoes, and “just in case” extras. But what they discover quickly is this: the lighter you pack, the deeper you enjoy. Travel isn’t about carrying everything you own—it’s about giving yourself the space to rest, move freely, and collect memories instead of luggage tags.Here are a few guest-inspired tips for packing light and loving your stay.",
+        fullContent: ""
+    },
+     {
+        id: 58,
+        category: "Playful Souls: Rediscovering Childhood Joy at Basalt Paradise",
+        route: "/blogs/playful-souls-rediscovering-childhood", // Unique route
+        // disatnce: "Offbeat Destinations Near Halol: Hidden Gems You Must Visit!",
+        image: welltravel,
+        date: "15-08-2025",
+        time: "11:28 AM",
+        tittle: "Playful Souls: Rediscovering Childhood Joy at Basalt Paradise",
+        description: "When was the last time you truly felt like a child again? Not just relaxed, but carefree—laughing until your stomach hurt, chasing a game for no reason, or lying on the grass watching clouds drift by. At Basalt Paradise, guests often find themselves rediscovering this forgotten side of life. It’s not just a resort; it’s a reminder that joy lives in the simplest of moments.",
+        fullContent: ""
+    },
 ];
 
 
@@ -754,6 +884,16 @@ export default function Blogs() {
 
     const buttons = [
   "All",
+  "Playful Souls: Rediscovering Childhood Joy at Basalt Paradise",
+  "Well-Traveled, Well-Rested: Guest Tips for Packing Light and Loving Your Stay",
+  "Quiet Corners: The Best Spots to Read, Reflect & Really Be",
+  "The Healing Power of Stone: How Basalt Shapes Our Well-Being",
+  "Trail & Tales: Short Walks That Reveal Halol’s Hidden Stories",
+  "Music in the Air: How Natural Sounds Become Part of Your Stay",
+  "Basalt by Day, Stars by Night: How Light Shapes Your Senses at the Resort",
+  "Seasonal Spa Rituals: Treatments Inspired by Halol’s Changing Weather",
+  "The Artisans of Halol: Handmade Gifts to Take Home from Basalt Paradise",
+  "Sunrise Stories: Guests Share Their Morning Moments at Basalt Paradise",
   "Retreat Rituals: How Guests Create Personal Traditions at Basalt Paradise",
   "Offline Escapes: A Day Without Wi-Fi at Basalt Paradise",
   "Unplug to Reconnect: How Basalt Paradise Makes Digital Detox Feel Effortless",
