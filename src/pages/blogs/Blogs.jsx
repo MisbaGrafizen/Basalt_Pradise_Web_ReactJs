@@ -1133,7 +1133,7 @@ const filteredBlogs =
                         <button
                             key={buttonName}
                             onClick={() => handleClick(buttonName)}
-                            className={`w-fit py-[7px] px-[18px] rounded-[20px] border-[1.2px] flex-shrink-0
+                            className={`w-fit py-[7px] px-[18px] text-left rounded-[20px] border-[1.2px] flex-shrink-0
                       ${selectedCategory === buttonName
                                     ? "bg-[#fcaf17] text-white border-[#fcaf17]"
                                     : "bg-transparent text-[#fcaf17] border-[#fcaf17]"
