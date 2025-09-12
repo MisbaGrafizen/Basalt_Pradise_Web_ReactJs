@@ -101,6 +101,21 @@ import playArea33  from "../../../public/ForestAreaImges/playarea3.jpeg"
 import playArea44  from "../../../public/ForestAreaImges/playarea4.jpeg"
 import playArea55  from "../../../public/ForestAreaImges/playarea5.jpeg"
 import playArea66  from "../../../public/ForestAreaImges/playarea6.jpeg"
+import disco1 from "../../../public/discotheq/image1.jpg"
+import disco2 from "../../../public/discotheq/image2.jpg"
+
+import disco3 from "../../../public/discotheq/image3.jpg"
+
+import disco4 from "../../../public/discotheq/image4.jpg"
+
+import disco5 from "../../../public/discotheq/image5.jpg"
+import disco6 from "../../../public/discotheq/image6.jpg"
+
+
+import disco11 from "../../../public/discotheq/image11.jpg"
+import disco7 from "../../../public/discotheq/image7.jpg"
+import disco8 from "../../../public/discotheq/image8.jpg"
+import disco9 from "../../../public/discotheq/image9.jpg"
 
 
 
@@ -152,7 +167,7 @@ export default function Gallery() {
     const villaRef = useRef(null)
     const zenRoomRef = useRef(null)
     const restaurantRef = useRef(null)
-
+const discothequeRef = useRef(null)
     const forestRef = useRef(null)
     const commonAreaRef = useRef(null)
     const othersRef = useRef(null)
@@ -199,7 +214,7 @@ export default function Gallery() {
     const forest = [forest1,forest2,forest3,forest4,forest6,forest7 ,forest5]
     const CommonArea = [commonArea1, commonArea2, commonArea3, commonArea4]
     const OtherS = [outdoor1, outdoor2, outdoor3, outdoor4, outdoor5]
-
+const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,disco8]
 
 
 
@@ -227,7 +242,9 @@ export default function Gallery() {
         Outdoors: outdoorsRef,
         "Restaurant & Banquet": restaurantRef,
         // "Forest Area": forestRef,
+        
         "Kids Play Area": playAreaRef,
+        Discotheque :discothequeRef,
         "Private Villa": villaRef,
         "Zen Room": zenRoomRef,
     };
@@ -236,9 +253,11 @@ export default function Gallery() {
         Outdoors: 10,
         "Restaurant & Banquet": 125,
         // "Forest Area": 340,
+      
         "Kids Play Area": 340,
-        "Private Villa": 492,
-        "Zen Room": 618,
+          Discotheque:492,
+        "Private Villa": 630,
+        "Zen Room": 760,
     };
 
     const buttonWidths = {
@@ -246,6 +265,7 @@ export default function Gallery() {
         "Restaurant & Banquet": 200,
         // "Forest Area":115,
         "Kids Play Area": 138,
+          Discotheque:123,
         "Private Villa": 120,
         "Zen Room": 115,
     };
@@ -476,6 +496,17 @@ export default function Gallery() {
                                         </div>
                                     </div>
 
+
+          <div ref={discothequeRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                        <h2 className="text-xl font-medium mb-6">Discotheque</h2>
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            {discotheque.map((src, index) => (
+                                                <div key={index} className="rounded-lg overflow-hidden h-64">
+                                                    <img src={src} onClick={() => openLightbox(garden, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div> 
                                     <div ref={villaRef} data-section="Private Villa" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb">Private Villa</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -499,16 +530,7 @@ export default function Gallery() {
                                     </div>
 
 
-                                    {/* <div ref={gardenRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
-                                        <h2 className="text-xl font-medium mb-6">Garden</h2>
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                            {garden.map((src, index) => (
-                                                <div key={index} className="rounded-lg overflow-hidden h-64">
-                                                    <img src={src} onClick={() => openLightbox(garden, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div> */}
+                           
 
                                     {/* <div ref={commonAreaRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Common Area</h2>
