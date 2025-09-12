@@ -1,426 +1,372 @@
-import React, { useEffect, useState } from 'react';
-import blog1 from "../../../public/10Blogs/pavagadhbannernew.jpeg";
-import blog11 from "../../../public/10Blogs/pavagadhbannernew2.jpeg";
-import blog111 from "../../../public/10Blogs/pavagadhbannernew3.jpeg";
+// src/pages/blogs/Blogdetails.jsx
+import React, { useEffect, useMemo, useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+import Header from "../../Component/header/Header";
+import Footer from "../../Component/footer/Footer";
 
-import blog2 from "../../../public/10Blogs/Citadel-sat-kaman-banner.jpg";
+const API_BASE = "https://server.grafizen.in/api/v2/hotel/admin";
 
-import blog3 from "../../../public/10Blogs/Jambughoda.jpg";
-import blog4 from "../../../public/10Blogs/Hathnimatafall.jpg";
-import blog5 from "../../../public/10Blogs/SOU.jpg";
-import blog6 from "../../../public/10Blogs/general-view.jpg";
-import blog7 from "../../../public/10Blogs/SOU.jpg";
-import Footer from '../../Component/footer/Footer';
-import Header from '../../Component/header/Header';
+/* ---------------- helpers ---------------- */
+const getId = (b) =>
+  typeof b?._id === "string" ? b._id : b?._id?.$oid || b?.id || "";
 
-const pavagadhbannernewimages = [blog1, blog11, blog111]
+const getCreatedAt = (b) => {
+  if (typeof b?.createdAt === "string") return new Date(b.createdAt);
+  if (b?.createdAt?.$date) return new Date(b.createdAt.$date);
+  return null;
+};
 
+const getH1FromHtml = (html) => {
+  if (!html || typeof html !== "string") return "";
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.querySelector("h1")?.textContent?.trim() || "";
+};
 
+const getBlogH1 = (b) =>
+  getH1FromHtml(b?.description) || getH1FromHtml(b?.subblogs) || b?.title || "Blog";
+
+const slugify = (str) =>
+  (str || "blog")
+    .toString()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 120);
+
+/* ---------- HTML transformer (tight rhythm + uniform images + bullets) ---------- */
+const styleSubblogsHtml = (html) => {
+  if (typeof html !== "string" || !html.trim()) return "<p>No content available.</p>";
+
+  const root = document.createElement("div");
+  root.innerHTML = html;
+
+  const onlyBrOrNbsp = (el) => {
+    const raw = (el.innerHTML || "").replace(/&nbsp;|\s/gi, "");
+    return raw === "" || raw.toLowerCase() === "<br>" || raw.toLowerCase() === "<br/>";
+  };
+  const setMB = (el, t, b) => {
+    el.style.marginTop = `${t}px`;
+    el.style.marginBottom = `${b}px`;
+  };
+
+  // remove empty <p> that create gaps
+  Array.from(root.getElementsByTagName("p")).forEach((p) => {
+    const text = (p.textContent || "").trim();
+    if (!text && onlyBrOrNbsp(p)) p.remove();
+  });
+
+  // H1 compact
+  Array.from(root.getElementsByTagName("h1")).forEach((h1) => {
+    h1.className = "";
+    h1.classList.add("text-[32px]", "font-[600]", "text-gray-900", "leading-snug");
+    setMB(h1, 2, 2);
+  });
+
+  // H2 compact (purple)
+  Array.from(root.getElementsByTagName("h2")).forEach((h2) => {
+    h2.className = "";
+    h2.classList.add("text-[#7442ff]", "font-semibold", "text-lg", "leading-snug");
+    setMB(h2, 0, 2);
+  });
+
+  // paragraphs + dashed rule
+  Array.from(root.getElementsByTagName("p")).forEach((p) => {
+    const t = (p.textContent || "").trim();
+
+    // "-----" -> dashed divider (half width)
+    if (/^-{3,}$/.test(t)) {
+      const bar = document.createElement("div");
+      bar.className = "w-1/2 border-t-2 border-dashed border-[#7442ff]";
+      setMB(bar, 8, 8);
+      p.replaceWith(bar);
+      return;
+    }
+
+    p.className = "";
+    p.classList.add("text-[#222]", "leading-[1.6]");
+    setMB(p, 2, 2);
+    const prev = p.previousElementSibling;
+    if (prev && /^H[12]$/.test(prev.tagName)) setMB(p, 2, 2);
+  });
+
+  // lists (force bullets/numbers even if globals reset them)
+  Array.from(root.getElementsByTagName("ul")).forEach((el) => {
+    el.className = "";
+    el.classList.add("list-disc", "list-outside", "pl-5", "leading-[1.6]");
+    setMB(el, 4, 4);
+  });
+  Array.from(root.getElementsByTagName("ol")).forEach((el) => {
+    el.className = "";
+    el.classList.add("list-decimal", "list-outside", "pl-5", "leading-[1.6]");
+    setMB(el, 4, 4);
+  });
+
+  // IMAGES: uniform size — full width + fixed height, cover
+  Array.from(root.getElementsByTagName("img")).forEach((img) => {
+    const wrap = document.createElement("div");
+    wrap.className = "w-full h-[320px] md:h-[420px] overflow-hidden rounded-md my-3";
+    img.classList.add("w-full", "h-full", "object-cover", "block");
+    img.removeAttribute("width");
+    img.removeAttribute("height");
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.objectFit = "cover";
+
+    img.parentNode?.replaceChild(wrap, img);
+    wrap.appendChild(img);
+  });
+
+  // collapse first/last outer margins
+  const first = root.firstElementChild;
+  if (first) first.style.marginTop = "0px";
+  const last = root.lastElementChild;
+  if (last) last.style.marginBottom = "0px";
+
+  return root.innerHTML;
+};
+
+/* ---------------- component ---------------- */
 export default function BlogDetails() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [currentIndexCitadel, setCurrentIndexCitadel] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % pavagadhbannernewimages.length);
-        }, 2500); // Change image every 2 seconds
-
-        return () => clearInterval(interval); // Cleanup on unmount
-    }, []);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndexCitadel((prevIndex) => (prevIndex + 1) % pavagadhbannernewimages.length);
-        }, 2500); // Change image every 2 seconds
-
-        return () => clearInterval(interval); // Cleanup on unmount
-    }, []);
-
-    return (
-        <>
-            <Header />
-            <div className='  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto  py-8 gap-[20px] pt-[110px] flex '>
-
-                <div className=' md:w-[80%] flex gap-[30px] flex-col'>
-
-
-                    <div className=" w-[100%]">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[400px] h-[200px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={pavagadhbannernewimages[currentIndex]}
-                                alt="Basalt Paradise Resort"
-                                className="object-cover w-full h-full transition-all duration-1000 ease-in-out"
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Pavagadh Hill & Kalika Mata Temple
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise: 5 km</b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-                                A UNESCO World Heritage site, Pavagadh Hill is famous for the Kalika Mata Temple, a revered Hindu pilgrimage site. Enjoy a scenic cable car ride to the temple and soak in breathtaking views of Gujarat’s landscape.
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className=" w-[100%] flex flex-col gap-[0px] h-[100%] mx-auto  py-8">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={blog2}
-                                alt="Basalt Paradise Resort"
-                                fill
-                                className="object-cover w-[100%] h-[100%]"
-                                priority
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Champaner-Pavagadh Archaeological Park
-
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise:6 km
-
-                                    </b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-                                A treasure trove of history, this UNESCO-listed heritage site boasts stunning mosques, forts, and stepwells from the 8th to 16th century. Must-visit spots include Jami Masjid and Kevda Masjid—architectural masterpieces blending Hindu and Islamic styles.
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className=" w-[100%]">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={blog3}
-                                alt="Basalt Paradise Resort"
-                                fill
-                                className="object-cover w-[100%] h-[100%]"
-                                priority
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Jambughoda Wildlife Sanctuary
-
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise: 35 km
-
-                                    </b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-
-                                Nature lovers, this one’s for you! Jambughoda Wildlife Sanctuary is home to leopards, sloth bears, and exotic bird species. Enjoy a wildlife safari or a peaceful trek through lush forests.
-
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className=" w-[100%] flex flex-col gap-[0px] h-[100%] mx-auto  py-8">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={blog4}
-                                alt="Basalt Paradise Resort"
-                                fill
-                                className="object-cover w-[100%] h-[100%]"
-                                priority
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Hathni Waterfall
-
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise: 45 km
-
-                                    </b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-
-                                A hidden paradise during monsoons, Hathni Waterfall is a must-visit for those seeking tranquility amidst nature. A perfect picnic spot, it offers a refreshing break from city life.
-
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className="w-[100%] flex flex-col gap-[0px] h-[100%] mx-auto  py-8">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={blog5}
-                                alt="Basalt Paradise Resort"
-                                fill
-                                className="object-cover w-[100%] h-[100%]"
-                                priority
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Sardar Sarovar Dam & Statue of Unity
-
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise: 90 km
-
-                                    </b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-
-                                A short drive from Basalt Paradise, this marvel houses the world’s tallest statue—the Statue of Unity! Witness a spectacular light & sound show, visit the viewing gallery, or take a boat ride in the Narmada River.
-
-
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className="w-[100%] flex flex-col gap-[0px] h-[100%] mx-auto  py-8">
-                        {/* Hero Banner */}
-                        <div className="relative w-full md:h-[450px] mb-8 bg-[#0a192f] rounded-lg overflow-hidden">
-                            <img
-                                src={blog6}
-                                alt="Basalt Paradise Resort"
-                                fill
-                                className="object-cover w-[100%] h-[100%]"
-                                priority
-                            />
-                        </div>
-
-                        {/* Main Content */}
-                        <article className="space-y-2">
-                            <h1 className="text-[18px] md:text-[23px] font-[500] text-gray-900">
-                                Mahakali Lake
-
-                            </h1>
-
-
-
-                            <div className=' cursor-default flex  md:items-center gap-[10px]   text-[#7442ff] '>
-                                <i className="fa-regular text-[20px] mt-[6px]  md:mt-0  fa-location-dot"></i>
-
-                                <p className=' gap-[10px] mt-[2px] flex'>
-                                    <b className=' text-[18px] font-[400]'> Distance from Basalt Paradise: 3 km
-
-                                    </b>
-                                </p>
-                            </div>
-                            <p className="text-gray-600 md:text-[16px] text-[14px]">
-
-                                A serene escape for couples and families, Mahakali Lake is ideal for evening strolls and birdwatching. Sunset views here are magical!
-
-
-
-                            </p>
-
-                        </article>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                    <div className="w-full my-2">
-                        <h1 className="text-[20px] basalt-text md:text-[23px] font-[600] mb-2">Related Blogs</h1>
-                        <ul className="list-disc ml-4 text-[17px] space-y-2">
-                            <li>
-                                <a href="/adventure-activities" className="text-[#000000] font-[500] hover:underline">
-                                    Adventure Activities Near Basalt Paradise
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/blogs/nature-spots-near-halol" className="text-[#000000] font-[500] hover:underline">
-                                    Best Nature Spots Near Halol
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/blogs/offbeat-destinations-near-halol" className="text-[#000000] font-[500] hover:underline">
-                                    Offbeat Destinations Near Halol
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <span className=' flex w-[50%] ml-[] border-t-[1.7px] border-[#7442ff]  border-dashed '></span>
-                </div>
-               <div className=" h-fit  max-w-[300px] right-[10%] border-[1.1px]  md:flex hidden border-[#fcaf17] bg-white shadow p-[16px] rounded-[10px]">
-                        <div id="infoProduto ">
-                            <div className="blog-sidebar">
-
-
-
-                                <div className="sidebar-search flex justify-between border-[1px] p-[10px] rounded-[8px]">
-                                    <input
-                                        type="text"
-                                        className="search-input  outline-none"
-                                        name="Search"
-                                        placeholder="Search "
-                                    />
-                                    <button className="search-btn pr-[10px]" type="submit">
-                                        <svg
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 16 16"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
-                                                fill="#fcaf17"
-                                            ></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div className="ak-height-50 ak-height-lg-30"></div>
-
-                                {/* Popular Categories */}
-                                <div className="sidebar-section px-[10px]">
-                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Influencer Guests
-                                    </h5>
-                                    <ul className="flex flex-col gap-[4px]">
-                                        <h1 className=' flex  font-cu font-[600] basalt-text'>Coming Soon . . .</h1>
-
-
-                                    </ul>
-                                </div>
-                                <div className="ak-height-50 ak-height-lg-30"></div>
-
-                                {/* Popular Tags */}
-                                <div className="sidebar-section  mt-[20px] px-[10px]">
-                                    <h5 className="title font-[600] text-[19px] py-[10px] text-[#000000]">
-                                        Popular Blogs
-                                    </h5>
-                                    <ul className="flex  flex-col gap-[8px]">
-                                        <li className='  flex'>
-                                            <i className="fa-sharp text-[5px] mt-[8px] mr-[10px]  text-[#fcaf17]  fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[13px] text-[#5c5b5b] ' href="/blogs/must-visit-places-near-basalt-paradise">10 Must-Visit Places Near Basalt Paradise</a>
-                                        </li>
-                                        <li className=' items-center flex'>
-                                            <i className="fa-sharp mt-[px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/travel-tips">Travel Tips & Guides</a>
-                                        </li>
-
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/offbeat-destinations-near-halol">         Offbeat Destinations Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/nature-spots-near-halol">      Best Nature Spots Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/adventure-activities">    Activities Near Basalt </a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/weekend-getaway-from-ahmedabad">   Weekend from Ahmedabad</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/romantic-getaways-near-vadodara">   Romantic Getaways Near Vadodara</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/spiritual-trails-near-halol">   Spiritual Trails Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-halol">   Best Time To Visit Pavagadh Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/birdwatching-and-eco-tourism-halol">   Birdwatching & Eco-Tourism halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/hidden-temples-spiritual-sites-pavagadh">   Hidden Temples & Spiritual Sites Pavagadh</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/best-time-to-visit-pavagadh-monsoon-guide">   Best Time To Visit Pavagadh Monsoon Guide</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/photography-places-halol-instagram-reels">   Top Photography Spots Near Halol</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/one-day-trip-pavagadh-from-vadodara-itinerary">  One Day Trip Pavagadh From Vadodara</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/history-of-champaner-pavagadh-heritage-guide"> History Of Champaner Pavagadh</a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/budget-travel-halol-pavagadh-guide"> Budget Travel Halol Pavagadh </a>
-                                        </li>
-                                        <li className='  flex'>
-                                            <i className="fa-sharp  mt-[8px] text-[5px] mr-[10px]  text-[#fcaf17]   fa-solid fa-circle"></i>
-                                            <a className='  font-[400] text-[14px] text-[#5c5b5b] ' href="/blogs/local-markets-handicrafts-halol-shopping-guide"> Local Markets & Handicrafts in Halol – Where to Shop Like a Local</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <Footer />
-        </>
+  const navigate = useNavigate();
+  const { slug } = useParams();
+  const { state } = useLocation();
+  const blogFromState = state?.blog || null;
+  const blogIdFromState = state?.blogId || null;
+
+  const [blog, setBlog] = useState(blogFromState);
+  const [loading, setLoading] = useState(!blogFromState);
+
+  const [allBlogs, setAllBlogs] = useState([]);
+  const [loadingSidebar, setLoadingSidebar] = useState(true);
+
+  // Use blog from state immediately
+  useEffect(() => {
+    if (state?.blog) {
+      setBlog(state.blog);
+      setLoading(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [state?.blog]);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const fetchById = async (id) => {
+      const res = await axios.get(`${API_BASE}/blog/${id}`);
+      return res.data?.careerData || res.data;
+    };
+
+    const fetchAll = async () => {
+      const res = await axios.get(`${API_BASE}/blog`);
+      const list = res.data?.careerData || res.data || [];
+      return Array.isArray(list) ? list : [];
+    };
+
+    (async () => {
+      try {
+        setLoadingSidebar(true);
+        const list = await fetchAll();
+        if (!mounted) return;
+        setAllBlogs(list);
+
+        if (state?.blog) return;
+
+        setLoading(true);
+
+        if (state?.blogId) {
+          const data = await fetchById(state.blogId);
+          if (mounted) setBlog(data);
+          return;
+        }
+
+        const match =
+          list
+            .map((b) => ({ b, s: slugify(getBlogH1(b)) }))
+            .find((x) => x.s === slug)?.b || null;
+
+        if (mounted) setBlog(match);
+      } catch (e) {
+        console.error("Failed to load blog:", e);
+      } finally {
+        if (mounted) {
+          setLoading(false);
+          setLoadingSidebar(false);
+        }
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [slug, state?.blog, state?.blogId]);
+
+  // Only subblogs
+  const rawHtml =
+    typeof blog?.subblogs === "string" && blog.subblogs.trim()
+      ? blog.subblogs
+      : "<p>No content available.</p>";
+  const styledHtml = useMemo(() => styleSubblogsHtml(rawHtml), [rawHtml]);
+
+  // Popular (for sidebar)
+  const popular = useMemo(() => {
+    const byTime = [...allBlogs].sort(
+      (a, b) => (getCreatedAt(b)?.getTime() || 0) - (getCreatedAt(a)?.getTime() || 0)
     );
+    const seen = new Set();
+    const out = [];
+    for (const b of byTime) {
+      const h1 = getBlogH1(b);
+      if (!h1 || seen.has(h1)) continue;
+      out.push({ h1, b, id: getId(b), slug: slugify(h1) });
+      seen.add(h1);
+      if (out.length >= 15) break;
+    }
+    return out;
+  }, [allBlogs]);
+
+  // Related (under the article): 4–5 recent, unique, exclude current
+  const related = useMemo(() => {
+    const currentId = getId(blog);
+    const byTime = [...allBlogs].sort(
+      (a, b) => (getCreatedAt(b)?.getTime() || 0) - (getCreatedAt(a)?.getTime() || 0)
+    );
+    const seen = new Set();
+    const out = [];
+    for (const b of byTime) {
+      const id = getId(b);
+      if (id === currentId) continue;
+      const h1 = getBlogH1(b);
+      if (!h1 || seen.has(h1)) continue;
+      out.push({ h1, b, id, slug: slugify(h1) });
+      seen.add(h1);
+      if (out.length >= 5) break;
+    }
+    return out;
+  }, [allBlogs, blog]);
+
+  const goToBlog = ({ slug: s, id, b }) => {
+    navigate(`/blogs/${s}`, { state: { blogId: id, blog: b } });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <Header />
+
+      <section className="w-[90%] md:w-[78%] mx-auto pt-[110px] pb-[40px] font-Poppins">
+        <div className="flex flex-col md:flex-row md:gap-8 gap-6">
+          {/* LEFT: 70% content */}
+          <div className="w-full md:w-[70%]">
+            {loading ? (
+              <div className="p-6 text-[#7442ff]">Loading…</div>
+            ) : (
+              <article className="max-w-none">
+                <div
+                  className="text-[15px] leading-[1.6] text-[#222]"
+                  dangerouslySetInnerHTML={{ __html: styledHtml }}
+                />
+
+                {/* Related Blogs */}
+                {related.length > 0 && (
+                  <div className="mt-10">
+                    <h3 className="text-[#7442ff] font-semibold text-2xl mb-3">
+                      Related Blogs :
+                    </h3>
+                    <ul className="list-disc list-outside pl-6 space-y-3 marker:text-[#7442ff]">
+                      {related.map((r) => (
+                        <li key={r.id}>
+                          <button
+                            type="button"
+                            onClick={() => goToBlog({ slug: r.slug, id: r.id, b: r.b })}
+                            className="text-[18px] font-medium text-[#111] hover:text-[#7442ff] transition-colors"
+                            title={r.h1}
+                          >
+                            {r.h1}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </article>
+            )}
+          </div>
+
+          {/* RIGHT: 30% sidebar */}
+          <aside className="w-full md:w-[30%]">
+            <div className="border-[1.1px] border-[#fcaf17] bg-white shadow p-4 rounded-[10px]">
+              {/* Search (visual only) */}
+              <div className="flex justify-between border p-2 rounded-[8px]">
+                <input
+                  type="text"
+                  className="outline-none flex-1"
+                  placeholder="Search"
+                  disabled
+                />
+                <button className="pr-[10px]" type="button" disabled>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M15.682 14.318L12.025 10.662C12.722 9.719 13.111 8.563 13.111 7.333C13.111 3.868 10.244 1 6.778 1C3.312 1 0.444 3.868 0.444 7.333C0.444 10.798 3.312 13.666 6.778 13.666C8.008 13.666 9.163 13.277 10.106 12.579L13.762 16.236C13.975 16.448 14.311 16.448 14.524 16.236L15.681 15.08C15.894 14.868 15.894 14.533 15.682 14.318ZM6.778 11.889C4.347 11.889 2.222 9.763 2.222 7.333C2.222 4.902 4.347 2.777 6.778 2.777C9.208 2.777 11.333 4.902 11.333 7.333C11.333 9.763 9.208 11.889 6.778 11.889Z"
+                      fill="#fcaf17"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Popular list (with real bullets) */}
+              <div className="mt-6">
+                <h5 className="font-[600] text-[19px] py-[10px] text-[#000000]">
+                  Popular Blogs
+                </h5>
+                <ul className="list-disc list-outside ml-5 space-y-2 text-[14px] text-[#5c5b5b] marker:text-[#fcaf17]">
+                  {loadingSidebar ? (
+                    <li>Loading…</li>
+                  ) : popular.length === 0 ? (
+                    <li>No blogs yet.</li>
+                  ) : (
+                    popular.map((entry) => {
+                      const active = entry.slug === slug;
+                      return (
+                        <li key={entry.id}>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              goToBlog({ slug: entry.slug, id: entry.id, b: entry.b })
+                            }
+                            className={`text-left hover:underline ${
+                              active ? "text-[#7442ff] font-medium" : ""
+                            }`}
+                            aria-current={active ? "page" : undefined}
+                            title={entry.h1}
+                          >
+                            <span
+                              className="block max-w-[230px]"
+                              style={{
+                                display: "-webkit-box",
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: "vertical",
+                                overflow: "hidden",
+                              }}
+                            >
+                              {entry.h1}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })
+                  )}
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
 }

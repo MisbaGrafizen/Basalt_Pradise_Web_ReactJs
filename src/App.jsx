@@ -252,7 +252,7 @@ function App() {
             element={loading ? <Loader /> : <MyBookings />}
           />
           <Route
-            path="/blogs/must-visit-places-near-basalt-paradise"
+            path="/blogs/:slug"
             element={loading ? <Loader /> : <BlogDetails />}
           />
           <Route
