@@ -293,7 +293,7 @@ const [open, setOpen] = useState(false);
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -40, scale: 0.95 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative  bg-white rounded-xl overflow-hidden shadow-lg"
+              className="relative  rounded-xl overflow-hidden shadow-lg"
             >
               {/* Close Button */}
               <button
@@ -314,7 +314,7 @@ const [open, setOpen] = useState(false);
               <a 
                   href="https://wa.me/918799284980" // replace with your WhatsApp number
                   target="_blank"
-                  rel="noopener noreferrer" className=" px-6 py-[7px]  mt-[px] mx-auto justify-center items-center flex basalt  w-[100%] ">
+                  rel="noopener noreferrer" className=" px-6 py-[7px]  mt-[px] mx-auto justify-center items-center flex basalt  w-[100%] min-w-[350px] md:min-w-[400px] ">
                 <div
               
                   className="  font-Poppins font-[500] text-[18px]  !text-white  rounded-[7px]  transition"
