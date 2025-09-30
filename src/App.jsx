@@ -102,23 +102,23 @@ function App() {
 const [open, setOpen] = useState(false);
 
   // Show modal after 3 seconds when page loads
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
-    }, 2000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setOpen(true);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []); // Empty dependency ensures it runs only once after hard refresh
+  //   return () => clearTimeout(timer);
+  // }, []); // Empty dependency ensures it runs only once after hard refresh
 
-  UseGoogleAnalytics();
+  // UseGoogleAnalytics();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 500); // 1.5 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 500); // 1.5 seconds
 
-    return () => clearTimeout(timer); // Cleanup the timer
-  }, []);
+  //   return () => clearTimeout(timer); // Cleanup the timer
+  // }, []);
 
   return (
     <>
@@ -305,7 +305,7 @@ const [open, setOpen] = useState(false);
 
               {/* Full Image */}
               <img
-                src={offer} // replace with your image
+                src={offer} 
                 alt="Modal"
                 className=" h-[350px] md:h-[500px] object-content"
               />
