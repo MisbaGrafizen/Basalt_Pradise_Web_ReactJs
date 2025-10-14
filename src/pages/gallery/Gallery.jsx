@@ -152,6 +152,45 @@ import bridge from "../../../public/Basalt Final/B19.jpg"
 import frogCenter from "../../../public/Basalt Final/B20.jpeg"
 import frorest from "../../../public/Basalt Final/B21.jpg"
 import mountain from "../../../public/Basalt Final/B22.jpeg"
+import discotheqnew1 from "../../../public/latestImagesBasalt/discothequ.jpg"
+import discotheqnew2 from "../../../public/latestImagesBasalt/discothequ2.jpg"
+import parking1 from "../../../public/latestImagesBasalt/parking1.jpg"
+import parking2 from "../../../public/latestImagesBasalt/parking2.jpg"
+import parking3 from "../../../public/latestImagesBasalt/parking3.jpg"
+import parking4 from "../../../public/latestImagesBasalt/parking4.jpg"
+import resturantnew1 from "../../../public/latestImagesBasalt/resturantnew1.jpg"
+import resturantnew2 from "../../../public/latestImagesBasalt/resturantnew2.jpg"
+import resturantnew3 from "../../../public/latestImagesBasalt/resturantnew3.jpg"
+import resturantnew4 from "../../../public/latestImagesBasalt/resturantnew4.jpg"
+import resturantnew6 from "../../../public/latestImagesBasalt/resturantnew6.jpg"
+
+import zero1 from "../../../public/latestImagesBasalt/zeroedgepool1.jpg"
+import zero2 from "../../../public/latestImagesBasalt/zeroedgepool2.jpg"
+import zero3 from "../../../public/latestImagesBasalt/zeroedgepool3.jpg"
+import zero4 from "../../../public/latestImagesBasalt/zeroedgepool4.jpg"
+import zero5 from "../../../public/latestImagesBasalt/zeroedgepool5.jpg"
+
+import disconight from "../../../public/latestImagesBasalt/discoquo.jpg"
+import outdoornew from "../../../public/latestImagesBasalt/must.jpg"
+import outdoonew2 from "../../../public/latestImagesBasalt/nighqua.jpg"
+import outdoonew3 from "../../../public/latestImagesBasalt/nouko.jpg"
+import outdoonew4 from "../../../public/latestImagesBasalt/zym.jpg"
+import villa23 from "../../../public/latestImagesBasalt/villa.jpg"
+import zeroedgesam from "../../../public/latestImagesBasalt/zeroedgepoolmu1.jpg"
+import zeroedgesam1 from "../../../public/latestImagesBasalt/zeroedgepoolmu2.jpg"
+import zeroedgesam2 from "../../../public/latestImagesBasalt/zeroedgepoolmu3.jpg"
+
+
+
+
+
+
+
+
+
+
+
+
 
 import { useLocation } from "react-router-dom"
 import Footer from "../../Component/footer/Footer"
@@ -168,7 +207,10 @@ export default function Gallery() {
     const zenRoomRef = useRef(null)
     const restaurantRef = useRef(null)
 const discothequeRef = useRef(null)
-    const forestRef = useRef(null)
+const parkingevchargeRef = useRef(null)
+
+
+    const zeroedgepoolRef = useRef(null)
     const commonAreaRef = useRef(null)
     const othersRef = useRef(null)
 
@@ -207,16 +249,16 @@ const discothequeRef = useRef(null)
 
 
     const roomImages = [room1, room2, room3, room4, room5]
-    const outdoorImages = [out8,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,out22,frogCenter,out23,out25,nightGreenArea, zen1, b5,zen2, drone1,  outdoor4, outdoor5, garden2, outdoor2, poolnignt, outdoor1, mountain,]
+    const outdoorImages = [out8,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,villa23,out22,frogCenter,out23,out25,nightGreenArea, zen1, b5,zen2, drone1,  outdoor4, outdoor5, garden2, outdoor2, poolnignt, outdoor1, mountain,outdoornew,outdoonew2,outdoonew3,outdoonew4]
     const villaRoom = [room6, room7, room8, villaGa, villa11, villa22, villa33, villa44, villa55]
-    const restaurantImages = [ resturant77, resturant33, banquet, resturant55, resturant66,]
+    const restaurantImages = [ resturant77, resturant33, banquet, resturant55, resturant66,resturantnew2,resturantnew3,resturantnew4,resturantnew6]
     const playArea = [PlayArea1, PlayArea2,forest1, PlayArea4, PlayArea5,forest7,playArea11,playArea33,forest6,playArea44,]
     const forest = [forest1,forest2,forest3,forest4,forest6,forest7 ,forest5]
     const CommonArea = [commonArea1, commonArea2, commonArea3, commonArea4]
     const OtherS = [outdoor1, outdoor2, outdoor3, outdoor4, outdoor5]
-const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,disco8]
-
-
+const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,disco8,discotheqnew1,discotheqnew2,disconight]
+const parkingev =[parking1,parking2,parking3,parking4,]
+const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedgesam2]
 
 
     const RoomGuest = [GusseRoom1, GusseRoom2,]
@@ -245,6 +287,8 @@ const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,dis
         
         "Kids Play Area": playAreaRef,
         Discotheque :discothequeRef,
+                "Parking + EV Charging" :parkingevchargeRef,
+                    "Zero Edge Pool" :zeroedgepoolRef,
         "Private Villa": villaRef,
         "Zen Room": zenRoomRef,
     };
@@ -256,8 +300,10 @@ const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,dis
       
         "Kids Play Area": 340,
           Discotheque:492,
-        "Private Villa": 630,
-        "Zen Room": 760,
+         "Parking + EV Charging":630,
+           "Zero Edge Pool":845,
+        "Private Villa": 1005,
+        "Zen Room": 1130,
     };
 
     const buttonWidths = {
@@ -266,6 +312,8 @@ const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,dis
         // "Forest Area":115,
         "Kids Play Area": 138,
           Discotheque:123,
+               "Parking + EV Charging":200,
+               "Zero Edge Pool":140,
         "Private Villa": 120,
         "Zen Room": 115,
     };
@@ -502,11 +550,40 @@ const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,dis
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {discotheque.map((src, index) => (
                                                 <div key={index} className="rounded-lg overflow-hidden h-64">
-                                                    <img src={src} onClick={() => openLightbox(garden, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
+                                                    <img src={src} onClick={() => openLightbox(discotheque, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
                                                 </div>
                                             ))}
                                         </div>
                                     </div> 
+
+
+          <div ref={parkingevchargeRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                        <h2 className="text-xl font-medium mb-6">Parking + EV Charge</h2>
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            {parkingev.map((src, index) => (
+                                                <div key={index} className="rounded-lg overflow-hidden h-64">
+                                                    <img src={src} onClick={() => openLightbox(parkingev, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div> 
+
+
+          <div ref={zeroedgepoolRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                        <h2 className="text-xl font-medium mb-6">Zero Edge Pool</h2>
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            {zeroedge.map((src, index) => (
+                                                <div key={index} className="rounded-lg overflow-hidden h-64">
+                                                    <img src={src} onClick={() => openLightbox(zeroedge, index)}  alt={`Garden ${index + 1}`} className="w-full h-full object-cover" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div> 
+
+
+
+
+                                    
                                     <div ref={villaRef} data-section="Private Villa" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb">Private Villa</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
