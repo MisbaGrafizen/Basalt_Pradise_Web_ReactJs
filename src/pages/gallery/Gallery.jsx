@@ -152,8 +152,8 @@ import bridge from "../../../public/Basalt Final/B19.jpg"
 import frogCenter from "../../../public/Basalt Final/B20.jpeg"
 import frorest from "../../../public/Basalt Final/B21.jpg"
 import mountain from "../../../public/Basalt Final/B22.jpeg"
-import discotheqnew1 from "../../../public/latestImagesBasalt/discothequ.jpg"
-import discotheqnew2 from "../../../public/latestImagesBasalt/discothequ2.jpg"
+import discotheqnew1 from "../../../public/latestImagesBasalt/beutifull-kuwo1.jpg"
+import discotheqnew2 from "../../../public/latestImagesBasalt/beutifull-kuwo2.jpg"
 import parking1 from "../../../public/latestImagesBasalt/parking1.jpg"
 import parking2 from "../../../public/latestImagesBasalt/parking2.jpg"
 import parking3 from "../../../public/latestImagesBasalt/parking3.jpg"
@@ -249,16 +249,25 @@ const parkingevchargeRef = useRef(null)
 
 
     const roomImages = [room1, room2, room3, room4, room5]
-    const outdoorImages = [out8,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,villa23,out22,frogCenter,out23,out25,nightGreenArea, zen1, b5,zen2, drone1,  outdoor4, outdoor5, garden2, outdoor2, poolnignt, outdoor1, mountain,outdoornew,outdoonew2,outdoonew3,outdoonew4]
+    // const outdoorImages = [out8,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,villa23,out22,frogCenter,out23,out25,nightGreenArea, zen1, b5,zen2, drone1,  outdoor4, outdoor5, garden2, outdoor2, poolnignt, outdoor1, mountain,outdoornew,outdoonew2,outdoonew3,outdoonew4]
+
+    const outdoorImages = [outdoor2,b5,out22, poolnignt, outdoor1,out10,out11,gardendrone,out16,out18,frorest,bridge,out21,villa23,frogCenter,out23,out25,nightGreenArea, zen1,zen2, drone1,  outdoor4, outdoor5, garden2,  outdoornew,outdoonew2,outdoonew3,outdoonew4]
+
+
+
+
+
     const villaRoom = [room6, room7, room8, villaGa, villa11, villa22, villa33, villa44, villa55]
     const restaurantImages = [ resturant77, resturant33, banquet, resturant55, resturant66,resturantnew2,resturantnew3,resturantnew4,resturantnew6]
     const playArea = [PlayArea1, PlayArea2,forest1, PlayArea4, PlayArea5,forest7,playArea11,playArea33,forest6,playArea44,]
     const forest = [forest1,forest2,forest3,forest4,forest6,forest7 ,forest5]
     const CommonArea = [commonArea1, commonArea2, commonArea3, commonArea4]
     const OtherS = [outdoor1, outdoor2, outdoor3, outdoor4, outdoor5]
-const discotheque =[disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,disco8,discotheqnew1,discotheqnew2,disconight]
-const parkingev =[parking1,parking2,parking3,parking4,]
-const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedgesam2]
+const discotheque =[ discotheqnew2,disco11,disco1,disco5,disco3,disco9,disco4,disco7,disco6,disco8,discotheqnew1,]
+const parkingev =[parking3,parking1,parking2,parking4,]
+// const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedgesam2]
+const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
+
 
 
     const RoomGuest = [GusseRoom1, GusseRoom2,]
@@ -500,7 +509,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
 
                                 {/* Content Sections */}
                                 <div className="space-y-12 px-[20px] pt-[130px] w-[100%] bg-white">
-                                    <div ref={outdoorsRef} data-section="Outdoors" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={outdoorsRef} data-section="Outdoors" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative !top-[-10px] ">Outdoors</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {outdoorImages.map((src, index) => (
@@ -511,7 +520,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div>
 
-                                    <div ref={restaurantRef} data-section="Restaurant & Banquet" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={restaurantRef} data-section="Restaurant & Banquet" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb">Restaurant & Banquet</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {restaurantImages.map((src, index) => (
@@ -522,7 +531,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div>
 {/* 
-                                    <div ref={forestRef} data-section="Forest Area" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={forestRef} data-section="Forest Area" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb"> Forest Area</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {forest.map((src, index) => (
@@ -533,7 +542,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div> */}
 
-                                    <div ref={playAreaRef} data-section="Kids Play Area" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={playAreaRef} data-section="Kids Play Area" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb"> Indoor & Outdoor activities</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {playArea.map((src, index) => (
@@ -545,7 +554,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                     </div>
 
 
-          <div ref={discothequeRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+          <div ref={discothequeRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Discotheque</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {discotheque.map((src, index) => (
@@ -557,8 +566,8 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                     </div> 
 
 
-          <div ref={parkingevchargeRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
-                                        <h2 className="text-xl font-medium mb-6">Parking + EV Charge</h2>
+          <div ref={parkingevchargeRef} className=" p-[20px] rounded-[10px]">
+                                        <h2 className="text-xl font-medium mb-6">Parking + EV Charging</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {parkingev.map((src, index) => (
                                                 <div key={index} className="rounded-lg overflow-hidden h-64">
@@ -569,7 +578,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                     </div> 
 
 
-          <div ref={zeroedgepoolRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+          <div ref={zeroedgepoolRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Zero Edge Pool</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {zeroedge.map((src, index) => (
@@ -584,7 +593,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
 
 
                                     
-                                    <div ref={villaRef} data-section="Private Villa" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={villaRef} data-section="Private Villa" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb">Private Villa</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {villaRoom.map((src, index) => (
@@ -595,7 +604,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div>
 
-                                    <div ref={zenRoomRef} data-section="Zen Room" className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={zenRoomRef} data-section="Zen Room" className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium relative top-[-10px] mb">Zen Room</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {roomImages.map((src, index) => (
@@ -609,7 +618,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
 
                            
 
-                                    {/* <div ref={commonAreaRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    {/* <div ref={commonAreaRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Common Area</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {CommonArea.map((src, index) => (
@@ -620,7 +629,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div> */}
 
-                                    {/* <div ref={othersRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    {/* <div ref={othersRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Others</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {OtherS.map((src, index) => (
@@ -683,7 +692,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                 {/* Content Sections */}
                                 <div className="space-y-12 px-[20px] pt-[130px] w-[100%] bg-white">
 
-                                    <div ref={Guestroom} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={Guestroom} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Room</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {RoomGuest.map((src, index) => (
@@ -696,7 +705,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
 
 
 
-                                    <div ref={GuestoutdoorsRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={GuestoutdoorsRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Outdoors</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {GuestOutdoors.map((src, index) => (
@@ -706,7 +715,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                             ))}
                                         </div>
                                     </div>
-                                    <div ref={GuessrestaurantRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={GuessrestaurantRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Resturant</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {GuestResturant.map((src, index) => (
@@ -718,7 +727,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                     </div>
 
 
-                                    <div ref={GuestPool} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    <div ref={GuestPool} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Pool</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {Guestpool.map((src, index) => (
@@ -729,7 +738,7 @@ const zeroedge =[zero1,zero2,zero3,zero4,zero5,zeroedgesam,zeroedgesam1,zeroedge
                                         </div>
                                     </div>
 
-                                    {/* <div ref={gardenRef} className="border-[1.5px] shadow-2 p-[20px] rounded-[10px]">
+                                    {/* <div ref={gardenRef} className=" p-[20px] rounded-[10px]">
                                         <h2 className="text-xl font-medium mb-6">Others</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                             {garden.map((src, index) => (
