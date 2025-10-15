@@ -440,7 +440,7 @@ const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
                 <div className="md:w-[78%] w-[95%] pb-[30px] pt-[110px] 2xl:w-[1320px] gap-[20px] mt-[5px] flex-col md:flex mx-auto">
                     <div className="w-[100%] bg-[white]">
                         {/* Sticky Header */}
-                        <div className="flex flex-col  h-fit fixed top-[50px] z-[20] bg-white w-[100%] 2xl:w-[1300] md:w-[79%]">
+                        <div className="flex flex-col  h-fit fixed top-[50px] z-[20] bg-white w-[100%] 2xl:w-[1300px] md:w-[79%]">
 
                             <div className="flex justify-between w-[100%] bg-white items-center mb-6">
                                 <button className="flex items-center text-lg font-bold">Basalt Paradise Resort and Spa</button>
@@ -471,7 +471,7 @@ const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
 
 
                                 <div className="flex flex-col  h-fit fixed top-[145px] z-[20] overflow-x-auto  w-[100%] pb-[10px] bg-white 2xl:w-[1300px] md:w-[78%]">
-                                    <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1370px] shadow-md rounded-br-[20px] w-[72%]  overflow-x-auto border-[#E5E5E5] relative z-[20] bg-white ">
+                                    <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1280px] shadow-md rounded-br-[20px] w-[72%]  overflow-x-auto border-[#E5E5E5] relative z-[20] bg-white ">
                                         <div className="max-w-[1400px] mx-auto relative">
                                             {/* Sliding Highlight */}
                                             <div
