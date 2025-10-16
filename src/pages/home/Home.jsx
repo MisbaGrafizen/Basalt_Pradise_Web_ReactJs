@@ -13,6 +13,7 @@ import Faq from "../../Component/calculativeSection/Faq";
 import Gallery from "../../Component/gallery/Gallery";
 import CalculativeSection from "../../Component/calculativeSection/CalculativeSection ";
 import CircularGallery from "../../Component/Reactbits/CircularGallery";
+import WinterExperience from "../../Component/uicomponent/WinterExperience";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
           <StaffHand />
 
           <BookingAillence />
+          <WinterExperience  />
           <BannerSection />
           <Faq />
           {/* <div className=" flex flex-col mx-auto w-[75%] scale-105" style={{ height: '400px', position: 'relative' }}>

@@ -285,7 +285,7 @@ export default function ContactUs() {
                             Business inquiry
                           </p>
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular  text-[#646464]">
-                          info@basaltparadise.com
+                            info@basaltparadise.com
                           </p>
                         </div>
                       </div>
@@ -304,11 +304,11 @@ export default function ContactUs() {
                         <i className=" text-[20px] mt-[5px] basalt-text text-yellow-500 fa-solid fa-location-dot "></i>
                         <div>
                           <p className="font-[600] font-lucida-bright-regular  text-[17px]">
-                             Address
+                            Address
                           </p>
 
                           <p className="w-[100%]  text-[15px] md:text-[14px] font-[400] font-lucida-bright-regular text-[#646464]">
-                          Nurpura, On Halol-Vadodara Highway
+                            Nurpura, On Halol-Vadodara Highway
                           </p>
                         </div>
                       </div>
@@ -393,7 +393,7 @@ export default function ContactUs() {
                     <button
                       type="submit"
                       className="flex justify-center basalt text-[#fff] mt-[10px] text-[#000] text-[18px] rounded-[6px] font-lucida-bright-regular  md:mx-0 py-[8px] w-[120px] font-[500] transition-transform duration-200 active:scale-95"
-                        onClick={handleSubmit}
+                      onClick={handleSubmit}
                     >
                       Submit
                     </button>
@@ -414,13 +414,32 @@ export default function ContactUs() {
       </section>
 
 
-          <div className=" 2xl:w-[1300px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
-              <Review />
-              {/* <TheSpotLight /> */}
-              <div className=" w-[90%] mx-auto">
-                <AlertBanner />
-              </div>
-              </div>
+      <div className=" 2xl:w-[1300px] !bg-[#]  pb-[20px] pt-[40px]   flex flex-col gap-[62px] h-[100%] mx-auto">
+
+        <div className="relative rounded-2xl w-[80%] mx-auto   font-Poppins h-[270px] overflow-hidden shadow-lg">
+          <div className=" h-[100%]  overflow-hidden">
+            <iframe
+              title="Infinity Sports Club - Nurpura Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.7429445209283!2d73.25110997492177!3d22.315949979678755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5b2c0b5e3d3%3A0x9d4d8dfcfb0e43b7!2sNurpura%2C%20Halol-Vadodara%20Highway%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1714892922335!5m2!1sen!2sin"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-md">
+            <p className="text-sm font-medium text-gray-800">
+              📍 Nurpura, On Halol–Vadodara Highway
+            </p>
+          </div>
+        </div>
+
+        <Review />
+        {/* <TheSpotLight /> */}
+        <div className=" w-[90%] mx-auto">
+          <AlertBanner />
+        </div>
+      </div>
       <Footer />
     </>
   );

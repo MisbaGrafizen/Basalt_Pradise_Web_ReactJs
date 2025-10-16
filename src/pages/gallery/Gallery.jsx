@@ -471,38 +471,32 @@ const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
 
 
                                 <div className="flex flex-col  h-fit fixed top-[145px] z-[20] overflow-x-auto  w-[100%] pb-[10px] bg-white 2xl:w-[1300px] md:w-[78%]">
-                                    <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1280px] shadow-md rounded-br-[20px] w-[72%]  overflow-x-auto border-[#E5E5E5] relative z-[20] bg-white ">
-                                        <div className="max-w-[1400px] mx-auto relative">
-                                            {/* Sliding Highlight */}
-                                            <div
-                                                className="absolute top-0 left-0 h-[35px] rounded-tl-[15px] shadow-md rounded-br-[15px] mt-[7px] bg-[#F59E0B] transition-all duration-300 ease-in-out"
-                                                style={{
-                                                    transform: `translateX(${buttonPositions[activeTab] ?? 0}px)`,
-                                                    width: `${buttonWidths[activeTab]}px`,
-                                                }}
-                                            ></div>
+                           <nav className="border mx-[10px] rounded-[10px] r shadow-md w-[72%] 2xl:w-[1280px] min-w-max overflow-x-auto border-[#E5E5E5] bg-white relative z-[20]">
+  <div className="max-w-[1400px] mx-auto px-3">
+    <ul className="flex items-center gap-3 py-2 overflow-x-auto no-scrollbar">
+      {Object.keys(buttonPositions).map((item) => (
+        <li key={item}>
+          <a
+            href="#"
+            data-tab={item}
+            onClick={(e) => {
+              e.preventDefault()
+              scrollToSection(sectionRefs[item], item)
+            }}
+            className={`inline-block px-3 text-[13px] py-[4px] font-[500] rounded-full border transition-all duration-200 ${
+              activeTab === item
+                ? "bg-[#F59E0B] !text-white border-[#F59E0B]  shadow-sm"
+                : "bg-white text-[#555] border-[#E5E5E5] hover:bg-[#FFF7E6] hover:text-[#222]"
+            }`}
+          >
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
 
-                                            {/* Button List */}
-                                            <ul className="flex items-center overflow-x-auto no-scrollbar">
-                                                {Object.keys(buttonPositions).map((item) => (
-                                                    <li key={item}>
-                                                        <a
-                                                            href="#"
-                                                            data-tab={item}
-                                                            onClick={(e) => {
-                                                                e.preventDefault();
-                                                                scrollToSection(sectionRefs[item], item);
-                                                            }}
-                                                            className={`inline-block px-6 py-[13px] text-[15px] transition-colors relative -mb-[1px] ${activeTab === item ? "!text-white font-[500]" : "text-[#666666] font-normal"
-                                                                }`}
-                                                        >
-                                                            {item}
-                                                        </a>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </nav>
 
                                 </div>
 
@@ -647,21 +641,14 @@ const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
 
                                 <div className="flex flex-col  h-fit fixed top-[155px] z-[20] bg-white w-[78%]">
                                     <div className="flex flex-col h-fit fixed top-[145px] z-[20] pb-[10px] bg-white w-[78%]">
-                                        <nav className="border mx-[10px] rounded-tl-[20px] min-w-max 2xl:w-[1370px] shadow-md rounded-br-[20px] w-[42%] border-[#E5E5E5] relative z-[20] bg-white">
-                                            <div className="min-w-max relative">
-                                                {/* Sliding Highlight */}
-                                                <div
-                                                    className="absolute top-0 left-0 h-[35px] rounded-tl-[15px] shadow-md rounded-br-[15px] mt-[7px] bg-[#F59E0B] transition-all duration-300 ease-in-out"
-                                                    style={{
-                                                        transform: `translateX(${travellerButtonPositions[activeTabGuest] ?? 0}px)`,
-                                                        width: `${travellerButtonWidths[activeTabGuest] ?? 100}px`,
-                                                    }}
-                                                ></div>
+                                        <nav className="border mx-[10px] rounded-[10px] r shadow-md w-[72%] 2xl:w-[1280px] min-w-max overflow-x-auto border-[#E5E5E5] bg-white relative z-[20]">
+                                           <div className="max-w-[1400px] mx-auto px-3">
+                                         
 
                                                 {/* Dynamic Tab Buttons */}
                                                 <ul
                                                     ref={travellerTabRef}
-                                                    className="flex items-center overflow-x-auto no-scrollbar min-w-max"
+                                                     className="flex items-center gap-3 py-2 overflow-x-auto no-scrollbar"
                                                 >
                                                     {Object.keys(travellerButtonPositions).map((key) => (
                                                         <li key={key}>
@@ -672,9 +659,9 @@ const zeroedge =[zeroedgesam2,zero2, zero5,zeroedgesam1,]
                                                                     e.preventDefault();
                                                                     scrollToSection1(travellerSectionRefs[key], key);
                                                                 }}
-                                                                className={`inline-block px-6 py-[13px] text-[15px] transition-colors relative -mb-[1px] ${activeTabGuest === key
-                                                                        ? "!text-white font-[500]"
-                                                                        : "text-[#666666] font-normal"
+                                                                className={`inline-block px-3 text-[13px] py-[4px] font-[500] rounded-full border transition-all duration-200  ${activeTabGuest === key
+   ? "bg-[#F59E0B] !text-white border-[#F59E0B]  shadow-sm"
+                : "bg-white text-[#555] border-[#E5E5E5] hover:bg-[#FFF7E6] hover:text-[#222]"
                                                                     }`}
                                                             >
                                                                 {travellerButtonLabels[key]}

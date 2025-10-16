@@ -101,24 +101,6 @@ function App() {
   const [loading, setLoading] = useState(false);
 const [open, setOpen] = useState(false);
 
-  // Show modal after 3 seconds when page loads
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setOpen(true);
-  //   }, 2000);
-
-  //   return () => clearTimeout(timer);
-  // }, []); // Empty dependency ensures it runs only once after hard refresh
-
-  // UseGoogleAnalytics();
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 500); // 1.5 seconds
-
-  //   return () => clearTimeout(timer); // Cleanup the timer
-  // }, []);
 
   return (
     <>

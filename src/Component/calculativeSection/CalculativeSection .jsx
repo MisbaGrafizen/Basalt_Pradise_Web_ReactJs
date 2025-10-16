@@ -53,7 +53,7 @@ export default function CalculativeSection() {
     <>
     <div className="md:w-[81%] w-[90%] py-[20px] bg-white mx-auto font-Poppins overflow-x-auto">
       <div className="w-[100%] mx-auto ">
-        <div className="flex flex-row justify-between gap-[25px] md:gap-0 min-w-max md:min-w-0">
+        <div className=" grid grid-cols-2  md:flex flex-row justify-between gap-[25px] md:gap-0 min-w-max md:min-w-0">
           {statsData.map((stat, index) => (
             <div key={index} className="relative flex flex-col items-center text-center px-2 md:px-3">
               {/* Divider line (except for the first item) */}
