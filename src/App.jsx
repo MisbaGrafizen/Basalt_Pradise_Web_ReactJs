@@ -96,10 +96,42 @@ import WellTravel from "./pages/blogs/WellTravel";
 import PlayfulSouls from "./pages/blogs/PlayfulSoules";
 import { motion, AnimatePresence } from "framer-motion";
 import offer from "../public/Basalt Navaratri Special Offer .jpg"
+import spa1 from "../public/spaNew/spa1.jpeg"
+import spa2 from "../public/spaNew/spa2.jpeg"
+// import spa3 from "../public/spaNew/spa3.jpeg"
+import spa4 from "../public/spaNew/spa4.jpeg"
+import spa5 from "../public/spaNew/spa5.jpeg"
+
 
 function App() {
   const [loading, setLoading] = useState(false);
-const [open, setOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+ const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Spa images - replace with your actual images
+  const spaImages = [
+   spa1,spa2,spa4,spa5 
+  ]
+
+  const onClose = () => setIsOpen(false);
+
+   useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Auto-slide carousel every 3 seconds
+  useEffect(() => {
+    if (!isOpen) return
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % spaImages.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [isOpen, spaImages.length])
 
 
   return (
@@ -262,52 +294,131 @@ const [open, setOpen] = useState(false);
 
 
 
- <AnimatePresence>
-        {open && (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop with blur */}
           <motion.div
-            className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[10000]"
+          />
+
+          {/* Modal */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="fixed inset-0 z-[12121312] flex items-center justify-center p-2"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -40, scale: 0.95 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative  rounded-xl overflow-hidden shadow-lg"
-            >
+            <div className="bg-gradient-to-br relative from-blue-50 to-amber-100 rounded-2xl shadow-2xl w-[380px] md:w-[460px] max-h-[90vh] overflow-y-auto">
               {/* Close Button */}
-              <button
-                onClick={() => setOpen(false)}
-                className="absolute top-3 right-3 text-[#fff] text-2xl"
+              <motion.button
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={onClose}
+                className="absolute top-2 right-2 justify-center items-center z-10 w-[25px] h-[25px] bg-red-500 text-white rounded-full flex  font-bold text-[13px] hover:bg-amber-800 pt-[3px] transition-colors"
               >
-             <i class="fa-solid fa-circle-xmark"></i>
-              </button>
+                ✕
+              </motion.button>
 
-              {/* Full Image */}
-              <img
-                src={offer} 
-                alt="Modal"
-                className=" h-[350px] md:h-[500px] object-content"
-              />
-
-              {/* WhatsApp Button */}
-              <a 
-                  href="https://wa.me/918799284980" // replace with your WhatsApp number
-                  target="_blank"
-                  rel="noopener noreferrer" className=" px-6 py-[7px]  mt-[px] mx-auto justify-center items-center flex basalt  w-[100%] min-w-[350px] md:min-w-[400px] ">
-                <div
-              
-                  className="  font-Poppins font-[500] text-[18px]  !text-white  rounded-[7px]  transition"
+              {/* Modal Content */}
+              <div className="p-8">
+                {/* Title */}
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="text-3xl font-Poppins font-[600]  text-blue-700 mb-4 text-center"
                 >
-                Inquiry Now
-                </div>
-              </a>
-            </motion.div>
+                  Spa at Basalt Paradise
+                </motion.h2>
+
+                {/* Description */}
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-center text-amber-800 font-[400] text-[12px] mb-2  font-Poppins leading-[18px]"
+                >
+                  Immerse yourself in pure luxury and tranquility. Our world-class spa offers rejuvenating treatments,
+                  holistic wellness therapies, and personalized relaxation experiences designed to restore your mind,
+                  body, and soul. Escape the ordinary and discover the extraordinary.
+                </motion.p>
+
+                {/* Image Carousel */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="relative mb-8 w-fit mx-auto rounded-xl overflow-hidden shadow-lg"
+                >
+                  <div className="relative w-full h-[350px]">
+                    <AnimatePresence mode="wait">
+                      <motion.img
+                        key={currentImageIndex}
+                        src={spaImages[currentImageIndex]}
+                        alt={`Spa image ${currentImageIndex + 1}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full h-full object-cover"
+                      />
+                    </AnimatePresence>
+
+                    {/* Image Counter */}
+                    {/* <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-serif">
+                      {currentImageIndex + 1} / {spaImages.length}
+                    </div> */}
+
+                    {/* Navigation Dots */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                      {spaImages.map((_, index) => (
+                        <motion.button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            index === currentImageIndex ? "bg-white w-6" : "bg-white/50 hover:bg-white/75"
+                          }`}
+                          whileHover={{ scale: 1.2 }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Call Now Button */}
+                <motion.a
+                  href="tel:+918799454980"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="block w-[200px] py-2 mx-auto  basalt to-amber-700 font-[600] text-white  text-[15px] rounded-full text-center hover:from-amber-700 hover:to-amber-800 font-Poppins transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Call Now 
+                </motion.a>
+{/* 
+             
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-8 pt-8 border-t border-amber-300 text-center text-sm text-amber-700"
+                >
+                  <p className="font-light">Available 24/7 • Premium Treatments • Expert Therapists</p>
+                </motion.div> */}
+              </div>
+            </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </>
+      )}
+    </AnimatePresence>
 
       </div>
 
