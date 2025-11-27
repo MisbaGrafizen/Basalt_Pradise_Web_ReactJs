@@ -401,9 +401,11 @@ export default function BlogDetails() {
           </aside>
         </div>
       </section>
+
+            {/*
  <section className="pt-10  font-Poppins bg-gradient-to-b pb-[40px] from-yellow-50 to-yellow-10">
         <div className=" mx-auto px-4">
-          {/* Decorative Header */}
+          
           <div className="text-center mb-10 relative">
 
             <h2 className="md:text-[45px] text-[30px] font-[600] text-gray-800 mb-3">
@@ -416,14 +418,14 @@ export default function BlogDetails() {
 
 
 
-          {/* Regular Articles - Masonry Layout */}
+       
           <div className=" flex overflow-x-auto pb-[19px]  px-[20px]  w-[100%] gap-8">
             {blogPosts.map((post, index) => (
               <div
                 key={post.id}
                 className={`group flex   relative flex-shrink-0 flex-col w-[290px] bg-white h-[370px] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300  `}
               >
-                {/* Image */}
+                
                 <div className="relative h-[190px] overflow-hidden">
                   <img
                     src={post.image || "/placeholder.svg"}
@@ -440,7 +442,7 @@ export default function BlogDetails() {
                   </div>
                 </div>
 
-                {/* Content */}
+
                 <div className="p-4">
                   <h3 className="text-[18px] leading-[23px] font-[600] text-gray-900 mb-2 group-hover:text-[#062f95] transition-colors duration-300 ">
                     {post.title}
@@ -465,6 +467,9 @@ export default function BlogDetails() {
 
 
       </section>
+
+
+      */}
       <Footer />
     </>
   );
