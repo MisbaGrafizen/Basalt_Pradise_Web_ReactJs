@@ -4,7 +4,7 @@
 
 // export default function IntegratedBlogDetails() {
 //   return (
-   
+
 // <>
 //        <Header />
 //             <div className='  2xl:w-[1300px] font-Poppins !bg-[#] w-[90%] md:w-[80%]   h-[100%] mx-auto  py-8 gap-[20px] pt-[110px] flex '>
@@ -156,22 +156,24 @@ export default function IntegratedBlogDetails() {
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Dummy Data for Bottom Blog Section
 
-useEffect(() => {
-  const fetchBlog = async () => {
-    try {
-      const response = await axios.get(`http://localhost:3000/api/v2/hotel/admin/blog/${id}`);
-      console.log('response', response)
-      setBlog(response.data.data);
-    } catch (error) {
-      console.error('Failed to fetch blog details:', error);
-    }
-  };
 
-  fetchBlog();
-}, [id]);
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3000/api/v2/hotel/admin/blog/${id}`);
+        console.log('response', response)
+        setBlog(response.data.data);
+      } catch (error) {
+        console.error('Failed to fetch blog details:', error);
+      }
+    };
 
-//   if (loading) return <p className="text-center mt-20">Loading...</p>;
+    fetchBlog();
+  }, [id]);
+
+  //   if (loading) return <p className="text-center mt-20">Loading...</p>;
   if (!blog) return <p className="text-center mt-20">Blog not found</p>;
 
   return (
@@ -198,6 +200,11 @@ useEffect(() => {
           {/* ...existing sidebar content... */}
         </div>
       </div>
+
+
+
+
+     
       <Footer />
     </>
   );

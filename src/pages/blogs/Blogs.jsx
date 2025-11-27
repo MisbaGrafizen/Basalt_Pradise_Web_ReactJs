@@ -1646,7 +1646,7 @@ export default function Blogs() {
                         <button
                             key={c}
                             onClick={() => handleClick(c)}
-                            className={`w-fit py-[7px] px-[18px] rounded-[20px] border-[1.2px] flex-shrink-0 ${selectedTitle === c
+                            className={`w- py-[7px] px-[18px] rounded-[20px] border-[1.2px] flex-shrink-0 ${selectedTitle === c
                                 ? "bg-[#fcaf17] text-white border-[#fcaf17]"
                                 : "bg-transparent text-[#fcaf17] border-[#fcaf17]"
                                 }`}

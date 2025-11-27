@@ -4,7 +4,43 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "../../Component/header/Header";
 import Footer from "../../Component/footer/Footer";
-
+const blogPosts = [
+  {
+    id: 1,
+    title: "How PET Recycling is Transforming Global Packaging",
+    excerpt: "Discover how recycled PET is becoming the backbone of sustainable packaging worldwide...",
+    category: "Recycling",
+    image: "https://images.unsplash.com/photo-1520975922071-6f61a00a6c86?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    id: 2,
+    title: "The Future of Circular Economy in India",
+    excerpt: "India is rapidly adapting new recycling systems to boost circular sustainability...",
+    category: "Sustainability",
+    image: "https://images.unsplash.com/photo-1532634896-26909d0d4b6a?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    id: 3,
+    title: "Modern PET Flakes Processing Technology",
+    excerpt: "High-efficiency machinery and automated systems are making PET processing faster than ever...",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    id: 4,
+    title: "Why Clean PET Bottles Matter in Recycling",
+    excerpt: "Pre-cleaning PET bottles can significantly improve flake quality and reduce production waste...",
+    category: "Awareness",
+    image: "https://images.unsplash.com/photo-1581094271901-e350f1a37dd0?auto=format&fit=crop&w=800&q=60"
+  },
+  {
+    id: 5,
+    title: "Smart Automation in PET Bottle Sorting",
+    excerpt: "AI-powered sorting systems are bringing accuracy and speed to waste management facilities...",
+    category: "Innovation",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=60"
+  }
+]; 
 const API_BASE = "https://server.grafizen.in/api/v2/hotel/admin";
 
 /* ---------------- helpers ---------------- */
@@ -365,7 +401,70 @@ export default function BlogDetails() {
           </aside>
         </div>
       </section>
+ <section className="pt-10  font-Poppins bg-gradient-to-b pb-[40px] from-yellow-50 to-yellow-10">
+        <div className=" mx-auto px-4">
+          {/* Decorative Header */}
+          <div className="text-center mb-10 relative">
 
+            <h2 className="md:text-[45px] text-[30px] font-[600] text-gray-800 mb-3">
+              Suggested Articles
+            </h2>
+
+
+
+          </div>
+
+
+
+          {/* Regular Articles - Masonry Layout */}
+          <div className=" flex overflow-x-auto pb-[19px]  px-[20px]  w-[100%] gap-8">
+            {blogPosts.map((post, index) => (
+              <div
+                key={post.id}
+                className={`group flex   relative flex-shrink-0 flex-col w-[290px] bg-white h-[370px] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300  `}
+              >
+                {/* Image */}
+                <div className="relative h-[190px] overflow-hidden">
+                  <img
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.title}
+                    className={`w-full object-cover h-[100%] group-hover:scale-105 transition-transform duration-500 
+                   
+               `}
+                  />
+                  <div className="absolute top-4 left-4 flex gap-2">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
+
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-4">
+                  <h3 className="text-[18px] leading-[23px] font-[600] text-gray-900 mb-2 group-hover:text-[#062f95] transition-colors duration-300 ">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-gray-600 mb-2 text-[13px] line-clamp-4">{post.excerpt}</p>
+                  <div className=" flex flex-col gap-[px] absolute bottom-5">
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+
+
+
+      </section>
       <Footer />
     </>
   );
