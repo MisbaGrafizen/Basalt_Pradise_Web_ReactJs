@@ -162,7 +162,7 @@ export default function IntegratedBlogDetails() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v2/hotel/admin/blog/${id}`);
+        const response = await axios.get(`https://server.grafizen.in/api/v2/hotel/admin/blog/${id}`);
         console.log('response', response)
         setBlog(response.data.data);
       } catch (error) {

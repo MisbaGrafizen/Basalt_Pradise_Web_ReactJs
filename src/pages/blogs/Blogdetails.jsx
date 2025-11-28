@@ -73,6 +73,11 @@ const slugify = (str) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 120);
 
+    const resolveBlogById = (id, list) => {
+  if (!id || !Array.isArray(list)) return null;
+  return list.find((b) => getId(b) === id) || null;
+};
+
 /* ---------- HTML transformer (tight rhythm + uniform images + bullets) ---------- */
 const styleSubblogsHtml = (html) => {
   if (typeof html !== "string" || !html.trim()) return "<p>No content available.</p>";
@@ -171,13 +176,14 @@ export default function BlogDetails() {
   const { slug } = useParams();
   const { state } = useLocation();
   const blogFromState = state?.blog || null;
-  const blogIdFromState = state?.blogId || null;
 
   const [blog, setBlog] = useState(blogFromState);
   const [loading, setLoading] = useState(!blogFromState);
 
   const [allBlogs, setAllBlogs] = useState([]);
   const [loadingSidebar, setLoadingSidebar] = useState(true);
+
+  console.log('blog', blog)
 
   // Use blog from state immediately
   useEffect(() => {
@@ -266,23 +272,31 @@ export default function BlogDetails() {
 
   // Related (under the article): 4–5 recent, unique, exclude current
   const related = useMemo(() => {
-    const currentId = getId(blog);
-    const byTime = [...allBlogs].sort(
-      (a, b) => (getCreatedAt(b)?.getTime() || 0) - (getCreatedAt(a)?.getTime() || 0)
-    );
-    const seen = new Set();
-    const out = [];
-    for (const b of byTime) {
-      const id = getId(b);
-      if (id === currentId) continue;
+  if (!blog?.relatedBlogs) return [];
+  return blog.relatedBlogs
+    .map((id) => {
+      const b = resolveBlogById(id, allBlogs);
+      if (!b) return null;
       const h1 = getBlogH1(b);
-      if (!h1 || seen.has(h1)) continue;
-      out.push({ h1, b, id, slug: slugify(h1) });
-      seen.add(h1);
-      if (out.length >= 5) break;
-    }
-    return out;
-  }, [allBlogs, blog]);
+      return { id: getId(b), h1, slug: slugify(h1), b };
+    })
+    .filter(Boolean);
+}, [blog, allBlogs]);
+
+
+const suggested = useMemo(() => {
+  if (!blog?.suggestedBlogs) return [];
+  return blog.suggestedBlogs
+    .map((id) => {
+      const b = resolveBlogById(id, allBlogs);
+      if (!b) return null;
+      const h1 = getBlogH1(b);
+      return { id: getId(b), h1, slug: slugify(h1), b };
+    })
+    .filter(Boolean);
+}, [blog, allBlogs]);
+
+
 
   const goToBlog = ({ slug: s, id, b }) => {
     navigate(`/blogs/${s}`, { state: { blogId: id, blog: b } });
@@ -402,74 +416,49 @@ export default function BlogDetails() {
         </div>
       </section>
 
-            {/*
- <section className="pt-10  font-Poppins bg-gradient-to-b pb-[40px] from-yellow-50 to-yellow-10">
-        <div className=" mx-auto px-4">
-          
-          <div className="text-center mb-10 relative">
+{suggested.length > 0 && (
+  <section className="pt-10  font-Poppins bg-gradient-to-b pb-[40px]">
+    <div className="mx-auto px-4">
+      <div className="text-center mb-10 relative">
+        <h2 className="md:text-[45px] text-[30px] font-[600] text-gray-800 mb-3">
+          Suggested Articles
+        </h2>
+      </div>
 
-            <h2 className="md:text-[45px] text-[30px] font-[600] text-gray-800 mb-3">
-              Suggested Articles
-            </h2>
+      <div className="flex overflow-x-auto pb-[19px] px-[20px] w-[100%] gap-8">
+        {suggested.map((post) => (
+          <div
+            key={post.id}
+            onClick={() => goToBlog(post)}
+            className="cursor-pointer flex flex-col flex-shrink-0 w-[290px] bg-white h-[370px] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition"
+          >
+            <div className="h-[190px] overflow-hidden">
+              <img
+                src={post.b.image}
+                alt={post.h1}
+                className="w-full h-full object-cover transition group-hover:scale-105"
+              />
+            </div>
 
+            <div className="p-4">
+              <h3 className="text-[18px] leading-[23px] font-[600] mb-2">
+                {post.h1}
+              </h3>
 
-
+              <p className="text-gray-600 text-[13px] line-clamp-3">
+                {getH1FromHtml(post.b.description)}
+              </p>
+            </div>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
 
 
 
-       
-          <div className=" flex overflow-x-auto pb-[19px]  px-[20px]  w-[100%] gap-8">
-            {blogPosts.map((post, index) => (
-              <div
-                key={post.id}
-                className={`group flex   relative flex-shrink-0 flex-col w-[290px] bg-white h-[370px] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300  `}
-              >
-                
-                <div className="relative h-[190px] overflow-hidden">
-                  <img
-                    src={post.image || "/placeholder.svg"}
-                    alt={post.title}
-                    className={`w-full object-cover h-[100%] group-hover:scale-105 transition-transform duration-500 
-                   
-               `}
-                  />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
-                      {post.category}
-                    </span>
-
-                  </div>
-                </div>
-
-
-                <div className="p-4">
-                  <h3 className="text-[18px] leading-[23px] font-[600] text-gray-900 mb-2 group-hover:text-[#062f95] transition-colors duration-300 ">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-gray-600 mb-2 text-[13px] line-clamp-4">{post.excerpt}</p>
-                  <div className=" flex flex-col gap-[px] absolute bottom-5">
-
-
-
-
-
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-
-
-
-
-      </section>
-
-
-      */}
+      
       <Footer />
     </>
   );

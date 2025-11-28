@@ -1439,9 +1439,8 @@ const normalize = (b) => {
     const description = typeof b?.description === "string" ? b.description : "";
     const subblogs = typeof b?.subblogs === "string" ? b.subblogs : "";
 
-    // derive H1 from description (fallback: subblogs/text)
     const h1 = extractTitleFromHtml(description || subblogs);
-    const slug = slugify(h1 || id); // always produce a slug
+    const slug = slugify(h1 || id);
 
     return {
         id,
@@ -1456,8 +1455,12 @@ const normalize = (b) => {
         date: b?.date || null,
         time: b?.time || null,
         route: `/blogs/${slug}`,
+
+        relatedBlogs: b?.relatedBlogs || [],
+        suggestedBlogs: b?.suggestedBlogs || [],
     };
 };
+
 
 
 const formatDateTimeUi = (dt, fallbackDate, fallbackTime) => {
